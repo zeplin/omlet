@@ -296,7 +296,7 @@ export async function getAnalysesOf(
 }
 
 export async function getLatestAnalysisIdsForAllPackageNames(workspaceId: string, params: { onOrBefore?: Date; } = {}): Promise<Record<string, MongooseTypes.ObjectId>> {
-    const result = await AnalysisModel.aggregate<{ _id: string; latestAnalysisId: string; }>(
+    const result = await AnalysisModel.aggregate<{ latestAnalysisId: MongooseTypes.ObjectId; latestPackageNames: string[]; }>(
         [
             {
                 $match: {
@@ -305,13 +305,53 @@ export async function getLatestAnalysisIdsForAllPackageNames(workspaceId: string
                 },
             },
             {
-                $unwind: "$packageNames",
+                $sort: {
+                    _id: 1,
+                },
             },
             {
                 $group: {
-                    _id: "$packageNames",
+                    _id: {
+                        $cond: {
+                            if: {
+                                $and: [
+                                    { $ne: ["$repository.scope", null] },
+                                    { $ne: ["$repository.name", null] },
+                                    { $ne: ["$repository.scope", ""] },
+                                    { $ne: ["$repository.name", ""] },
+                                ],
+                            },
+                            then: { $concat: ["$repository.scope", "/", "$repository.name"] },
+                            else: {
+                                $cond: {
+                                    if: {
+                                        $and: [
+                                            { $ne: ["$repository.url", null] },
+                                            { $ne: ["$repository.url", ""] },
+                                        ],
+                                    },
+                                    then: "$repository.url",
+                                    else: {
+                                        $cond: {
+                                            if: {
+                                                $and: [
+                                                    { $ne: ["$repository.initialCommitHash", null] },
+                                                    { $ne: ["$repository.initialCommitHash", ""] },
+                                                ],
+                                            },
+                                            then: "$repository.initialCommitHash",
+                                            else: "$_id",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
                     latestAnalysisId: {
-                        $max: "$_id",
+                        $last: "$_id",
+                    },
+                    latestPackageNames: {
+                        $last: "$packageNames",
                     },
                 },
             },
@@ -319,9 +359,13 @@ export async function getLatestAnalysisIdsForAllPackageNames(workspaceId: string
         { readPreference: mongoose.mongo.ReadPreference.PRIMARY }
     );
 
-    return result.reduce((map, record) =>
-        ({ ...map, [record._id]: new MongooseTypes.ObjectId(record.latestAnalysisId) })
-    , {});
+    const map: Record<string, MongooseTypes.ObjectId> = {};
+    for (const record of result) {
+        for (const packageName of record.latestPackageNames) {
+            map[packageName] = record.latestAnalysisId;
+        }
+    }
+    return map;
 }
 
 export async function deleteAnalysis(

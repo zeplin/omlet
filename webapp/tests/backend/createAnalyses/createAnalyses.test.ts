@@ -173,4 +173,25 @@ describe("Create analyses", () => {
             updatedAt: expect.any(Date),
         }, "7. Workspace");
     });
+
+    it("should exclude removed packages from the workspace index when a new scan is submitted", async () => {
+        const modifiedPayload = JSON.parse(
+            JSON.stringify(omletWebapp).replace(/@omlet\/webapp/g, "@omlet/new-package"),
+        ) as Record<string, unknown>;
+
+        const res = await request(app)
+            .post(`/api/workspaces/${workspaceSlug}/analyses`)
+            .set("Cookie", `omlet-auth-token=${token}`)
+            .send(modifiedPayload);
+
+        expect(res.status).toBe(httpStatus.OK);
+        // Wait for post-analysis background tasks to complete (indexes, projects update)
+        await new Promise(resolve => setTimeout(resolve, 10000));
+
+        const workspace = await WorkspaceModel.findOne({ _id: workspaceId }, {}, { lean: true });
+        const packageNames = workspace?.projects.map((p: any) => p.packageName) ?? [];
+
+        expect(packageNames).toContain("@omlet/new-package");
+        expect(packageNames).not.toContain("@omlet/webapp");
+    });
 });
