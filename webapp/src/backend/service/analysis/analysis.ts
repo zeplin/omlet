@@ -295,74 +295,91 @@ export async function getAnalysesOf(
     };
 }
 
-export async function getLatestAnalysisIdsForAllPackageNames(workspaceId: string, params: { onOrBefore?: Date; } = {}): Promise<Record<string, MongooseTypes.ObjectId>> {
-    const result = await AnalysisModel.aggregate<{ latestAnalysisId: MongooseTypes.ObjectId; latestPackageNames: string[]; }>(
-        [
-            {
-                $match: {
-                    workspace: new MongooseTypes.ObjectId(workspaceId),
-                    ...(params.onOrBefore ? ({ createdAt: { $lte: params.onOrBefore } }) : {}),
-                },
-            },
-            {
-                $sort: {
-                    _id: 1,
-                },
-            },
-            {
-                $group: {
-                    _id: {
-                        $cond: {
-                            if: {
-                                $and: [
-                                    { $ne: ["$repository.scope", null] },
-                                    { $ne: ["$repository.name", null] },
-                                    { $ne: ["$repository.scope", ""] },
-                                    { $ne: ["$repository.name", ""] },
-                                ],
-                            },
-                            then: { $concat: ["$repository.scope", "/", "$repository.name"] },
-                            else: {
-                                $cond: {
-                                    if: {
-                                        $and: [
-                                            { $ne: ["$repository.url", null] },
-                                            { $ne: ["$repository.url", ""] },
-                                        ],
-                                    },
-                                    then: "$repository.url",
-                                    else: {
-                                        $cond: {
-                                            if: {
-                                                $and: [
-                                                    { $ne: ["$repository.initialCommitHash", null] },
-                                                    { $ne: ["$repository.initialCommitHash", ""] },
-                                                ],
-                                            },
-                                            then: "$repository.initialCommitHash",
-                                            else: "$_id",
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
-                    latestAnalysisId: {
-                        $last: "$_id",
-                    },
-                    latestPackageNames: {
-                        $last: "$packageNames",
-                    },
-                },
-            },
-        ],
-        { readPreference: mongoose.mongo.ReadPreference.PRIMARY }
-    );
+export async function getLatestAnalysisIdsForAllPackageNames(
+    workspaceId: string,
+    params: { onOrBefore?: Date; } = {},
+): Promise<Record<string, MongooseTypes.ObjectId>> {
+    const analyses = await AnalysisModel.find(
+        {
+            workspace: new MongooseTypes.ObjectId(workspaceId),
+            ...(params.onOrBefore ? { createdAt: { $lte: params.onOrBefore } } : {}),
+        },
+        {
+            _id: 1,
+            packageNames: 1,
+            repository: 1,
+        },
+        {
+            readPreference: mongoose.mongo.ReadPreference.PRIMARY,
+        },
+    )
+        .sort({ _id: 1 })
+        .lean()
+        .exec();
+
+    interface RepoGroup {
+        scopesAndNames: Set<string>;
+        urls: Set<string>;
+        commitHashes: Set<string>;
+        latestAnalysisId: MongooseTypes.ObjectId;
+        latestPackageNames: string[];
+    }
+
+    const groups: RepoGroup[] = [];
+
+    for (const analysis of analyses) {
+        const repo = analysis.repository;
+
+        // Find if this analysis matches any existing repository group
+        let matchedGroup: RepoGroup | undefined;
+
+        if (repo) {
+            const scopeAndName = repo.scope && repo.name ? `${repo.scope}/${repo.name}` : undefined;
+
+            for (const group of groups) {
+                if (
+                    (scopeAndName && group.scopesAndNames.has(scopeAndName)) ||
+                    (repo.url && group.urls.has(repo.url)) ||
+                    (repo.initialCommitHash && group.commitHashes.has(repo.initialCommitHash))
+                ) {
+                    matchedGroup = group;
+                    break;
+                }
+            }
+        }
+
+        if (!matchedGroup) {
+            matchedGroup = {
+                scopesAndNames: new Set<string>(),
+                urls: new Set<string>(),
+                commitHashes: new Set<string>(),
+                latestAnalysisId: analysis._id,
+                latestPackageNames: analysis.packageNames,
+            };
+
+            groups.push(matchedGroup);
+        }
+
+        if (repo) {
+            if (repo.scope && repo.name) {
+                matchedGroup.scopesAndNames.add(`${repo.scope}/${repo.name}`);
+            }
+            if (repo.url) {
+                matchedGroup.urls.add(repo.url);
+            }
+            if (repo.initialCommitHash) {
+                matchedGroup.commitHashes.add(repo.initialCommitHash);
+            }
+        }
+
+        matchedGroup.latestAnalysisId = analysis._id;
+        matchedGroup.latestPackageNames = analysis.packageNames;
+    }
 
     const map: Record<string, MongooseTypes.ObjectId> = {};
-    for (const record of result) {
-        for (const packageName of record.latestPackageNames) {
-            map[packageName] = record.latestAnalysisId;
+    for (const group of groups) {
+        for (const packageName of group.latestPackageNames) {
+            map[packageName] = group.latestAnalysisId;
         }
     }
     return map;

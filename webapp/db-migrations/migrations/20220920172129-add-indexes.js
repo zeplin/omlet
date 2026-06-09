@@ -2,6 +2,7 @@ module.exports = {
     async up(db, client) {
         const analysesCollection = db.collection("analyses");
         await analysesCollection.createIndex(["workspace"], { name: "workspace_1" });
+        await analysesCollection.createIndex(["workspace", "_id"], { name: "workspace_id_1" });
 
         const authRequestsCollection = db.collection("authRequests");
         await authRequestsCollection.createIndex({ "createdAt": 1 }, { name: "ttl", expireAfterSeconds: 1800 });
