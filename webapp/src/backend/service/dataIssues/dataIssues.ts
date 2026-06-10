@@ -3,7 +3,7 @@ import { Types as MongooseTypes } from "mongoose";
 import { type InvalidDependency } from "../../../cliDataModels/InvalidDependency";
 import { FilterOperation } from "../../../common/models/FilterOperation";
 import { BaseError } from "../../error";
-import { getAnalysesOf, getLatestAnalysisIdsForAllPackageNames } from "../analysis/analysis";
+import { getAnalysesOf, getLatestAnalysisIdsForActivePackages } from "../analysis/analysis";
 import { getLatestComponentsIn, RESERVED_TAGS } from "../component/component";
 import { logException } from "../logger";
 import { type Workspace, type Project } from "../workspace/workspace";
@@ -89,7 +89,7 @@ export async function getDataIssues(workspace: Workspace): Promise<DataIssue[]> 
             new DataIssue(p, [], new Set()),
         ])
     );
-    const analysisIdMap = await getLatestAnalysisIdsForAllPackageNames(workspace.id);
+    const analysisIdMap = await getLatestAnalysisIdsForActivePackages(workspace.id);
     const analysisIds = Object.values(analysisIdMap);
 
     if (Object.values(analysisIdMap).length === 0) {

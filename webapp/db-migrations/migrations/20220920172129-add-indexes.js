@@ -2,7 +2,7 @@ module.exports = {
     async up(db, client) {
         const analysesCollection = db.collection("analyses");
         await analysesCollection.createIndex(["workspace"], { name: "workspace_1" });
-        await analysesCollection.createIndex(["workspace", "_id"], { name: "workspace_id_1" });
+        await analysesCollection.createIndex(["workspace", "_id"], { name: "workspace_1_id_1" });
 
         const authRequestsCollection = db.collection("authRequests");
         await authRequestsCollection.createIndex({ "createdAt": 1 }, { name: "ttl", expireAfterSeconds: 1800 });
@@ -62,6 +62,7 @@ module.exports = {
     async down(db, client) {
         const analysesCollection = db.collection("analyses");
         await analysesCollection.dropIndex("workspace_1");
+        await analysesCollection.dropIndex("workspace_1_id_1");
 
         const authRequestsCollection = db.collection("authRequests");
         await authRequestsCollection.dropIndex("ttl");

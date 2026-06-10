@@ -155,7 +155,7 @@ export async function performPostAnalysisOperations(
     return withAnalysisWriteLock(
         workspace.id,
         async () => {
-            const analysisIdsByPackage = await getLatestAnalysisIdsForAllPackageNames(workspace.id, {
+            const analysisIdsByPackage = await getLatestAnalysisIdsForActivePackages(workspace.id, {
                 onOrBefore: analysis.createdAt,
             });
 
@@ -295,7 +295,7 @@ export async function getAnalysesOf(
     };
 }
 
-export async function getLatestAnalysisIdsForAllPackageNames(
+export async function getLatestAnalysisIdsForActivePackages(
     workspaceId: string,
     params: { onOrBefore?: Date; } = {},
 ): Promise<Record<string, MongooseTypes.ObjectId>> {
@@ -330,8 +330,8 @@ export async function getLatestAnalysisIdsForAllPackageNames(
     for (const analysis of analyses) {
         const repo = analysis.repository;
 
-        // Find if this analysis matches any existing repository group
-        let matchedGroup: RepoGroup | undefined;
+        // Find all existing repository groups that match this analysis's metadata
+        const matchedGroups: RepoGroup[] = [];
 
         if (repo) {
             const scopeAndName = repo.scope && repo.name ? `${repo.scope}/${repo.name}` : undefined;
@@ -342,13 +342,40 @@ export async function getLatestAnalysisIdsForAllPackageNames(
                     (repo.url && group.urls.has(repo.url)) ||
                     (repo.initialCommitHash && group.commitHashes.has(repo.initialCommitHash))
                 ) {
-                    matchedGroup = group;
-                    break;
+                    matchedGroups.push(group);
                 }
             }
         }
 
-        if (!matchedGroup) {
+        let matchedGroup: RepoGroup;
+
+        if (matchedGroups.length > 0) {
+            // Use the first matched group as canonical
+            matchedGroup = matchedGroups[0];
+
+            // If there are multiple matching groups, merge them all into the first one
+            if (matchedGroups.length > 1) {
+                for (let i = 1; i < matchedGroups.length; i++) {
+                    const otherGroup = matchedGroups[i];
+
+                    for (const sn of otherGroup.scopesAndNames) {
+                        matchedGroup.scopesAndNames.add(sn);
+                    }
+                    for (const url of otherGroup.urls) {
+                        matchedGroup.urls.add(url);
+                    }
+                    for (const hash of otherGroup.commitHashes) {
+                        matchedGroup.commitHashes.add(hash);
+                    }
+
+                    const index = groups.indexOf(otherGroup);
+                    if (index > -1) {
+                        groups.splice(index, 1);
+                    }
+                }
+            }
+        } else {
+            // Create a new repository group
             matchedGroup = {
                 scopesAndNames: new Set<string>(),
                 urls: new Set<string>(),
@@ -356,7 +383,6 @@ export async function getLatestAnalysisIdsForAllPackageNames(
                 latestAnalysisId: analysis._id,
                 latestPackageNames: analysis.packageNames,
             };
-
             groups.push(matchedGroup);
         }
 
@@ -379,7 +405,10 @@ export async function getLatestAnalysisIdsForAllPackageNames(
     const map: Record<string, MongooseTypes.ObjectId> = {};
     for (const group of groups) {
         for (const packageName of group.latestPackageNames) {
-            map[packageName] = group.latestAnalysisId;
+            const currentLatestId = map[packageName];
+            if (!currentLatestId || group.latestAnalysisId.getTimestamp() > currentLatestId.getTimestamp()) {
+                map[packageName] = group.latestAnalysisId;
+            }
         }
     }
     return map;
@@ -414,7 +443,7 @@ export async function deleteAnalysis(
 
             const indexDocsToRecreate = await findUniqueComponentIndexesByAnalysisId<keyof FieldFilter>(workspaceId, analysisId, { fields });
             for (const doc of indexDocsToRecreate) {
-                const analysisIdsByPackage = await getLatestAnalysisIdsForAllPackageNames(workspaceId, {
+                const analysisIdsByPackage = await getLatestAnalysisIdsForActivePackages(workspaceId, {
                     onOrBefore: doc.analyzedAt,
                 });
 
@@ -505,7 +534,7 @@ export async function deleteAnalyses(
             );
 
             for (const doc of relevantIndexDocs) {
-                const analysisIdsByPackage = await getLatestAnalysisIdsForAllPackageNames(workspaceId, {
+                const analysisIdsByPackage = await getLatestAnalysisIdsForActivePackages(workspaceId, {
                     onOrBefore: doc.analyzedAt,
                 });
 
