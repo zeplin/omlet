@@ -72,6 +72,14 @@ export function Auth() {
                 return "Authenticating with GitHub failed.\n" +
                     "Please try again.";
             }
+            if (errorCode === "gitlab_access_denied") {
+                return "Authenticating with GitLab failed.\n" +
+                    "Please give permission to authenticate.";
+            }
+            if (errorCode.startsWith("gitlab")) {
+                return "Authenticating with GitLab failed.\n" +
+                    "Please try again.";
+            }
             if (errorCode.startsWith("google")) {
                 return "Authenticating with Google failed.\n" +
                     "Please try again.";
@@ -132,6 +140,11 @@ export function Auth() {
                         <p className={classes.continueWith}>Continue with:</p>
                         <form method="get" action="/auth/github">
                             <AuthButton provider={AuthProvider.Github} disabled={!authProviders.github}/>
+                            {isCli && <input type="hidden" name="cli" value={isCli.toString()}/>}
+                            {redirect && <input type="hidden" name="redirect" value={redirect}/>}
+                        </form>
+                        <form method="get" action="/auth/gitlab">
+                            <AuthButton provider={AuthProvider.Gitlab} disabled={!authProviders.gitlab}/>
                             {isCli && <input type="hidden" name="cli" value={isCli.toString()}/>}
                             {redirect && <input type="hidden" name="redirect" value={redirect}/>}
                         </form>

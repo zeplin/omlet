@@ -175,7 +175,7 @@ export async function getMultipleUsers(userIds: string[]): Promise<User[]> {
 }
 
 export async function resetUserLoginProviders(userId: string, newEmail: string): Promise<void> {
-    const typesToClear: LoginProviderType[] = [LoginProviderType.Github, LoginProviderType.Google];
+    const typesToClear: LoginProviderType[] = [LoginProviderType.Github, LoginProviderType.Gitlab, LoginProviderType.Google];
     await UserModel.updateOne(
         { _id: userId },
         { $pull: { loginProviders: { type: { $in: typesToClear } } } }

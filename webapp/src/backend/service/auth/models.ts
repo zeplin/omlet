@@ -5,6 +5,7 @@ const AUTH_REQUEST_COLLECTION_NAME = "authRequests";
 export enum LoginProviderType {
     Google = "google",
     Github = "github",
+    Gitlab = "gitlab",
     Email = "email",
 }
 

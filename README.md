@@ -62,7 +62,7 @@ See [Your first scan](./docs/cli/your-first-scan.md) for a full CLI walkthrough.
 
 ## Going beyond the quick start
 
-For a long-running instance shared with teammates, you'll want to swap the test user for real authentication. The web app supports Google OAuth and GitHub OAuth.
+For a long-running instance shared with teammates, you'll want to swap the test user for real authentication. The web app supports Google OAuth, GitHub OAuth, and GitLab OAuth.
 
 ### Disable the test user
 
@@ -93,6 +93,21 @@ The redirect path is fixed at `/auth/google/login` — only the host part (`APP_
    ```
 
 As with Google, the callback path is fixed at `/auth/github/login`.
+
+### GitLab OAuth
+
+1. In your GitLab instance, go to User Settings > Applications (or Admin Area > Applications for an instance-wide app) and create a new application.
+2. Set the redirect URI to `<APP_BASE_URL>/auth/gitlab/login` — e.g. `http://localhost:3001/auth/gitlab/login` for local development, or `https://omlet.example.com/auth/gitlab/login` in production.
+3. Grant the `read_user` scope.
+4. Set in `webapp/.env`:
+
+   ```sh
+   GITLAB_BASE_URL="https://gitlab.com"
+   GITLAB_CLIENT_ID="<your client id>"
+   GITLAB_CLIENT_SECRET="<your client secret>"
+   ```
+
+If you're using a self-hosted GitLab instance, set `GITLAB_BASE_URL` to that instance URL instead. The callback path is fixed at `/auth/gitlab/login`.
 
 ### Email login
 
