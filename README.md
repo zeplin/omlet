@@ -111,6 +111,7 @@ VITE_APP_BASE_URL="https://omlet.example.com"
 
 Full user documentation lives in [`docs/`](./docs/README.md):
 
+- [Migrating from the hosted version](./docs/migrating-from-the-hosted-version.md) — move from omlet.dev to your own instance without starting from scratch
 - [CLI](./docs/cli/README.md) — scan commands, config file, custom component properties
 - [Dashboard](./docs/dashboard/analytics/README.md) — analytics, components, workspace settings
 - [FAQs](./docs/faqs/README.md)

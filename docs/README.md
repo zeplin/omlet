@@ -2,6 +2,8 @@
 
 New to Omlet? Follow the [project README](../README.md) to get a local instance running.
 
+Coming from the hosted version at omlet.dev? See [Migrating from the hosted version](./migrating-from-the-hosted-version.md).
+
 ## CLI
 
 - [Overview](./cli/README.md)
