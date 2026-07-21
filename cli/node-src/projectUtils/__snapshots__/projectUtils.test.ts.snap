@@ -1268,6 +1268,33 @@ exports[`extractProjectSetup when reading package entry points from \`exports\` 
 }
 `;
 
+exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(object)(object)(object) field 1`] = `
+{
+  "absolutePath": "/repo/project",
+  "isValidDependency": [Function],
+  "packages": {},
+  "root": {
+    "aliases": {},
+    "exportMap": {
+      ".": [
+        "src/index.ts",
+      ],
+    },
+    "importMap": {
+      "project": [
+        "src/index.ts",
+      ],
+      "project/*": [
+        "*",
+      ],
+    },
+    "name": "project",
+    "path": "",
+    "version": "0.0.0",
+  },
+}
+`;
+
 exports[`extractProjectSetup when reading package entry points from \`exports\` field should extract the main entry point from the \`exports\` (object)(string) field 1`] = `
 {
   "absolutePath": "/repo/project",

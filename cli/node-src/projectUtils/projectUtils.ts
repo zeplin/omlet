@@ -513,7 +513,7 @@ export class ProjectSetupResolver {
             return formattedPath.replace(/\.[cm]?js$/, ".ts");
         };
 
-        const getExportPaths = (exportsValue: ExportsValue) => {
+        const getExportPaths = (exportsValue: ExportsValue): string[] | null => {
             if (typeof exportsValue === "string") {
                 return [exportsValue];
             }
@@ -526,13 +526,11 @@ export class ProjectSetupResolver {
             // Within the "exports" object, key order is significant. During condition matching,
             // earlier entries have higher priority and take precedence over later entries.
             // The general rule is that conditions should be from most specific to least specific in object order.
+            // Conditions may nest (e.g. `"import": { "types": ..., "default": ... }`), so each
+            // ES-module condition is resolved recursively down to its string path(s).
             const conditionalExports = Object.entries(exportsValue)
-                .filter((entry): entry is [string, string] => {
-                    const [condition] = entry;
-
-                    return isEsModuleCondition(condition);
-                })
-                .map(([, path]) => path);
+                .filter(([condition]) => isEsModuleCondition(condition))
+                .flatMap(([, value]) => getExportPaths(value) ?? []);
 
             if (conditionalExports.length !== 0) {
                 return conditionalExports;
