@@ -2,14 +2,14 @@ import fetch from "node-fetch";
 
 import { config } from "../../../config/backend";
 
+import { OAuthFailure } from "./errors";
 import {
     type AuthResult,
-    authenticateUser,
     type LoginOptions,
-    OAuthFailure,
     type UserData,
-} from "./auth";
-import { LoginProviderType } from "./models";
+    LoginProviderType,
+} from "./models";
+import { authenticateUser } from "./utils";
 
 const GITLAB_REDIRECT_URI = `${config.APP_BASE_URL}${config.GITLAB_LOGIN_PATH}`;
 

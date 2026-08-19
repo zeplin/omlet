@@ -1,4 +1,7 @@
+import { type JwtPayload } from "jsonwebtoken";
 import { type Types, model, Schema } from "mongoose";
+
+import { type User } from "../user/user";
 
 const AUTH_REQUEST_COLLECTION_NAME = "authRequests";
 
@@ -7,6 +10,34 @@ export enum LoginProviderType {
     Github = "github",
     Gitlab = "gitlab",
     Email = "email",
+}
+
+export interface LoginOptions {
+    isCliSession: boolean;
+}
+
+export interface UserData {
+    email: string;
+    emails?: string[];
+    fullName?: string;
+    avatarUrl?: string;
+    loginProvider: LoginProviderType;
+    externalId: string;
+}
+
+export type AuthToken = string;
+
+export interface AuthResult {
+    user: User;
+    token: AuthToken;
+    isNewUser: boolean;
+}
+
+export interface TokenPayload extends JwtPayload {
+    userId: string;
+    email: string;
+    loginProvider: LoginProviderType;
+    isAdmin?: boolean;
 }
 
 export interface AuthRequestDoc {
@@ -43,4 +74,5 @@ const AuthRequestSchema = new Schema<AuthRequestDoc>({
         virtuals: true,
     },
 });
+
 export const AuthRequestModel = model<AuthRequestDoc>("AuthRequest", AuthRequestSchema, AUTH_REQUEST_COLLECTION_NAME);
