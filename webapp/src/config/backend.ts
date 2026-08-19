@@ -36,6 +36,10 @@ interface BackendConfig {
     GITHUB_CLIENT_ID: string;
     GITHUB_CLIENT_SECRET: string;
     GITHUB_LOGIN_PATH: string;
+    GITLAB_BASE_URL: string;
+    GITLAB_CLIENT_ID: string;
+    GITLAB_CLIENT_SECRET: string;
+    GITLAB_LOGIN_PATH: string;
     INVITE_LIFETIME_MSEC: number;
     APP_ENV: AppEnvType;
     API_ROOT_PATH: string;
@@ -76,6 +80,10 @@ const config: BackendConfig = {
     GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID ?? "",
     GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET ?? "",
     GITHUB_LOGIN_PATH: "/auth/github/login",
+    GITLAB_BASE_URL: process.env.GITLAB_BASE_URL ?? "https://gitlab.com",
+    GITLAB_CLIENT_ID: process.env.GITLAB_CLIENT_ID ?? "",
+    GITLAB_CLIENT_SECRET: process.env.GITLAB_CLIENT_SECRET ?? "",
+    GITLAB_LOGIN_PATH: "/auth/gitlab/login",
     INVITE_LIFETIME_MSEC: 365 * 24 * 60 * 60 * 1000,
     APP_ENV,
     API_ROOT_PATH: "/api",

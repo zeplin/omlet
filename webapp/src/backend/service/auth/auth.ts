@@ -23,6 +23,7 @@ import {
     removeMember,
 } from "../workspace/workspace";
 
+import { authGitlabUser, getGitlabAuthUrl } from "./authGitlab";
 import { type AuthRequestDoc, AuthRequestModel, LoginProviderType } from "./models";
 
 export class OAuthFailure extends ServiceError {
@@ -128,7 +129,7 @@ export function generatePublicAuthToken(tokenId: string, payload: PublicTokenPay
     });
 }
 
-interface UserData {
+export interface UserData {
     email: string;
     emails?: string[];
     fullName?: string;
@@ -180,7 +181,7 @@ async function acceptUserInvites(user: User) {
     }
 }
 
-async function authenticateUser(userData: UserData, { isCliSession }: { isCliSession: boolean; }): Promise<AuthResult> {
+export async function authenticateUser(userData: UserData, { isCliSession }: { isCliSession: boolean; }): Promise<AuthResult> {
     let user = await findUserByLoginProvider(userData.loginProvider, userData.externalId);
     let isNewUser = false;
 
@@ -257,11 +258,11 @@ function decodeGoogleIdToken(idToken: string): GoogleIdPayload {
     return jwt.decode(idToken) as GoogleIdPayload;
 }
 
-interface LoginOptions {
+export interface LoginOptions {
     isCliSession: boolean;
 }
 
-interface AuthResult {
+export interface AuthResult {
     user: User;
     token: AuthToken;
     isNewUser: boolean;
@@ -358,6 +359,8 @@ async function authGithubUser(authCode: string, { isCliSession = false }: LoginO
         });
     }
 }
+
+
 // This function is not called.
 // Email auth uses POST /api/auth-request instead
 function getEmailAuthUrl(): string {
@@ -395,6 +398,10 @@ export const authProviders: Record<LoginProviderType, Provider> = {
     [LoginProviderType.Github]: {
         auth: authGithubUser,
         getAuthUrl: getGithubAuthUrl,
+    },
+    [LoginProviderType.Gitlab]: {
+        auth: authGitlabUser,
+        getAuthUrl: getGitlabAuthUrl,
     },
     [LoginProviderType.Email]: {
         auth: authEmailUser,

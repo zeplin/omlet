@@ -255,12 +255,14 @@ apiRouter.get("/auth-providers",
     async (req: Request, res: Response) => {
         const google = Boolean(config.GOOGLE_CLIENT_ID) && Boolean(config.GOOGLE_CLIENT_SECRET);
         const github = Boolean(config.GITHUB_CLIENT_ID) && Boolean(config.GITHUB_CLIENT_SECRET);
+        const gitlab = Boolean(config.GITLAB_CLIENT_ID) && Boolean(config.GITLAB_CLIENT_SECRET);
         const email = config.EMAILS_ENABLED;
         const testUser = config.ENABLE_TEST_USER;
 
         res.status(httpStatus.OK).json({
             google,
             github,
+            gitlab,
             email,
             testUser,
         });
