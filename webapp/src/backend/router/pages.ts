@@ -9,12 +9,12 @@ import {
     type AuthRequest,
     authenticateTestUser,
     authProviders,
-    AuthRequestNotFound,
-    createUserSession,
     findAndDeleteAuthRequest,
     getVerifiedAuthPayload,
 } from "../service/auth/auth";
+import { AuthRequestNotFound } from "../service/auth/errors";
 import { LoginProviderType } from "../service/auth/models";
+import { createUserSession } from "../service/auth/utils";
 import { sendEmailChangeNotificationEmail, sendWelcomeEmail } from "../service/emailing";
 import { healthCheckService } from "../service/healthcheck";
 import { logException } from "../service/logger";

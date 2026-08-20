@@ -1,7 +1,7 @@
 import { type Response } from "superagent";
 
-import { generateUserToken } from "../../src/backend/service/auth/auth";
 import { type LoginProviderType } from "../../src/backend/service/auth/models";
+import { generateUserToken } from "../../src/backend/service/auth/utils";
 import { generateNanoId } from "../../src/backend/service/utils";
 import { config } from "../../src/config/backend";
 
