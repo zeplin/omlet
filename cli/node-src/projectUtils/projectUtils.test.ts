@@ -190,6 +190,31 @@ describe("extractProjectSetup", () => {
                 expect(projectSetup).toMatchSnapshot();
             });
 
+            it("should extract the main entry point from the `exports` (object)(object)(object)(object) field", async () => {
+                vol.fromJSON(({
+                    "/repo/project/package.json": JSON.stringify({
+                        "name": "project",
+                        "exports": {
+                            ".": {
+                                "import": {
+                                    "types": "src/index.d.ts",
+                                    "default": "src/index.js",
+                                },
+                            },
+                        },
+                    }),
+                    "/repo/project/src/index.ts": "",
+                }));
+
+                const projectSetup = await extractProjectSetup("/repo", "/repo/project", {
+                    configPath: ".omletrc.json",
+                    include: ["**/*.{js,jsx,ts,tsx}"],
+                    ignore: [],
+                });
+
+                expect(projectSetup).toMatchSnapshot();
+            });
+
             it("should prioritize the `exports` field over the `main` field", async () => {
                 vol.fromJSON(({
                     "/repo/project/package.json": JSON.stringify({
