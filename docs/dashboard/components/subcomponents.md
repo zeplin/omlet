@@ -10,7 +10,7 @@ Open the **Subcomponents** tab on a component's detail page to see the list. Eac
 
 ## Family usage
 
-The component detail panel also shows **# Root component used**, which reflects the total usage of the component family (the root component plus all of its subcomponents).
+The component detail panel also shows **# Root used**, which reflects the total usage of the component family (the root component plus all of its subcomponents).
 
 ---
 

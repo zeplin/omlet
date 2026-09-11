@@ -99,7 +99,6 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
     const spacedPath = path.split("/").join(`/${ZERO_WIDTH_SPACE}`);
 
     const rootComponentUsage = customProperties?.rootComponent?.[0] as number | undefined;
-    const subcomponentsCount = customProperties?.subcomponents?.[0] as number | undefined;
 
     const birthday = (() => {
         if (!createdAt) {
@@ -186,12 +185,9 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
                     <IconChild/>
                     <span>{numOfDependencies}</span>
                 </ComponentField>
-                {subcomponentsCount !== undefined && (
-                    <ComponentField name="# subcomponents" value={subcomponentsCount}/>
-                )}
                 <ComponentField name="# Used" value={numOfUsages}/>
                 {rootComponentUsage !== undefined && (
-                    <ComponentField name="# Root component used" value={rootComponentUsage}/>
+                    <ComponentField name="# Root used" value={rootComponentUsage}/>
                 )}
                 <ComponentField
                     name="Created"
