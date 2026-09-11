@@ -9,7 +9,9 @@ import {
     getLatestAnalysisComponent,
     getLatestAnalysisComponentDependencies,
     getLatestAnalysisComponentProps,
+    getLatestAnalysisComponentSubcomponents,
 } from "../../api/api";
+import { IconComponents } from "../../library/icons/IconComponents";
 import { IconDependencyTree } from "../../library/icons/IconDependencyTree";
 import { IconProps } from "../../library/icons/IconProps";
 import { logError } from "../../logger";
@@ -20,6 +22,7 @@ import { useStore } from "../../providers/StoreProvider/StoreProvider";
 import { ComponentDetailInfo } from "./componentDetailInfo/ComponentDetailInfo";
 import { PropsTable } from "./propsTable/PropsTable";
 import { PropUsages } from "./propUsages/PropUsages";
+import { SubcomponentsTable } from "./subcomponentsTable/SubcomponentsTable";
 import { Tabs } from "./tabs/Tabs";
 import { TreeViewWithReactFlowProvider as TreeView } from "./treeView/TreeView";
 
@@ -82,6 +85,8 @@ export function ComponentDetail() {
     const workspace = getWorkspace()!;
 
     const [component, setComponent] = useState<Component | undefined>(undefined);
+    const [subcomponents, setSubcomponents] = useState<Component[] | undefined>(undefined);
+    const [familyUsage, setFamilyUsage] = useState<number | undefined>(undefined);
     const [, definitionId] = useMemo(() => componentSlug?.split("::") ?? [], [componentSlug]);
 
     const { data: customProperties } = useQuery({
@@ -94,6 +99,20 @@ export function ComponentDetail() {
             );
         },
     });
+
+    const detailInfoCustomProperties = useMemo(() => {
+        if (!customProperties) {
+            return undefined;
+        }
+        const result: Record<string, (string | number | boolean | Date)[]> = { ...customProperties };
+        if (subcomponents !== undefined) {
+            result.subcomponents = [subcomponents.length];
+        }
+        if (familyUsage !== undefined) {
+            result.rootComponent = [familyUsage];
+        }
+        return result;
+    }, [customProperties, familyUsage, subcomponents]);
 
     useEffect(() => {
         if (activeTab === "dependency-tree" || componentProps?.definitionId === definitionId) {
@@ -127,6 +146,21 @@ export function ComponentDetail() {
             }
         }
         fetchComponent();
+    }, [workspace, definitionId]);
+
+    useEffect(() => {
+        async function fetchSubcomponents() {
+            try {
+                const { subcomponents, familyUsage } = await getLatestAnalysisComponentSubcomponents(workspaceSlug!, encodeURIComponent(definitionId));
+                setSubcomponents(subcomponents);
+                setFamilyUsage(familyUsage);
+            } catch (error) {
+                logError(error);
+            }
+        }
+        setSubcomponents(undefined);
+        setFamilyUsage(undefined);
+        fetchSubcomponents();
     }, [workspace, definitionId]);
 
     useEffect(() => {
@@ -208,7 +242,7 @@ export function ComponentDetail() {
             <div className={classes.leftPanel}>
                 <ComponentDetailInfo
                     component={component}
-                    customProperties={customProperties}/>
+                    customProperties={detailInfoCustomProperties}/>
             </div>
             {(
                 selectedProp
@@ -235,6 +269,23 @@ export function ComponentDetail() {
                                         props={componentProps?.data.props ?? []}
                                         numberOfUsages={componentProps?.data.numberOfUsages ?? 0}
                                         onPropClick={handlePropClick} />
+                                ),
+                            },
+                            {
+                                key: "subcomponents",
+                                label: (
+                                    <>
+                                        <IconComponents />
+                                        <div>
+                                            Subcomponents ({subcomponents?.length ?? 0})
+                                        </div>
+                                    </>
+                                ),
+                                content: (
+                                    <SubcomponentsTable
+                                        loading={subcomponents === undefined}
+                                        subcomponents={subcomponents ?? []}
+                                        workspaceSlug={workspaceSlug!} />
                                 ),
                             },
                             {

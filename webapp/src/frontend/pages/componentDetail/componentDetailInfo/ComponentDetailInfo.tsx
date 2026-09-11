@@ -98,6 +98,8 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
     const tags = getTags().filter(({ slug }) => tagSlugs.has(slug));
     const spacedPath = path.split("/").join(`/${ZERO_WIDTH_SPACE}`);
 
+    const rootComponentUsage = customProperties?.rootComponent?.[0] as number | undefined;
+
     const birthday = (() => {
         if (!createdAt) {
             return null;
@@ -139,8 +141,14 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
             return null;
         }
 
-        const customPropertyNames = Object.keys(customProperties);
-        const customPropertyTypes = getCustomPropertyTypes(customProperties);
+        const filteredCustomProperties = Object.fromEntries(
+            Object.entries(customProperties).filter(([key]) => key !== "rootComponent" && key !== "subcomponents"),
+        );
+        const customPropertyNames = Object.keys(filteredCustomProperties);
+        if (customPropertyNames.length === 0) {
+            return null;
+        }
+        const customPropertyTypes = getCustomPropertyTypes(filteredCustomProperties);
 
         return (
             <section>
@@ -149,7 +157,7 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
                     <span>CUSTOM PROPERTIES</span>
                 </H4>
                 {customPropertyNames.map(name =>
-                    <ComponentField key={name} name={name} type={customPropertyTypes[name]} value={metadata[name]}/>
+                    <ComponentField key={name} name={name} type={customPropertyTypes[name]} value={metadata[name]}/>,
                 )}
             </section>
         );
@@ -178,6 +186,9 @@ export function ComponentDetailInfo({ component, customProperties }: Props) {
                     <span>{numOfDependencies}</span>
                 </ComponentField>
                 <ComponentField name="# Used" value={numOfUsages}/>
+                {rootComponentUsage !== undefined && (
+                    <ComponentField name="# Root used" value={rootComponentUsage}/>
+                )}
                 <ComponentField
                     name="Created"
                     value={createdAt ? formatDate(createdAt) : "Over a year"}

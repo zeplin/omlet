@@ -1,0 +1,92 @@
+.subcomponentsTable {
+    padding: 0 var(--spacing-xs);
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    overflow: auto;
+}
+
+.subcomponentsTable .header {
+    display: contents;
+}
+
+.subcomponentsTable .header .cell {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    height: 43px;
+    gap: 6px;
+    background-color: var(--background-primary-color);
+    z-index: 1;
+    color: var(--label-primary-color);
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.subcomponentsTable .header .cell:first-child {
+    padding: 0 var(--spacing-xxl-2) 0 var(--spacing-s);
+    border-radius: var(--spacing-xxs) 0 0 var(--spacing-xxs);
+}
+
+.subcomponentsTable .header .cell:last-child {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xxl-2);
+    justify-content: flex-end;
+    border-radius: 0 var(--spacing-xxs) var(--spacing-xxs) 0;
+}
+
+.subcomponentsTable .row {
+    display: contents;
+}
+
+.subcomponentsTable .row .cell {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    gap: var(--spacing-m);
+    font-size: 13px;
+    color: var(--label-primary-color);
+    padding: 0 var(--spacing-xxl-2) 0 var(--spacing-s);
+}
+
+.subcomponentsTable .row .cell:first-child {
+    padding: 0 var(--spacing-xxl-2) 0 var(--spacing-s);
+    font-family: var(--font-family-secondary);
+}
+
+.subcomponentsTable .row .cell:last-child {
+    padding: 0 var(--spacing-s) 0 var(--spacing-xxl-2);
+    justify-content: flex-end;
+}
+
+.subcomponentsTable .row .cell:hover {
+    text-decoration: none;
+}
+
+.subcomponentsTable .row:hover .cell {
+    background-color: var(--background-tertiary-color);
+}
+
+.subcomponentsTable .row .separator {
+    grid-column: span 2;
+    height: var(--border-width);
+    background-color: var(--border-primary-color);
+    margin: 0 var(--spacing-s);
+}
+
+.subcomponentsTable .row:hover+.row .separator,
+.subcomponentsTable .row:hover .separator {
+    background: none;
+}
+
+.subcomponentsTable.loading .row .cell .skeleton {
+    height: var(--spacing-s);
+}
+
+.subcomponentsTable.loading .row .cell:first-child .skeleton {
+    width: 160px;
+}
+
+.subcomponentsTable.loading .row .cell:last-child .skeleton {
+    width: 32px;
+}

@@ -41,6 +41,7 @@ import {
     analyseTimeSeriesDataAsCSV,
     findLatestComponentsByDefinitionId,
     getComponentProps,
+    getComponentSubcomponents,
     getComponentUsagesWithParentComponent,
     getCustomProperties,
     getDependenciesFor,
@@ -1726,6 +1727,73 @@ apiRouter.get("/workspaces/:workspaceSlug/components/:definitionId/props",
         } catch (error) {
             if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
                 throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            throw error;
+        }
+    }
+);
+
+apiRouter.get("/workspaces/:workspaceSlug/components/:definitionId/subcomponents",
+    authMiddleware({ credentialsRequired: false }),
+    requestValidator({
+        params: {
+            schema: joi.object({
+                workspaceSlug: joi.string(),
+                definitionId: joi.string(),
+            }),
+        },
+    }),
+    async (req: Request<{ workspaceSlug: string; definitionId: string; }>, res: Response) => {
+        try {
+            const {
+                auth,
+                params: {
+                    workspaceSlug,
+                    definitionId,
+                },
+            } = req;
+
+            const workspace = await getWorkspaceIfAuthorized(workspaceSlug, UserPermission.READ, { auth });
+
+            const dataRevisionId = await getWorkspaceDataRevisionId(workspace.id);
+            const computedEtag = etag(JSON.stringify({
+                cacheVersion: COMPONENTS_ETAG_CACHE_VERSION,
+                workspaceId: workspace.id,
+                dataRevisionId,
+                definitionId,
+                url: req.originalUrl,
+            }));
+
+            const clientEtag = req.get("If-None-Match");
+            if (clientEtag === computedEtag) {
+                return res.status(httpStatus.NOT_MODIFIED)
+                    .set("ETag", computedEtag)
+                    .set("Cache-Control", "private")
+                    .set("Content-Type", "application/json")
+                    .send();
+            }
+
+            const { subcomponents, familyUsage } = await getComponentSubcomponents(workspace.id, definitionId);
+            const projectMap = Object.fromEntries(workspace.projects.map(p => [p.packageName, p]));
+            subcomponents.forEach(component => {
+                component.packageName = projectMap[component.packageName]?.alias || component.packageName;
+            });
+
+            res.status(httpStatus.OK)
+                .set("ETag", computedEtag)
+                .set("Cache-Control", "private")
+                .json({
+                    subcomponents: subcomponents.map(component => component.toResponse()),
+                    familyUsage,
+                });
+        } catch (error) {
+            if (error instanceof WorkspaceNotFound || error instanceof MemberNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.WORKSPACE_NOT_FOUND);
+            }
+
+            if (error instanceof ComponentNotFound) {
+                throw new ClientError(httpStatus.NOT_FOUND, ErrorResponseCode.COMPONENT_NOT_FOUND);
             }
 
             throw error;

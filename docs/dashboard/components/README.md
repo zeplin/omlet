@@ -4,7 +4,7 @@ The Components page lists all your components, where you can [search and filter]
 
 ![Components page](../../images/components-page.png)
 
-You can also get deeper insights into individual components: see the [Dependency tree](./dependency-tree.md) to understand relationships, and [Props tracking](./props-tracking.md) to see how each prop is used.
+You can also get deeper insights into individual components: see the [Dependency tree](./dependency-tree.md) to understand relationships, [Props tracking](./props-tracking.md) to see how each prop is used, and [Subcomponents](./subcomponents.md) to explore component families.
 
 ## Sections
 
@@ -12,6 +12,7 @@ You can also get deeper insights into individual components: see the [Dependency
 - [Component tags](./tags.md)
 - [Dependency tree](./dependency-tree.md)
 - [Props tracking](./props-tracking.md)
+- [Subcomponents](./subcomponents.md)
 
 ---
 
