@@ -277,7 +277,7 @@ export function ComponentDetail() {
                                     <>
                                         <IconComponents />
                                         <div>
-                                            Subcomponents
+                                            Subcomponents ({subcomponents?.length ?? 0})
                                         </div>
                                     </>
                                 ),
