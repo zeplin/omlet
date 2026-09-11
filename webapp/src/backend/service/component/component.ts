@@ -740,6 +740,88 @@ export async function findLatestComponentsByDefinitionId(workspaceId: string, de
     return result.map(doc => Component.fromAggregationResult(doc));
 }
 
+export async function getComponentSubcomponents(
+    workspaceId: string,
+    componentDefinitionId: string,
+): Promise<{ subcomponents: Component[]; familyUsage: number; }> {
+    const latestAnalysisId = await getLatestIndexAnalysisId(workspaceId);
+    if (!latestAnalysisId) {
+        return { subcomponents: [], familyUsage: 0 };
+    }
+
+    const [parent] = await findLatestComponentsByDefinitionId(workspaceId, [componentDefinitionId]);
+    if (!parent) {
+        throw new ComponentNotFound();
+    }
+
+    const escapedName = escapeRegex(parent.name);
+    const regexPattern = new RegExp(`^${escapedName}\\.`);
+
+    const result = await HistoricComponentIndexModel.aggregate<ComponentAggregationResult>([
+        {
+            $match: {
+                workspace: new MongooseTypes.ObjectId(workspaceId),
+                lastAnalysis: new MongooseTypes.ObjectId(latestAnalysisId),
+            },
+        },
+        {
+            $unwind: {
+                path: "$entries",
+            },
+        },
+        {
+            $match: {
+                "entries.definitionId": { $ne: componentDefinitionId },
+                "entries.component.name": regexPattern,
+                "entries.component.packageName": parent.packageName,
+            },
+        },
+        {
+            $addFields: {
+                "entries.component.numOfUsages": {
+                    $size: "$entries.usingComponents",
+                },
+                "entries.component.tags": "$entries.tags",
+                "entries.component.lastUsageChangedAt": "$entries.lastUsageChangedAt",
+            },
+        },
+        {
+            $replaceRoot: {
+                newRoot: {
+                    $mergeObjects: [
+                        "$entries.component",
+                        {
+                            id: "$entries.component._id",
+                            tags: {
+                                $cond: {
+                                    if: { $eq: ["$entries.component.isInternal", false] },
+                                    then: {
+                                        $concatArrays: ["$entries.tags", [RESERVED_TAGS.EXTERNAL.slug]],
+                                    },
+                                    else: "$entries.tags",
+                                },
+                            },
+                            numOfUsages: {
+                                $size: "$entries.usingComponents",
+                            },
+                        },
+                    ],
+                },
+            },
+        },
+        {
+            $sort: {
+                name: 1,
+            },
+        },
+    ], {});
+
+    const subcomponents = result.map(doc => Component.fromAggregationResult(doc));
+    const familyUsage = parent.numOfUsages + subcomponents.reduce((sum, c) => sum + c.numOfUsages, 0);
+
+    return { subcomponents, familyUsage };
+}
+
 export class CustomPropertyRequiredForAnalysis extends ServiceError {
     constructor() {
         super("Custom property value required for given analysis subject");

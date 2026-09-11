@@ -457,6 +457,20 @@ export async function getLatestAnalysisComponentProps(workspaceSlug: string, com
     return handleResponse<ComponentProps>(response);
 }
 
+interface SubcomponentsResponse {
+    subcomponents: RawComponent[];
+    familyUsage: number;
+}
+
+export async function getLatestAnalysisComponentSubcomponents(workspaceSlug: string, componentId: string): Promise<{ subcomponents: Component[]; familyUsage: number; }> {
+    const response = await http.get(`${base}/workspaces/${workspaceSlug}/components/${componentId}/subcomponents`);
+    const { subcomponents, familyUsage } = await handleResponse<SubcomponentsResponse>(response);
+    return {
+        subcomponents: subcomponents.map(transformComponent),
+        familyUsage,
+    };
+}
+
 export async function getMembers(workspaceSlug: string): Promise<Member[]> {
     const response = await http.get(`${base}/workspaces/${workspaceSlug}/members`);
     return handleResponse<Member[]>(response);
