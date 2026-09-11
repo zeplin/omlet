@@ -30,4 +30,4 @@ Under **Popular Charts**, Omlet displays unused component props that can be remo
 
 ---
 
-← [Dependency tree](./dependency-tree.md)
+← [Dependency tree](./dependency-tree.md) · [Subcomponents](./subcomponents.md) →
