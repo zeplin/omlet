@@ -1,8 +1,10 @@
 use serde::Serialize;
 use std::fmt::{self, Display};
-use swc::atoms::JsWord;
+use swc_atoms::Atom;
 use swc_common::SyntaxContext;
-use swc_ecmascript::ast::{Expr, Ident, ImportNamedSpecifier, Lit, MemberProp, ModuleExportName};
+use swc_ecma_ast::{
+    Expr, Ident, IdentName, ImportNamedSpecifier, Lit, MemberProp, ModuleExportName,
+};
 
 #[derive(Debug, Serialize, Hash, PartialEq, Eq, Clone, PartialOrd, Ord)]
 pub enum MemberProperty {
@@ -28,11 +30,13 @@ impl From<&MemberProp> for MemberProperty {
         match &value {
             MemberProp::Ident(ident) => MemberProperty::Object(ident.sym.to_string()),
             MemberProp::PrivateName(private_name) => {
-                MemberProperty::Object(private_name.id.sym.to_string())
+                MemberProperty::Object(private_name.name.to_string())
             }
             MemberProp::Computed(computed_prop) => match computed_prop.expr.as_ref() {
                 Expr::Lit(literal) => match literal {
-                    Lit::Str(str) => MemberProperty::Object(str.value.to_string()),
+                    Lit::Str(str) => {
+                        MemberProperty::Object(str.value.to_string_lossy().into_owned())
+                    }
                     Lit::Bool(bool) => MemberProperty::Object(bool.value.to_string()),
                     Lit::Null(_) => MemberProperty::Object("null".to_string()),
                     Lit::Num(num) => MemberProperty::Array(num.value as usize),
@@ -51,12 +55,12 @@ pub static WILDCARD_EXPORT_NAME: &'static str = "<wildcard>";
 
 #[derive(Debug, Hash, PartialEq, Eq, Clone, PartialOrd, Ord)]
 pub struct Symbol {
-    name: JsWord,
+    name: Atom,
     context: SyntaxContext,
 }
 
 impl Symbol {
-    pub fn new(name: JsWord, context: SyntaxContext) -> Self {
+    pub fn new(name: Atom, context: SyntaxContext) -> Self {
         Self { name, context }
     }
 
@@ -65,11 +69,11 @@ impl Symbol {
     }
 
     pub fn wildcard() -> Self {
-        Self::new(JsWord::from(WILDCARD_EXPORT_NAME), SyntaxContext::empty())
+        Self::new(Atom::from(WILDCARD_EXPORT_NAME), SyntaxContext::empty())
     }
 
     pub fn eq_name(&self, name: &str) -> bool {
-        self.name.eq_str_ignore_ascii_case(name)
+        self.name.eq_ignore_ascii_case(name)
     }
 
     pub fn get_name(&self) -> String {
@@ -77,11 +81,11 @@ impl Symbol {
     }
 
     pub fn is_wildcard(&self) -> bool {
-        self.name.eq_str_ignore_ascii_case(WILDCARD_EXPORT_NAME)
+        self.name.eq_ignore_ascii_case(WILDCARD_EXPORT_NAME)
     }
 
     pub fn is_default(&self) -> bool {
-        self.name.eq_str_ignore_ascii_case(DEFAULT_EXPORT_NAME)
+        self.name.eq_ignore_ascii_case(DEFAULT_EXPORT_NAME)
     }
 
     pub fn is_anonymous(&self) -> bool {
@@ -91,7 +95,7 @@ impl Symbol {
 
 impl Default for Symbol {
     fn default() -> Self {
-        Self::new(JsWord::from(DEFAULT_EXPORT_NAME), SyntaxContext::empty())
+        Self::new(Atom::from(DEFAULT_EXPORT_NAME), SyntaxContext::empty())
     }
 }
 
@@ -103,19 +107,25 @@ impl From<MemberProperty> for Symbol {
 
 impl From<&Ident> for Symbol {
     fn from(ident: &Ident) -> Self {
-        Self::new(ident.sym.clone(), ident.span.ctxt)
+        Self::new(ident.sym.clone(), ident.ctxt)
     }
 }
 
 impl From<Ident> for Symbol {
     fn from(ident: Ident) -> Self {
-        Self::new(ident.sym, ident.span.ctxt)
+        Self::new(ident.sym, ident.ctxt)
+    }
+}
+
+impl From<&IdentName> for Symbol {
+    fn from(ident: &IdentName) -> Self {
+        Self::new(ident.sym.clone(), SyntaxContext::empty())
     }
 }
 
 impl From<&str> for Symbol {
     fn from(name: &str) -> Self {
-        Self::new(JsWord::from(name), SyntaxContext::empty())
+        Self::new(Atom::from(name), SyntaxContext::empty())
     }
 }
 
@@ -123,9 +133,10 @@ impl From<&ModuleExportName> for Symbol {
     fn from(export_name: &ModuleExportName) -> Self {
         match export_name {
             ModuleExportName::Ident(ident) => Self::from(ident),
-            ModuleExportName::Str(str) => {
-                Self::new(JsWord::from(&str.value), SyntaxContext::empty())
-            }
+            ModuleExportName::Str(str) => Self::new(
+                str.value.to_atom_lossy().into_owned(),
+                SyntaxContext::empty(),
+            ),
         }
     }
 }
@@ -139,7 +150,7 @@ impl From<&ImportNamedSpecifier> for Symbol {
                 symbol
             } else {
                 Self {
-                    context: named_specifier.local.span.ctxt,
+                    context: named_specifier.local.ctxt,
                     ..symbol
                 }
             }

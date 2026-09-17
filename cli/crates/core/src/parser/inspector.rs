@@ -13,22 +13,20 @@ use std::{
 use ahash::{AHashMap, AHashSet};
 use derivative::Derivative;
 use serde::{ser::SerializeStruct, Serialize, Serializer};
-use swc::atoms::JsWord;
+use swc_atoms::Atom;
 use swc_common::{Loc, SourceMap, Span};
-use swc_ecmascript::ast::{AssignExpr, AssignOp, BinExpr};
-use swc_ecmascript::{
-    ast::{
-        ArrayLit, ArrowExpr, BlockStmt, BlockStmtOrExpr, CallExpr, Callee, Class, ClassDecl,
-        ClassExpr, CondExpr, Decl, DefaultDecl, ExportAll, ExportDecl, ExportDefaultDecl,
-        ExportDefaultExpr, ExportSpecifier, Expr, FnDecl, FnExpr, Function, Ident, ImportDecl,
-        ImportSpecifier, JSXAttrName, JSXAttrOrSpread, JSXAttrValue, JSXElement, JSXElementName,
-        JSXExpr, JSXMemberExpr, JSXObject, Lit, MemberExpr, MemberProp, Module as SwcModule,
-        ModuleDecl, NamedExport, ObjectLit, ObjectPat as ObjectPattern,
-        ObjectPatProp as ObjectPatternProp, OptChainBase, Param, Pat as EsPattern, Prop, PropName,
-        PropOrSpread, ReturnStmt, Stmt, SuperProp, TaggedTpl, VarDeclarator,
-    },
-    visit::{noop_visit_type, VisitAll, VisitAllWith},
+use swc_ecma_ast::{
+    ArrayLit, ArrowExpr, ArrowFunctionBody, CallExpr, Callee, Class, ClassDecl, ClassExpr,
+    CondExpr, Decl, DefaultDecl, ExportAll, ExportDecl, ExportDefaultDecl, ExportDefaultExpr,
+    ExportSpecifier, Expr, FnDecl, FnExpr, Function, FunctionBody, Ident, ImportDecl,
+    ImportSpecifier, JSXAttrName, JSXAttrOrSpread, JSXAttrValue, JSXElement, JSXElementName,
+    JSXExpr, JSXMemberExpr, JSXObject, Lit, MemberExpr, MemberProp, Module as SwcModule,
+    ModuleDecl, NamedExport, ObjectLit, ObjectPat as ObjectPattern,
+    ObjectPatProp as ObjectPatternProp, OptChainBase, Param, Pat as EsPattern, Prop, PropName,
+    PropOrSpread, ReturnStmt, Stmt, SuperProp, TaggedTpl, VarDeclarator,
 };
+use swc_ecma_ast::{AssignExpr, AssignOp, BinExpr, SimpleAssignTarget};
+use swc_ecma_visit::{Visit, VisitWith};
 
 use crate::module_resolver::{ModuleId, ModuleResolver};
 
@@ -108,7 +106,7 @@ impl PropValue {
     pub fn from_lit(lit: &Lit) -> Option<Self> {
         match lit {
             Lit::Str(value) => Some(Self::String {
-                value: value.value.to_string(),
+                value: value.value.to_string_lossy().into_owned(),
             }),
             Lit::Num(value) => Some(Self::Number { value: value.value }),
             Lit::Bool(value) => Some(Self::Bool { value: value.value }),
@@ -173,7 +171,7 @@ impl PropValue {
                                         })
                                     }
                                     PropName::Str(str) => {
-                                        let key = str.value.to_string();
+                                        let key = str.value.to_string_lossy().into_owned();
                                         let value = Self::from_expr(kv.value.as_ref())?;
                                         Some(ObjectPropValue::KeyValue {
                                             key,
@@ -197,7 +195,7 @@ impl PropValue {
                                         })
                                     }
                                     PropName::Str(str) => {
-                                        let key = str.value.to_string();
+                                        let key = str.value.to_string_lossy().into_owned();
                                         Some(ObjectPropValue::KeyValue {
                                             key,
                                             value: Box::new(Self::Getter),
@@ -215,7 +213,7 @@ impl PropValue {
                                         })
                                     }
                                     PropName::Str(str) => {
-                                        let key = str.value.to_string();
+                                        let key = str.value.to_string_lossy().into_owned();
                                         Some(ObjectPropValue::KeyValue {
                                             key,
                                             value: Box::new(Self::Setter),
@@ -233,7 +231,7 @@ impl PropValue {
                                         })
                                     }
                                     PropName::Str(str) => {
-                                        let key = str.value.to_string();
+                                        let key = str.value.to_string_lossy().into_owned();
                                         Some(ObjectPropValue::KeyValue {
                                             key,
                                             value: Box::new(Self::Function),
@@ -272,7 +270,7 @@ impl PropValue {
                     property: Box::new(Self::from_expr(prop.expr.as_ref())?),
                 }),
             },
-            Expr::OptChain(expr) => match &expr.base {
+            Expr::OptChain(expr) => match expr.base.as_ref() {
                 OptChainBase::Member(expr) => match &expr.prop {
                     MemberProp::Ident(prop) => Some(Self::Member {
                         value: Box::new(Self::from_expr(expr.obj.as_ref())?),
@@ -294,6 +292,7 @@ impl PropValue {
             Expr::TsNonNull(expr) => Self::from_expr(expr.expr.as_ref()),
             Expr::TsAs(expr) => Self::from_expr(expr.expr.as_ref()),
             Expr::TsInstantiation(expr) => Self::from_expr(expr.expr.as_ref()),
+            Expr::TsSatisfies(expr) => Self::from_expr(expr.expr.as_ref()),
             Expr::This(_) => Some(Self::This),
             Expr::Tpl(_) => Some(Self::TemplateLiteral),
             Expr::Invalid(_) => None,
@@ -303,7 +302,9 @@ impl PropValue {
 
     fn from_jsx_attribute_value(value: &JSXAttrValue) -> Option<Self> {
         match value {
-            JSXAttrValue::Lit(lit) => Self::from_lit(lit),
+            JSXAttrValue::Str(str) => Some(Self::String {
+                value: str.value.to_string_lossy().into_owned(),
+            }),
             JSXAttrValue::JSXExprContainer(expr) => match &expr.expr {
                 JSXExpr::JSXEmptyExpr(_) => None,
                 JSXExpr::Expr(expr) => Self::from_expr(&expr),
@@ -618,7 +619,7 @@ impl Serialize for ReferenceScope {
 }
 
 pub struct PropDefinitionFinder<'a> {
-    props_symbol: Option<&'a JsWord>,
+    props_symbol: Option<&'a Atom>,
     props: AHashMap<String, PropDefinition>,
     source_map: Arc<SourceMap>,
 }
@@ -707,13 +708,13 @@ impl<'a> PropDefinitionFinder<'a> {
                 .function
                 .body
                 .as_ref()
-                .map(|block| BlockStmtOrExpr::BlockStmt(block.clone())),
+                .map(|block| ArrowFunctionBody::FunctionBody(block.clone())),
             Definition::Expr(Expr::Fn(f)) => f
                 .function
                 .body
                 .as_ref()
-                .map(|block| BlockStmtOrExpr::BlockStmt(block.clone())),
-            Definition::Expr(Expr::Arrow(f)) => Some(f.body.clone()),
+                .map(|block| ArrowFunctionBody::FunctionBody(block.clone())),
+            Definition::Expr(Expr::Arrow(f)) => Some(f.body.as_ref().clone()),
             _ => None,
         };
 
@@ -740,13 +741,13 @@ impl<'a> PropDefinitionFinder<'a> {
 
                     if let (Some(rest_ident), Some(b)) = (rest_prop, body) {
                         finder.props_symbol = Some(&rest_ident.id.sym);
-                        b.visit_all_with(&mut finder);
+                        b.visit_with(&mut finder);
                     }
                 }
                 EsPattern::Ident(ident) => {
                     if let Some(b) = body {
                         finder.props_symbol = Some(&ident.id.sym);
-                        b.visit_all_with(&mut finder);
+                        b.visit_with(&mut finder);
                     }
                 }
                 _ => {}
@@ -756,7 +757,7 @@ impl<'a> PropDefinitionFinder<'a> {
     }
 }
 
-impl<'a> VisitAll for PropDefinitionFinder<'a> {
+impl<'a> Visit for PropDefinitionFinder<'a> {
     fn visit_var_declarator(&mut self, n: &VarDeclarator) {
         let is_props_declarator = || {
             n.init.as_ref().is_some_and(|expr| {
@@ -772,6 +773,8 @@ impl<'a> VisitAll for PropDefinitionFinder<'a> {
                 self.add_props_from_object_pattern(object);
             }
         }
+
+        n.visit_children_with(self);
     }
 
     fn visit_member_expr(&mut self, n: &MemberExpr) {
@@ -803,7 +806,7 @@ impl<'a> VisitAll for PropDefinitionFinder<'a> {
                             &self.source_map.lookup_char_pos(computed.span.hi),
                         );
                         self.add_prop_definition_if_not_exists(
-                            str.value.to_string(),
+                            str.value.to_string_lossy().into_owned(),
                             None,
                             start,
                             end,
@@ -812,6 +815,8 @@ impl<'a> VisitAll for PropDefinitionFinder<'a> {
                 }
             }
         }
+
+        n.visit_children_with(self);
     }
 }
 
@@ -1089,15 +1094,13 @@ impl EsModuleChecker {
     fn is_es_module(module: &SwcModule) -> bool {
         let mut finder = EsModuleChecker { found: false };
 
-        module.visit_all_with(&mut finder);
+        module.visit_with(&mut finder);
 
         finder.found
     }
 }
 
-impl VisitAll for EsModuleChecker {
-    noop_visit_type!();
-
+impl Visit for EsModuleChecker {
     fn visit_module_decl(&mut self, n: &ModuleDecl) {
         match n {
             ModuleDecl::Import(_)
@@ -1110,6 +1113,8 @@ impl VisitAll for EsModuleChecker {
             | ModuleDecl::TsExportAssignment(_)
             | ModuleDecl::TsNamespaceExport(_) => self.found = false,
         }
+
+        n.visit_children_with(self);
     }
 }
 
@@ -1292,7 +1297,7 @@ impl Inspector {
                         let mut member_properties = member_properties.clone();
                         member_properties.push(MemberProperty::Object(assign.key.sym.to_string()));
 
-                        vec![(Symbol::from(&assign.key), assign.span, member_properties)]
+                        vec![(Symbol::from(&assign.key.id), assign.span, member_properties)]
                     }
                     ObjectPatternProp::KeyValue(kv) => {
                         let mut member_properties = member_properties.clone();
@@ -1381,7 +1386,7 @@ impl Inspector {
             if let Some(def) = declarator.init.as_ref() {
                 self.begin_scope(&symbol);
                 let expr = def.as_ref();
-                expr.visit_all_with(self);
+                expr.visit_with(self);
 
                 self.handle_parameters_of_expr(&symbol, expr);
 
@@ -1405,7 +1410,7 @@ impl Inspector {
 
     fn handle_import_decl(&mut self, import_decl: &ImportDecl) {
         for specifier in &import_decl.specifiers {
-            let import_path = import_decl.src.value.to_string();
+            let import_path = import_decl.src.value.to_string_lossy().into_owned();
             let source = self.get_module_id_for(&import_path);
 
             match specifier {
@@ -1457,7 +1462,7 @@ impl Inspector {
     }
 
     fn handle_export_all(&mut self, n: &ExportAll) {
-        let source_id = self.get_module_id_for(&n.src.value.to_string());
+        let source_id = self.get_module_id_for(&n.src.value.to_string_lossy());
         self.add_export(Symbol::wildcard(), Symbol::wildcard(), Some(source_id));
     }
 
@@ -1472,7 +1477,7 @@ impl Inspector {
 
                 self.begin_scope(&symbol);
 
-                class_expr.class.visit_all_with(self);
+                class_expr.class.visit_with(self);
 
                 let definition = Definition::Expr(Expr::Class(class_expr.clone()));
 
@@ -1505,7 +1510,7 @@ impl Inspector {
 
                 self.begin_scope(&symbol);
 
-                fn_expr.function.visit_all_with(self);
+                fn_expr.function.visit_with(self);
 
                 let definition = Definition::Expr(Expr::Fn(fn_expr.clone()));
 
@@ -1527,7 +1532,7 @@ impl Inspector {
         let symbol = Symbol::default();
         self.begin_scope(&symbol);
 
-        n.expr.visit_all_with(self);
+        n.expr.visit_with(self);
 
         self.handle_parameters_of_expr(&symbol, n.expr.as_ref());
 
@@ -1544,7 +1549,7 @@ impl Inspector {
 
     fn handle_named_export(&mut self, n: &NamedExport) {
         let source = match n.src.as_ref() {
-            Some(src) => Some(self.get_module_id_for(&src.value.to_string())),
+            Some(src) => Some(self.get_module_id_for(&src.value.to_string_lossy())),
             None => None,
         };
 
@@ -1589,7 +1594,7 @@ impl Inspector {
         let symbol = (&class_decl.ident).into();
         self.begin_scope(&symbol);
 
-        class_decl.class.visit_all_with(self);
+        class_decl.class.visit_with(self);
 
         let definition = Definition::from(&Decl::Class(class_decl.clone()));
 
@@ -1616,7 +1621,7 @@ impl Inspector {
                 .collect(),
         );
 
-        fn_decl.function.visit_all_with(self);
+        fn_decl.function.visit_with(self);
 
         let definition = Definition::from(&Decl::Fn(fn_decl.clone()));
 
@@ -1638,7 +1643,7 @@ impl Inspector {
 
         self.begin_scope(&symbol);
 
-        class_expr.class.visit_all_with(self);
+        class_expr.class.visit_with(self);
 
         let definition = Definition::Expr(Expr::Class(class_expr.clone()));
 
@@ -1653,18 +1658,15 @@ impl Inspector {
 
     fn handle_assign_expr(&mut self, assign_expr: &AssignExpr) {
         if assign_expr.op == AssignOp::Assign {
-            if let Some(expr) = assign_expr.left.as_expr() {
-                if let Expr::Member(member_expr) = expr {
-                    expr.visit_all_with(self);
-                    let member_expr_reference = InferredType::to_reference_with_source(
-                        &self.process_member_expr(member_expr),
-                    );
-                    if let Some(left) = member_expr_reference {
-                        if let Some(right) = &assign_expr.right.as_ident() {
-                            let symbol = Symbol::from(*right);
-                            if let Some(decl) = self.get_declaration(&symbol) {
-                                self.add_assignment(left.0.reference, decl.clone());
-                            }
+            if let Some(SimpleAssignTarget::Member(member_expr)) = assign_expr.left.as_simple() {
+                member_expr.visit_with(self);
+                let member_expr_reference =
+                    InferredType::to_reference_with_source(&self.process_member_expr(member_expr));
+                if let Some(left) = member_expr_reference {
+                    if let Some(right) = &assign_expr.right.as_ident() {
+                        let symbol = Symbol::from(*right);
+                        if let Some(decl) = self.get_declaration(&symbol) {
+                            self.add_assignment(left.0.reference, decl.clone());
                         }
                     }
                 }
@@ -1756,7 +1758,7 @@ impl Inspector {
 
         self.begin_scope(&symbol);
 
-        fn_expr.function.visit_all_with(self);
+        fn_expr.function.visit_with(self);
 
         self.add_declaration(
             symbol,
@@ -1850,7 +1852,7 @@ impl Inspector {
     fn find_return_stmts_in_stmt(stmt: &Stmt) -> Vec<&ReturnStmt> {
         match &stmt {
             Stmt::Return(rs) => vec![rs],
-            Stmt::Block(block_stmt) => Inspector::find_return_stmts(block_stmt),
+            Stmt::Block(block_stmt) => Inspector::find_return_stmts(&block_stmt.stmts),
             Stmt::If(if_stmt) => {
                 let mut return_stmts = Inspector::find_return_stmts_in_stmt(&if_stmt.cons);
 
@@ -1871,14 +1873,14 @@ impl Inspector {
                 })
                 .collect(),
             Stmt::Try(try_stmt) => {
-                let mut return_stmts = Inspector::find_return_stmts(&try_stmt.block);
+                let mut return_stmts = Inspector::find_return_stmts(&try_stmt.block.stmts);
 
                 if let Some(catch_clause) = &try_stmt.handler {
-                    return_stmts.extend(Inspector::find_return_stmts(&catch_clause.body));
+                    return_stmts.extend(Inspector::find_return_stmts(&catch_clause.body.stmts));
                 }
 
                 if let Some(finally_stmt) = &try_stmt.finalizer {
-                    return_stmts.extend(Inspector::find_return_stmts(finally_stmt));
+                    return_stmts.extend(Inspector::find_return_stmts(&finally_stmt.stmts));
                 }
 
                 return_stmts
@@ -1894,9 +1896,8 @@ impl Inspector {
         }
     }
 
-    fn find_return_stmts(block: &BlockStmt) -> Vec<&ReturnStmt> {
-        block
-            .stmts
+    fn find_return_stmts(stmts: &[Stmt]) -> Vec<&ReturnStmt> {
+        stmts
             .iter()
             .flat_map(Inspector::find_return_stmts_in_stmt)
             .collect()
@@ -1949,13 +1950,13 @@ impl Inspector {
     fn process_literal(&self, literal: &Lit) -> Rc<InferredType> {
         match literal {
             Lit::JSXText(_) => Rc::new(InferredType::JSX),
-            Lit::Str(s) => Rc::new(InferredType::Str(s.value.to_string())),
+            Lit::Str(s) => Rc::new(InferredType::Str(s.value.to_string_lossy().into_owned())),
             _ => Rc::new(InferredType::Unknown),
         }
     }
 
-    fn process_block_stmt(&self, block: &BlockStmt) -> Rc<InferredType> {
-        let return_stmts = Inspector::find_return_stmts(block);
+    fn process_block_stmt(&self, block: &FunctionBody) -> Rc<InferredType> {
+        let return_stmts = Inspector::find_return_stmts(&block.stmts);
 
         let mut inferred_type_vec = vec![];
         for return_stmt in return_stmts {
@@ -1987,8 +1988,8 @@ impl Inspector {
     }
 
     fn process_arrow_expr(&self, arrow: &ArrowExpr) -> Rc<InferredType> {
-        let return_types = match &arrow.body {
-            BlockStmtOrExpr::BlockStmt(block) => {
+        let return_types = match arrow.body.as_ref() {
+            ArrowFunctionBody::FunctionBody(block) => {
                 let inferred_type = self.process_block_stmt(block);
 
                 if let InferredType::Union(return_types) = inferred_type.deref() {
@@ -1997,7 +1998,7 @@ impl Inspector {
                     vec![Rc::new(InferredType::Unknown)]
                 }
             }
-            BlockStmtOrExpr::Expr(expr) => {
+            ArrowFunctionBody::Expr(expr) => {
                 vec![self.process_expr(expr.as_ref())]
             }
         };
@@ -2023,7 +2024,7 @@ impl Inspector {
                 .get(0)
                 .and_then(|arg| arg.expr.as_lit())
                 .and_then(|lit| match lit {
-                    Lit::Str(str) => Some(self.get_module_id_for(&str.value.to_string())),
+                    Lit::Str(str) => Some(self.get_module_id_for(&str.value.to_string_lossy())),
                     _ => None,
                 })
                 .map_or_else(
@@ -2091,7 +2092,7 @@ impl Inspector {
     fn prop_to_string(prop: &PropName) -> String {
         match prop {
             PropName::Ident(ident) => ident.sym.to_string(),
-            PropName::Str(str) => str.value.to_string(),
+            PropName::Str(str) => str.value.to_string_lossy().into_owned(),
             PropName::Num(num) => num.value.to_string(),
             PropName::BigInt(big_int) => big_int.value.to_string(),
             PropName::Computed(_) => String::from("[computed]"),
@@ -2116,6 +2117,7 @@ impl Inspector {
                         Prop::Getter(getter) => (
                             Inspector::prop_to_string(&getter.key),
                             getter
+                                .function
                                 .body
                                 .as_ref()
                                 .map_or(Rc::new(InferredType::Unknown), |block| {
@@ -2167,7 +2169,7 @@ impl Inspector {
             Expr::Array(array) => self.process_array_expr(array),
             Expr::Object(object) => self.process_object_expr(object),
             Expr::Member(member) => self.process_member_expr(member),
-            Expr::OptChain(opt_chain) => match &opt_chain.base {
+            Expr::OptChain(opt_chain) => match opt_chain.base.as_ref() {
                 OptChainBase::Member(member) => self.process_member_expr(member),
                 OptChainBase::Call(opt_call) => self.process_call_expr(&opt_call.clone().into()),
             },
@@ -2183,6 +2185,7 @@ impl Inspector {
             }
             Expr::TsNonNull(ts_non_null) => self.process_expr(ts_non_null.expr.as_ref()),
             Expr::TsTypeAssertion(ts_type_asstn) => self.process_expr(ts_type_asstn.expr.as_ref()),
+            Expr::TsSatisfies(ts_satisfies) => self.process_expr(ts_satisfies.expr.as_ref()),
 
             Expr::JSXEmpty(_) => Rc::new(InferredType::JSX),
             Expr::JSXElement(_) => Rc::new(InferredType::JSX),
@@ -2205,15 +2208,13 @@ impl Inspector {
             return;
         }
 
-        module.visit_all_with(self);
+        module.visit_with(self);
 
         self.extend_exports();
     }
 }
 
-impl VisitAll for Inspector {
-    noop_visit_type!();
-
+impl Visit for Inspector {
     fn visit_module_decl(&mut self, n: &ModuleDecl) {
         match n {
             ModuleDecl::Import(import_decl) => self.handle_import_decl(import_decl),
@@ -2232,10 +2233,14 @@ impl VisitAll for Inspector {
             | ModuleDecl::TsExportAssignment(_)
             | ModuleDecl::TsNamespaceExport(_) => {}
         };
+
+        n.visit_children_with(self);
     }
 
     fn visit_ident(&mut self, n: &Ident) {
         self.capture_reference(Symbol::from(n).into(), false);
+
+        n.visit_children_with(self);
     }
 
     fn visit_decl(&mut self, n: &Decl) {
@@ -2244,6 +2249,8 @@ impl VisitAll for Inspector {
             Decl::Fn(fn_decl) => self.handle_fn_decl(fn_decl),
             _ => {}
         }
+
+        n.visit_children_with(self);
     }
 
     fn visit_default_decl(&mut self, n: &DefaultDecl) {
@@ -2252,6 +2259,8 @@ impl VisitAll for Inspector {
             DefaultDecl::Fn(fn_expr) => self.handle_fn_expr(fn_expr),
             _ => {}
         }
+
+        n.visit_children_with(self);
     }
 
     fn visit_expr(&mut self, n: &Expr) {
@@ -2262,10 +2271,14 @@ impl VisitAll for Inspector {
             Expr::Call(call_expr) => self.handle_call_expr(call_expr),
             _ => {}
         }
+
+        n.visit_children_with(self);
     }
 
     fn visit_var_declarator(&mut self, n: &VarDeclarator) {
         self.handle_var_declarator(n);
+
+        n.visit_children_with(self);
     }
 
     fn visit_jsx_element(&mut self, n: &JSXElement) {
@@ -2280,6 +2293,8 @@ impl VisitAll for Inspector {
             }
             JSXElementName::JSXNamespacedName(_) => {}
         }
+
+        n.visit_children_with(self);
     }
 }
 

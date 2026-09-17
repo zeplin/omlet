@@ -5,17 +5,15 @@ use logger::{debug, trace};
 use relative_path::{RelativePath, RelativePathBuf};
 use serde::Serialize;
 use std::sync::{Arc, RwLock};
-use swc::{
-    common::{errors::Handler, sync::Lrc, FileName, SourceFile, SourceMap},
-    config::{Config, IsModule, JscConfig, Options},
-    Compiler,
+use swc_common::{
+    errors::{Diagnostic, DiagnosticBuilder, Emitter, Handler, HandlerFlags},
+    sync::Lrc,
+    FileName, Globals, Mark, SourceFile, SourceMap, GLOBALS,
 };
-use swc_common::errors::{Diagnostic, DiagnosticBuilder, Emitter, HandlerFlags};
-use swc_ecmascript::{
-    ast::{EsVersion, Module as SwcModule, ModuleItem, Program, Script},
-    parser::{Syntax, TsConfig},
-    visit::Fold,
-};
+use swc_ecma_ast::{EsVersion, Module as SwcModule, ModuleItem};
+use swc_ecma_parser::{parse_file_as_module, Syntax, TsSyntax};
+use swc_ecma_transforms_base::resolver;
+use swc_ecma_visit::VisitMutWith;
 
 mod inspector;
 pub mod symbol;
@@ -29,23 +27,6 @@ use inspector::{Declaration, Inspector, PropDefinitionFinder, ReferenceScopePtr}
 pub use symbol::Symbol;
 
 use crate::module_resolver::{ModuleId, ModuleResolver, ModuleType};
-
-fn noop() -> impl Fold {
-    Noop
-}
-
-struct Noop;
-impl Fold for Noop {
-    #[inline(always)]
-    fn fold_module(&mut self, m: SwcModule) -> SwcModule {
-        m
-    }
-
-    #[inline(always)]
-    fn fold_script(&mut self, s: Script) -> Script {
-        s
-    }
-}
 
 #[derive(Debug, Serialize)]
 pub struct ParserError {
@@ -83,7 +64,7 @@ pub struct Module {
 struct ErrorEmitter(Lrc<RwLock<Vec<Diagnostic>>>);
 
 impl Emitter for ErrorEmitter {
-    fn emit(&mut self, db: &DiagnosticBuilder) {
+    fn emit(&mut self, db: &mut DiagnosticBuilder<'_>) {
         self.0.write().unwrap().push((**db).clone());
     }
 }
@@ -116,75 +97,99 @@ fn collect_errors(error_emitter: &ErrorEmitter, source_map: &Lrc<SourceMap>) -> 
     diagnostics
 }
 
+// swc's `Config::adjust` used to override these from the file extension
+// before handing the config to the parser.
+fn syntax_for(file_name: &FileName) -> Syntax {
+    let mut config = TsSyntax {
+        tsx: true,
+        decorators: true,
+        ..Default::default()
+    };
+
+    if let FileName::Real(path) = file_name {
+        if path
+            .file_name()
+            .and_then(|name| name.to_str())
+            .is_some_and(|name| name.ends_with(".d.ts"))
+        {
+            config.dts = true;
+        }
+
+        match path.extension().and_then(|ext| ext.to_str()) {
+            Some("tsx") => config.tsx = true,
+            Some("ts") => config.tsx = false,
+            _ => {}
+        }
+    }
+
+    Syntax::Typescript(config)
+}
+
 pub fn parse_module(
     source_map: &Lrc<SourceMap>,
     source_file: &Lrc<SourceFile>,
 ) -> Result<SwcModule, ParserError> {
-    let error_buffer = Box::new(ErrorEmitter::default());
-    let handler = Lrc::new(Handler::with_emitter_and_flags(
-        error_buffer.clone(),
-        HandlerFlags {
-            treat_err_as_bug: false,
-            can_emit_warnings: true,
-            dont_buffer_diagnostics: true,
-            ..HandlerFlags::default()
-        },
-    ));
-    let compiler = Compiler::new(source_map.clone());
-
-    let result = compiler
-        .parse_js_as_input(
-            source_file.clone(),
-            None,
-            &handler,
-            &Options {
-                config: Config {
-                    env: None,
-                    exclude: None,
-                    jsc: JscConfig {
-                        syntax: Some(Syntax::Typescript(TsConfig {
-                            tsx: true,
-                            decorators: true,
-                            ..Default::default()
-                        })),
-                        transform: None.into(),
-                        external_helpers: Some(false).into(),
-                        target: Some(EsVersion::latest()),
-                        loose: Some(false).into(),
-                        keep_class_names: Some(false).into(),
-                        ..Default::default()
-                    },
-                    module: None,
-                    minify: Some(false).into(),
-                    source_maps: None,
-                    ..Default::default()
-                },
-                is_module: IsModule::Bool(true),
-                ..Default::default()
+    // `Mark::new` needs a GLOBALS scope; a fresh one per file keeps the syntax
+    // contexts module-local and deterministic, as swc's `Compiler` did.
+    GLOBALS.set(&Globals::default(), || {
+        let error_buffer = ErrorEmitter::default();
+        let handler = Handler::with_emitter_and_flags(
+            Box::new(error_buffer.clone()),
+            HandlerFlags {
+                treat_err_as_bug: false,
+                can_emit_warnings: true,
+                dont_buffer_diagnostics: true,
+                ..HandlerFlags::default()
             },
-            &source_file.name,
+        );
+
+        let syntax = syntax_for(&source_file.name);
+
+        let mut recovered_errors = vec![];
+        let result = parse_file_as_module(
+            source_file,
+            syntax,
+            EsVersion::latest(),
             None,
-            |_| noop(),
-        )
-        .map_err(|err| {
-            let errors = collect_errors(&error_buffer, source_map);
-            let reason = if errors.len() > 0 {
-                errors
-            } else {
-                vec![format!("{}", err.to_string())]
-            };
+            &mut recovered_errors,
+        );
 
-            ParserError::new(reason, source_file.name.to_string())
-        })?
-        .unwrap();
+        // A recovered error still aborts the parse: the resulting AST would be wrong.
+        let mut failed = !recovered_errors.is_empty();
+        for error in recovered_errors {
+            error.into_diagnostic(&handler).emit();
+        }
 
-    match result.program {
-        Program::Module(m) => Result::Ok(m),
-        _ => Result::Err(ParserError::new(
-            vec![format!("Script is not expected: {}", &source_file.name)],
-            source_file.name.to_string(),
-        )),
-    }
+        let module = match result {
+            Ok(module) => Some(module),
+            Err(error) => {
+                error.into_diagnostic(&handler).emit();
+                failed = true;
+
+                None
+            }
+        };
+
+        match module {
+            Some(mut module) if !failed => {
+                let unresolved_mark = Mark::new();
+                let top_level_mark = Mark::new();
+                module.visit_mut_with(&mut resolver(unresolved_mark, top_level_mark, true));
+
+                Result::Ok(module)
+            }
+            _ => {
+                let errors = collect_errors(&error_buffer, source_map);
+                let reason = if errors.len() > 0 {
+                    errors
+                } else {
+                    vec![String::from("Syntax Error")]
+                };
+
+                Result::Err(ParserError::new(reason, source_file.name.to_string()))
+            }
+        }
+    })
 }
 
 impl TryFrom<&str> for Module {
@@ -209,8 +214,10 @@ impl Module {
     ) -> Result<Self, ParserError> {
         let file_path = RelativePathBuf::from(name);
         let source_map = Lrc::<SourceMap>::default();
-        let source_file =
-            source_map.new_source_file(FileName::Real(file_path.to_path("")), src.to_string());
+        let source_file = source_map.new_source_file(
+            Lrc::new(FileName::Real(file_path.to_path(""))),
+            src.to_string(),
+        );
 
         let swc_module = parse_module(&source_map, &source_file)?;
         let id = ModuleId::new(&file_path, mtype, pkg_name);
