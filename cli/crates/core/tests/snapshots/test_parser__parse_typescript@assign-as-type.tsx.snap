@@ -13,7 +13,7 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
   - symbol: "<anonymous-1>#0"
@@ -32,13 +32,13 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "11282974830275686631"
       path: src/functional-component/ts-extensions/assign-as-type.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -55,7 +55,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "11282974830275686631"
       path: src/functional-component/ts-extensions/assign-as-type.tsx
@@ -75,75 +75,70 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
       - "<anonymous-3>#0"
     references:
-      - "Component#0"
-      - "React#1"
-      - "Sample#1"
-      - "div#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
       - "<anonymous-1>#0"
     references:
-      - "Component#0"
-      - "React#1"
-      - "div#2"
+      - "React#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "<anonymous-1>#0"
-    parent: "Sample#1"
+    parent: "Sample#2"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
       - "<anonymous-2>#0"
     references:
-      - "Component#0"
-      - "React#1"
-      - "div#2"
+      - "React#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "<anonymous-2>#0"
-    parent: "Sample#1"
+    parent: "Sample#2"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "<anonymous-3>#0"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -151,22 +146,21 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 116
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 36
         end: 116
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -174,13 +168,12 @@ body:
           span:
             start: 42
             end: 115
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 42
               end: 48
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: Sample
@@ -189,27 +182,23 @@ body:
             span:
               start: 51
               end: 115
-              ctxt: 0
             expression:
               async: false
               body:
-                type: BlockStatement
+                type: FunctionBody
                 span:
                   start: 63
                   end: 96
-                  ctxt: 0
                 stmts:
                   - type: ReturnStatement
                     span:
                       start: 69
                       end: 94
-                      ctxt: 0
                     argument:
                       type: JSXElement
                       span:
                         start: 76
                         end: 93
-                        ctxt: 0
                       opening:
                         type: JSXOpeningElement
                         name:
@@ -217,13 +206,12 @@ body:
                           span:
                             start: 77
                             end: 80
-                            ctxt: 2
+                          ctxt: 1
                           value: div
                           optional: false
                         span:
                           start: 76
                           end: 81
-                          ctxt: 0
                         attributes: []
                         selfClosing: false
                         typeArguments: ~
@@ -232,7 +220,6 @@ body:
                           span:
                             start: 81
                             end: 87
-                            ctxt: 0
                           value: Sample
                           raw: Sample
                       closing:
@@ -240,15 +227,15 @@ body:
                         span:
                           start: 87
                           end: 93
-                          ctxt: 0
                         name:
                           type: Identifier
                           span:
                             start: 89
                             end: 92
-                            ctxt: 2
+                          ctxt: 1
                           value: div
                           optional: false
+              ctxt: 3
               decorators: []
               generator: false
               identifier: ~
@@ -257,7 +244,6 @@ body:
               span:
                 start: 51
                 end: 96
-                ctxt: 0
               type: FunctionExpression
               typeParameters: ~
             typeAnnotation:
@@ -265,15 +251,17 @@ body:
               span:
                 start: 100
                 end: 115
-                ctxt: 0
               typeName:
                 type: TsQualifiedName
+                span:
+                  start: 100
+                  end: 115
                 left:
                   type: Identifier
                   span:
                     start: 100
                     end: 105
-                    ctxt: 1
+                  ctxt: 2
                   value: React
                   optional: false
                 right:
@@ -281,8 +269,7 @@ body:
                   span:
                     start: 106
                     end: 115
-                    ctxt: 0
                   value: Component
-                  optional: false
               typeParams: ~
           definite: false
+

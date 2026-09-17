@@ -16,7 +16,7 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "Komponent#1"
+  - symbol: "Komponent#2"
     source:
       hash: "5436316275091899454"
       path: src/forwardRef/react-forwardRef.tsx
@@ -32,13 +32,13 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "5436316275091899454"
       path: src/forwardRef/react-forwardRef.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -67,7 +67,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "React#1"
+                  symbol: "React#2"
                   source:
                     hash: "5436316275091899454"
                     path: src/forwardRef/react-forwardRef.tsx
@@ -77,7 +77,7 @@ declarations:
             - Object: forwardRef
         - - TypeOf:
               symbol:
-                symbol: "Komponent#1"
+                symbol: "Komponent#2"
                 source:
                   hash: "5436316275091899454"
                   path: src/forwardRef/react-forwardRef.tsx
@@ -94,48 +94,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Komponent#1"
+      - "Komponent#2"
       - "default#0"
     references:
-      - "Komponent#1"
-      - "React#1"
-      - "div#2"
-      - "forwardRef#0"
+      - "Komponent#2"
+      - "React#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Komponent#1"
+      - "div#1"
+  - owner: "Komponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "Komponent#1"
-      - "React#1"
-      - "forwardRef#0"
+      - "Komponent#2"
+      - "React#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -143,30 +139,27 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 50
         end: 89
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 56
             end: 87
-            ctxt: 0
           argument:
             type: JSXElement
             span:
               start: 63
               end: 86
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -174,13 +167,12 @@ body:
                 span:
                   start: 64
                   end: 67
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
               span:
                 start: 63
                 end: 68
-                ctxt: 0
               attributes: []
               selfClosing: false
               typeArguments: ~
@@ -189,7 +181,6 @@ body:
                 span:
                   start: 68
                   end: 80
-                  ctxt: 0
                 value: thirsty bear
                 raw: thirsty bear
             closing:
@@ -197,15 +188,15 @@ body:
               span:
                 start: 80
                 end: 86
-                ctxt: 0
               name:
                 type: Identifier
                 span:
                   start: 82
                   end: 85
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -214,7 +205,7 @@ body:
       span:
         start: 38
         end: 47
-        ctxt: 1
+      ctxt: 2
       value: Komponent
       optional: false
     params: []
@@ -222,32 +213,29 @@ body:
     span:
       start: 29
       end: 89
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDefaultExpression
     span:
       start: 91
       end: 134
-      ctxt: 0
     expression:
       type: CallExpression
       span:
         start: 106
         end: 133
-        ctxt: 0
+      ctxt: 0
       callee:
         type: MemberExpression
         span:
           start: 106
           end: 122
-          ctxt: 0
         object:
           type: Identifier
           span:
             start: 106
             end: 111
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
         property:
@@ -255,9 +243,7 @@ body:
           span:
             start: 112
             end: 122
-            ctxt: 0
           value: forwardRef
-          optional: false
       arguments:
         - spread: ~
           expression:
@@ -265,7 +251,8 @@ body:
             span:
               start: 123
               end: 132
-              ctxt: 1
+            ctxt: 2
             value: Komponent
             optional: false
       typeArguments: ~
+

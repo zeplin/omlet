@@ -13,13 +13,13 @@ created_at: ~
 updated_at: ~
 exports: []
 declarations:
-  - symbol: "json#1"
+  - symbol: "json#2"
     source:
       hash: "13987688687699692002"
       path: src/module-decls/module-import-assertions.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 7717424795633916708, path: \"src/module-decls/foo.json\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 7717424795633916708, path: \"src/module-decls/foo.json\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -41,28 +41,24 @@ scopes:
     parent: ~
     children: []
     references:
-      - "assert#0"
-      - "json#1"
-      - "type#0"
+      - "json#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 55
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 12
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 12
-            ctxt: 1
+          ctxt: 2
           value: json
           optional: false
     source:
@@ -70,16 +66,14 @@ body:
       span:
         start: 18
         end: 30
-        ctxt: 0
       value: "./foo.json"
       raw: "\"./foo.json\""
     typeOnly: false
-    asserts:
+    with:
       type: ObjectExpression
       span:
         start: 38
         end: 54
-        ctxt: 0
       properties:
         - type: KeyValueProperty
           key:
@@ -87,34 +81,31 @@ body:
             span:
               start: 40
               end: 44
-              ctxt: 0
             value: type
-            optional: false
           value:
             type: StringLiteral
             span:
               start: 46
               end: 52
-              ctxt: 0
             value: json
             raw: "\"json\""
+    phase: evaluation
   - type: ExpressionStatement
     span:
       start: 56
       end: 105
-      ctxt: 0
     expression:
       type: CallExpression
       span:
         start: 56
         end: 104
-        ctxt: 0
+      ctxt: 0
       callee:
         type: Import
         span:
           start: 56
           end: 62
-          ctxt: 0
+        phase: evaluation
       arguments:
         - spread: ~
           expression:
@@ -122,7 +113,6 @@ body:
             span:
               start: 63
               end: 73
-              ctxt: 0
             value: foo.json
             raw: "\"foo.json\""
         - spread: ~
@@ -131,7 +121,6 @@ body:
             span:
               start: 75
               end: 103
-              ctxt: 0
             properties:
               - type: KeyValueProperty
                 key:
@@ -139,15 +128,12 @@ body:
                   span:
                     start: 77
                     end: 83
-                    ctxt: 0
                   value: assert
-                  optional: false
                 value:
                   type: ObjectExpression
                   span:
                     start: 85
                     end: 101
-                    ctxt: 0
                   properties:
                     - type: KeyValueProperty
                       key:
@@ -155,15 +141,13 @@ body:
                         span:
                           start: 87
                           end: 91
-                          ctxt: 0
                         value: type
-                        optional: false
                       value:
                         type: StringLiteral
                         span:
                           start: 93
                           end: 99
-                          ctxt: 0
                         value: json
                         raw: "\"json\""
       typeArguments: ~
+

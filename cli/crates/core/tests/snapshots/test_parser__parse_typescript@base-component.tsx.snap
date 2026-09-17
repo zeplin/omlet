@@ -16,7 +16,7 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "BaseComponent#1"
+  - symbol: "BaseComponent#2"
     source:
       hash: "14843863319049372981"
       path: src/class-component/object-inheritance/base-component.tsx
@@ -28,7 +28,7 @@ declarations:
         MemberOf:
           - TypeOf:
               symbol:
-                symbol: "React#1"
+                symbol: "React#2"
                 source:
                   hash: "14843863319049372981"
                   path: src/class-component/object-inheritance/base-component.tsx
@@ -42,13 +42,13 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "14843863319049372981"
       path: src/class-component/object-inheritance/base-component.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -75,7 +75,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "object#1"
+          symbol: "object#2"
           source:
             hash: "14843863319049372981"
             path: src/class-component/object-inheritance/base-component.tsx
@@ -88,7 +88,7 @@ declarations:
     end:
       line: 15
       column: 23
-  - symbol: "object#1"
+  - symbol: "object#2"
     source:
       hash: "14843863319049372981"
       path: src/class-component/object-inheritance/base-component.tsx
@@ -102,7 +102,7 @@ declarations:
             component:
               TypeOf:
                 symbol:
-                  symbol: "BaseComponent#1"
+                  symbol: "BaseComponent#2"
                   source:
                     hash: "14843863319049372981"
                     path: src/class-component/object-inheritance/base-component.tsx
@@ -119,62 +119,52 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "BaseComponent#1"
-      - "object#1"
+      - "BaseComponent#2"
+      - "object#2"
       - "default#0"
     references:
-      - "BaseComponent#1"
-      - "Component#0"
-      - "React#1"
-      - "base#0"
-      - "component#0"
-      - "div#2"
-      - "object#1"
-      - "render#0"
+      - "BaseComponent#2"
+      - "React#2"
+      - "div#1"
+      - "object#2"
     jsx_references:
-      - "div#2"
-  - owner: "BaseComponent#1"
+      - "div#1"
+  - owner: "BaseComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#0"
-      - "React#1"
-      - "div#2"
-      - "render#0"
+      - "React#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "object#1"
+      - "div#1"
+  - owner: "object#2"
     parent: "__global#0"
     children: []
     references:
-      - "BaseComponent#1"
-      - "base#0"
-      - "component#0"
+      - "BaseComponent#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "object#1"
+      - "object#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -182,50 +172,44 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - body:
       - type: ClassMethod
         span:
           start: 79
           end: 127
-          ctxt: 0
         key:
           type: Identifier
           span:
             start: 79
             end: 85
-            ctxt: 0
           value: render
-          optional: false
         function:
           params: []
           decorators: []
           span:
             start: 79
             end: 127
-            ctxt: 0
+          ctxt: 3
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 88
               end: 127
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 98
                   end: 121
-                  ctxt: 0
                 argument:
                   type: JSXElement
                   span:
                     start: 105
                     end: 120
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -233,13 +217,12 @@ body:
                       span:
                         start: 106
                         end: 109
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                     span:
                       start: 105
                       end: 110
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -248,7 +231,6 @@ body:
                       span:
                         start: 110
                         end: 114
-                        ctxt: 0
                       value: base
                       raw: base
                   closing:
@@ -256,13 +238,12 @@ body:
                     span:
                       start: 114
                       end: 120
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 116
                         end: 119
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
           generator: false
@@ -275,6 +256,7 @@ body:
         isAbstract: false
         isOptional: false
         isOverride: false
+    ctxt: 0
     declare: false
     decorators: []
     identifier:
@@ -282,7 +264,7 @@ body:
       span:
         start: 35
         end: 48
-        ctxt: 1
+      ctxt: 2
       value: BaseComponent
       optional: false
     implements: []
@@ -290,19 +272,17 @@ body:
     span:
       start: 29
       end: 129
-      ctxt: 0
     superClass:
       type: MemberExpression
       span:
         start: 57
         end: 72
-        ctxt: 0
       object:
         type: Identifier
         span:
           start: 57
           end: 62
-          ctxt: 1
+        ctxt: 2
         value: React
         optional: false
       property:
@@ -310,9 +290,7 @@ body:
         span:
           start: 63
           end: 72
-          ctxt: 0
         value: Component
-        optional: false
     superTypeParams: ~
     type: ClassDeclaration
     typeParams: ~
@@ -320,7 +298,7 @@ body:
     span:
       start: 131
       end: 201
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -328,13 +306,12 @@ body:
         span:
           start: 137
           end: 200
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 137
             end: 143
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: object
@@ -343,7 +320,6 @@ body:
           span:
             start: 146
             end: 200
-            ctxt: 0
           properties:
             - type: KeyValueProperty
               key:
@@ -351,15 +327,12 @@ body:
                 span:
                   start: 152
                   end: 156
-                  ctxt: 0
                 value: base
-                optional: false
               value:
                 type: ObjectExpression
                 span:
                   start: 158
                   end: 198
-                  ctxt: 0
                 properties:
                   - type: KeyValueProperty
                     key:
@@ -367,15 +340,13 @@ body:
                       span:
                         start: 168
                         end: 177
-                        ctxt: 0
                       value: component
-                      optional: false
                     value:
                       type: Identifier
                       span:
                         start: 179
                         end: 192
-                        ctxt: 1
+                      ctxt: 2
                       value: BaseComponent
                       optional: false
         definite: false
@@ -383,12 +354,12 @@ body:
     span:
       start: 203
       end: 225
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 218
         end: 224
-        ctxt: 1
+      ctxt: 2
       value: object
       optional: false
+

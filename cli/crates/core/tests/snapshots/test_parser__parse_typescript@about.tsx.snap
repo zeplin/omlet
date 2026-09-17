@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "AboutPage#1"
+      Internal: "AboutPage#2"
     exported_name: default
 declarations:
-  - symbol: "AboutPage#1"
+  - symbol: "AboutPage#2"
     source:
       hash: "13306960864051424853"
       path: src/simple/about.tsx
@@ -32,17 +32,17 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "AlertButton#1"
+  - symbol: "AlertButton#2"
     source:
       hash: "13306960864051424853"
       path: src/simple/about.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('AlertButton' type=dynamic), context: #1 }, source: ModuleId { hash: 5148538744336220601, path: \"\", pkg_name: \"@acme/components\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"AlertButton\", context: #2 }, source: ModuleId { hash: 5148538744336220601, path: \"\", pkg_name: \"@acme/components\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "AlertButton#1"
+          symbol: "AlertButton#2"
           source:
             hash: "5148538744336220601"
             path: ""
@@ -55,7 +55,7 @@ declarations:
     end:
       line: 1
       column: 21
-  - symbol: "Header#1"
+  - symbol: "Header#2"
     source:
       hash: "13306960864051424853"
       path: src/simple/about.tsx
@@ -66,7 +66,7 @@ declarations:
       MemberOf:
         - TypeOf:
             symbol:
-              symbol: "navComponents#1"
+              symbol: "navComponents#2"
               source:
                 hash: "13306960864051424853"
                 path: src/simple/about.tsx
@@ -80,7 +80,7 @@ declarations:
     end:
       line: 5
       column: 15
-  - symbol: "UserAvatar#1"
+  - symbol: "UserAvatar#2"
     source:
       hash: "13306960864051424853"
       path: src/simple/about.tsx
@@ -91,7 +91,7 @@ declarations:
       MemberOf:
         - TypeOf:
             symbol:
-              symbol: "navComponents#1"
+              symbol: "navComponents#2"
               source:
                 hash: "13306960864051424853"
                 path: src/simple/about.tsx
@@ -105,13 +105,13 @@ declarations:
     end:
       line: 4
       column: 17
-  - symbol: "navComponents#1"
+  - symbol: "navComponents#2"
     source:
       hash: "13306960864051424853"
       path: src/simple/about.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 8219741811766528831, path: \"src/simple/components/nav\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 8219741811766528831, path: \"src/simple/components/nav\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -132,80 +132,76 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "UserAvatar#1"
-      - "Header#1"
-      - "AboutPage#1"
-      - "AboutPage#1"
+      - "UserAvatar#2"
+      - "Header#2"
+      - "AboutPage#2"
+      - "AboutPage#2"
     references:
-      - "AboutPage#1"
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#0"
-      - "UserAvatar#1"
-      - "h1#2"
-      - "navComponents#1"
+      - "AboutPage#2"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
+      - "navComponents#2"
     jsx_references:
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#1"
-      - "h1#2"
-  - owner: "UserAvatar#1"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
+  - owner: "UserAvatar#2"
     parent: "__global#0"
     children: []
     references:
-      - "UserAvatar#0"
-      - "navComponents#1"
+      - "navComponents#2"
     jsx_references: []
-  - owner: "Header#1"
+  - owner: "Header#2"
     parent: "__global#0"
     children: []
     references:
-      - "navComponents#1"
+      - "navComponents#2"
     jsx_references: []
-  - owner: "AboutPage#1"
+  - owner: "AboutPage#2"
     parent: "__global#0"
     children: []
     references:
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#1"
-      - "h1#2"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
     jsx_references:
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#1"
-      - "h1#2"
-  - owner: "AboutPage#1"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
+  - owner: "AboutPage#2"
     parent: "__global#0"
     children: []
     references:
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#1"
-      - "h1#2"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
     jsx_references:
-      - "AlertButton#1"
-      - "Header#1"
-      - "UserAvatar#1"
-      - "h1#2"
+      - "AlertButton#2"
+      - "Header#2"
+      - "UserAvatar#2"
+      - "h1#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 48
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 21
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 21
-            ctxt: 1
+          ctxt: 2
           value: AlertButton
           optional: false
         imported: ~
@@ -215,28 +211,26 @@ body:
       span:
         start: 29
         end: 47
-        ctxt: 0
       value: "@acme/components"
       raw: "\"@acme/components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 49
       end: 99
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 56
           end: 74
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 61
             end: 74
-            ctxt: 1
+          ctxt: 2
           value: navComponents
           optional: false
     source:
@@ -244,16 +238,16 @@ body:
       span:
         start: 80
         end: 98
-        ctxt: 0
       value: "./components/nav"
       raw: "\"./components/nav\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 101
       end: 145
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -261,13 +255,12 @@ body:
         span:
           start: 107
           end: 144
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 107
             end: 117
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: UserAvatar
@@ -276,13 +269,12 @@ body:
           span:
             start: 120
             end: 144
-            ctxt: 0
           object:
             type: Identifier
             span:
               start: 120
               end: 133
-              ctxt: 1
+            ctxt: 2
             value: navComponents
             optional: false
           property:
@@ -290,15 +282,13 @@ body:
             span:
               start: 134
               end: 144
-              ctxt: 0
             value: UserAvatar
-            optional: false
         definite: false
   - type: VariableDeclaration
     span:
       start: 146
       end: 179
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -306,27 +296,25 @@ body:
         span:
           start: 152
           end: 178
-          ctxt: 0
         id:
           type: ObjectPattern
           span:
             start: 152
             end: 162
-            ctxt: 0
           properties:
             - type: AssignmentPatternProperty
               span:
                 start: 154
                 end: 160
-                ctxt: 0
               key:
-                type: Identifier
+                ctxt: 2
+                optional: false
                 span:
                   start: 154
                   end: 160
-                  ctxt: 1
+                type: Identifier
+                typeAnnotation: ~
                 value: Header
-                optional: false
               value: ~
           optional: false
           typeAnnotation: ~
@@ -335,7 +323,7 @@ body:
           span:
             start: 165
             end: 178
-            ctxt: 1
+          ctxt: 2
           value: navComponents
           optional: false
         definite: false
@@ -343,33 +331,28 @@ body:
     span:
       start: 181
       end: 355
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 217
           end: 355
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 223
               end: 353
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 230
                 end: 352
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 240
                   end: 346
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -377,13 +360,12 @@ body:
                     span:
                       start: 241
                       end: 247
-                      ctxt: 1
+                    ctxt: 2
                     value: Header
                     optional: false
                   span:
                     start: 240
                     end: 248
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -392,14 +374,12 @@ body:
                     span:
                       start: 248
                       end: 261
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 261
                       end: 274
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -407,13 +387,12 @@ body:
                         span:
                           start: 262
                           end: 272
-                          ctxt: 1
+                        ctxt: 2
                         value: UserAvatar
                         optional: false
                       span:
                         start: 261
                         end: 274
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -423,14 +402,12 @@ body:
                     span:
                       start: 274
                       end: 287
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 287
                       end: 301
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -438,13 +415,12 @@ body:
                         span:
                           start: 288
                           end: 290
-                          ctxt: 2
+                        ctxt: 1
                         value: h1
                         optional: false
                       span:
                         start: 287
                         end: 291
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -453,7 +429,6 @@ body:
                         span:
                           start: 291
                           end: 296
-                          ctxt: 0
                         value: About
                         raw: About
                     closing:
@@ -461,27 +436,24 @@ body:
                       span:
                         start: 296
                         end: 301
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 298
                           end: 300
-                          ctxt: 2
+                        ctxt: 1
                         value: h1
                         optional: false
                   - type: JSXText
                     span:
                       start: 301
                       end: 314
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 314
                       end: 328
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -489,13 +461,12 @@ body:
                         span:
                           start: 315
                           end: 326
-                          ctxt: 1
+                        ctxt: 2
                         value: AlertButton
                         optional: false
                       span:
                         start: 314
                         end: 328
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -505,23 +476,22 @@ body:
                     span:
                       start: 328
                       end: 337
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 337
                     end: 346
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 339
                       end: 345
-                      ctxt: 1
+                    ctxt: 2
                     value: Header
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -529,7 +499,7 @@ body:
         span:
           start: 205
           end: 214
-          ctxt: 1
+        ctxt: 2
         value: AboutPage
         optional: false
       params: []
@@ -537,7 +507,6 @@ body:
       span:
         start: 196
         end: 355
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
 

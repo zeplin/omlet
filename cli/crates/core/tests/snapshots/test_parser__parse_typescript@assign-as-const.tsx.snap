@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "9380883922543465689"
       path: src/functional-component/ts-extensions/assign-as-const.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "9380883922543465689"
       path: src/functional-component/ts-extensions/assign-as-const.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "element#1"
+              symbol: "element#2"
               source:
                 hash: "9380883922543465689"
                 path: src/functional-component/ts-extensions/assign-as-const.tsx
@@ -63,7 +63,7 @@ declarations:
     end:
       line: 5
       column: 20
-  - symbol: "element#1"
+  - symbol: "element#2"
     source:
       hash: "9380883922543465689"
       path: src/functional-component/ts-extensions/assign-as-const.tsx
@@ -81,53 +81,51 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "element#1"
-      - "Sample#1"
-      - "Sample#1"
+      - "element#2"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "div#2"
-      - "element#1"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "element#2"
     jsx_references:
-      - "div#2"
-  - owner: "element#1"
+      - "div#1"
+  - owner: "element#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "element#1"
+      - "element#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "element#1"
+      - "element#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -135,16 +133,16 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 29
       end: 72
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -152,13 +150,12 @@ body:
         span:
           start: 35
           end: 71
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 35
             end: 42
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: element
@@ -167,13 +164,11 @@ body:
           span:
             start: 45
             end: 71
-            ctxt: 0
           expression:
             type: JSXElement
             span:
               start: 45
               end: 62
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -181,13 +176,12 @@ body:
                 span:
                   start: 46
                   end: 49
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
               span:
                 start: 45
                 end: 50
-                ctxt: 0
               attributes: []
               selfClosing: false
               typeArguments: ~
@@ -196,7 +190,6 @@ body:
                 span:
                   start: 50
                   end: 56
-                  ctxt: 0
                 value: Sample
                 raw: Sample
             closing:
@@ -204,13 +197,12 @@ body:
               span:
                 start: 56
                 end: 62
-                ctxt: 0
               name:
                 type: Identifier
                 span:
                   start: 58
                   end: 61
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
         definite: false
@@ -218,13 +210,12 @@ body:
     span:
       start: 74
       end: 110
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 81
         end: 110
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -232,13 +223,12 @@ body:
           span:
             start: 87
             end: 109
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 87
               end: 93
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: Sample
@@ -247,14 +237,14 @@ body:
             span:
               start: 96
               end: 109
-              ctxt: 0
+            ctxt: 3
             params: []
             body:
               type: Identifier
               span:
                 start: 102
                 end: 109
-                ctxt: 1
+              ctxt: 2
               value: element
               optional: false
             async: false
@@ -262,3 +252,4 @@ body:
             typeParameters: ~
             returnType: ~
           definite: false
+

@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "AwaitImportAndUseInJsx#1"
+      Internal: "AwaitImportAndUseInJsx#2"
     exported_name: AwaitImportAndUseInJsx
 declarations:
-  - symbol: "AwaitImportAndUseInJsx#1"
+  - symbol: "AwaitImportAndUseInJsx#2"
     source:
       hash: "13736345449019309360"
       path: src/dynamic-import/await-import-and-use-in-jsx.tsx
@@ -72,7 +72,7 @@ declarations:
     end:
       line: 10
       column: 10
-  - symbol: "node#2"
+  - symbol: "node#3"
     source:
       hash: "13736345449019309360"
       path: src/dynamic-import/await-import-and-use-in-jsx.tsx
@@ -84,7 +84,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "useState#1"
+                  symbol: "useState#2"
                   source:
                     hash: "13736345449019309360"
                     path: src/dynamic-import/await-import-and-use-in-jsx.tsx
@@ -99,7 +99,7 @@ declarations:
     end:
       line: 4
       column: 16
-  - symbol: "setNode#2"
+  - symbol: "setNode#3"
     source:
       hash: "13736345449019309360"
       path: src/dynamic-import/await-import-and-use-in-jsx.tsx
@@ -111,7 +111,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "useState#1"
+                  symbol: "useState#2"
                   source:
                     hash: "13736345449019309360"
                     path: src/dynamic-import/await-import-and-use-in-jsx.tsx
@@ -126,17 +126,17 @@ declarations:
     end:
       line: 4
       column: 25
-  - symbol: "useEffect#1"
+  - symbol: "useEffect#2"
     source:
       hash: "13736345449019309360"
       path: src/dynamic-import/await-import-and-use-in-jsx.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('useEffect' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"useEffect\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "useEffect#1"
+          symbol: "useEffect#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -149,17 +149,17 @@ declarations:
     end:
       line: 1
       column: 29
-  - symbol: "useState#1"
+  - symbol: "useState#2"
     source:
       hash: "13736345449019309360"
       path: src/dynamic-import/await-import-and-use-in-jsx.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('useState' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"useState\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "useState#1"
+          symbol: "useState#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -176,65 +176,65 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "AwaitImportAndUseInJsx#1"
-      - "AwaitImportAndUseInJsx#1"
-      - "node#2"
-      - "setNode#2"
+      - "AwaitImportAndUseInJsx#2"
+      - "AwaitImportAndUseInJsx#2"
+      - "node#3"
+      - "setNode#3"
       - "fetchNode#4"
       - "ImportedComponent#5"
     references:
-      - "AwaitImportAndUseInJsx#1"
+      - "AwaitImportAndUseInJsx#2"
       - "ImportedComponent#5"
-      - "div#3"
+      - "div#1"
       - "fetchNode#4"
-      - "node#2"
-      - "setNode#2"
-      - "useEffect#1"
-      - "useState#1"
+      - "node#3"
+      - "setNode#3"
+      - "useEffect#2"
+      - "useState#2"
     jsx_references:
       - "ImportedComponent#5"
-      - "div#3"
-  - owner: "AwaitImportAndUseInJsx#1"
+      - "div#1"
+  - owner: "AwaitImportAndUseInJsx#2"
     parent: "__global#0"
     children:
-      - "node#2"
-      - "setNode#2"
+      - "node#3"
+      - "setNode#3"
       - "fetchNode#4"
       - "ImportedComponent#5"
     references:
       - "ImportedComponent#5"
-      - "div#3"
+      - "div#1"
       - "fetchNode#4"
-      - "node#2"
-      - "setNode#2"
-      - "useEffect#1"
-      - "useState#1"
+      - "node#3"
+      - "setNode#3"
+      - "useEffect#2"
+      - "useState#2"
     jsx_references:
       - "ImportedComponent#5"
-      - "div#3"
-  - owner: "node#2"
-    parent: "AwaitImportAndUseInJsx#1"
+      - "div#1"
+  - owner: "node#3"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
-  - owner: "setNode#2"
-    parent: "AwaitImportAndUseInJsx#1"
+      - "div#1"
+  - owner: "setNode#3"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
+      - "div#1"
   - owner: "fetchNode#4"
-    parent: "AwaitImportAndUseInJsx#1"
+    parent: "AwaitImportAndUseInJsx#2"
     children:
       - "ImportedComponent#5"
     references:
       - "ImportedComponent#5"
-      - "setNode#2"
+      - "setNode#3"
     jsx_references:
       - "ImportedComponent#5"
   - owner: "ImportedComponent#5"
@@ -243,51 +243,51 @@ scopes:
     references: []
     jsx_references: []
   - owner: "ImportedComponent#5"
-    parent: "AwaitImportAndUseInJsx#1"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "AwaitImportAndUseInJsx#1"
+  - owner: "AwaitImportAndUseInJsx#2"
     parent: "__global#0"
     children:
-      - "node#2"
-      - "setNode#2"
+      - "node#3"
+      - "setNode#3"
       - "fetchNode#4"
       - "ImportedComponent#5"
     references:
       - "ImportedComponent#5"
-      - "div#3"
+      - "div#1"
       - "fetchNode#4"
-      - "node#2"
-      - "setNode#2"
-      - "useEffect#1"
-      - "useState#1"
+      - "node#3"
+      - "setNode#3"
+      - "useEffect#2"
+      - "useState#2"
     jsx_references:
       - "ImportedComponent#5"
-      - "div#3"
-  - owner: "node#2"
-    parent: "AwaitImportAndUseInJsx#1"
+      - "div#1"
+  - owner: "node#3"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
-  - owner: "setNode#2"
-    parent: "AwaitImportAndUseInJsx#1"
+      - "div#1"
+  - owner: "setNode#3"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
+      - "div#1"
   - owner: "fetchNode#4"
-    parent: "AwaitImportAndUseInJsx#1"
+    parent: "AwaitImportAndUseInJsx#2"
     children:
       - "ImportedComponent#5"
     references:
       - "ImportedComponent#5"
-      - "setNode#2"
+      - "setNode#3"
     jsx_references:
       - "ImportedComponent#5"
   - owner: "ImportedComponent#5"
@@ -296,33 +296,33 @@ scopes:
     references: []
     jsx_references: []
   - owner: "ImportedComponent#5"
-    parent: "AwaitImportAndUseInJsx#1"
+    parent: "AwaitImportAndUseInJsx#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "node#2"
+  - owner: "node#3"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
-  - owner: "setNode#2"
+      - "div#1"
+  - owner: "setNode#3"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "useState#1"
+      - "div#1"
+      - "useState#2"
     jsx_references:
-      - "div#3"
+      - "div#1"
   - owner: "fetchNode#4"
     parent: "__global#0"
     children:
       - "ImportedComponent#5"
     references:
       - "ImportedComponent#5"
-      - "setNode#2"
+      - "setNode#3"
     jsx_references:
       - "ImportedComponent#5"
   - owner: "ImportedComponent#5"
@@ -340,19 +340,17 @@ body:
     span:
       start: 1
       end: 45
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 18
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 18
-            ctxt: 1
+          ctxt: 2
           value: useState
           optional: false
         imported: ~
@@ -361,13 +359,12 @@ body:
         span:
           start: 20
           end: 29
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 20
             end: 29
-            ctxt: 1
+          ctxt: 2
           value: useEffect
           optional: false
         imported: ~
@@ -377,30 +374,28 @@ body:
       span:
         start: 37
         end: 44
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 47
       end: 461
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 88
           end: 461
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 94
               end: 147
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -408,27 +403,25 @@ body:
                 span:
                   start: 100
                   end: 146
-                  ctxt: 0
                 id:
                   type: ArrayPattern
                   span:
                     start: 100
                     end: 115
-                    ctxt: 0
                   elements:
-                    - optional: false
+                    - ctxt: 3
+                      optional: false
                       span:
                         start: 101
                         end: 105
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: node
-                    - optional: false
+                    - ctxt: 3
+                      optional: false
                       span:
                         start: 107
                         end: 114
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: setNode
@@ -439,13 +432,13 @@ body:
                   span:
                     start: 118
                     end: 146
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Identifier
                     span:
                       start: 118
                       end: 126
-                      ctxt: 1
+                    ctxt: 2
                     value: useState
                     optional: false
                   arguments:
@@ -455,7 +448,6 @@ body:
                         span:
                           start: 127
                           end: 145
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
@@ -463,13 +455,12 @@ body:
                             span:
                               start: 128
                               end: 131
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                           span:
                             start: 127
                             end: 132
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -478,7 +469,6 @@ body:
                             span:
                               start: 132
                               end: 139
-                              ctxt: 0
                             value: loading
                             raw: loading
                         closing:
@@ -486,13 +476,12 @@ body:
                           span:
                             start: 139
                             end: 145
-                            ctxt: 0
                           name:
                             type: Identifier
                             span:
                               start: 141
                               end: 144
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                   typeArguments: ~
@@ -501,19 +490,18 @@ body:
             span:
               start: 153
               end: 354
-              ctxt: 0
             expression:
               type: CallExpression
               span:
                 start: 153
                 end: 353
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 153
                   end: 162
-                  ctxt: 1
+                ctxt: 2
                 value: useEffect
                 optional: false
               arguments:
@@ -523,28 +511,26 @@ body:
                     span:
                       start: 163
                       end: 348
-                      ctxt: 0
+                    ctxt: 4
                     params: []
                     body:
-                      type: BlockStatement
+                      type: FunctionBody
                       span:
                         start: 169
                         end: 348
-                        ctxt: 0
                       stmts:
                         - async: true
                           body:
-                            type: BlockStatement
+                            type: FunctionBody
                             span:
                               start: 206
                               end: 320
-                              ctxt: 0
                             stmts:
                               - type: VariableDeclaration
                                 span:
                                   start: 220
                                   end: 267
-                                  ctxt: 0
+                                ctxt: 0
                                 kind: const
                                 declare: false
                                 declarations:
@@ -552,27 +538,25 @@ body:
                                     span:
                                       start: 226
                                       end: 266
-                                      ctxt: 0
                                     id:
                                       type: ObjectPattern
                                       span:
                                         start: 226
                                         end: 245
-                                        ctxt: 0
                                       properties:
                                         - type: AssignmentPatternProperty
                                           span:
                                             start: 227
                                             end: 244
-                                            ctxt: 0
                                           key:
-                                            type: Identifier
+                                            ctxt: 5
+                                            optional: false
                                             span:
                                               start: 227
                                               end: 244
-                                              ctxt: 5
+                                            type: Identifier
+                                            typeAnnotation: ~
                                             value: ImportedComponent
-                                            optional: false
                                           value: ~
                                       optional: false
                                       typeAnnotation: ~
@@ -581,19 +565,18 @@ body:
                                       span:
                                         start: 248
                                         end: 266
-                                        ctxt: 0
                                       argument:
                                         type: CallExpression
                                         span:
                                           start: 254
                                           end: 266
-                                          ctxt: 0
+                                        ctxt: 0
                                         callee:
                                           type: Import
                                           span:
                                             start: 254
                                             end: 260
-                                            ctxt: 0
+                                          phase: evaluation
                                         arguments:
                                           - spread: ~
                                             expression:
@@ -601,7 +584,6 @@ body:
                                               span:
                                                 start: 261
                                                 end: 265
-                                                ctxt: 0
                                               value: ds
                                               raw: "\"ds\""
                                         typeArguments: ~
@@ -610,19 +592,18 @@ body:
                                 span:
                                   start: 280
                                   end: 310
-                                  ctxt: 0
                                 expression:
                                   type: CallExpression
                                   span:
                                     start: 280
                                     end: 309
-                                    ctxt: 0
+                                  ctxt: 0
                                   callee:
                                     type: Identifier
                                     span:
                                       start: 280
                                       end: 287
-                                      ctxt: 2
+                                    ctxt: 3
                                     value: setNode
                                     optional: false
                                   arguments:
@@ -632,7 +613,6 @@ body:
                                         span:
                                           start: 288
                                           end: 308
-                                          ctxt: 0
                                         opening:
                                           type: JSXOpeningElement
                                           name:
@@ -640,19 +620,19 @@ body:
                                             span:
                                               start: 289
                                               end: 306
-                                              ctxt: 5
+                                            ctxt: 5
                                             value: ImportedComponent
                                             optional: false
                                           span:
                                             start: 288
                                             end: 308
-                                            ctxt: 0
                                           attributes: []
                                           selfClosing: true
                                           typeArguments: ~
                                         children: []
                                         closing: ~
                                   typeArguments: ~
+                          ctxt: 5
                           declare: false
                           decorators: []
                           generator: false
@@ -661,7 +641,7 @@ body:
                             span:
                               start: 194
                               end: 203
-                              ctxt: 4
+                            ctxt: 4
                             value: fetchNode
                             optional: false
                           params: []
@@ -669,26 +649,24 @@ body:
                           span:
                             start: 179
                             end: 320
-                            ctxt: 0
                           type: FunctionDeclaration
                           typeParameters: ~
                         - type: ExpressionStatement
                           span:
                             start: 330
                             end: 342
-                            ctxt: 0
                           expression:
                             type: CallExpression
                             span:
                               start: 330
                               end: 341
-                              ctxt: 0
+                            ctxt: 0
                             callee:
                               type: Identifier
                               span:
                                 start: 330
                                 end: 339
-                                ctxt: 4
+                              ctxt: 4
                               value: fetchNode
                               optional: false
                             arguments: []
@@ -703,65 +681,56 @@ body:
                     span:
                       start: 350
                       end: 352
-                      ctxt: 0
                     elements: []
               typeArguments: ~
           - type: ReturnStatement
             span:
               start: 360
               end: 459
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 367
                 end: 458
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 377
                   end: 452
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 377
                     end: 379
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 379
                       end: 392
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXExpressionContainer
                     span:
                       start: 392
                       end: 398
-                      ctxt: 0
                     expression:
                       type: Identifier
                       span:
                         start: 393
                         end: 397
-                        ctxt: 2
+                      ctxt: 3
                       value: node
                       optional: false
                   - type: JSXText
                     span:
                       start: 398
                       end: 411
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 411
                       end: 440
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -769,13 +738,12 @@ body:
                         span:
                           start: 412
                           end: 415
-                          ctxt: 3
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 411
                         end: 416
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -784,7 +752,6 @@ body:
                         span:
                           start: 416
                           end: 434
-                          ctxt: 0
                         value: some sync jsx code
                         raw: some sync jsx code
                     closing:
@@ -792,28 +759,26 @@ body:
                       span:
                         start: 434
                         end: 440
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 436
                           end: 439
-                          ctxt: 3
+                        ctxt: 1
                         value: div
                         optional: false
                   - type: JSXText
                     span:
                       start: 440
                       end: 449
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 449
                     end: 452
-                    ctxt: 0
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -822,7 +787,7 @@ body:
         span:
           start: 63
           end: 85
-          ctxt: 1
+        ctxt: 2
         value: AwaitImportAndUseInJsx
         optional: false
       params: []
@@ -830,6 +795,6 @@ body:
       span:
         start: 54
         end: 461
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

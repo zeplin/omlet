@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MainWithDefaultImport#1"
+      Internal: "MainWithDefaultImport#2"
     exported_name: MainWithDefaultImport
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "8742014489253607534"
       path: src/renamed-import/ordinary-default-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 3
       column: 14
-  - symbol: "MainWithDefaultImport#1"
+  - symbol: "MainWithDefaultImport#2"
     source:
       hash: "8742014489253607534"
       path: src/renamed-import/ordinary-default-import.tsx
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "react#1"
+  - symbol: "react#2"
     source:
       hash: "8742014489253607534"
       path: src/renamed-import/ordinary-default-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -82,46 +82,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "MainWithDefaultImport#1"
-      - "MainWithDefaultImport#1"
+      - "MainWithDefaultImport#2"
+      - "MainWithDefaultImport#2"
     references:
-      - "Button#1"
-      - "MainWithDefaultImport#1"
-      - "react#1"
+      - "Button#2"
+      - "MainWithDefaultImport#2"
+      - "react#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithDefaultImport#1"
+      - "Button#2"
+  - owner: "MainWithDefaultImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithDefaultImport#1"
+      - "Button#2"
+  - owner: "MainWithDefaultImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
+      - "Button#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: react
           optional: false
     source:
@@ -129,28 +127,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 29
       end: 53
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 36
           end: 42
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 36
             end: 42
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
     source:
@@ -158,36 +154,32 @@ body:
       span:
         start: 48
         end: 52
-        ctxt: 0
       value: ds
       raw: "\"ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 55
       end: 120
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 95
           end: 120
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 101
               end: 118
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 108
                 end: 117
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -195,18 +187,18 @@ body:
                   span:
                     start: 109
                     end: 115
-                    ctxt: 1
+                  ctxt: 2
                   value: Button
                   optional: false
                 span:
                   start: 108
                   end: 117
-                  ctxt: 0
                 attributes: []
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -215,7 +207,7 @@ body:
         span:
           start: 71
           end: 92
-          ctxt: 1
+        ctxt: 2
         value: MainWithDefaultImport
         optional: false
       params: []
@@ -223,6 +215,6 @@ body:
       span:
         start: 62
         end: 120
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

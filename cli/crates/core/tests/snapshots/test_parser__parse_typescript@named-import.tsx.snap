@@ -13,19 +13,19 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "NamedImportSample#1"
+      Internal: "NamedImportSample#2"
     exported_name: NamedImportSample
   - source:
-      Internal: "NamedImportUnknown#1"
+      Internal: "NamedImportUnknown#2"
     exported_name: NamedImportUnknown
   - source:
-      Internal: "StyledNamedImportUnknownComponent#1"
+      Internal: "StyledNamedImportUnknownComponent#2"
     exported_name: StyledNamedImportUnknownComponent
   - source:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "NamedImportSample#1"
+  - symbol: "NamedImportSample#2"
     source:
       hash: "15997042622171380594"
       path: src/styled-component/named-import.tsx
@@ -41,7 +41,7 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "NamedImportUnknown#1"
+  - symbol: "NamedImportUnknown#2"
     source:
       hash: "15997042622171380594"
       path: src/styled-component/named-import.tsx
@@ -56,7 +56,7 @@ declarations:
     end:
       line: 13
       column: 2
-  - symbol: "StyledNamedImportSample#1"
+  - symbol: "StyledNamedImportSample#2"
     source:
       hash: "15997042622171380594"
       path: src/styled-component/named-import.tsx
@@ -68,7 +68,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "15997042622171380594"
                     path: src/styled-component/named-import.tsx
@@ -77,7 +77,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "NamedImportSample#1"
+                    symbol: "NamedImportSample#2"
                     source:
                       hash: "15997042622171380594"
                       path: src/styled-component/named-import.tsx
@@ -91,7 +91,7 @@ declarations:
     end:
       line: 7
       column: 30
-  - symbol: "StyledNamedImportUnknownComponent#1"
+  - symbol: "StyledNamedImportUnknownComponent#2"
     source:
       hash: "15997042622171380594"
       path: src/styled-component/named-import.tsx
@@ -103,7 +103,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "15997042622171380594"
                     path: src/styled-component/named-import.tsx
@@ -112,7 +112,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "NamedImportUnknown#1"
+                    symbol: "NamedImportUnknown#2"
                     source:
                       hash: "15997042622171380594"
                       path: src/styled-component/named-import.tsx
@@ -136,7 +136,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "StyledNamedImportSample#1"
+          symbol: "StyledNamedImportSample#2"
           source:
             hash: "15997042622171380594"
             path: src/styled-component/named-import.tsx
@@ -149,17 +149,17 @@ declarations:
     end:
       line: 19
       column: 40
-  - symbol: "styled#1"
+  - symbol: "styled#2"
     source:
       hash: "15997042622171380594"
       path: src/styled-component/named-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('styled' type=inline), context: #1 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"styled\", context: #2 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "styled#1"
+          symbol: "styled#2"
           source:
             hash: "3407005538810520906"
             path: ""
@@ -176,92 +176,90 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NamedImportSample#1"
-      - "NamedImportSample#1"
-      - "StyledNamedImportSample#1"
-      - "NamedImportUnknown#1"
-      - "NamedImportUnknown#1"
-      - "StyledNamedImportUnknownComponent#1"
-      - "StyledNamedImportUnknownComponent#1"
+      - "NamedImportSample#2"
+      - "NamedImportSample#2"
+      - "StyledNamedImportSample#2"
+      - "NamedImportUnknown#2"
+      - "NamedImportUnknown#2"
+      - "StyledNamedImportUnknownComponent#2"
+      - "StyledNamedImportUnknownComponent#2"
       - "default#0"
     references:
-      - "NamedImportSample#1"
-      - "NamedImportUnknown#1"
-      - "StyledNamedImportSample#1"
-      - "StyledNamedImportUnknownComponent#1"
-      - "div#2"
-      - "styled#1"
+      - "NamedImportSample#2"
+      - "NamedImportUnknown#2"
+      - "StyledNamedImportSample#2"
+      - "StyledNamedImportUnknownComponent#2"
+      - "div#1"
+      - "styled#2"
     jsx_references:
-      - "div#2"
-  - owner: "NamedImportSample#1"
+      - "div#1"
+  - owner: "NamedImportSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "NamedImportSample#1"
+      - "div#1"
+  - owner: "NamedImportSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "StyledNamedImportSample#1"
+      - "div#1"
+  - owner: "StyledNamedImportSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "NamedImportSample#1"
-      - "styled#1"
+      - "NamedImportSample#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "NamedImportUnknown#1"
+  - owner: "NamedImportUnknown#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "NamedImportUnknown#1"
+  - owner: "NamedImportUnknown#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "StyledNamedImportUnknownComponent#1"
+  - owner: "StyledNamedImportUnknownComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NamedImportUnknown#1"
-      - "styled#1"
+      - "NamedImportUnknown#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "StyledNamedImportUnknownComponent#1"
+  - owner: "StyledNamedImportUnknownComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NamedImportUnknown#1"
-      - "styled#1"
+      - "NamedImportUnknown#2"
+      - "styled#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "StyledNamedImportSample#1"
+      - "StyledNamedImportSample#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 44
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 16
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 16
-            ctxt: 1
+          ctxt: 2
           value: styled
           optional: false
         imported: ~
@@ -271,36 +269,32 @@ body:
       span:
         start: 24
         end: 43
-        ctxt: 0
       value: styled-components
       raw: "\"styled-components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 46
       end: 115
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 82
           end: 115
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 88
               end: 113
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 95
                 end: 112
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -308,13 +302,12 @@ body:
                   span:
                     start: 96
                     end: 99
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 95
                   end: 100
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -323,7 +316,6 @@ body:
                   span:
                     start: 100
                     end: 106
-                    ctxt: 0
                   value: Sample
                   raw: Sample
               closing:
@@ -331,15 +323,15 @@ body:
                 span:
                   start: 106
                   end: 112
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 108
                     end: 111
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -348,7 +340,7 @@ body:
         span:
           start: 62
           end: 79
-          ctxt: 1
+        ctxt: 2
         value: NamedImportSample
         optional: false
       params: []
@@ -356,14 +348,13 @@ body:
       span:
         start: 53
         end: 115
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: VariableDeclaration
     span:
       start: 117
       end: 203
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -371,13 +362,12 @@ body:
         span:
           start: 123
           end: 202
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 123
             end: 146
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: StyledNamedImportSample
@@ -386,19 +376,19 @@ body:
           span:
             start: 149
             end: 202
-            ctxt: 0
+          ctxt: 0
           tag:
             type: CallExpression
             span:
               start: 149
               end: 174
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 149
                 end: 155
-                ctxt: 1
+              ctxt: 2
               value: styled
               optional: false
             arguments:
@@ -408,7 +398,7 @@ body:
                   span:
                     start: 156
                     end: 173
-                    ctxt: 1
+                  ctxt: 2
                   value: NamedImportSample
                   optional: false
             typeArguments: ~
@@ -418,14 +408,12 @@ body:
             span:
               start: 174
               end: 202
-              ctxt: 0
             expressions: []
             quasis:
               - type: TemplateElement
                 span:
                   start: 175
                   end: 201
-                  ctxt: 0
                 tail: true
                 cooked: "\n  background-color: red;\n"
                 raw: "\n  background-color: red;\n"
@@ -434,22 +422,20 @@ body:
     span:
       start: 205
       end: 257
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 242
           end: 257
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 248
               end: 255
-              ctxt: 0
             argument: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -458,7 +444,7 @@ body:
         span:
           start: 221
           end: 239
-          ctxt: 1
+        ctxt: 2
         value: NamedImportUnknown
         optional: false
       params: []
@@ -466,20 +452,18 @@ body:
       span:
         start: 212
         end: 257
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 259
       end: 365
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 266
         end: 365
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -487,13 +471,12 @@ body:
           span:
             start: 272
             end: 364
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 272
               end: 305
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: StyledNamedImportUnknownComponent
@@ -502,19 +485,19 @@ body:
             span:
               start: 308
               end: 364
-              ctxt: 0
+            ctxt: 0
             tag:
               type: CallExpression
               span:
                 start: 308
                 end: 334
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 308
                   end: 314
-                  ctxt: 1
+                ctxt: 2
                 value: styled
                 optional: false
               arguments:
@@ -524,7 +507,7 @@ body:
                     span:
                       start: 315
                       end: 333
-                      ctxt: 1
+                    ctxt: 2
                     value: NamedImportUnknown
                     optional: false
               typeArguments: ~
@@ -534,14 +517,12 @@ body:
               span:
                 start: 334
                 end: 364
-                ctxt: 0
               expressions: []
               quasis:
                 - type: TemplateElement
                   span:
                     start: 335
                     end: 363
-                    ctxt: 0
                   tail: true
                   cooked: "\n    background-color: red;\n"
                   raw: "\n    background-color: red;\n"
@@ -550,12 +531,12 @@ body:
     span:
       start: 367
       end: 406
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 382
         end: 405
-        ctxt: 1
+      ctxt: 2
       value: StyledNamedImportSample
       optional: false
+

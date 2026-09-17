@@ -13,7 +13,7 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "exported#1"
+      Internal: "exported#2"
     exported_name: exported
   - source:
       External:
@@ -25,13 +25,13 @@ exports:
           mtype: local
     exported_name: "<wildcard>"
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "4214781875961314466"
       path: src/module-decls/wildcard-export/exporter.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -48,7 +48,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "exported#1"
+  - symbol: "exported#2"
     source:
       hash: "4214781875961314466"
       path: src/module-decls/wildcard-export/exporter.tsx
@@ -68,46 +68,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "exported#1"
-      - "exported#1"
+      - "exported#2"
+      - "exported#2"
     references:
-      - "React#1"
-      - "div#2"
-      - "exported#1"
+      - "React#2"
+      - "div#1"
+      - "exported#2"
     jsx_references:
-      - "div#2"
-  - owner: "exported#1"
+      - "div#1"
+  - owner: "exported#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "exported#1"
+      - "div#1"
+  - owner: "exported#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -115,36 +113,32 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 91
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 56
           end: 91
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 62
               end: 89
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 69
                 end: 88
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -152,13 +146,12 @@ body:
                   span:
                     start: 70
                     end: 73
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 69
                   end: 74
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -167,7 +160,6 @@ body:
                   span:
                     start: 74
                     end: 82
-                    ctxt: 0
                   value: exported
                   raw: exported
               closing:
@@ -175,15 +167,15 @@ body:
                 span:
                   start: 82
                   end: 88
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 84
                     end: 87
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -192,7 +184,7 @@ body:
         span:
           start: 45
           end: 53
-          ctxt: 1
+        ctxt: 2
         value: exported
         optional: false
       params: []
@@ -200,20 +192,19 @@ body:
       span:
         start: 36
         end: 91
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportAllDeclaration
     span:
       start: 93
       end: 118
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 107
         end: 117
-        ctxt: 0
       value: "./sample"
       raw: "\"./sample\""
-    asserts: ~
+    typeOnly: false
+    with: ~
+

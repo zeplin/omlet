@@ -94,7 +94,7 @@ declarations:
       path: src/module-decls/module-export-from.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -130,33 +130,30 @@ body:
     span:
       start: 1
       end: 23
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 15
         end: 22
-        ctxt: 0
       value: golly
       raw: "\"golly\""
-    asserts: ~
+    typeOnly: false
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 24
       end: 55
-      ctxt: 0
     specifiers:
       - type: ExportNamespaceSpecifier
         span:
           start: 31
           end: 41
-          ctxt: 0
         name:
           type: Identifier
           span:
             start: 36
             end: 41
-            ctxt: 0
+          ctxt: 0
           value: dolly
           optional: false
     source:
@@ -164,28 +161,25 @@ body:
       span:
         start: 47
         end: 54
-        ctxt: 0
       value: dolly
       raw: "\"dolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 56
       end: 100
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 65
           end: 73
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 65
             end: 73
-            ctxt: 0
+          ctxt: 0
           value: coronado
           optional: false
         exported: ~
@@ -194,13 +188,12 @@ body:
         span:
           start: 75
           end: 84
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 75
             end: 84
-            ctxt: 0
+          ctxt: 0
           value: scrimshaw
           optional: false
         exported: ~
@@ -210,28 +203,25 @@ body:
       span:
         start: 92
         end: 99
-        ctxt: 0
       value: molly
       raw: "\"molly\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 101
       end: 163
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 110
           end: 127
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 110
             end: 118
-            ctxt: 0
+          ctxt: 0
           value: coronado
           optional: false
         exported:
@@ -239,7 +229,7 @@ body:
           span:
             start: 122
             end: 127
-            ctxt: 0
+          ctxt: 0
           value: cPeep
           optional: false
         isTypeOnly: false
@@ -247,13 +237,12 @@ body:
         span:
           start: 129
           end: 147
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 129
             end: 138
-            ctxt: 0
+          ctxt: 0
           value: scrimshaw
           optional: false
         exported:
@@ -261,7 +250,7 @@ body:
           span:
             start: 142
             end: 147
-            ctxt: 0
+          ctxt: 0
           value: sPeep
           optional: false
         isTypeOnly: false
@@ -270,28 +259,25 @@ body:
       span:
         start: 155
         end: 162
-        ctxt: 0
       value: molly
       raw: "\"molly\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 164
       end: 227
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 173
           end: 180
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 173
             end: 180
-            ctxt: 0
+          ctxt: 0
           value: default
           optional: false
         exported: ~
@@ -300,13 +286,12 @@ body:
         span:
           start: 182
           end: 192
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 182
             end: 192
-            ctxt: 0
+          ctxt: 0
           value: hollyMolly
           optional: false
         exported: ~
@@ -315,13 +300,12 @@ body:
         span:
           start: 194
           end: 211
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 194
             end: 203
-            ctxt: 0
+          ctxt: 0
           value: scrimshaw
           optional: false
         exported:
@@ -329,7 +313,7 @@ body:
           span:
             start: 207
             end: 211
-            ctxt: 0
+          ctxt: 0
           value: shaw
           optional: false
         isTypeOnly: false
@@ -338,8 +322,8 @@ body:
       span:
         start: 219
         end: 226
-        ctxt: 0
       value: molly
       raw: "\"molly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+

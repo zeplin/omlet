@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "1701424192065571836"
       path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "1701424192065571836"
       path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
@@ -56,7 +56,7 @@ declarations:
     end:
       line: 11
       column: 2
-  - symbol: "i#2"
+  - symbol: "i#4"
     source:
       hash: "1701424192065571836"
       path: src/functional-component/control-statements/loop-for-of/for-of-if.tsx
@@ -74,49 +74,47 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "div#3"
-      - "i#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "i#4"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "i#2"
+      - "div#1"
+      - "i#4"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "i#2"
+      - "div#1"
+      - "i#4"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -124,37 +122,34 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 204
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 54
           end: 204
-          ctxt: 0
         stmts:
           - type: ForOfStatement
             span:
               start: 60
               end: 186
-              ctxt: 0
-            await: ~
+            await: false
             left:
               type: VariableDeclaration
               span:
                 start: 65
                 end: 72
-                ctxt: 0
+              ctxt: 0
               kind: const
               declare: false
               declarations:
@@ -162,13 +157,12 @@ body:
                   span:
                     start: 71
                     end: 72
-                    ctxt: 0
                   id:
+                    ctxt: 4
                     optional: false
                     span:
                       start: 71
                       end: 72
-                      ctxt: 2
                     type: Identifier
                     typeAnnotation: ~
                     value: i
@@ -179,7 +173,6 @@ body:
               span:
                 start: 76
                 end: 106
-                ctxt: 0
               elements:
                 - spread: ~
                   expression:
@@ -187,7 +180,6 @@ body:
                     span:
                       start: 77
                       end: 78
-                      ctxt: 0
                     value: 0.0
                     raw: "0"
                 - spread: ~
@@ -196,7 +188,6 @@ body:
                     span:
                       start: 80
                       end: 81
-                      ctxt: 0
                     value: 1.0
                     raw: "1"
                 - spread: ~
@@ -205,7 +196,6 @@ body:
                     span:
                       start: 83
                       end: 84
-                      ctxt: 0
                     value: 2.0
                     raw: "2"
                 - spread: ~
@@ -214,7 +204,6 @@ body:
                     span:
                       start: 86
                       end: 87
-                      ctxt: 0
                     value: 3.0
                     raw: "3"
                 - spread: ~
@@ -223,7 +212,6 @@ body:
                     span:
                       start: 89
                       end: 90
-                      ctxt: 0
                     value: 4.0
                     raw: "4"
                 - spread: ~
@@ -232,7 +220,6 @@ body:
                     span:
                       start: 92
                       end: 93
-                      ctxt: 0
                     value: 5.0
                     raw: "5"
                 - spread: ~
@@ -241,7 +228,6 @@ body:
                     span:
                       start: 95
                       end: 96
-                      ctxt: 0
                     value: 6.0
                     raw: "6"
                 - spread: ~
@@ -250,7 +236,6 @@ body:
                     span:
                       start: 98
                       end: 99
-                      ctxt: 0
                     value: 7.0
                     raw: "7"
                 - spread: ~
@@ -259,7 +244,6 @@ body:
                     span:
                       start: 101
                       end: 102
-                      ctxt: 0
                     value: 8.0
                     raw: "8"
                 - spread: ~
@@ -268,7 +252,6 @@ body:
                     span:
                       start: 104
                       end: 105
-                      ctxt: 0
                     value: 9.0
                     raw: "9"
             body:
@@ -276,26 +259,24 @@ body:
               span:
                 start: 108
                 end: 186
-                ctxt: 0
+              ctxt: 5
               stmts:
                 - type: IfStatement
                   span:
                     start: 118
                     end: 180
-                    ctxt: 0
                   test:
                     type: BinaryExpression
                     span:
                       start: 122
                       end: 129
-                      ctxt: 0
                     operator: "==="
                     left:
                       type: Identifier
                       span:
                         start: 122
                         end: 123
-                        ctxt: 2
+                      ctxt: 4
                       value: i
                       optional: false
                     right:
@@ -303,7 +284,6 @@ body:
                       span:
                         start: 128
                         end: 129
-                        ctxt: 0
                       value: 5.0
                       raw: "5"
                   consequent:
@@ -311,19 +291,17 @@ body:
                     span:
                       start: 131
                       end: 180
-                      ctxt: 0
+                    ctxt: 6
                     stmts:
                       - type: ReturnStatement
                         span:
                           start: 145
                           end: 170
-                          ctxt: 0
                         argument:
                           type: JSXElement
                           span:
                             start: 152
                             end: 169
-                            ctxt: 0
                           opening:
                             type: JSXOpeningElement
                             name:
@@ -331,13 +309,12 @@ body:
                               span:
                                 start: 153
                                 end: 156
-                                ctxt: 3
+                              ctxt: 1
                               value: div
                               optional: false
                             span:
                               start: 152
                               end: 157
-                              ctxt: 0
                             attributes: []
                             selfClosing: false
                             typeArguments: ~
@@ -346,7 +323,6 @@ body:
                               span:
                                 start: 157
                                 end: 163
-                                ctxt: 0
                               value: Sample
                               raw: Sample
                           closing:
@@ -354,13 +330,12 @@ body:
                             span:
                               start: 163
                               end: 169
-                              ctxt: 0
                             name:
                               type: Identifier
                               span:
                                 start: 165
                                 end: 168
-                                ctxt: 3
+                              ctxt: 1
                               value: div
                               optional: false
                   alternate: ~
@@ -368,15 +343,14 @@ body:
             span:
               start: 192
               end: 202
-              ctxt: 0
             argument:
               type: NumericLiteral
               span:
                 start: 199
                 end: 201
-                ctxt: 0
               value: 42.0
               raw: "42"
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -385,7 +359,7 @@ body:
         span:
           start: 45
           end: 51
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -393,6 +367,6 @@ body:
       span:
         start: 36
         end: 204
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

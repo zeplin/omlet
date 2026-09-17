@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "12726900177706873002"
       path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "12726900177706873002"
       path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "result#2"
+              symbol: "result#3"
               source:
                 hash: "12726900177706873002"
                 path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
@@ -63,17 +63,17 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "bool#2"
+  - symbol: "bool#3"
     source:
       hash: "12726900177706873002"
       path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"Sample\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "Sample#1"
+          symbol: "Sample#2"
           source:
             hash: "12726900177706873002"
             path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
@@ -85,8 +85,8 @@ declarations:
       column: 24
     end:
       line: 3
-      column: 38
-  - symbol: "result#2"
+      column: 28
+  - symbol: "result#3"
     source:
       hash: "12726900177706873002"
       path: src/functional-component/control-statements/conditional-if/return-var/if-else-if.tsx
@@ -104,55 +104,53 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "bool#2"
-      - "div#3"
-      - "result#2"
-      - "undefined#3"
+      - "React#2"
+      - "Sample#2"
+      - "bool#3"
+      - "div#1"
+      - "result#3"
+      - "undefined#1"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "div#3"
-      - "result#2"
-      - "undefined#3"
+      - "bool#3"
+      - "div#1"
+      - "result#3"
+      - "undefined#1"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "div#3"
-      - "result#2"
-      - "undefined#3"
+      - "bool#3"
+      - "div#1"
+      - "result#3"
+      - "undefined#1"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -160,30 +158,28 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 260
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 68
           end: 260
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 74
               end: 85
-              ctxt: 0
+            ctxt: 0
             kind: let
             declare: false
             declarations:
@@ -191,13 +187,12 @@ body:
                 span:
                   start: 78
                   end: 84
-                  ctxt: 0
                 id:
+                  ctxt: 3
                   optional: false
                   span:
                     start: 78
                     end: 84
-                    ctxt: 2
                   type: Identifier
                   typeAnnotation: ~
                   value: result
@@ -207,20 +202,18 @@ body:
             span:
               start: 91
               end: 238
-              ctxt: 0
             test:
               type: BinaryExpression
               span:
                 start: 95
                 end: 113
-                ctxt: 0
               operator: "==="
               left:
                 type: Identifier
                 span:
                   start: 95
                   end: 99
-                  ctxt: 2
+                ctxt: 3
                 value: bool
                 optional: false
               right:
@@ -228,7 +221,7 @@ body:
                 span:
                   start: 104
                   end: 113
-                  ctxt: 3
+                ctxt: 1
                 value: undefined
                 optional: false
             consequent:
@@ -236,26 +229,24 @@ body:
               span:
                 start: 115
                 end: 145
-                ctxt: 0
+              ctxt: 4
               stmts:
                 - type: ExpressionStatement
                   span:
                     start: 125
                     end: 139
-                    ctxt: 0
                   expression:
                     type: AssignmentExpression
                     span:
                       start: 125
                       end: 138
-                      ctxt: 0
                     operator: "="
                     left:
+                      ctxt: 3
                       optional: false
                       span:
                         start: 125
                         end: 131
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: result
@@ -264,19 +255,17 @@ body:
                       span:
                         start: 134
                         end: 138
-                        ctxt: 0
             alternate:
               type: IfStatement
               span:
                 start: 151
                 end: 238
-                ctxt: 0
               test:
                 type: Identifier
                 span:
                   start: 155
                   end: 159
-                  ctxt: 2
+                ctxt: 3
                 value: bool
                 optional: false
               consequent:
@@ -284,26 +273,24 @@ body:
                 span:
                   start: 161
                   end: 204
-                  ctxt: 0
+                ctxt: 5
                 stmts:
                   - type: ExpressionStatement
                     span:
                       start: 171
                       end: 198
-                      ctxt: 0
                     expression:
                       type: AssignmentExpression
                       span:
                         start: 171
                         end: 197
-                        ctxt: 0
                       operator: "="
                       left:
+                        ctxt: 3
                         optional: false
                         span:
                           start: 171
                           end: 177
-                          ctxt: 2
                         type: Identifier
                         typeAnnotation: ~
                         value: result
@@ -312,7 +299,6 @@ body:
                         span:
                           start: 180
                           end: 197
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
@@ -320,13 +306,12 @@ body:
                             span:
                               start: 181
                               end: 184
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                           span:
                             start: 180
                             end: 185
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -335,7 +320,6 @@ body:
                             span:
                               start: 185
                               end: 191
-                              ctxt: 0
                             value: Sample
                             raw: Sample
                         closing:
@@ -343,13 +327,12 @@ body:
                           span:
                             start: 191
                             end: 197
-                            ctxt: 0
                           name:
                             type: Identifier
                             span:
                               start: 193
                               end: 196
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
               alternate:
@@ -357,26 +340,24 @@ body:
                 span:
                   start: 210
                   end: 238
-                  ctxt: 0
+                ctxt: 6
                 stmts:
                   - type: ExpressionStatement
                     span:
                       start: 220
                       end: 232
-                      ctxt: 0
                     expression:
                       type: AssignmentExpression
                       span:
                         start: 220
                         end: 231
-                        ctxt: 0
                       operator: "="
                       left:
+                        ctxt: 3
                         optional: false
                         span:
                           start: 220
                           end: 226
-                          ctxt: 2
                         type: Identifier
                         typeAnnotation: ~
                         value: result
@@ -385,22 +366,21 @@ body:
                         span:
                           start: 229
                           end: 231
-                          ctxt: 0
                         value: 42.0
                         raw: "42"
           - type: ReturnStatement
             span:
               start: 244
               end: 258
-              ctxt: 0
             argument:
               type: Identifier
               span:
                 start: 251
                 end: 257
-                ctxt: 2
+              ctxt: 3
               value: result
               optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -409,7 +389,7 @@ body:
         span:
           start: 45
           end: 51
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params:
@@ -417,33 +397,30 @@ body:
           span:
             start: 52
             end: 66
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: true
             span:
               start: 52
-              end: 66
-              ctxt: 2
+              end: 56
             type: Identifier
             typeAnnotation:
               type: TsTypeAnnotation
               span:
                 start: 57
                 end: 66
-                ctxt: 0
               typeAnnotation:
                 type: TsKeywordType
                 span:
                   start: 59
                   end: 66
-                  ctxt: 0
                 kind: boolean
             value: bool
       returnType: ~
       span:
         start: 36
         end: 260
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

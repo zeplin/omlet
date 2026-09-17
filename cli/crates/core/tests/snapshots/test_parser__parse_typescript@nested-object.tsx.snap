@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "NestedObject#1"
+      Internal: "NestedObject#2"
     exported_name: default
 declarations:
-  - symbol: "Box#1"
+  - symbol: "Box#2"
     source:
       hash: "15966743490465926700"
       path: src/object-properties/nested-object.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Box' type=inline), context: #1 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Box\", context: #2 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Box#1"
+          symbol: "Box#2"
           source:
             hash: "10072812099332075239"
             path: ""
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "NestedObject#1"
+  - symbol: "NestedObject#2"
     source:
       hash: "15966743490465926700"
       path: src/object-properties/nested-object.tsx
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 20
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "15966743490465926700"
       path: src/object-properties/nested-object.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -82,64 +82,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NestedObject#1"
-      - "NestedObject#1"
+      - "NestedObject#2"
+      - "NestedObject#2"
     references:
-      - "Box#1"
-      - "NestedObject#1"
-      - "React#1"
-      - "border#0"
-      - "color#0"
-      - "customStyles#0"
-      - "style#0"
-      - "sx#0"
-      - "width#0"
+      - "Box#2"
+      - "NestedObject#2"
+      - "React#2"
     jsx_references:
-      - "Box#1"
-  - owner: "NestedObject#1"
+      - "Box#2"
+  - owner: "NestedObject#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "border#0"
-      - "color#0"
-      - "customStyles#0"
-      - "style#0"
-      - "sx#0"
-      - "width#0"
+      - "Box#2"
     jsx_references:
-      - "Box#1"
-  - owner: "NestedObject#1"
+      - "Box#2"
+  - owner: "NestedObject#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "border#0"
-      - "color#0"
-      - "customStyles#0"
-      - "style#0"
-      - "sx#0"
-      - "width#0"
+      - "Box#2"
     jsx_references:
-      - "Box#1"
+      - "Box#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -147,28 +127,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 64
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 37
           end: 40
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 40
-            ctxt: 1
+          ctxt: 2
           value: Box
           optional: false
         imported: ~
@@ -178,42 +156,37 @@ body:
       span:
         start: 48
         end: 63
-        ctxt: 0
       value: "@mui/material"
       raw: "\"@mui/material\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 66
       end: 446
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 105
           end: 446
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 111
               end: 444
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 118
                 end: 443
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 128
                   end: 437
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -221,39 +194,33 @@ body:
                     span:
                       start: 129
                       end: 132
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
                   span:
                     start: 128
                     end: 390
-                    ctxt: 0
                   attributes:
                     - type: JSXAttribute
                       span:
                         start: 145
                         end: 380
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 145
                           end: 147
-                          ctxt: 0
                         value: sx
-                        optional: false
                       value:
                         type: JSXExpressionContainer
                         span:
                           start: 148
                           end: 380
-                          ctxt: 0
                         expression:
                           type: ObjectExpression
                           span:
                             start: 149
                             end: 379
-                            ctxt: 0
                           properties:
                             - type: KeyValueProperty
                               key:
@@ -261,15 +228,12 @@ body:
                                 span:
                                   start: 167
                                   end: 179
-                                  ctxt: 0
                                 value: customStyles
-                                optional: false
                               value:
                                 type: ObjectExpression
                                 span:
                                   start: 181
                                   end: 365
-                                  ctxt: 0
                                 properties:
                                   - type: KeyValueProperty
                                     key:
@@ -277,15 +241,12 @@ body:
                                       span:
                                         start: 203
                                         end: 208
-                                        ctxt: 0
                                       value: color
-                                      optional: false
                                     value:
                                       type: StringLiteral
                                       span:
                                         start: 210
                                         end: 215
-                                        ctxt: 0
                                       value: red
                                       raw: "\"red\""
                                   - type: KeyValueProperty
@@ -294,15 +255,12 @@ body:
                                       span:
                                         start: 237
                                         end: 243
-                                        ctxt: 0
                                       value: border
-                                      optional: false
                                     value:
                                       type: ObjectExpression
                                       span:
                                         start: 245
                                         end: 346
-                                        ctxt: 0
                                       properties:
                                         - type: KeyValueProperty
                                           key:
@@ -310,15 +268,12 @@ body:
                                             span:
                                               start: 271
                                               end: 276
-                                              ctxt: 0
                                             value: style
-                                            optional: false
                                           value:
                                             type: StringLiteral
                                             span:
                                               start: 278
                                               end: 285
-                                              ctxt: 0
                                             value: solid
                                             raw: "\"solid\""
                                         - type: KeyValueProperty
@@ -327,15 +282,12 @@ body:
                                             span:
                                               start: 311
                                               end: 316
-                                              ctxt: 0
                                             value: width
-                                            optional: false
                                           value:
                                             type: StringLiteral
                                             span:
                                               start: 318
                                               end: 323
-                                              ctxt: 0
                                             value: 2px
                                             raw: "\"2px\""
                   selfClosing: false
@@ -345,23 +297,22 @@ body:
                     span:
                       start: 390
                       end: 431
-                      ctxt: 0
-                    value: "\n\n            Styled with sx prop\n\n        "
-                    raw: "\n\n            Styled with sx prop\n\n        "
+                    value: "\n            Styled with sx prop\n        "
+                    raw: "\n            Styled with sx prop\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 431
                     end: 437
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 433
                       end: 436
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -369,7 +320,7 @@ body:
         span:
           start: 90
           end: 102
-          ctxt: 1
+        ctxt: 2
         value: NestedObject
         optional: false
       params: []
@@ -377,6 +328,6 @@ body:
       span:
         start: 81
         end: 446
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

@@ -13,7 +13,7 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "thirteen#1"
+      Internal: "thirteen#2"
     exported_name: default
   - source:
       Internal: "default#0"
@@ -33,7 +33,7 @@ declarations:
     end:
       line: 14
       column: 21
-  - symbol: "dollyPromise#1"
+  - symbol: "dollyPromise#2"
     source:
       hash: "1289218655610857903"
       path: src/module-decls/module-dynamic-import.ts
@@ -56,7 +56,7 @@ declarations:
     end:
       line: 1
       column: 19
-  - symbol: "molly#2"
+  - symbol: "molly#4"
     source:
       hash: "1289218655610857903"
       path: src/module-decls/module-dynamic-import.ts
@@ -79,7 +79,7 @@ declarations:
     end:
       line: 8
       column: 16
-  - symbol: "thirteen#1"
+  - symbol: "thirteen#2"
     source:
       hash: "1289218655610857903"
       path: src/module-decls/module-dynamic-import.ts
@@ -94,7 +94,7 @@ declarations:
     end:
       line: 13
       column: 39
-  - symbol: "whereIsDolly#1"
+  - symbol: "whereIsDolly#2"
     source:
       hash: "1289218655610857903"
       path: src/module-decls/module-dynamic-import.ts
@@ -106,7 +106,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "dollyPromise#1"
+                  symbol: "dollyPromise#2"
                   source:
                     hash: "1289218655610857903"
                     path: src/module-decls/module-dynamic-import.ts
@@ -120,7 +120,7 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "whereIsMolly#1"
+  - symbol: "whereIsMolly#2"
     source:
       hash: "1289218655610857903"
       path: src/module-decls/module-dynamic-import.ts
@@ -132,7 +132,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "molly#2"
+                  symbol: "molly#4"
                   source:
                     hash: "1289218655610857903"
                     path: src/module-decls/module-dynamic-import.ts
@@ -150,57 +150,54 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "dollyPromise#1"
-      - "whereIsDolly#1"
-      - "whereIsMolly#1"
-      - "molly#2"
-      - "thirteen#1"
-      - "thirteen#1"
+      - "dollyPromise#2"
+      - "whereIsDolly#2"
+      - "whereIsMolly#2"
+      - "molly#4"
+      - "thirteen#2"
+      - "thirteen#2"
       - "default#0"
     references:
-      - "dollyPromise#1"
-      - "location#0"
-      - "molly#2"
-      - "thirteen#1"
-      - "whereIsDolly#1"
-      - "whereIsMolly#1"
+      - "dollyPromise#2"
+      - "molly#4"
+      - "thirteen#2"
+      - "whereIsDolly#2"
+      - "whereIsMolly#2"
     jsx_references: []
-  - owner: "dollyPromise#1"
+  - owner: "dollyPromise#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "whereIsDolly#1"
+  - owner: "whereIsDolly#2"
     parent: "__global#0"
     children: []
     references:
-      - "dollyPromise#1"
-      - "location#0"
+      - "dollyPromise#2"
     jsx_references: []
-  - owner: "whereIsMolly#1"
+  - owner: "whereIsMolly#2"
     parent: "__global#0"
     children:
-      - "molly#2"
+      - "molly#4"
     references:
-      - "location#0"
-      - "molly#2"
+      - "molly#4"
     jsx_references: []
-  - owner: "molly#2"
-    parent: "whereIsMolly#1"
+  - owner: "molly#4"
+    parent: "whereIsMolly#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "molly#2"
+  - owner: "molly#4"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "thirteen#1"
+  - owner: "thirteen#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "thirteen#1"
+  - owner: "thirteen#2"
     parent: "__global#0"
     children: []
     references: []
@@ -215,7 +212,7 @@ body:
     span:
       start: 1
       end: 38
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -223,13 +220,12 @@ body:
         span:
           start: 7
           end: 37
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 7
             end: 19
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: dollyPromise
@@ -238,13 +234,13 @@ body:
           span:
             start: 22
             end: 37
-            ctxt: 0
+          ctxt: 0
           callee:
             type: Import
             span:
               start: 22
               end: 28
-              ctxt: 0
+            phase: evaluation
           arguments:
             - spread: ~
               expression:
@@ -252,48 +248,42 @@ body:
                 span:
                   start: 29
                   end: 36
-                  ctxt: 0
                 value: dolly
                 raw: "\"dolly\""
           typeArguments: ~
         definite: false
   - async: true
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 70
         end: 115
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 76
             end: 113
-            ctxt: 0
           argument:
             type: MemberExpression
             span:
               start: 83
               end: 112
-              ctxt: 0
             object:
               type: ParenthesisExpression
               span:
                 start: 83
                 end: 103
-                ctxt: 0
               expression:
                 type: AwaitExpression
                 span:
                   start: 84
                   end: 102
-                  ctxt: 0
                 argument:
                   type: Identifier
                   span:
                     start: 90
                     end: 102
-                    ctxt: 1
+                  ctxt: 2
                   value: dollyPromise
                   optional: false
             property:
@@ -301,9 +291,8 @@ body:
               span:
                 start: 104
                 end: 112
-                ctxt: 0
               value: location
-              optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -312,7 +301,7 @@ body:
       span:
         start: 55
         end: 67
-        ctxt: 1
+      ctxt: 2
       value: whereIsDolly
       optional: false
     params: []
@@ -320,22 +309,20 @@ body:
     span:
       start: 40
       end: 115
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - async: true
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 147
         end: 219
-        ctxt: 0
       stmts:
         - type: VariableDeclaration
           span:
             start: 153
             end: 189
-            ctxt: 0
+          ctxt: 0
           kind: const
           declare: false
           declarations:
@@ -343,13 +330,12 @@ body:
               span:
                 start: 159
                 end: 188
-                ctxt: 0
               id:
+                ctxt: 4
                 optional: false
                 span:
                   start: 159
                   end: 164
-                  ctxt: 2
                 type: Identifier
                 typeAnnotation: ~
                 value: molly
@@ -358,19 +344,18 @@ body:
                 span:
                   start: 167
                   end: 188
-                  ctxt: 0
                 argument:
                   type: CallExpression
                   span:
                     start: 173
                     end: 188
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Import
                     span:
                       start: 173
                       end: 179
-                      ctxt: 0
+                    phase: evaluation
                   arguments:
                     - spread: ~
                       expression:
@@ -378,7 +363,6 @@ body:
                         span:
                           start: 180
                           end: 187
-                          ctxt: 0
                         value: molly
                         raw: "\"molly\""
                   typeArguments: ~
@@ -387,19 +371,17 @@ body:
           span:
             start: 195
             end: 217
-            ctxt: 0
           argument:
             type: MemberExpression
             span:
               start: 202
               end: 216
-              ctxt: 0
             object:
               type: Identifier
               span:
                 start: 202
                 end: 207
-                ctxt: 2
+              ctxt: 4
               value: molly
               optional: false
             property:
@@ -407,9 +389,8 @@ body:
               span:
                 start: 208
                 end: 216
-                ctxt: 0
               value: location
-              optional: false
+    ctxt: 4
     declare: false
     decorators: []
     generator: false
@@ -418,7 +399,7 @@ body:
       span:
         start: 132
         end: 144
-        ctxt: 1
+      ctxt: 2
       value: whereIsMolly
       optional: false
     params: []
@@ -426,23 +407,21 @@ body:
     span:
       start: 117
       end: 219
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDefaultDeclaration
     span:
       start: 221
       end: 259
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 256
           end: 259
-          ctxt: 0
         stmts: []
+      ctxt: 5
       decorators: []
       generator: false
       identifier:
@@ -450,7 +429,7 @@ body:
         span:
           start: 245
           end: 253
-          ctxt: 1
+        ctxt: 2
         value: thirteen
         optional: false
       params: []
@@ -458,19 +437,17 @@ body:
       span:
         start: 236
         end: 259
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
   - type: ExportDefaultExpression
     span:
       start: 260
       end: 280
-      ctxt: 0
     expression:
       type: NumericLiteral
       span:
         start: 275
         end: 279
-        ctxt: 0
       value: 1331.0
       raw: "1331"
+

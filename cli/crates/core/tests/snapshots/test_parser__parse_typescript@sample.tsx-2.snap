@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "sample#1"
+      Internal: "sample#2"
     exported_name: sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "16957890942232978691"
       path: src/module-decls/wildcard-import/sample.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "sample#1"
+  - symbol: "sample#2"
     source:
       hash: "16957890942232978691"
       path: src/module-decls/wildcard-import/sample.tsx
@@ -60,46 +60,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "sample#1"
-      - "sample#1"
+      - "sample#2"
+      - "sample#2"
     references:
-      - "React#1"
-      - "div#2"
-      - "sample#1"
+      - "React#2"
+      - "div#1"
+      - "sample#2"
     jsx_references:
-      - "div#2"
-  - owner: "sample#1"
+      - "div#1"
+  - owner: "sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "sample#1"
+      - "div#1"
+  - owner: "sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -107,43 +105,39 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 93
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 54
           end: 93
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 60
               end: 91
-              ctxt: 0
             argument:
               type: ArrowFunctionExpression
               span:
                 start: 67
                 end: 90
-                ctxt: 0
+              ctxt: 4
               params: []
               body:
                 type: JSXElement
                 span:
                   start: 73
                   end: 90
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -151,13 +145,12 @@ body:
                     span:
                       start: 74
                       end: 77
-                      ctxt: 2
+                    ctxt: 1
                     value: div
                     optional: false
                   span:
                     start: 73
                     end: 78
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -166,7 +159,6 @@ body:
                     span:
                       start: 78
                       end: 84
-                      ctxt: 0
                     value: sample
                     raw: sample
                 closing:
@@ -174,19 +166,19 @@ body:
                   span:
                     start: 84
                     end: 90
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 86
                       end: 89
-                      ctxt: 2
+                    ctxt: 1
                     value: div
                     optional: false
               async: false
               generator: false
               typeParameters: ~
               returnType: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -195,7 +187,7 @@ body:
         span:
           start: 45
           end: 51
-          ctxt: 1
+        ctxt: 2
         value: sample
         optional: false
       params: []
@@ -203,6 +195,6 @@ body:
       span:
         start: 36
         end: 93
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

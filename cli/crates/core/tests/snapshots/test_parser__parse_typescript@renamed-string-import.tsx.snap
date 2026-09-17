@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MainWithRenamedStringImport#1"
+      Internal: "MainWithRenamedStringImport#2"
     exported_name: MainWithRenamedStringImport
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "6603304538742303530"
       path: src/renamed-import/renamed-string-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11441123865108480054, path: \"src/renamed-import/renamed-string-export\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11441123865108480054, path: \"src/renamed-import/renamed-string-export\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 3
       column: 29
-  - symbol: "MainWithRenamedStringImport#1"
+  - symbol: "MainWithRenamedStringImport#2"
     source:
       hash: "6603304538742303530"
       path: src/renamed-import/renamed-string-import.tsx
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "react#1"
+  - symbol: "react#2"
     source:
       hash: "6603304538742303530"
       path: src/renamed-import/renamed-string-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -82,46 +82,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "MainWithRenamedStringImport#1"
-      - "MainWithRenamedStringImport#1"
+      - "MainWithRenamedStringImport#2"
+      - "MainWithRenamedStringImport#2"
     references:
-      - "Button#1"
-      - "MainWithRenamedStringImport#1"
-      - "react#1"
+      - "Button#2"
+      - "MainWithRenamedStringImport#2"
+      - "react#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithRenamedStringImport#1"
+      - "Button#2"
+  - owner: "MainWithRenamedStringImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithRenamedStringImport#1"
+      - "Button#2"
+  - owner: "MainWithRenamedStringImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
+      - "Button#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: react
           optional: false
     source:
@@ -129,28 +127,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 29
       end: 91
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 38
           end: 57
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 51
             end: 57
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         imported:
@@ -158,7 +154,6 @@ body:
           span:
             start: 38
             end: 47
-            ctxt: 0
           value: default
           raw: "\"default\""
         isTypeOnly: false
@@ -167,36 +162,32 @@ body:
       span:
         start: 65
         end: 90
-        ctxt: 0
       value: "./renamed-string-export"
       raw: "\"./renamed-string-export\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 93
       end: 164
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 139
           end: 164
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 145
               end: 162
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 152
                 end: 161
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -204,18 +195,18 @@ body:
                   span:
                     start: 153
                     end: 159
-                    ctxt: 1
+                  ctxt: 2
                   value: Button
                   optional: false
                 span:
                   start: 152
                   end: 161
-                  ctxt: 0
                 attributes: []
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -224,7 +215,7 @@ body:
         span:
           start: 109
           end: 136
-          ctxt: 1
+        ctxt: 2
         value: MainWithRenamedStringImport
         optional: false
       params: []
@@ -232,6 +223,6 @@ body:
       span:
         start: 100
         end: 164
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

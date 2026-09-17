@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "DefaultExportMain#1"
+      Internal: "DefaultExportMain#2"
     exported_name: DefaultExportMain
 declarations:
-  - symbol: "AnonExprWrapped#1"
+  - symbol: "AnonExprWrapped#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 2303020239782242557, path: \"src/module-decls/default-export/default-export-anon-expr-wrapped\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 2303020239782242557, path: \"src/module-decls/default-export/default-export-anon-expr-wrapped\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,13 +39,13 @@ declarations:
     end:
       line: 4
       column: 23
-  - symbol: "AnonFunc#1"
+  - symbol: "AnonFunc#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 7985280754074797674, path: \"src/module-decls/default-export/default-export-anon-func\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 7985280754074797674, path: \"src/module-decls/default-export/default-export-anon-func\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -62,13 +62,13 @@ declarations:
     end:
       line: 5
       column: 16
-  - symbol: "AnonFuncIndex#1"
+  - symbol: "AnonFuncIndex#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 16069976020702245511, path: \"src/module-decls/default-export/default-export-anon-func-index\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 16069976020702245511, path: \"src/module-decls/default-export/default-export-anon-func-index\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -85,7 +85,7 @@ declarations:
     end:
       line: 1
       column: 21
-  - symbol: "DefaultExportMain#1"
+  - symbol: "DefaultExportMain#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
@@ -101,13 +101,13 @@ declarations:
     end:
       line: 26
       column: 2
-  - symbol: "DefaultOfDoubleExport#1"
+  - symbol: "DefaultOfDoubleExport#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 4200492320518109367, path: \"src/module-decls/default-export/default-export-default-and-named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 4200492320518109367, path: \"src/module-decls/default-export/default-export-default-and-named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -124,17 +124,17 @@ declarations:
     end:
       line: 6
       column: 29
-  - symbol: "NamedComponentDoubleExport#1"
+  - symbol: "NamedComponentDoubleExport#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('NamedComponentDoubleExport' type=dynamic), context: #1 }, source: ModuleId { hash: 4200492320518109367, path: \"src/module-decls/default-export/default-export-default-and-named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"NamedComponentDoubleExport\", context: #2 }, source: ModuleId { hash: 4200492320518109367, path: \"src/module-decls/default-export/default-export-default-and-named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "NamedComponentDoubleExport#1"
+          symbol: "NamedComponentDoubleExport#2"
           source:
             hash: "4200492320518109367"
             path: src/module-decls/default-export/default-export-default-and-named
@@ -147,13 +147,13 @@ declarations:
     end:
       line: 6
       column: 59
-  - symbol: "NamedFunc#1"
+  - symbol: "NamedFunc#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 1587052392204105296, path: \"src/module-decls/default-export/default-export-named-func\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 1587052392204105296, path: \"src/module-decls/default-export/default-export-named-func\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -170,13 +170,13 @@ declarations:
     end:
       line: 7
       column: 17
-  - symbol: "NamedFuncIndex#1"
+  - symbol: "NamedFuncIndex#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 5862911469966729913, path: \"src/module-decls/default-export/default-export-named-func-index\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 5862911469966729913, path: \"src/module-decls/default-export/default-export-named-func-index\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -193,13 +193,13 @@ declarations:
     end:
       line: 2
       column: 22
-  - symbol: "NamedVarDecl#1"
+  - symbol: "NamedVarDecl#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 6634460355154843873, path: \"src/module-decls/default-export/default-export-named-var-decl\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 6634460355154843873, path: \"src/module-decls/default-export/default-export-named-var-decl\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -216,13 +216,13 @@ declarations:
     end:
       line: 8
       column: 20
-  - symbol: "ReExported#1"
+  - symbol: "ReExported#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 10729565759264828385, path: \"src/module-decls/default-export/default-export-reexport/default-export-reexport\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 10729565759264828385, path: \"src/module-decls/default-export/default-export-reexport/default-export-reexport\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -239,13 +239,13 @@ declarations:
     end:
       line: 3
       column: 18
-  - symbol: "ThirdPartyDefaultExport#1"
+  - symbol: "ThirdPartyDefaultExport#2"
     source:
       hash: "1900397157574226215"
       path: src/module-decls/default-export/default-export-main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 16319847468930993779, path: \"\", pkg_name: \"@acme/button-component\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 16319847468930993779, path: \"\", pkg_name: \"@acme/button-component\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -266,99 +266,97 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "DefaultExportMain#1"
-      - "DefaultExportMain#1"
+      - "DefaultExportMain#2"
+      - "DefaultExportMain#2"
     references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultExportMain#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultExportMain#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
     jsx_references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
-  - owner: "DefaultExportMain#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
+  - owner: "DefaultExportMain#2"
     parent: "__global#0"
     children: []
     references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
     jsx_references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
-  - owner: "DefaultExportMain#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
+  - owner: "DefaultExportMain#2"
     parent: "__global#0"
     children: []
     references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
     jsx_references:
-      - "AnonExprWrapped#1"
-      - "AnonFunc#1"
-      - "AnonFuncIndex#1"
-      - "DefaultOfDoubleExport#1"
-      - "NamedComponentDoubleExport#1"
-      - "NamedFunc#1"
-      - "NamedFuncIndex#1"
-      - "NamedVarDecl#1"
-      - "ReExported#1"
-      - "ThirdPartyDefaultExport#1"
+      - "AnonExprWrapped#2"
+      - "AnonFunc#2"
+      - "AnonFuncIndex#2"
+      - "DefaultOfDoubleExport#2"
+      - "NamedComponentDoubleExport#2"
+      - "NamedFunc#2"
+      - "NamedFuncIndex#2"
+      - "NamedVarDecl#2"
+      - "ReExported#2"
+      - "ThirdPartyDefaultExport#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 62
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 21
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 21
-            ctxt: 1
+          ctxt: 2
           value: AnonFuncIndex
           optional: false
     source:
@@ -366,28 +364,26 @@ body:
       span:
         start: 27
         end: 61
-        ctxt: 0
       value: "./default-export-anon-func-index"
       raw: "\"./default-export-anon-func-index\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 63
       end: 126
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 70
           end: 84
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 70
             end: 84
-            ctxt: 1
+          ctxt: 2
           value: NamedFuncIndex
           optional: false
     source:
@@ -395,28 +391,26 @@ body:
       span:
         start: 90
         end: 125
-        ctxt: 0
       value: "./default-export-named-func-index"
       raw: "\"./default-export-named-func-index\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 127
       end: 202
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 134
           end: 144
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 134
             end: 144
-            ctxt: 1
+          ctxt: 2
           value: ReExported
           optional: false
     source:
@@ -424,28 +418,26 @@ body:
       span:
         start: 150
         end: 201
-        ctxt: 0
       value: "./default-export-reexport/default-export-reexport"
       raw: "\"./default-export-reexport/default-export-reexport\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 203
       end: 268
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 210
           end: 225
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 210
             end: 225
-            ctxt: 1
+          ctxt: 2
           value: AnonExprWrapped
           optional: false
     source:
@@ -453,28 +445,26 @@ body:
       span:
         start: 231
         end: 267
-        ctxt: 0
       value: "./default-export-anon-expr-wrapped"
       raw: "\"./default-export-anon-expr-wrapped\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 269
       end: 319
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 276
           end: 284
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 276
             end: 284
-            ctxt: 1
+          ctxt: 2
           value: AnonFunc
           optional: false
     source:
@@ -482,41 +472,38 @@ body:
       span:
         start: 290
         end: 318
-        ctxt: 0
       value: "./default-export-anon-func"
       raw: "\"./default-export-anon-func\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 320
       end: 423
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 327
           end: 348
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 327
             end: 348
-            ctxt: 1
+          ctxt: 2
           value: DefaultOfDoubleExport
           optional: false
       - type: ImportSpecifier
         span:
           start: 352
           end: 378
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 352
             end: 378
-            ctxt: 1
+          ctxt: 2
           value: NamedComponentDoubleExport
           optional: false
         imported: ~
@@ -526,28 +513,26 @@ body:
       span:
         start: 386
         end: 422
-        ctxt: 0
       value: "./default-export-default-and-named"
       raw: "\"./default-export-default-and-named\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 424
       end: 476
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 431
           end: 440
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 431
             end: 440
-            ctxt: 1
+          ctxt: 2
           value: NamedFunc
           optional: false
     source:
@@ -555,28 +540,26 @@ body:
       span:
         start: 446
         end: 475
-        ctxt: 0
       value: "./default-export-named-func"
       raw: "\"./default-export-named-func\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 477
       end: 536
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 484
           end: 496
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 484
             end: 496
-            ctxt: 1
+          ctxt: 2
           value: NamedVarDecl
           optional: false
     source:
@@ -584,28 +567,26 @@ body:
       span:
         start: 502
         end: 535
-        ctxt: 0
       value: "./default-export-named-var-decl"
       raw: "\"./default-export-named-var-decl\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 537
       end: 598
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 544
           end: 567
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 544
             end: 567
-            ctxt: 1
+          ctxt: 2
           value: ThirdPartyDefaultExport
           optional: false
     source:
@@ -613,61 +594,53 @@ body:
       span:
         start: 573
         end: 597
-        ctxt: 0
       value: "@acme/button-component"
       raw: "\"@acme/button-component\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 600
       end: 993
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 636
           end: 993
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 642
               end: 991
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 649
                 end: 990
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 659
                   end: 984
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 659
                     end: 661
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 661
                       end: 674
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 674
                       end: 690
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -675,13 +648,12 @@ body:
                         span:
                           start: 675
                           end: 688
-                          ctxt: 1
+                        ctxt: 2
                         value: AnonFuncIndex
                         optional: false
                       span:
                         start: 674
                         end: 690
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -691,14 +663,12 @@ body:
                     span:
                       start: 690
                       end: 703
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 703
                       end: 720
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -706,13 +676,12 @@ body:
                         span:
                           start: 704
                           end: 718
-                          ctxt: 1
+                        ctxt: 2
                         value: NamedFuncIndex
                         optional: false
                       span:
                         start: 703
                         end: 720
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -722,14 +691,12 @@ body:
                     span:
                       start: 720
                       end: 733
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 733
                       end: 746
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -737,13 +704,12 @@ body:
                         span:
                           start: 734
                           end: 744
-                          ctxt: 1
+                        ctxt: 2
                         value: ReExported
                         optional: false
                       span:
                         start: 733
                         end: 746
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -753,14 +719,12 @@ body:
                     span:
                       start: 746
                       end: 759
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 759
                       end: 777
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -768,13 +732,12 @@ body:
                         span:
                           start: 760
                           end: 775
-                          ctxt: 1
+                        ctxt: 2
                         value: AnonExprWrapped
                         optional: false
                       span:
                         start: 759
                         end: 777
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -784,14 +747,12 @@ body:
                     span:
                       start: 777
                       end: 790
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 790
                       end: 801
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -799,13 +760,12 @@ body:
                         span:
                           start: 791
                           end: 799
-                          ctxt: 1
+                        ctxt: 2
                         value: AnonFunc
                         optional: false
                       span:
                         start: 790
                         end: 801
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -815,14 +775,12 @@ body:
                     span:
                       start: 801
                       end: 814
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 814
                       end: 838
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -830,13 +788,12 @@ body:
                         span:
                           start: 815
                           end: 836
-                          ctxt: 1
+                        ctxt: 2
                         value: DefaultOfDoubleExport
                         optional: false
                       span:
                         start: 814
                         end: 838
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -846,14 +803,12 @@ body:
                     span:
                       start: 838
                       end: 851
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 851
                       end: 880
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -861,13 +816,12 @@ body:
                         span:
                           start: 852
                           end: 878
-                          ctxt: 1
+                        ctxt: 2
                         value: NamedComponentDoubleExport
                         optional: false
                       span:
                         start: 851
                         end: 880
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -877,14 +831,12 @@ body:
                     span:
                       start: 880
                       end: 893
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 893
                       end: 905
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -892,13 +844,12 @@ body:
                         span:
                           start: 894
                           end: 903
-                          ctxt: 1
+                        ctxt: 2
                         value: NamedFunc
                         optional: false
                       span:
                         start: 893
                         end: 905
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -908,14 +859,12 @@ body:
                     span:
                       start: 905
                       end: 918
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 918
                       end: 933
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -923,13 +872,12 @@ body:
                         span:
                           start: 919
                           end: 931
-                          ctxt: 1
+                        ctxt: 2
                         value: NamedVarDecl
                         optional: false
                       span:
                         start: 918
                         end: 933
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -939,14 +887,12 @@ body:
                     span:
                       start: 933
                       end: 946
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 946
                       end: 972
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -954,13 +900,12 @@ body:
                         span:
                           start: 947
                           end: 970
-                          ctxt: 1
+                        ctxt: 2
                         value: ThirdPartyDefaultExport
                         optional: false
                       span:
                         start: 946
                         end: 972
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -970,15 +915,14 @@ body:
                     span:
                       start: 972
                       end: 981
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 981
                     end: 984
-                    ctxt: 0
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -987,7 +931,7 @@ body:
         span:
           start: 616
           end: 633
-          ctxt: 1
+        ctxt: 2
         value: DefaultExportMain
         optional: false
       params: []
@@ -995,6 +939,6 @@ body:
       span:
         start: 607
         end: 993
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

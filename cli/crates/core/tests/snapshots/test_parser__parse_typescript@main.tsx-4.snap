@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MainPage#1"
+      Internal: "MainPage#2"
     exported_name: default
 declarations:
-  - symbol: "BackButton#1"
+  - symbol: "BackButton#2"
     source:
       hash: "9140074414188734769"
       path: src/simple/main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('BackButton' type=dynamic), context: #1 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"BackButton\", context: #2 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "BackButton#1"
+          symbol: "BackButton#2"
           source:
             hash: "6711003159110202606"
             path: src/simple/components/newNavigation
@@ -39,17 +39,17 @@ declarations:
     end:
       line: 1
       column: 44
-  - symbol: "HeaderNew#1"
+  - symbol: "HeaderNew#2"
     source:
       hash: "9140074414188734769"
       path: src/simple/main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('HeaderNew' type=dynamic), context: #1 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"HeaderNew\", context: #2 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "HeaderNew#1"
+          symbol: "HeaderNew#2"
           source:
             hash: "6711003159110202606"
             path: src/simple/components/newNavigation
@@ -62,7 +62,7 @@ declarations:
     end:
       line: 1
       column: 19
-  - symbol: "MainPage#1"
+  - symbol: "MainPage#2"
     source:
       hash: "9140074414188734769"
       path: src/simple/main.tsx
@@ -78,17 +78,17 @@ declarations:
     end:
       line: 11
       column: 2
-  - symbol: "UserMenuNew#1"
+  - symbol: "UserMenuNew#2"
     source:
       hash: "9140074414188734769"
       path: src/simple/main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('UserMenuNew' type=dynamic), context: #1 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"UserMenuNew\", context: #2 }, source: ModuleId { hash: 6711003159110202606, path: \"src/simple/components/newNavigation\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "UserMenuNew#1"
+          symbol: "UserMenuNew#2"
           source:
             hash: "6711003159110202606"
             path: src/simple/components/newNavigation
@@ -105,57 +105,55 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "MainPage#1"
-      - "MainPage#1"
+      - "MainPage#2"
+      - "MainPage#2"
     references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "MainPage#1"
-      - "UserMenuNew#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "MainPage#2"
+      - "UserMenuNew#2"
     jsx_references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "UserMenuNew#1"
-  - owner: "MainPage#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "UserMenuNew#2"
+  - owner: "MainPage#2"
     parent: "__global#0"
     children: []
     references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "UserMenuNew#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "UserMenuNew#2"
     jsx_references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "UserMenuNew#1"
-  - owner: "MainPage#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "UserMenuNew#2"
+  - owner: "MainPage#2"
     parent: "__global#0"
     children: []
     references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "UserMenuNew#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "UserMenuNew#2"
     jsx_references:
-      - "BackButton#1"
-      - "HeaderNew#1"
-      - "UserMenuNew#1"
+      - "BackButton#2"
+      - "HeaderNew#2"
+      - "UserMenuNew#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 81
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 19
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 19
-            ctxt: 1
+          ctxt: 2
           value: HeaderNew
           optional: false
         imported: ~
@@ -164,13 +162,12 @@ body:
         span:
           start: 21
           end: 32
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 21
             end: 32
-            ctxt: 1
+          ctxt: 2
           value: UserMenuNew
           optional: false
         imported: ~
@@ -179,13 +176,12 @@ body:
         span:
           start: 34
           end: 44
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 34
             end: 44
-            ctxt: 1
+          ctxt: 2
           value: BackButton
           optional: false
         imported: ~
@@ -195,42 +191,37 @@ body:
       span:
         start: 52
         end: 80
-        ctxt: 0
       value: "./components/newNavigation"
       raw: "\"./components/newNavigation\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 83
       end: 255
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 118
           end: 255
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 124
               end: 253
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 131
                 end: 252
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 141
                   end: 246
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -238,13 +229,12 @@ body:
                     span:
                       start: 142
                       end: 151
-                      ctxt: 1
+                    ctxt: 2
                     value: HeaderNew
                     optional: false
                   span:
                     start: 141
                     end: 152
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -253,14 +243,12 @@ body:
                     span:
                       start: 152
                       end: 165
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 165
                       end: 178
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -268,13 +256,12 @@ body:
                         span:
                           start: 166
                           end: 176
-                          ctxt: 1
+                        ctxt: 2
                         value: BackButton
                         optional: false
                       span:
                         start: 165
                         end: 178
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -284,14 +271,12 @@ body:
                     span:
                       start: 178
                       end: 191
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 191
                       end: 205
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -299,13 +284,12 @@ body:
                         span:
                           start: 192
                           end: 203
-                          ctxt: 1
+                        ctxt: 2
                         value: UserMenuNew
                         optional: false
                       span:
                         start: 191
                         end: 205
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -315,23 +299,22 @@ body:
                     span:
                       start: 205
                       end: 234
-                      ctxt: 0
-                    value: "\n\n            Content\n\n        "
-                    raw: "\n\n            Content\n\n        "
+                    value: "\n            Content\n        "
+                    raw: "\n            Content\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 234
                     end: 246
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 236
                       end: 245
-                      ctxt: 1
+                    ctxt: 2
                     value: HeaderNew
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -339,7 +322,7 @@ body:
         span:
           start: 107
           end: 115
-          ctxt: 1
+        ctxt: 2
         value: MainPage
         optional: false
       params: []
@@ -347,7 +330,6 @@ body:
       span:
         start: 98
         end: 255
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
 

@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MainWithOrdinaryImport#1"
+      Internal: "MainWithOrdinaryImport#2"
     exported_name: MainWithOrdinaryImport
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "5138736821431616478"
       path: src/renamed-import/ordinary-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Button' type=inline), context: #1 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Button\", context: #2 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Button#1"
+          symbol: "Button#2"
           source:
             hash: "3516152902168980351"
             path: ""
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 3
       column: 16
-  - symbol: "MainWithOrdinaryImport#1"
+  - symbol: "MainWithOrdinaryImport#2"
     source:
       hash: "5138736821431616478"
       path: src/renamed-import/ordinary-import.tsx
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "react#1"
+  - symbol: "react#2"
     source:
       hash: "5138736821431616478"
       path: src/renamed-import/ordinary-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -82,46 +82,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "MainWithOrdinaryImport#1"
-      - "MainWithOrdinaryImport#1"
+      - "MainWithOrdinaryImport#2"
+      - "MainWithOrdinaryImport#2"
     references:
-      - "Button#1"
-      - "MainWithOrdinaryImport#1"
-      - "react#1"
+      - "Button#2"
+      - "MainWithOrdinaryImport#2"
+      - "react#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithOrdinaryImport#1"
+      - "Button#2"
+  - owner: "MainWithOrdinaryImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
-  - owner: "MainWithOrdinaryImport#1"
+      - "Button#2"
+  - owner: "MainWithOrdinaryImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references:
-      - "Button#1"
+      - "Button#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: react
           optional: false
     source:
@@ -129,28 +127,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 29
       end: 57
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 38
           end: 44
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 38
             end: 44
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         imported: ~
@@ -160,36 +156,32 @@ body:
       span:
         start: 52
         end: 56
-        ctxt: 0
       value: ds
       raw: "\"ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 59
       end: 125
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 100
           end: 125
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 106
               end: 123
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 113
                 end: 122
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -197,18 +189,18 @@ body:
                   span:
                     start: 114
                     end: 120
-                    ctxt: 1
+                  ctxt: 2
                   value: Button
                   optional: false
                 span:
                   start: 113
                   end: 122
-                  ctxt: 0
                 attributes: []
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -217,7 +209,7 @@ body:
         span:
           start: 75
           end: 97
-          ctxt: 1
+        ctxt: 2
         value: MainWithOrdinaryImport
         optional: false
       params: []
@@ -225,6 +217,6 @@ body:
       span:
         start: 66
         end: 125
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

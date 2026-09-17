@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "ComponentUsingNamedWrappedComponent#1"
+      Internal: "ComponentUsingNamedWrappedComponent#2"
     exported_name: ComponentUsingNamedWrappedComponent
   - source:
-      Internal: "NamedComponentWrapped#1"
+      Internal: "NamedComponentWrapped#2"
     exported_name: NamedComponentWrapped
   - source:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "ComponentUsingNamedWrappedComponent#1"
+  - symbol: "ComponentUsingNamedWrappedComponent#2"
     source:
       hash: "2303020239782242557"
       path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -38,7 +38,7 @@ declarations:
     end:
       line: 8
       column: 2
-  - symbol: "NamedComponentWrapped#1"
+  - symbol: "NamedComponentWrapped#2"
     source:
       hash: "2303020239782242557"
       path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -54,17 +54,17 @@ declarations:
     end:
       line: 12
       column: 2
-  - symbol: "comp#2"
+  - symbol: "comp#3"
     source:
       hash: "2303020239782242557"
       path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withRouter' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withRouter\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withRouter#1"
+          symbol: "withRouter#2"
           source:
             hash: "2303020239782242557"
             path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -88,7 +88,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "withRouter#1"
+              symbol: "withRouter#2"
               source:
                 hash: "2303020239782242557"
                 path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -97,7 +97,7 @@ declarations:
             is_local: true
         - - TypeOf:
               symbol:
-                symbol: "NamedComponentWrapped#1"
+                symbol: "NamedComponentWrapped#2"
                 source:
                   hash: "2303020239782242557"
                   path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -110,7 +110,7 @@ declarations:
     end:
       line: 14
       column: 50
-  - symbol: "withRouter#1"
+  - symbol: "withRouter#2"
     source:
       hash: "2303020239782242557"
       path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -121,7 +121,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "comp#2"
+              symbol: "comp#3"
               source:
                 hash: "2303020239782242557"
                 path: src/module-decls/default-export/default-export-anon-expr-wrapped.tsx
@@ -138,84 +138,83 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "withRouter#1"
-      - "ComponentUsingNamedWrappedComponent#1"
-      - "ComponentUsingNamedWrappedComponent#1"
-      - "NamedComponentWrapped#1"
-      - "NamedComponentWrapped#1"
+      - "withRouter#2"
+      - "ComponentUsingNamedWrappedComponent#2"
+      - "ComponentUsingNamedWrappedComponent#2"
+      - "NamedComponentWrapped#2"
+      - "NamedComponentWrapped#2"
       - "default#0"
     references:
-      - "ComponentUsingNamedWrappedComponent#1"
-      - "NamedComponentWrapped#1"
-      - "comp#2"
-      - "div#3"
-      - "withRouter#1"
+      - "ComponentUsingNamedWrappedComponent#2"
+      - "NamedComponentWrapped#2"
+      - "comp#3"
+      - "div#1"
+      - "withRouter#2"
     jsx_references:
-      - "NamedComponentWrapped#1"
-      - "div#3"
-  - owner: "withRouter#1"
+      - "NamedComponentWrapped#2"
+      - "div#1"
+  - owner: "withRouter#2"
     parent: "__global#0"
     children: []
     references:
-      - "comp#2"
+      - "comp#3"
     jsx_references: []
-  - owner: "ComponentUsingNamedWrappedComponent#1"
+  - owner: "ComponentUsingNamedWrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NamedComponentWrapped#1"
+      - "NamedComponentWrapped#2"
     jsx_references:
-      - "NamedComponentWrapped#1"
-  - owner: "ComponentUsingNamedWrappedComponent#1"
+      - "NamedComponentWrapped#2"
+  - owner: "ComponentUsingNamedWrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NamedComponentWrapped#1"
+      - "NamedComponentWrapped#2"
     jsx_references:
-      - "NamedComponentWrapped#1"
-  - owner: "NamedComponentWrapped#1"
+      - "NamedComponentWrapped#2"
+  - owner: "NamedComponentWrapped#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
-  - owner: "NamedComponentWrapped#1"
+      - "div#1"
+  - owner: "NamedComponentWrapped#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
+      - "div#1"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "NamedComponentWrapped#1"
-      - "withRouter#1"
+      - "NamedComponentWrapped#2"
+      - "withRouter#2"
     jsx_references: []
 body:
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 28
         end: 48
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 34
             end: 46
-            ctxt: 0
           argument:
             type: Identifier
             span:
               start: 41
               end: 45
-              ctxt: 2
+            ctxt: 3
             value: comp
             optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -224,7 +223,7 @@ body:
       span:
         start: 11
         end: 21
-        ctxt: 1
+      ctxt: 2
       value: withRouter
       optional: false
     params:
@@ -232,14 +231,13 @@ body:
         span:
           start: 22
           end: 26
-          ctxt: 0
         decorators: []
         pat:
+          ctxt: 3
           optional: false
           span:
             start: 22
             end: 26
-            ctxt: 2
           type: Identifier
           typeAnnotation: ~
           value: comp
@@ -247,34 +245,29 @@ body:
     span:
       start: 2
       end: 48
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 50
       end: 144
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 104
           end: 144
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 110
               end: 142
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 117
                 end: 141
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -282,18 +275,18 @@ body:
                   span:
                     start: 118
                     end: 139
-                    ctxt: 1
+                  ctxt: 2
                   value: NamedComponentWrapped
                   optional: false
                 span:
                   start: 117
                   end: 141
-                  ctxt: 0
                 attributes: []
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -302,7 +295,7 @@ body:
         span:
           start: 66
           end: 101
-          ctxt: 1
+        ctxt: 2
         value: ComponentUsingNamedWrappedComponent
         optional: false
       params: []
@@ -310,34 +303,29 @@ body:
       span:
         start: 57
         end: 144
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 146
       end: 213
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 186
           end: 213
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 192
               end: 211
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 199
                 end: 210
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -345,13 +333,12 @@ body:
                   span:
                     start: 200
                     end: 203
-                    ctxt: 3
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 199
                   end: 204
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -361,15 +348,15 @@ body:
                 span:
                   start: 204
                   end: 210
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 206
                     end: 209
-                    ctxt: 3
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 5
       declare: false
       decorators: []
       generator: false
@@ -378,7 +365,7 @@ body:
         span:
           start: 162
           end: 183
-          ctxt: 1
+        ctxt: 2
         value: NamedComponentWrapped
         optional: false
       params: []
@@ -386,26 +373,24 @@ body:
       span:
         start: 153
         end: 213
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDefaultExpression
     span:
       start: 215
       end: 264
-      ctxt: 0
     expression:
       type: CallExpression
       span:
         start: 230
         end: 263
-        ctxt: 0
+      ctxt: 0
       callee:
         type: Identifier
         span:
           start: 230
           end: 240
-          ctxt: 1
+        ctxt: 2
         value: withRouter
         optional: false
       arguments:
@@ -415,7 +400,8 @@ body:
             span:
               start: 241
               end: 262
-              ctxt: 1
+            ctxt: 2
             value: NamedComponentWrapped
             optional: false
       typeArguments: ~
+

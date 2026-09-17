@@ -16,13 +16,13 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "ObjecTable#1"
+  - symbol: "ObjecTable#2"
     source:
       hash: "8057420998325895419"
       path: src/subcomponent/table/usage4.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 16873499257714524183, path: \"src/subcomponent/table/object-assign\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 16873499257714524183, path: \"src/subcomponent/table/object-assign\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 18
-  - symbol: "TableUser4#1"
+  - symbol: "TableUser4#2"
     source:
       hash: "8057420998325895419"
       path: src/subcomponent/table/usage4.tsx
@@ -65,7 +65,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "TableUser4#1"
+          symbol: "TableUser4#2"
           source:
             hash: "8057420998325895419"
             path: src/subcomponent/table/usage4.tsx
@@ -82,52 +82,46 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "TableUser4#1"
+      - "TableUser4#2"
       - "default#0"
     references:
-      - "Cell#2"
-      - "ObjecTable#1"
-      - "THeader#2"
-      - "TableUser4#1"
+      - "ObjecTable#2"
+      - "TableUser4#2"
     jsx_references:
-      - "ObjecTable#1"
-      - "ObjecTable#1.Cell"
-      - "ObjecTable#1.THeader"
-  - owner: "TableUser4#1"
+      - "ObjecTable#2"
+      - "ObjecTable#2.Cell"
+      - "ObjecTable#2.THeader"
+  - owner: "TableUser4#2"
     parent: "__global#0"
     children: []
     references:
-      - "Cell#2"
-      - "ObjecTable#1"
-      - "THeader#2"
+      - "ObjecTable#2"
     jsx_references:
-      - "ObjecTable#1"
-      - "ObjecTable#1.Cell"
-      - "ObjecTable#1.THeader"
+      - "ObjecTable#2"
+      - "ObjecTable#2.Cell"
+      - "ObjecTable#2.THeader"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "TableUser4#1"
+      - "TableUser4#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 42
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 18
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 18
-            ctxt: 1
+          ctxt: 2
           value: ObjecTable
           optional: false
     source:
@@ -135,16 +129,16 @@ body:
       span:
         start: 24
         end: 41
-        ctxt: 0
       value: "./object-assign"
       raw: "\"./object-assign\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 44
       end: 308
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -152,13 +146,12 @@ body:
         span:
           start: 50
           end: 307
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 50
             end: 60
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: TableUser4
@@ -167,32 +160,28 @@ body:
           span:
             start: 63
             end: 307
-            ctxt: 0
+          ctxt: 3
           params: []
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 69
               end: 307
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 75
                   end: 305
-                  ctxt: 0
                 argument:
                   type: ParenthesisExpression
                   span:
                     start: 82
                     end: 304
-                    ctxt: 0
                   expression:
                     type: JSXElement
                     span:
                       start: 92
                       end: 298
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -200,13 +189,12 @@ body:
                         span:
                           start: 93
                           end: 103
-                          ctxt: 1
+                        ctxt: 2
                         value: ObjecTable
                         optional: false
                       span:
                         start: 92
                         end: 104
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -215,24 +203,25 @@ body:
                         span:
                           start: 104
                           end: 117
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXElement
                         span:
                           start: 117
                           end: 194
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 118
+                              end: 136
                             object:
                               type: Identifier
                               span:
                                 start: 118
                                 end: 128
-                                ctxt: 1
+                              ctxt: 2
                               value: ObjecTable
                               optional: false
                             property:
@@ -240,13 +229,10 @@ body:
                               span:
                                 start: 129
                                 end: 136
-                                ctxt: 2
                               value: THeader
-                              optional: false
                           span:
                             start: 117
                             end: 137
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -255,23 +241,24 @@ body:
                             span:
                               start: 137
                               end: 173
-                              ctxt: 0
-                            value: "\n\n                Header\n\n            "
-                            raw: "\n\n                Header\n\n            "
+                            value: "\n                Header\n            "
+                            raw: "\n                Header\n            "
                         closing:
                           type: JSXClosingElement
                           span:
                             start: 173
                             end: 194
-                            ctxt: 0
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 175
+                              end: 193
                             object:
                               type: Identifier
                               span:
                                 start: 175
                                 end: 185
-                                ctxt: 1
+                              ctxt: 2
                               value: ObjecTable
                               optional: false
                             property:
@@ -279,31 +266,30 @@ body:
                               span:
                                 start: 186
                                 end: 193
-                                ctxt: 2
                               value: THeader
-                              optional: false
                       - type: JSXText
                         span:
                           start: 194
                           end: 207
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXElement
                         span:
                           start: 207
                           end: 276
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 208
+                              end: 223
                             object:
                               type: Identifier
                               span:
                                 start: 208
                                 end: 218
-                                ctxt: 1
+                              ctxt: 2
                               value: ObjecTable
                               optional: false
                             property:
@@ -311,13 +297,10 @@ body:
                               span:
                                 start: 219
                                 end: 223
-                                ctxt: 2
                               value: Cell
-                              optional: false
                           span:
                             start: 207
                             end: 224
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -326,23 +309,24 @@ body:
                             span:
                               start: 224
                               end: 258
-                              ctxt: 0
-                            value: "\n\n                Cell\n\n            "
-                            raw: "\n\n                Cell\n\n            "
+                            value: "\n                Cell\n            "
+                            raw: "\n                Cell\n            "
                         closing:
                           type: JSXClosingElement
                           span:
                             start: 258
                             end: 276
-                            ctxt: 0
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 260
+                              end: 275
                             object:
                               type: Identifier
                               span:
                                 start: 260
                                 end: 270
-                                ctxt: 1
+                              ctxt: 2
                               value: ObjecTable
                               optional: false
                             property:
@@ -350,28 +334,24 @@ body:
                               span:
                                 start: 271
                                 end: 275
-                                ctxt: 2
                               value: Cell
-                              optional: false
                       - type: JSXText
                         span:
                           start: 276
                           end: 285
-                          ctxt: 0
-                        value: "\n\n        "
-                        raw: "\n\n        "
+                        value: "\n        "
+                        raw: "\n        "
                     closing:
                       type: JSXClosingElement
                       span:
                         start: 285
                         end: 298
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 287
                           end: 297
-                          ctxt: 1
+                        ctxt: 2
                         value: ObjecTable
                         optional: false
           async: false
@@ -383,12 +363,12 @@ body:
     span:
       start: 310
       end: 336
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 325
         end: 335
-        ctxt: 1
+      ctxt: 2
       value: TableUser4
       optional: false
+

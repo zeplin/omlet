@@ -13,13 +13,13 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Button#1"
+      Internal: "Button#2"
     exported_name: Button
   - source:
-      Internal: "Link#1"
+      Internal: "Link#2"
     exported_name: Link
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "14625591195093695410"
       path: src/wildcard-import/ds.tsx
@@ -35,7 +35,7 @@ declarations:
     end:
       line: 3
       column: 2
-  - symbol: "Link#1"
+  - symbol: "Link#2"
     source:
       hash: "14625591195093695410"
       path: src/wildcard-import/ds.tsx
@@ -55,72 +55,68 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Button#1"
-      - "Button#1"
-      - "Link#1"
-      - "Link#1"
+      - "Button#2"
+      - "Button#2"
+      - "Link#2"
+      - "Link#2"
     references:
-      - "Button#1"
-      - "Link#1"
-      - "a#2"
-      - "button#2"
+      - "Button#2"
+      - "Link#2"
+      - "a#1"
+      - "button#1"
     jsx_references:
-      - "a#2"
-      - "button#2"
-  - owner: "Button#1"
+      - "a#1"
+      - "button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "Button#1"
+      - "button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "Link#1"
+      - "button#1"
+  - owner: "Link#2"
     parent: "__global#0"
     children: []
     references:
-      - "a#2"
+      - "a#1"
     jsx_references:
-      - "a#2"
-  - owner: "Link#1"
+      - "a#1"
+  - owner: "Link#2"
     parent: "__global#0"
     children: []
     references:
-      - "a#2"
+      - "a#1"
     jsx_references:
-      - "a#2"
+      - "a#1"
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 65
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 26
           end: 65
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 32
               end: 63
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 39
                 end: 62
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -128,13 +124,12 @@ body:
                   span:
                     start: 40
                     end: 46
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
                 span:
                   start: 39
                   end: 47
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -143,7 +138,6 @@ body:
                   span:
                     start: 47
                     end: 53
-                    ctxt: 0
                   value: button
                   raw: button
               closing:
@@ -151,15 +145,15 @@ body:
                 span:
                   start: 53
                   end: 62
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 55
                     end: 61
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -168,7 +162,7 @@ body:
         span:
           start: 17
           end: 23
-          ctxt: 1
+        ctxt: 2
         value: Button
         optional: false
       params: []
@@ -176,34 +170,29 @@ body:
       span:
         start: 8
         end: 65
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 67
       end: 117
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 90
           end: 117
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 96
               end: 115
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 103
                 end: 114
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -211,13 +200,12 @@ body:
                   span:
                     start: 104
                     end: 105
-                    ctxt: 2
+                  ctxt: 1
                   value: a
                   optional: false
                 span:
                   start: 103
                   end: 106
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -226,7 +214,6 @@ body:
                   span:
                     start: 106
                     end: 110
-                    ctxt: 0
                   value: Link
                   raw: Link
               closing:
@@ -234,15 +221,15 @@ body:
                 span:
                   start: 110
                   end: 114
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 112
                     end: 113
-                    ctxt: 2
+                  ctxt: 1
                   value: a
                   optional: false
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -251,7 +238,7 @@ body:
         span:
           start: 83
           end: 87
-          ctxt: 1
+        ctxt: 2
         value: Link
         optional: false
       params: []
@@ -259,6 +246,6 @@ body:
       span:
         start: 74
         end: 117
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

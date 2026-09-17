@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "parent#1"
+      Internal: "parent#2"
     exported_name: parent
 declarations:
-  - symbol: "child#1"
+  - symbol: "child#2"
     source:
       hash: "7991178739980311314"
       path: src/wildcard-import/parent.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 9464339265109063103, path: \"src/wildcard-import/child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 9464339265109063103, path: \"src/wildcard-import/child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 18
-  - symbol: "parent#1"
+  - symbol: "parent#2"
     source:
       hash: "7991178739980311314"
       path: src/wildcard-import/parent.ts
@@ -52,7 +52,7 @@ declarations:
             - MemberOf:
                 - TypeOf:
                     symbol:
-                      symbol: "child#1"
+                      symbol: "child#2"
                       source:
                         hash: "7991178739980311314"
                         path: src/wildcard-import/parent.ts
@@ -71,45 +71,40 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "parent#1"
-      - "parent#1"
+      - "parent#2"
+      - "parent#2"
     references:
-      - "child#0"
-      - "child#1"
-      - "parent#1"
+      - "child#2"
+      - "parent#2"
     jsx_references: []
-  - owner: "parent#1"
+  - owner: "parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "child#0"
-      - "child#1"
+      - "child#2"
     jsx_references: []
-  - owner: "parent#1"
+  - owner: "parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "child#0"
-      - "child#1"
+      - "child#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 34
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 8
           end: 18
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 13
             end: 18
-            ctxt: 1
+          ctxt: 2
           value: child
           optional: false
     source:
@@ -117,48 +112,44 @@ body:
       span:
         start: 24
         end: 33
-        ctxt: 0
       value: "./child"
       raw: "\"./child\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 36
       end: 90
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 61
           end: 90
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 67
               end: 88
-              ctxt: 0
             argument:
               type: CallExpression
               span:
                 start: 74
                 end: 87
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: MemberExpression
                 span:
                   start: 74
                   end: 85
-                  ctxt: 0
                 object:
                   type: Identifier
                   span:
                     start: 74
                     end: 79
-                    ctxt: 1
+                  ctxt: 2
                   value: child
                   optional: false
                 property:
@@ -166,11 +157,10 @@ body:
                   span:
                     start: 80
                     end: 85
-                    ctxt: 0
                   value: child
-                  optional: false
               arguments: []
               typeArguments: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -179,7 +169,7 @@ body:
         span:
           start: 52
           end: 58
-          ctxt: 1
+        ctxt: 2
         value: parent
         optional: false
       params: []
@@ -187,6 +177,6 @@ body:
       span:
         start: 43
         end: 90
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

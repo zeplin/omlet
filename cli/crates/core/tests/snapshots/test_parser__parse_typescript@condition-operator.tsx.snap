@@ -13,13 +13,13 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "LinkOrButton#1"
+      Internal: "LinkOrButton#2"
     exported_name: LinkOrButton
   - source:
-      Internal: "Parent#1"
+      Internal: "Parent#2"
     exported_name: Parent
 declarations:
-  - symbol: "Component#2"
+  - symbol: "Component#3"
     source:
       hash: "14684010592071628135"
       path: src/wildcard-import/condition-operator.tsx
@@ -31,7 +31,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "DS#1"
+                  symbol: "DS#2"
                   source:
                     hash: "14684010592071628135"
                     path: src/wildcard-import/condition-operator.tsx
@@ -42,7 +42,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "DS#1"
+                  symbol: "DS#2"
                   source:
                     hash: "14684010592071628135"
                     path: src/wildcard-import/condition-operator.tsx
@@ -56,13 +56,13 @@ declarations:
     end:
       line: 5
       column: 20
-  - symbol: "DS#1"
+  - symbol: "DS#2"
     source:
       hash: "14684010592071628135"
       path: src/wildcard-import/condition-operator.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -79,7 +79,7 @@ declarations:
     end:
       line: 1
       column: 15
-  - symbol: "LinkOrButton#1"
+  - symbol: "LinkOrButton#2"
     source:
       hash: "14684010592071628135"
       path: src/wildcard-import/condition-operator.tsx
@@ -95,7 +95,7 @@ declarations:
     end:
       line: 8
       column: 2
-  - symbol: "Parent#1"
+  - symbol: "Parent#2"
     source:
       hash: "14684010592071628135"
       path: src/wildcard-import/condition-operator.tsx
@@ -111,18 +111,18 @@ declarations:
     end:
       line: 13
       column: 2
-  - symbol: "link#2"
+  - symbol: "link#3"
     source:
       hash: "14684010592071628135"
       path: src/wildcard-import/condition-operator.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('LinkOrButton' type=dynamic), context: #1 }>[0][link]"
+    definition: "Parameter<Symbol { name: \"LinkOrButton\", context: #2 }>[0][link]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "LinkOrButton#1"
+              symbol: "LinkOrButton#2"
               source:
                 hash: "14684010592071628135"
                 path: src/wildcard-import/condition-operator.tsx
@@ -140,105 +140,91 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "LinkOrButton#1"
-      - "LinkOrButton#1"
-      - "Component#2"
-      - "Parent#1"
-      - "Parent#1"
+      - "LinkOrButton#2"
+      - "LinkOrButton#2"
+      - "Component#3"
+      - "Parent#2"
+      - "Parent#2"
     references:
-      - "Button#0"
-      - "Component#2"
-      - "DS#1"
-      - "Link#0"
-      - "LinkOrButton#1"
-      - "Parent#1"
-      - "link#2"
+      - "Component#3"
+      - "DS#2"
+      - "LinkOrButton#2"
+      - "Parent#2"
+      - "link#3"
     jsx_references:
-      - "Component#2"
-      - "LinkOrButton#1"
-  - owner: "LinkOrButton#1"
+      - "Component#3"
+      - "LinkOrButton#2"
+  - owner: "LinkOrButton#2"
     parent: "__global#0"
     children:
-      - "Component#2"
+      - "Component#3"
     references:
-      - "Button#0"
-      - "Component#2"
-      - "DS#1"
-      - "Link#0"
-      - "link#2"
+      - "Component#3"
+      - "DS#2"
+      - "link#3"
     jsx_references:
-      - "Component#2"
-  - owner: "Component#2"
-    parent: "LinkOrButton#1"
+      - "Component#3"
+  - owner: "Component#3"
+    parent: "LinkOrButton#2"
     children: []
     references:
-      - "Button#0"
-      - "DS#1"
-      - "Link#0"
-      - "link#2"
+      - "DS#2"
+      - "link#3"
     jsx_references: []
-  - owner: "LinkOrButton#1"
+  - owner: "LinkOrButton#2"
     parent: "__global#0"
     children:
-      - "Component#2"
+      - "Component#3"
     references:
-      - "Button#0"
-      - "Component#2"
-      - "DS#1"
-      - "Link#0"
-      - "link#2"
+      - "Component#3"
+      - "DS#2"
+      - "link#3"
     jsx_references:
-      - "Component#2"
-  - owner: "Component#2"
-    parent: "LinkOrButton#1"
+      - "Component#3"
+  - owner: "Component#3"
+    parent: "LinkOrButton#2"
     children: []
     references:
-      - "Button#0"
-      - "DS#1"
-      - "Link#0"
-      - "link#2"
+      - "DS#2"
+      - "link#3"
     jsx_references: []
-  - owner: "Component#2"
+  - owner: "Component#3"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "DS#1"
-      - "Link#0"
-      - "link#2"
+      - "DS#2"
+      - "link#3"
     jsx_references: []
-  - owner: "Parent#1"
+  - owner: "Parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LinkOrButton#1"
+      - "LinkOrButton#2"
     jsx_references:
-      - "LinkOrButton#1"
-  - owner: "Parent#1"
+      - "LinkOrButton#2"
+  - owner: "Parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LinkOrButton#1"
+      - "LinkOrButton#2"
     jsx_references:
-      - "LinkOrButton#1"
+      - "LinkOrButton#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 28
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 8
           end: 15
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 13
             end: 15
-            ctxt: 1
+          ctxt: 2
           value: DS
           optional: false
     source:
@@ -246,30 +232,28 @@ body:
       span:
         start: 21
         end: 27
-        ctxt: 0
       value: "./ds"
       raw: "\"./ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 31
       end: 150
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 70
           end: 150
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 76
               end: 121
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -277,13 +261,12 @@ body:
                 span:
                   start: 82
                   end: 120
-                  ctxt: 0
                 id:
+                  ctxt: 3
                   optional: false
                   span:
                     start: 82
                     end: 91
-                    ctxt: 2
                   type: Identifier
                   typeAnnotation: ~
                   value: Component
@@ -292,13 +275,12 @@ body:
                   span:
                     start: 94
                     end: 120
-                    ctxt: 0
                   test:
                     type: Identifier
                     span:
                       start: 94
                       end: 98
-                      ctxt: 2
+                    ctxt: 3
                     value: link
                     optional: false
                   consequent:
@@ -306,13 +288,12 @@ body:
                     span:
                       start: 101
                       end: 108
-                      ctxt: 0
                     object:
                       type: Identifier
                       span:
                         start: 101
                         end: 103
-                        ctxt: 1
+                      ctxt: 2
                       value: DS
                       optional: false
                     property:
@@ -320,21 +301,18 @@ body:
                       span:
                         start: 104
                         end: 108
-                        ctxt: 0
                       value: Link
-                      optional: false
                   alternate:
                     type: MemberExpression
                     span:
                       start: 111
                       end: 120
-                      ctxt: 0
                     object:
                       type: Identifier
                       span:
                         start: 111
                         end: 113
-                        ctxt: 1
+                      ctxt: 2
                       value: DS
                       optional: false
                     property:
@@ -342,21 +320,17 @@ body:
                       span:
                         start: 114
                         end: 120
-                        ctxt: 0
                       value: Button
-                      optional: false
                 definite: false
           - type: ReturnStatement
             span:
               start: 127
               end: 148
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 134
                 end: 147
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -364,18 +338,18 @@ body:
                   span:
                     start: 135
                     end: 144
-                    ctxt: 2
+                  ctxt: 3
                   value: Component
                   optional: false
                 span:
                   start: 134
                   end: 147
-                  ctxt: 0
                 attributes: []
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -384,7 +358,7 @@ body:
         span:
           start: 47
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: LinkOrButton
         optional: false
       params:
@@ -392,28 +366,26 @@ body:
           span:
             start: 60
             end: 68
-            ctxt: 0
           decorators: []
           pat:
             type: ObjectPattern
             span:
               start: 60
               end: 68
-              ctxt: 0
             properties:
               - type: AssignmentPatternProperty
                 span:
                   start: 62
                   end: 66
-                  ctxt: 0
                 key:
-                  type: Identifier
+                  ctxt: 3
+                  optional: false
                   span:
                     start: 62
                     end: 66
-                    ctxt: 2
+                  type: Identifier
+                  typeAnnotation: ~
                   value: link
-                  optional: false
                 value: ~
             optional: false
             typeAnnotation: ~
@@ -421,40 +393,34 @@ body:
       span:
         start: 38
         end: 150
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 151
       end: 224
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 176
           end: 224
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 182
               end: 222
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 189
                 end: 221
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 199
                   end: 215
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -462,18 +428,18 @@ body:
                     span:
                       start: 200
                       end: 212
-                      ctxt: 1
+                    ctxt: 2
                     value: LinkOrButton
                     optional: false
                   span:
                     start: 199
                     end: 215
-                    ctxt: 0
                   attributes: []
                   selfClosing: true
                   typeArguments: ~
                 children: []
                 closing: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -482,7 +448,7 @@ body:
         span:
           start: 167
           end: 173
-          ctxt: 1
+        ctxt: 2
         value: Parent
         optional: false
       params: []
@@ -490,6 +456,6 @@ body:
       span:
         start: 158
         end: 224
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

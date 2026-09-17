@@ -5,11 +5,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
   {
     "body": [
       {
-        "asserts": null,
+        "phase": "evaluation",
         "source": {
           "raw": ""./components/newNavigation"",
           "span": {
-            "ctxt": 0,
             "end": 80,
             "start": 52,
           },
@@ -17,7 +16,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "value": "./components/newNavigation",
         },
         "span": {
-          "ctxt": 0,
           "end": 81,
           "start": 1,
         },
@@ -26,9 +24,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
             "imported": null,
             "isTypeOnly": false,
             "local": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 19,
                 "start": 10,
               },
@@ -36,7 +34,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "HeaderNew",
             },
             "span": {
-              "ctxt": 0,
               "end": 19,
               "start": 10,
             },
@@ -46,9 +43,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
             "imported": null,
             "isTypeOnly": false,
             "local": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 32,
                 "start": 21,
               },
@@ -56,7 +53,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "UserMenuNew",
             },
             "span": {
-              "ctxt": 0,
               "end": 32,
               "start": 21,
             },
@@ -66,9 +62,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
             "imported": null,
             "isTypeOnly": false,
             "local": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 44,
                 "start": 34,
               },
@@ -76,7 +72,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "BackButton",
             },
             "span": {
-              "ctxt": 0,
               "end": 44,
               "start": 34,
             },
@@ -85,13 +80,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
         ],
         "type": "ImportDeclaration",
         "typeOnly": false,
+        "with": null,
       },
       {
         "decl": {
           "async": false,
           "body": {
             "span": {
-              "ctxt": 0,
               "end": 255,
               "start": 118,
             },
@@ -102,16 +97,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "children": [
                       {
                         "raw": "
-
             ",
                         "span": {
-                          "ctxt": 0,
                           "end": 165,
                           "start": 152,
                         },
                         "type": "JSXText",
                         "value": "
-
             ",
                       },
                       {
@@ -120,9 +112,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "opening": {
                           "attributes": [],
                           "name": {
+                            "ctxt": 2,
                             "optional": false,
                             "span": {
-                              "ctxt": 1,
                               "end": 176,
                               "start": 166,
                             },
@@ -131,7 +123,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           },
                           "selfClosing": true,
                           "span": {
-                            "ctxt": 0,
                             "end": 178,
                             "start": 165,
                           },
@@ -139,7 +130,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           "typeArguments": null,
                         },
                         "span": {
-                          "ctxt": 0,
                           "end": 178,
                           "start": 165,
                         },
@@ -147,16 +137,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       {
                         "raw": "
-
             ",
                         "span": {
-                          "ctxt": 0,
                           "end": 191,
                           "start": 178,
                         },
                         "type": "JSXText",
                         "value": "
-
             ",
                       },
                       {
@@ -165,9 +152,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "opening": {
                           "attributes": [],
                           "name": {
+                            "ctxt": 2,
                             "optional": false,
                             "span": {
-                              "ctxt": 1,
                               "end": 203,
                               "start": 192,
                             },
@@ -176,7 +163,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           },
                           "selfClosing": true,
                           "span": {
-                            "ctxt": 0,
                             "end": 205,
                             "start": 191,
                           },
@@ -184,7 +170,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           "typeArguments": null,
                         },
                         "span": {
-                          "ctxt": 0,
                           "end": 205,
                           "start": 191,
                         },
@@ -192,28 +177,23 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       {
                         "raw": "
-
             Content
-
         ",
                         "span": {
-                          "ctxt": 0,
                           "end": 234,
                           "start": 205,
                         },
                         "type": "JSXText",
                         "value": "
-
             Content
-
         ",
                       },
                     ],
                     "closing": {
                       "name": {
+                        "ctxt": 2,
                         "optional": false,
                         "span": {
-                          "ctxt": 1,
                           "end": 245,
                           "start": 236,
                         },
@@ -221,7 +201,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "value": "HeaderNew",
                       },
                       "span": {
-                        "ctxt": 0,
                         "end": 246,
                         "start": 234,
                       },
@@ -230,9 +209,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "opening": {
                       "attributes": [],
                       "name": {
+                        "ctxt": 2,
                         "optional": false,
                         "span": {
-                          "ctxt": 1,
                           "end": 151,
                           "start": 142,
                         },
@@ -241,7 +220,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       "selfClosing": false,
                       "span": {
-                        "ctxt": 0,
                         "end": 152,
                         "start": 141,
                       },
@@ -249,35 +227,33 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       "typeArguments": null,
                     },
                     "span": {
-                      "ctxt": 0,
                       "end": 246,
                       "start": 141,
                     },
                     "type": "JSXElement",
                   },
                   "span": {
-                    "ctxt": 0,
                     "end": 252,
                     "start": 131,
                   },
                   "type": "ParenthesisExpression",
                 },
                 "span": {
-                  "ctxt": 0,
                   "end": 253,
                   "start": 124,
                 },
                 "type": "ReturnStatement",
               },
             ],
-            "type": "BlockStatement",
+            "type": "FunctionBody",
           },
+          "ctxt": 3,
           "decorators": [],
           "generator": false,
           "identifier": {
+            "ctxt": 2,
             "optional": false,
             "span": {
-              "ctxt": 1,
               "end": 115,
               "start": 107,
             },
@@ -287,7 +263,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "params": [],
           "returnType": null,
           "span": {
-            "ctxt": 0,
             "end": 255,
             "start": 98,
           },
@@ -295,7 +270,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "typeParameters": null,
         },
         "span": {
-          "ctxt": 0,
           "end": 255,
           "start": 83,
         },
@@ -305,7 +279,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
     "created_at": null,
     "declarations": [
       {
-        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('BackButton' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: "BackButton", context: #2 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
         "end": {
           "column": 44,
           "line": 1,
@@ -320,7 +294,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "package_name": "typescript-examples",
                 "path": "src/simple/components/newNavigation",
               },
-              "symbol": "BackButton#1",
+              "symbol": "BackButton#2",
             },
           },
         },
@@ -334,10 +308,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 34,
           "line": 1,
         },
-        "symbol": "BackButton#1",
+        "symbol": "BackButton#2",
       },
       {
-        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('HeaderNew' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: "HeaderNew", context: #2 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
         "end": {
           "column": 19,
           "line": 1,
@@ -352,7 +326,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "package_name": "typescript-examples",
                 "path": "src/simple/components/newNavigation",
               },
-              "symbol": "HeaderNew#1",
+              "symbol": "HeaderNew#2",
             },
           },
         },
@@ -366,7 +340,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 10,
           "line": 1,
         },
-        "symbol": "HeaderNew#1",
+        "symbol": "HeaderNew#2",
       },
       {
         "definition": "<expression>",
@@ -389,10 +363,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 16,
           "line": 3,
         },
-        "symbol": "MainPage#1",
+        "symbol": "MainPage#2",
       },
       {
-        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('UserMenuNew' type=dynamic), context: #1 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: "UserMenuNew", context: #2 }, source: ModuleId { hash: 10004515936686217676, path: "src/simple/components/newNavigation", pkg_name: "typescript-examples", mtype: Local } }>",
         "end": {
           "column": 32,
           "line": 1,
@@ -407,7 +381,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "package_name": "typescript-examples",
                 "path": "src/simple/components/newNavigation",
               },
-              "symbol": "UserMenuNew#1",
+              "symbol": "UserMenuNew#2",
             },
           },
         },
@@ -421,14 +395,14 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 21,
           "line": 1,
         },
-        "symbol": "UserMenuNew#1",
+        "symbol": "UserMenuNew#2",
       },
     ],
     "exports": [
       {
         "exported_name": "default",
         "source": {
-          "Internal": "MainPage#1",
+          "Internal": "MainPage#2",
         },
       },
     ],
@@ -441,51 +415,51 @@ exports[`\`parse\` command should match the snapshot 1`] = `
     "scopes": [
       {
         "children": [
-          "MainPage#1",
-          "MainPage#1",
+          "MainPage#2",
+          "MainPage#2",
         ],
         "jsx_references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "UserMenuNew#2",
         ],
         "owner": "__global#0",
         "parent": null,
         "references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "MainPage#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "MainPage#2",
+          "UserMenuNew#2",
         ],
       },
       {
         "children": [],
         "jsx_references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "UserMenuNew#2",
         ],
-        "owner": "MainPage#1",
+        "owner": "MainPage#2",
         "parent": "__global#0",
         "references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "UserMenuNew#2",
         ],
       },
       {
         "children": [],
         "jsx_references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "UserMenuNew#2",
         ],
-        "owner": "MainPage#1",
+        "owner": "MainPage#2",
         "parent": "__global#0",
         "references": [
-          "BackButton#1",
-          "HeaderNew#1",
-          "UserMenuNew#1",
+          "BackButton#2",
+          "HeaderNew#2",
+          "UserMenuNew#2",
         ],
       },
     ],
@@ -495,11 +469,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
   {
     "body": [
       {
-        "asserts": null,
+        "phase": "evaluation",
         "source": {
           "raw": ""@acme/components"",
           "span": {
-            "ctxt": 0,
             "end": 47,
             "start": 29,
           },
@@ -507,7 +480,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "value": "@acme/components",
         },
         "span": {
-          "ctxt": 0,
           "end": 48,
           "start": 1,
         },
@@ -516,9 +488,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
             "imported": null,
             "isTypeOnly": false,
             "local": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 21,
                 "start": 10,
               },
@@ -526,7 +498,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "AlertButton",
             },
             "span": {
-              "ctxt": 0,
               "end": 21,
               "start": 10,
             },
@@ -535,13 +506,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
         ],
         "type": "ImportDeclaration",
         "typeOnly": false,
+        "with": null,
       },
       {
-        "asserts": null,
+        "phase": "evaluation",
         "source": {
           "raw": ""./components/nav"",
           "span": {
-            "ctxt": 0,
             "end": 98,
             "start": 80,
           },
@@ -549,16 +520,15 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "value": "./components/nav",
         },
         "span": {
-          "ctxt": 0,
           "end": 99,
           "start": 49,
         },
         "specifiers": [
           {
             "local": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 74,
                 "start": 61,
               },
@@ -566,7 +536,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "navComponents",
             },
             "span": {
-              "ctxt": 0,
               "end": 74,
               "start": 56,
             },
@@ -575,15 +544,17 @@ exports[`\`parse\` command should match the snapshot 1`] = `
         ],
         "type": "ImportDeclaration",
         "typeOnly": false,
+        "with": null,
       },
       {
+        "ctxt": 0,
         "declarations": [
           {
             "definite": false,
             "id": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 117,
                 "start": 107,
               },
@@ -593,9 +564,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
             },
             "init": {
               "object": {
+                "ctxt": 2,
                 "optional": false,
                 "span": {
-                  "ctxt": 1,
                   "end": 133,
                   "start": 120,
                 },
@@ -603,9 +574,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "value": "navComponents",
               },
               "property": {
-                "optional": false,
                 "span": {
-                  "ctxt": 0,
                   "end": 144,
                   "start": 134,
                 },
@@ -613,14 +582,12 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "value": "UserAvatar",
               },
               "span": {
-                "ctxt": 0,
                 "end": 144,
                 "start": 120,
               },
               "type": "MemberExpression",
             },
             "span": {
-              "ctxt": 0,
               "end": 144,
               "start": 107,
             },
@@ -630,13 +597,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
         "declare": false,
         "kind": "const",
         "span": {
-          "ctxt": 0,
           "end": 145,
           "start": 101,
         },
         "type": "VariableDeclaration",
       },
       {
+        "ctxt": 0,
         "declarations": [
           {
             "definite": false,
@@ -645,17 +612,17 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "properties": [
                 {
                   "key": {
+                    "ctxt": 2,
                     "optional": false,
                     "span": {
-                      "ctxt": 1,
                       "end": 160,
                       "start": 154,
                     },
                     "type": "Identifier",
+                    "typeAnnotation": null,
                     "value": "Header",
                   },
                   "span": {
-                    "ctxt": 0,
                     "end": 160,
                     "start": 154,
                   },
@@ -664,7 +631,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 },
               ],
               "span": {
-                "ctxt": 0,
                 "end": 162,
                 "start": 152,
               },
@@ -672,9 +638,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "typeAnnotation": null,
             },
             "init": {
+              "ctxt": 2,
               "optional": false,
               "span": {
-                "ctxt": 1,
                 "end": 178,
                 "start": 165,
               },
@@ -682,7 +648,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
               "value": "navComponents",
             },
             "span": {
-              "ctxt": 0,
               "end": 178,
               "start": 152,
             },
@@ -692,7 +657,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
         "declare": false,
         "kind": "const",
         "span": {
-          "ctxt": 0,
           "end": 179,
           "start": 146,
         },
@@ -703,7 +667,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "async": false,
           "body": {
             "span": {
-              "ctxt": 0,
               "end": 355,
               "start": 217,
             },
@@ -714,16 +677,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "children": [
                       {
                         "raw": "
-
             ",
                         "span": {
-                          "ctxt": 0,
                           "end": 261,
                           "start": 248,
                         },
                         "type": "JSXText",
                         "value": "
-
             ",
                       },
                       {
@@ -732,9 +692,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "opening": {
                           "attributes": [],
                           "name": {
+                            "ctxt": 2,
                             "optional": false,
                             "span": {
-                              "ctxt": 1,
                               "end": 272,
                               "start": 262,
                             },
@@ -743,7 +703,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           },
                           "selfClosing": true,
                           "span": {
-                            "ctxt": 0,
                             "end": 274,
                             "start": 261,
                           },
@@ -751,7 +710,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           "typeArguments": null,
                         },
                         "span": {
-                          "ctxt": 0,
                           "end": 274,
                           "start": 261,
                         },
@@ -759,16 +717,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       {
                         "raw": "
-
             ",
                         "span": {
-                          "ctxt": 0,
                           "end": 287,
                           "start": 274,
                         },
                         "type": "JSXText",
                         "value": "
-
             ",
                       },
                       {
@@ -776,7 +731,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           {
                             "raw": "About",
                             "span": {
-                              "ctxt": 0,
                               "end": 296,
                               "start": 291,
                             },
@@ -786,9 +740,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         ],
                         "closing": {
                           "name": {
+                            "ctxt": 1,
                             "optional": false,
                             "span": {
-                              "ctxt": 2,
                               "end": 300,
                               "start": 298,
                             },
@@ -796,7 +750,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                             "value": "h1",
                           },
                           "span": {
-                            "ctxt": 0,
                             "end": 301,
                             "start": 296,
                           },
@@ -805,9 +758,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "opening": {
                           "attributes": [],
                           "name": {
+                            "ctxt": 1,
                             "optional": false,
                             "span": {
-                              "ctxt": 2,
                               "end": 290,
                               "start": 288,
                             },
@@ -816,7 +769,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           },
                           "selfClosing": false,
                           "span": {
-                            "ctxt": 0,
                             "end": 291,
                             "start": 287,
                           },
@@ -824,7 +776,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           "typeArguments": null,
                         },
                         "span": {
-                          "ctxt": 0,
                           "end": 301,
                           "start": 287,
                         },
@@ -832,16 +783,13 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       {
                         "raw": "
-
             ",
                         "span": {
-                          "ctxt": 0,
                           "end": 314,
                           "start": 301,
                         },
                         "type": "JSXText",
                         "value": "
-
             ",
                       },
                       {
@@ -850,9 +798,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "opening": {
                           "attributes": [],
                           "name": {
+                            "ctxt": 2,
                             "optional": false,
                             "span": {
-                              "ctxt": 1,
                               "end": 326,
                               "start": 315,
                             },
@@ -861,7 +809,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           },
                           "selfClosing": true,
                           "span": {
-                            "ctxt": 0,
                             "end": 328,
                             "start": 314,
                           },
@@ -869,7 +816,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                           "typeArguments": null,
                         },
                         "span": {
-                          "ctxt": 0,
                           "end": 328,
                           "start": 314,
                         },
@@ -877,24 +823,21 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       {
                         "raw": "
-
         ",
                         "span": {
-                          "ctxt": 0,
                           "end": 337,
                           "start": 328,
                         },
                         "type": "JSXText",
                         "value": "
-
         ",
                       },
                     ],
                     "closing": {
                       "name": {
+                        "ctxt": 2,
                         "optional": false,
                         "span": {
-                          "ctxt": 1,
                           "end": 345,
                           "start": 339,
                         },
@@ -902,7 +845,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                         "value": "Header",
                       },
                       "span": {
-                        "ctxt": 0,
                         "end": 346,
                         "start": 337,
                       },
@@ -911,9 +853,9 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "opening": {
                       "attributes": [],
                       "name": {
+                        "ctxt": 2,
                         "optional": false,
                         "span": {
-                          "ctxt": 1,
                           "end": 247,
                           "start": 241,
                         },
@@ -922,7 +864,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       },
                       "selfClosing": false,
                       "span": {
-                        "ctxt": 0,
                         "end": 248,
                         "start": 240,
                       },
@@ -930,35 +871,33 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                       "typeArguments": null,
                     },
                     "span": {
-                      "ctxt": 0,
                       "end": 346,
                       "start": 240,
                     },
                     "type": "JSXElement",
                   },
                   "span": {
-                    "ctxt": 0,
                     "end": 352,
                     "start": 230,
                   },
                   "type": "ParenthesisExpression",
                 },
                 "span": {
-                  "ctxt": 0,
                   "end": 353,
                   "start": 223,
                 },
                 "type": "ReturnStatement",
               },
             ],
-            "type": "BlockStatement",
+            "type": "FunctionBody",
           },
+          "ctxt": 3,
           "decorators": [],
           "generator": false,
           "identifier": {
+            "ctxt": 2,
             "optional": false,
             "span": {
-              "ctxt": 1,
               "end": 214,
               "start": 205,
             },
@@ -968,7 +907,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "params": [],
           "returnType": null,
           "span": {
-            "ctxt": 0,
             "end": 355,
             "start": 196,
           },
@@ -976,7 +914,6 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "typeParameters": null,
         },
         "span": {
-          "ctxt": 0,
           "end": 355,
           "start": 181,
         },
@@ -1006,10 +943,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 16,
           "line": 7,
         },
-        "symbol": "AboutPage#1",
+        "symbol": "AboutPage#2",
       },
       {
-        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('AlertButton' type=dynamic), context: #1 }, source: ModuleId { hash: 5148538744336220601, path: "", pkg_name: "@acme/components", mtype: Package } }>",
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: "AlertButton", context: #2 }, source: ModuleId { hash: 5148538744336220601, path: "", pkg_name: "@acme/components", mtype: Package } }>",
         "end": {
           "column": 21,
           "line": 1,
@@ -1024,7 +961,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                 "package_name": "@acme/components",
                 "path": "",
               },
-              "symbol": "AlertButton#1",
+              "symbol": "AlertButton#2",
             },
           },
         },
@@ -1038,7 +975,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 10,
           "line": 1,
         },
-        "symbol": "AlertButton#1",
+        "symbol": "AlertButton#2",
       },
       {
         "definition": "<expression>",
@@ -1058,7 +995,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "package_name": "typescript-examples",
                     "path": "src/simple/about.tsx",
                   },
-                  "symbol": "navComponents#1",
+                  "symbol": "navComponents#2",
                 },
               },
             },
@@ -1077,7 +1014,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 9,
           "line": 5,
         },
-        "symbol": "Header#1",
+        "symbol": "Header#2",
       },
       {
         "definition": "<expression>",
@@ -1097,7 +1034,7 @@ exports[`\`parse\` command should match the snapshot 1`] = `
                     "package_name": "typescript-examples",
                     "path": "src/simple/about.tsx",
                   },
-                  "symbol": "navComponents#1",
+                  "symbol": "navComponents#2",
                 },
               },
             },
@@ -1116,10 +1053,10 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 7,
           "line": 4,
         },
-        "symbol": "UserAvatar#1",
+        "symbol": "UserAvatar#2",
       },
       {
-        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 56435560017408417, path: "src/simple/components/nav", pkg_name: "typescript-examples", mtype: Local } }>",
+        "definition": "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: "<wildcard>", context: #0 }, source: ModuleId { hash: 56435560017408417, path: "src/simple/components/nav", pkg_name: "typescript-examples", mtype: Local } }>",
         "end": {
           "column": 26,
           "line": 2,
@@ -1148,14 +1085,14 @@ exports[`\`parse\` command should match the snapshot 1`] = `
           "column": 8,
           "line": 2,
         },
-        "symbol": "navComponents#1",
+        "symbol": "navComponents#2",
       },
     ],
     "exports": [
       {
         "exported_name": "default",
         "source": {
-          "Internal": "AboutPage#1",
+          "Internal": "AboutPage#2",
         },
       },
     ],
@@ -1168,80 +1105,78 @@ exports[`\`parse\` command should match the snapshot 1`] = `
     "scopes": [
       {
         "children": [
-          "UserAvatar#1",
-          "Header#1",
-          "AboutPage#1",
-          "AboutPage#1",
+          "UserAvatar#2",
+          "Header#2",
+          "AboutPage#2",
+          "AboutPage#2",
         ],
         "jsx_references": [
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#1",
-          "h1#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
         ],
         "owner": "__global#0",
         "parent": null,
         "references": [
-          "AboutPage#1",
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#0",
-          "UserAvatar#1",
-          "h1#2",
-          "navComponents#1",
+          "AboutPage#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
+          "navComponents#2",
         ],
       },
       {
         "children": [],
         "jsx_references": [],
-        "owner": "UserAvatar#1",
+        "owner": "UserAvatar#2",
         "parent": "__global#0",
         "references": [
-          "UserAvatar#0",
-          "navComponents#1",
+          "navComponents#2",
         ],
       },
       {
         "children": [],
         "jsx_references": [],
-        "owner": "Header#1",
+        "owner": "Header#2",
         "parent": "__global#0",
         "references": [
-          "navComponents#1",
+          "navComponents#2",
         ],
       },
       {
         "children": [],
         "jsx_references": [
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#1",
-          "h1#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
         ],
-        "owner": "AboutPage#1",
+        "owner": "AboutPage#2",
         "parent": "__global#0",
         "references": [
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#1",
-          "h1#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
         ],
       },
       {
         "children": [],
         "jsx_references": [
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#1",
-          "h1#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
         ],
-        "owner": "AboutPage#1",
+        "owner": "AboutPage#2",
         "parent": "__global#0",
         "references": [
-          "AlertButton#1",
-          "Header#1",
-          "UserAvatar#1",
-          "h1#2",
+          "AlertButton#2",
+          "Header#2",
+          "UserAvatar#2",
+          "h1#1",
         ],
       },
     ],

@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MainComponent#1"
+      Internal: "MainComponent#2"
     exported_name: MainComponent
 declarations:
-  - symbol: "ComponentWithoutJSX#1"
+  - symbol: "ComponentWithoutJSX#2"
     source:
       hash: "13497189898419724855"
       path: src/jsx-refs/jsx-refs.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('ComponentWithoutJSX' type=dynamic), context: #1 }, source: ModuleId { hash: 909876588202224156, path: \"src/jsx-refs/components-no-jsx\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"ComponentWithoutJSX\", context: #2 }, source: ModuleId { hash: 909876588202224156, path: \"src/jsx-refs/components-no-jsx\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ComponentWithoutJSX#1"
+          symbol: "ComponentWithoutJSX#2"
           source:
             hash: "909876588202224156"
             path: src/jsx-refs/components-no-jsx
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 29
-  - symbol: "MainComponent#1"
+  - symbol: "MainComponent#2"
     source:
       hash: "13497189898419724855"
       path: src/jsx-refs/jsx-refs.tsx
@@ -55,17 +55,17 @@ declarations:
     end:
       line: 8
       column: 2
-  - symbol: "Tool#1"
+  - symbol: "Tool#2"
     source:
       hash: "13497189898419724855"
       path: src/jsx-refs/jsx-refs.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Tool' type=inline), context: #1 }, source: ModuleId { hash: 909876588202224156, path: \"src/jsx-refs/components-no-jsx\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Tool\", context: #2 }, source: ModuleId { hash: 909876588202224156, path: \"src/jsx-refs/components-no-jsx\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Tool#1"
+          symbol: "Tool#2"
           source:
             hash: "909876588202224156"
             path: src/jsx-refs/components-no-jsx
@@ -82,57 +82,55 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "MainComponent#1"
-      - "MainComponent#1"
+      - "MainComponent#2"
+      - "MainComponent#2"
     references:
-      - "ComponentWithoutJSX#1"
-      - "MainComponent#1"
-      - "Tool#1"
-      - "div#2"
+      - "ComponentWithoutJSX#2"
+      - "MainComponent#2"
+      - "Tool#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithoutJSX#1"
-      - "Tool#1"
-      - "div#2"
-  - owner: "MainComponent#1"
+      - "ComponentWithoutJSX#2"
+      - "Tool#2"
+      - "div#1"
+  - owner: "MainComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentWithoutJSX#1"
-      - "Tool#1"
-      - "div#2"
+      - "ComponentWithoutJSX#2"
+      - "Tool#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithoutJSX#1"
-      - "Tool#1"
-      - "div#2"
-  - owner: "MainComponent#1"
+      - "ComponentWithoutJSX#2"
+      - "Tool#2"
+      - "div#1"
+  - owner: "MainComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentWithoutJSX#1"
-      - "Tool#1"
-      - "div#2"
+      - "ComponentWithoutJSX#2"
+      - "Tool#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithoutJSX#1"
-      - "Tool#1"
-      - "div#2"
+      - "ComponentWithoutJSX#2"
+      - "Tool#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 65
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 29
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 29
-            ctxt: 1
+          ctxt: 2
           value: ComponentWithoutJSX
           optional: false
         imported: ~
@@ -141,13 +139,12 @@ body:
         span:
           start: 31
           end: 35
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 31
             end: 35
-            ctxt: 1
+          ctxt: 2
           value: Tool
           optional: false
         imported: ~
@@ -157,36 +154,32 @@ body:
       span:
         start: 43
         end: 64
-        ctxt: 0
       value: "./components-no-jsx"
       raw: "\"./components-no-jsx\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 67
       end: 178
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 99
           end: 178
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 105
               end: 176
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 112
                 end: 175
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -194,13 +187,12 @@ body:
                   span:
                     start: 113
                     end: 116
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 112
                   end: 117
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -209,14 +201,12 @@ body:
                   span:
                     start: 117
                     end: 126
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 126
                     end: 148
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -224,13 +214,12 @@ body:
                       span:
                         start: 127
                         end: 146
-                        ctxt: 1
+                      ctxt: 2
                       value: ComponentWithoutJSX
                       optional: false
                     span:
                       start: 126
                       end: 148
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -240,14 +229,12 @@ body:
                   span:
                     start: 148
                     end: 157
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 157
                     end: 164
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -255,13 +242,12 @@ body:
                       span:
                         start: 158
                         end: 162
-                        ctxt: 1
+                      ctxt: 2
                       value: Tool
                       optional: false
                     span:
                       start: 157
                       end: 164
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -271,23 +257,22 @@ body:
                   span:
                     start: 164
                     end: 169
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 169
                   end: 175
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 171
                     end: 174
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -296,7 +281,7 @@ body:
         span:
           start: 83
           end: 96
-          ctxt: 1
+        ctxt: 2
         value: MainComponent
         optional: false
       params: []
@@ -304,6 +289,6 @@ body:
       span:
         start: 74
         end: 178
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

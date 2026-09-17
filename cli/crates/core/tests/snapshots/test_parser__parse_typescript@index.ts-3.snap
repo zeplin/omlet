@@ -1,6 +1,6 @@
 ---
 source: crates/core/tests/test_parser.rs
-expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
 input_file: samples/typescript/src/wildcard-re-export/components/index.ts
 ---
 source_path: src/wildcard-re-export/components/index.ts
@@ -42,28 +42,26 @@ body:
     span:
       start: 1
       end: 27
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 15
         end: 26
-        ctxt: 0
       value: "./Divider"
       raw: "\"./Divider\""
-    asserts: ~
+    typeOnly: false
+    with: ~
   - type: ExportAllDeclaration
     span:
       start: 28
       end: 56
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 42
         end: 55
-        ctxt: 0
       value: "./Accordion"
       raw: "\"./Accordion\""
-    asserts: ~
+    typeOnly: false
+    with: ~
 

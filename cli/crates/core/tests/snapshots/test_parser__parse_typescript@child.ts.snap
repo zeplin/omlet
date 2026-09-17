@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "child#1"
+      Internal: "child#2"
     exported_name: child
 declarations:
-  - symbol: "child#1"
+  - symbol: "child#2"
     source:
       hash: "9464339265109063103"
       path: src/wildcard-import/child.ts
@@ -29,7 +29,7 @@ declarations:
             - MemberOf:
                 - TypeOf:
                     symbol:
-                      symbol: "foo#2"
+                      symbol: "foo#1"
                       source:
                         hash: "9464339265109063103"
                         path: src/wildcard-import/child.ts
@@ -48,65 +48,58 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "child#1"
-      - "child#1"
+      - "child#2"
+      - "child#2"
     references:
-      - "child#0"
-      - "child#1"
-      - "foo#2"
+      - "child#2"
+      - "foo#1"
     jsx_references: []
-  - owner: "child#1"
+  - owner: "child#2"
     parent: "__global#0"
     children: []
     references:
-      - "child#0"
-      - "foo#2"
+      - "foo#1"
     jsx_references: []
-  - owner: "child#1"
+  - owner: "child#2"
     parent: "__global#0"
     children: []
     references:
-      - "child#0"
-      - "foo#2"
+      - "foo#1"
     jsx_references: []
 body:
   - type: ExportDeclaration
     span:
       start: 2
       end: 53
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 26
           end: 53
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 32
               end: 51
-              ctxt: 0
             argument:
               type: CallExpression
               span:
                 start: 39
                 end: 50
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: MemberExpression
                 span:
                   start: 39
                   end: 48
-                  ctxt: 0
                 object:
                   type: Identifier
                   span:
                     start: 39
                     end: 42
-                    ctxt: 2
+                  ctxt: 1
                   value: foo
                   optional: false
                 property:
@@ -114,11 +107,10 @@ body:
                   span:
                     start: 43
                     end: 48
-                    ctxt: 0
                   value: child
-                  optional: false
               arguments: []
               typeArguments: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -127,7 +119,7 @@ body:
         span:
           start: 18
           end: 23
-          ctxt: 1
+        ctxt: 2
         value: child
         optional: false
       params: []
@@ -135,6 +127,6 @@ body:
       span:
         start: 9
         end: 53
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

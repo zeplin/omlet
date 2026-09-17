@@ -22,7 +22,7 @@ declarations:
       path: src/wildcard-import/wildcard-export.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -51,19 +51,17 @@ body:
     span:
       start: 1
       end: 28
-      ctxt: 0
     specifiers:
       - type: ExportNamespaceSpecifier
         span:
           start: 8
           end: 15
-          ctxt: 0
         name:
           type: Identifier
           span:
             start: 13
             end: 15
-            ctxt: 0
+          ctxt: 0
           value: ds
           optional: false
     source:
@@ -71,8 +69,8 @@ body:
       span:
         start: 21
         end: 27
-        ctxt: 0
       value: "./ds"
       raw: "\"./ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+

@@ -16,29 +16,29 @@ exports:
       Internal: "default#0"
     exported_name: default
   - source:
-      Internal: "wolly#1"
+      Internal: "wolly#2"
     exported_name: wDog
   - source:
-      Internal: "molly#1"
+      Internal: "molly#2"
     exported_name: mDog
   - source:
-      Internal: "dolly#1"
+      Internal: "dolly#2"
     exported_name: dolly
   - source:
-      Internal: "x#1"
+      Internal: "x#2"
     exported_name: x
 declarations:
-  - symbol: "coronado#1"
+  - symbol: "coronado#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('coronado' type=dynamic), context: #1 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"coronado\", context: #2 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "coronado#1"
+          symbol: "coronado#2"
           source:
             hash: "10667860426393955498"
             path: src/module-decls/wolly
@@ -65,13 +65,13 @@ declarations:
     end:
       line: 7
       column: 21
-  - symbol: "dolly#1"
+  - symbol: "dolly#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 968289628563977978, path: \"src/module-decls/dolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 968289628563977978, path: \"src/module-decls/dolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -88,13 +88,13 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "molly#1"
+  - symbol: "molly#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 6483836126506089555, path: \"src/module-decls/molly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 6483836126506089555, path: \"src/module-decls/molly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -111,13 +111,13 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "mollyAll#1"
+  - symbol: "mollyAll#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 6483836126506089555, path: \"src/module-decls/molly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 6483836126506089555, path: \"src/module-decls/molly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -134,17 +134,17 @@ declarations:
     end:
       line: 2
       column: 28
-  - symbol: "scrimshaw#1"
+  - symbol: "scrimshaw#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('scrimshaw' type=dynamic), context: #1 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"scrimshaw\", context: #2 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "scrimshaw#1"
+          symbol: "scrimshaw#2"
           source:
             hash: "10667860426393955498"
             path: src/module-decls/wolly
@@ -157,13 +157,13 @@ declarations:
     end:
       line: 3
       column: 36
-  - symbol: "wolly#1"
+  - symbol: "wolly#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 10667860426393955498, path: \"src/module-decls/wolly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -180,7 +180,7 @@ declarations:
     end:
       line: 3
       column: 13
-  - symbol: "x#1"
+  - symbol: "x#2"
     source:
       hash: "16005058368192827951"
       path: src/module-decls/module-mixed.ts
@@ -202,30 +202,30 @@ scopes:
     parent: ~
     children:
       - "default#0"
-      - "x#1"
-      - "x#1"
+      - "x#2"
+      - "x#2"
     references:
-      - "coronado#1"
-      - "dolly#1"
-      - "mDog#2"
-      - "molly#1"
-      - "mollyAll#1"
-      - "scrimshaw#1"
-      - "wDog#2"
-      - "wolly#1"
-      - "x#1"
+      - "coronado#2"
+      - "dolly#2"
+      - "mDog#1"
+      - "molly#2"
+      - "mollyAll#2"
+      - "scrimshaw#2"
+      - "wDog#1"
+      - "wolly#2"
+      - "x#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "x#1"
+  - owner: "x#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "x#1"
+  - owner: "x#2"
     parent: "__global#0"
     children: []
     references: []
@@ -235,19 +235,17 @@ body:
     span:
       start: 1
       end: 29
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: dolly
           optional: false
     source:
@@ -255,41 +253,38 @@ body:
       span:
         start: 19
         end: 28
-        ctxt: 0
       value: "./dolly"
       raw: "\"./dolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 30
       end: 73
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 37
           end: 42
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 42
-            ctxt: 1
+          ctxt: 2
           value: molly
           optional: false
       - type: ImportNamespaceSpecifier
         span:
           start: 44
           end: 57
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 49
             end: 57
-            ctxt: 1
+          ctxt: 2
           value: mollyAll
           optional: false
     source:
@@ -297,41 +292,38 @@ body:
       span:
         start: 63
         end: 72
-        ctxt: 0
       value: "./molly"
       raw: "\"./molly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 74
       end: 127
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 81
           end: 86
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 81
             end: 86
-            ctxt: 1
+          ctxt: 2
           value: wolly
           optional: false
       - type: ImportSpecifier
         span:
           start: 90
           end: 98
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 90
             end: 98
-            ctxt: 1
+          ctxt: 2
           value: coronado
           optional: false
         imported: ~
@@ -340,13 +332,12 @@ body:
         span:
           start: 100
           end: 109
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 100
             end: 109
-            ctxt: 1
+          ctxt: 2
           value: scrimshaw
           optional: false
         imported: ~
@@ -356,57 +347,52 @@ body:
       span:
         start: 117
         end: 126
-        ctxt: 0
       value: "./wolly"
       raw: "\"./wolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 128
       end: 145
-      ctxt: 0
     specifiers: []
     source:
       type: StringLiteral
       span:
         start: 135
         end: 144
-        ctxt: 0
       value: "./golly"
       raw: "\"./golly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultExpression
     span:
       start: 148
       end: 168
-      ctxt: 0
     expression:
       type: NumericLiteral
       span:
         start: 163
         end: 167
-        ctxt: 0
       value: 1331.0
       raw: "1331"
   - type: ExportNamedDeclaration
     span:
       start: 169
       end: 216
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 178
           end: 191
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 178
             end: 183
-            ctxt: 1
+          ctxt: 2
           value: wolly
           optional: false
         exported:
@@ -414,7 +400,7 @@ body:
           span:
             start: 187
             end: 191
-            ctxt: 2
+          ctxt: 1
           value: wDog
           optional: false
         isTypeOnly: false
@@ -422,13 +408,12 @@ body:
         span:
           start: 193
           end: 206
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 193
             end: 198
-            ctxt: 1
+          ctxt: 2
           value: molly
           optional: false
         exported:
@@ -436,7 +421,7 @@ body:
           span:
             start: 202
             end: 206
-            ctxt: 2
+          ctxt: 1
           value: mDog
           optional: false
         isTypeOnly: false
@@ -444,31 +429,29 @@ body:
         span:
           start: 208
           end: 213
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 208
             end: 213
-            ctxt: 1
+          ctxt: 2
           value: dolly
           optional: false
         exported: ~
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportDeclaration
     span:
       start: 217
       end: 241
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 224
         end: 241
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -476,13 +459,12 @@ body:
           span:
             start: 230
             end: 240
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 230
               end: 231
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: x
@@ -491,7 +473,6 @@ body:
             span:
               start: 234
               end: 240
-              ctxt: 0
             elements:
               - spread: ~
                 expression:
@@ -499,7 +480,6 @@ body:
                   span:
                     start: 235
                     end: 236
-                    ctxt: 0
                   value: 1.0
                   raw: "1"
               - spread: ~
@@ -508,7 +488,7 @@ body:
                   span:
                     start: 238
                     end: 239
-                    ctxt: 0
                   value: 2.0
                   raw: "2"
           definite: false
+

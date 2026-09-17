@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "RedeclaredButton#1"
+      Internal: "RedeclaredButton#2"
     exported_name: RedeclaredButton
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "13339757074741913233"
       path: src/redeclare-import/redeclare-and-export.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Button' type=inline), context: #1 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Button\", context: #2 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Button#1"
+          symbol: "Button#2"
           source:
             hash: "3516152902168980351"
             path: ""
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 16
-  - symbol: "RedeclaredButton#1"
+  - symbol: "RedeclaredButton#2"
     source:
       hash: "13339757074741913233"
       path: src/redeclare-import/redeclare-and-export.tsx
@@ -49,7 +49,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Button#1"
+          symbol: "Button#2"
           source:
             hash: "13339757074741913233"
             path: src/redeclare-import/redeclare-and-export.tsx
@@ -66,35 +66,33 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "RedeclaredButton#1"
+      - "RedeclaredButton#2"
     references:
-      - "Button#1"
-      - "RedeclaredButton#1"
+      - "Button#2"
+      - "RedeclaredButton#2"
     jsx_references: []
-  - owner: "RedeclaredButton#1"
+  - owner: "RedeclaredButton#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
+      - "Button#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 29
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 16
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 16
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         imported: ~
@@ -104,16 +102,16 @@ body:
       span:
         start: 24
         end: 28
-        ctxt: 0
       value: ds
       raw: "\"ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 31
       end: 63
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -121,13 +119,12 @@ body:
         span:
           start: 37
           end: 62
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 37
             end: 53
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: RedeclaredButton
@@ -136,7 +133,7 @@ body:
           span:
             start: 56
             end: 62
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         definite: false
@@ -144,23 +141,22 @@ body:
     span:
       start: 64
       end: 96
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 77
           end: 93
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 77
             end: 93
-            ctxt: 1
+          ctxt: 2
           value: RedeclaredButton
           optional: false
         exported: ~
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
+

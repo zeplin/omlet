@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "RedeclareImport#1"
+      Internal: "RedeclareImport#2"
     exported_name: RedeclareImport
 declarations:
-  - symbol: "ComponentFromDestructedObject#1"
+  - symbol: "ComponentFromDestructedObject#2"
     source:
       hash: "7128159823283162876"
       path: src/wildcard-import/redeclare-import.tsx
@@ -27,7 +27,7 @@ declarations:
       MemberOf:
         - TypeOf:
             symbol:
-              symbol: "DS#1"
+              symbol: "DS#2"
               source:
                 hash: "7128159823283162876"
                 path: src/wildcard-import/redeclare-import.tsx
@@ -41,13 +41,13 @@ declarations:
     end:
       line: 5
       column: 46
-  - symbol: "DS#1"
+  - symbol: "DS#2"
     source:
       hash: "7128159823283162876"
       path: src/wildcard-import/redeclare-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -64,13 +64,13 @@ declarations:
     end:
       line: 2
       column: 15
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "7128159823283162876"
       path: src/wildcard-import/redeclare-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -87,7 +87,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "RedeclareImport#1"
+  - symbol: "RedeclareImport#2"
     source:
       hash: "7128159823283162876"
       path: src/wildcard-import/redeclare-import.tsx
@@ -103,7 +103,7 @@ declarations:
     end:
       line: 13
       column: 2
-  - symbol: "RedeclaredComponent#1"
+  - symbol: "RedeclaredComponent#2"
     source:
       hash: "7128159823283162876"
       path: src/wildcard-import/redeclare-import.tsx
@@ -114,7 +114,7 @@ declarations:
       MemberOf:
         - TypeOf:
             symbol:
-              symbol: "DS#1"
+              symbol: "DS#2"
               source:
                 hash: "7128159823283162876"
                 path: src/wildcard-import/redeclare-import.tsx
@@ -132,69 +132,65 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "RedeclaredComponent#1"
-      - "ComponentFromDestructedObject#1"
-      - "RedeclareImport#1"
-      - "RedeclareImport#1"
+      - "RedeclaredComponent#2"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclareImport#2"
+      - "RedeclareImport#2"
     references:
-      - "Button#0"
-      - "ComponentFromDestructedObject#1"
-      - "DS#1"
-      - "React#1"
-      - "RedeclareImport#1"
-      - "RedeclaredComponent#1"
+      - "ComponentFromDestructedObject#2"
+      - "DS#2"
+      - "React#2"
+      - "RedeclareImport#2"
+      - "RedeclaredComponent#2"
     jsx_references:
-      - "ComponentFromDestructedObject#1"
-      - "RedeclaredComponent#1"
-  - owner: "RedeclaredComponent#1"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclaredComponent#2"
+  - owner: "RedeclaredComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "DS#1"
+      - "DS#2"
     jsx_references: []
-  - owner: "ComponentFromDestructedObject#1"
+  - owner: "ComponentFromDestructedObject#2"
     parent: "__global#0"
     children: []
     references:
-      - "DS#1"
+      - "DS#2"
     jsx_references: []
-  - owner: "RedeclareImport#1"
+  - owner: "RedeclareImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentFromDestructedObject#1"
-      - "RedeclaredComponent#1"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclaredComponent#2"
     jsx_references:
-      - "ComponentFromDestructedObject#1"
-      - "RedeclaredComponent#1"
-  - owner: "RedeclareImport#1"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclaredComponent#2"
+  - owner: "RedeclareImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentFromDestructedObject#1"
-      - "RedeclaredComponent#1"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclaredComponent#2"
     jsx_references:
-      - "ComponentFromDestructedObject#1"
-      - "RedeclaredComponent#1"
+      - "ComponentFromDestructedObject#2"
+      - "RedeclaredComponent#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -202,28 +198,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 55
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 35
           end: 42
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 40
             end: 42
-            ctxt: 1
+          ctxt: 2
           value: DS
           optional: false
     source:
@@ -231,16 +225,16 @@ body:
       span:
         start: 48
         end: 54
-        ctxt: 0
       value: "./ds"
       raw: "\"./ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 57
       end: 95
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -248,13 +242,12 @@ body:
         span:
           start: 63
           end: 94
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 63
             end: 82
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: RedeclaredComponent
@@ -263,13 +256,12 @@ body:
           span:
             start: 85
             end: 94
-            ctxt: 0
           object:
             type: Identifier
             span:
               start: 85
               end: 87
-              ctxt: 1
+            ctxt: 2
             value: DS
             optional: false
           property:
@@ -277,15 +269,13 @@ body:
             span:
               start: 88
               end: 94
-              ctxt: 0
             value: Button
-            optional: false
         definite: false
   - type: VariableDeclaration
     span:
       start: 96
       end: 149
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -293,13 +283,11 @@ body:
         span:
           start: 102
           end: 148
-          ctxt: 0
         id:
           type: ObjectPattern
           span:
             start: 102
             end: 143
-            ctxt: 0
           properties:
             - type: KeyValuePatternProperty
               key:
@@ -307,15 +295,13 @@ body:
                 span:
                   start: 104
                   end: 110
-                  ctxt: 0
                 value: Button
-                optional: false
               value:
+                ctxt: 2
                 optional: false
                 span:
                   start: 112
                   end: 141
-                  ctxt: 1
                 type: Identifier
                 typeAnnotation: ~
                 value: ComponentFromDestructedObject
@@ -326,7 +312,7 @@ body:
           span:
             start: 146
             end: 148
-            ctxt: 1
+          ctxt: 2
           value: DS
           optional: false
         definite: false
@@ -334,52 +320,44 @@ body:
     span:
       start: 150
       end: 311
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 184
           end: 311
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 190
               end: 309
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 197
                 end: 308
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 207
                   end: 302
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 207
                     end: 209
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 209
                       end: 222
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 222
                       end: 244
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -387,13 +365,12 @@ body:
                         span:
                           start: 223
                           end: 242
-                          ctxt: 1
+                        ctxt: 2
                         value: RedeclaredComponent
                         optional: false
                       span:
                         start: 222
                         end: 244
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -403,14 +380,12 @@ body:
                     span:
                       start: 244
                       end: 257
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 257
                       end: 290
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -418,13 +393,12 @@ body:
                         span:
                           start: 258
                           end: 287
-                          ctxt: 1
+                        ctxt: 2
                         value: ComponentFromDestructedObject
                         optional: false
                       span:
                         start: 257
                         end: 290
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -434,15 +408,14 @@ body:
                     span:
                       start: 290
                       end: 299
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 299
                     end: 302
-                    ctxt: 0
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -451,7 +424,7 @@ body:
         span:
           start: 166
           end: 181
-          ctxt: 1
+        ctxt: 2
         value: RedeclareImport
         optional: false
       params: []
@@ -459,6 +432,6 @@ body:
       span:
         start: 157
         end: 311
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

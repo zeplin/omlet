@@ -13,22 +13,22 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
   - source:
-      Internal: "StyledSample#1"
+      Internal: "StyledSample#2"
     exported_name: StyledSample
   - source:
-      Internal: "Unknown#1"
+      Internal: "Unknown#2"
     exported_name: Unknown
   - source:
-      Internal: "StyledUnknownComponent#1"
+      Internal: "StyledUnknownComponent#2"
     exported_name: StyledUnknownComponent
   - source:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "635212125955545628"
       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -44,7 +44,7 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "StyledSample#1"
+  - symbol: "StyledSample#2"
     source:
       hash: "635212125955545628"
       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -56,7 +56,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "635212125955545628"
                     path: src/styled-component-workaround/from-component-workaround.tsx
@@ -65,7 +65,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "Sample#1"
+                    symbol: "Sample#2"
                     source:
                       hash: "635212125955545628"
                       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -79,7 +79,7 @@ declarations:
     end:
       line: 7
       column: 26
-  - symbol: "StyledUnknownComponent#1"
+  - symbol: "StyledUnknownComponent#2"
     source:
       hash: "635212125955545628"
       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -91,7 +91,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "635212125955545628"
                     path: src/styled-component-workaround/from-component-workaround.tsx
@@ -100,7 +100,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "Unknown#1"
+                    symbol: "Unknown#2"
                     source:
                       hash: "635212125955545628"
                       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -114,7 +114,7 @@ declarations:
     end:
       line: 15
       column: 36
-  - symbol: "Unknown#1"
+  - symbol: "Unknown#2"
     source:
       hash: "635212125955545628"
       path: src/styled-component-workaround/from-component-workaround.tsx
@@ -139,7 +139,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "StyledSample#1"
+          symbol: "StyledSample#2"
           source:
             hash: "635212125955545628"
             path: src/styled-component-workaround/from-component-workaround.tsx
@@ -152,13 +152,13 @@ declarations:
     end:
       line: 19
       column: 29
-  - symbol: "styled#1"
+  - symbol: "styled#2"
     source:
       hash: "635212125955545628"
       path: src/styled-component-workaround/from-component-workaround.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 17217891852522968423, path: \"src/styled-component-workaround/my-styled-components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 17217891852522968423, path: \"src/styled-component-workaround/my-styled-components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -179,100 +179,98 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
-      - "StyledSample#1"
-      - "StyledSample#1"
-      - "Unknown#1"
-      - "Unknown#1"
-      - "StyledUnknownComponent#1"
-      - "StyledUnknownComponent#1"
+      - "Sample#2"
+      - "Sample#2"
+      - "StyledSample#2"
+      - "StyledSample#2"
+      - "Unknown#2"
+      - "Unknown#2"
+      - "StyledUnknownComponent#2"
+      - "StyledUnknownComponent#2"
       - "default#0"
     references:
-      - "Sample#1"
-      - "StyledSample#1"
-      - "StyledUnknownComponent#1"
-      - "Unknown#1"
-      - "div#2"
-      - "styled#1"
+      - "Sample#2"
+      - "StyledSample#2"
+      - "StyledUnknownComponent#2"
+      - "Unknown#2"
+      - "div#1"
+      - "styled#2"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "StyledSample#1"
+      - "div#1"
+  - owner: "StyledSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Sample#1"
-      - "styled#1"
+      - "Sample#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "StyledSample#1"
+  - owner: "StyledSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Sample#1"
-      - "styled#1"
+      - "Sample#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "Unknown#1"
+  - owner: "Unknown#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "Unknown#1"
+  - owner: "Unknown#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "StyledUnknownComponent#1"
+  - owner: "StyledUnknownComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "Unknown#1"
-      - "styled#1"
+      - "Unknown#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "StyledUnknownComponent#1"
+  - owner: "StyledUnknownComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "Unknown#1"
-      - "styled#1"
+      - "Unknown#2"
+      - "styled#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "StyledSample#1"
+      - "StyledSample#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 45
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 14
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 14
-            ctxt: 1
+          ctxt: 2
           value: styled
           optional: false
     source:
@@ -280,36 +278,32 @@ body:
       span:
         start: 20
         end: 44
-        ctxt: 0
       value: "./my-styled-components"
       raw: "\"./my-styled-components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 47
       end: 105
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 72
           end: 105
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 78
               end: 103
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 85
                 end: 102
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -317,13 +311,12 @@ body:
                   span:
                     start: 86
                     end: 89
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 85
                   end: 90
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -332,7 +325,6 @@ body:
                   span:
                     start: 90
                     end: 96
-                    ctxt: 0
                   value: Sample
                   raw: Sample
               closing:
@@ -340,15 +332,15 @@ body:
                 span:
                   start: 96
                   end: 102
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 98
                     end: 101
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -357,7 +349,7 @@ body:
         span:
           start: 63
           end: 69
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -365,20 +357,18 @@ body:
       span:
         start: 54
         end: 105
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 107
       end: 180
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 114
         end: 180
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -386,13 +376,12 @@ body:
           span:
             start: 120
             end: 179
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 120
               end: 132
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: StyledSample
@@ -401,19 +390,19 @@ body:
             span:
               start: 135
               end: 179
-              ctxt: 0
+            ctxt: 0
             tag:
               type: CallExpression
               span:
                 start: 135
                 end: 149
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 135
                   end: 141
-                  ctxt: 1
+                ctxt: 2
                 value: styled
                 optional: false
               arguments:
@@ -423,7 +412,7 @@ body:
                     span:
                       start: 142
                       end: 148
-                      ctxt: 1
+                    ctxt: 2
                     value: Sample
                     optional: false
               typeArguments: ~
@@ -433,14 +422,12 @@ body:
               span:
                 start: 149
                 end: 179
-                ctxt: 0
               expressions: []
               quasis:
                 - type: TemplateElement
                   span:
                     start: 150
                     end: 178
-                    ctxt: 0
                   tail: true
                   cooked: "\n    background-color: red;\n"
                   raw: "\n    background-color: red;\n"
@@ -449,22 +436,20 @@ body:
     span:
       start: 182
       end: 223
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 208
           end: 223
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 214
               end: 221
-              ctxt: 0
             argument: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -473,7 +458,7 @@ body:
         span:
           start: 198
           end: 205
-          ctxt: 1
+        ctxt: 2
         value: Unknown
         optional: false
       params: []
@@ -481,20 +466,18 @@ body:
       span:
         start: 189
         end: 223
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 225
       end: 309
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 232
         end: 309
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -502,13 +485,12 @@ body:
           span:
             start: 238
             end: 308
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 238
               end: 260
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: StyledUnknownComponent
@@ -517,19 +499,19 @@ body:
             span:
               start: 263
               end: 308
-              ctxt: 0
+            ctxt: 0
             tag:
               type: CallExpression
               span:
                 start: 263
                 end: 278
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 263
                   end: 269
-                  ctxt: 1
+                ctxt: 2
                 value: styled
                 optional: false
               arguments:
@@ -539,7 +521,7 @@ body:
                     span:
                       start: 270
                       end: 277
-                      ctxt: 1
+                    ctxt: 2
                     value: Unknown
                     optional: false
               typeArguments: ~
@@ -549,14 +531,12 @@ body:
               span:
                 start: 278
                 end: 308
-                ctxt: 0
               expressions: []
               quasis:
                 - type: TemplateElement
                   span:
                     start: 279
                     end: 307
-                    ctxt: 0
                   tail: true
                   cooked: "\n    background-color: red;\n"
                   raw: "\n    background-color: red;\n"
@@ -565,12 +545,12 @@ body:
     span:
       start: 311
       end: 339
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 326
         end: 338
-        ctxt: 1
+      ctxt: 2
       value: StyledSample
       optional: false
+

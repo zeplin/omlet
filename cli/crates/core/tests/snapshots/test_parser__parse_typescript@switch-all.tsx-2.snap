@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "11946246313802523909"
       path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "11946246313802523909"
       path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "result#2"
+              symbol: "result#3"
               source:
                 hash: "11946246313802523909"
                 path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
@@ -63,7 +63,7 @@ declarations:
     end:
       line: 18
       column: 2
-  - symbol: "result#2"
+  - symbol: "result#3"
     source:
       hash: "11946246313802523909"
       path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
@@ -77,17 +77,17 @@ declarations:
     end:
       line: 4
       column: 15
-  - symbol: "type#2"
+  - symbol: "type#3"
     source:
       hash: "11946246313802523909"
       path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"Sample\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "Sample#1"
+          symbol: "Sample#2"
           source:
             hash: "11946246313802523909"
             path: src/functional-component/control-statements/conditional-switch/return-var/switch-all.tsx
@@ -99,53 +99,53 @@ declarations:
       column: 24
     end:
       line: 3
-      column: 37
+      column: 28
 scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
-      - "result#2"
+      - "Sample#2"
+      - "Sample#2"
+      - "result#3"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "div#3"
-      - "result#2"
-      - "type#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "result#3"
+      - "type#3"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "result#2"
+      - "result#3"
     references:
-      - "div#3"
-      - "result#2"
-      - "type#2"
+      - "div#1"
+      - "result#3"
+      - "type#3"
     jsx_references:
-      - "div#3"
-  - owner: "result#2"
-    parent: "Sample#1"
+      - "div#1"
+  - owner: "result#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "result#2"
+      - "result#3"
     references:
-      - "div#3"
-      - "result#2"
-      - "type#2"
+      - "div#1"
+      - "result#3"
+      - "type#3"
     jsx_references:
-      - "div#3"
-  - owner: "result#2"
-    parent: "Sample#1"
+      - "div#1"
+  - owner: "result#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "result#2"
+  - owner: "result#3"
     parent: "__global#0"
     children: []
     references: []
@@ -155,19 +155,17 @@ body:
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -175,30 +173,28 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 303
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 67
           end: 303
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 73
               end: 89
-              ctxt: 0
+            ctxt: 0
             kind: let
             declare: false
             declarations:
@@ -206,13 +202,12 @@ body:
                 span:
                   start: 77
                   end: 88
-                  ctxt: 0
                 id:
+                  ctxt: 3
                   optional: false
                   span:
                     start: 77
                     end: 83
-                    ctxt: 2
                   type: Identifier
                   typeAnnotation: ~
                   value: result
@@ -221,7 +216,6 @@ body:
                   span:
                     start: 86
                     end: 88
-                    ctxt: 0
                   value: 42.0
                   raw: "42"
                 definite: false
@@ -229,13 +223,13 @@ body:
             span:
               start: 95
               end: 281
-              ctxt: 0
+            bodyCtxt: 4
             discriminant:
               type: Identifier
               span:
                 start: 103
                 end: 107
-                ctxt: 2
+              ctxt: 3
               value: type
               optional: false
             cases:
@@ -243,13 +237,11 @@ body:
                 span:
                   start: 119
                   end: 186
-                  ctxt: 0
                 test:
                   type: StringLiteral
                   span:
                     start: 124
                     end: 129
-                    ctxt: 0
                   value: one
                   raw: "\"one\""
                 consequent:
@@ -257,20 +249,18 @@ body:
                     span:
                       start: 143
                       end: 167
-                      ctxt: 0
                     expression:
                       type: AssignmentExpression
                       span:
                         start: 143
                         end: 166
-                        ctxt: 0
                       operator: "="
                       left:
+                        ctxt: 3
                         optional: false
                         span:
                           start: 143
                           end: 149
-                          ctxt: 2
                         type: Identifier
                         typeAnnotation: ~
                         value: result
@@ -279,7 +269,6 @@ body:
                         span:
                           start: 152
                           end: 166
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
@@ -287,13 +276,12 @@ body:
                             span:
                               start: 153
                               end: 156
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                           span:
                             start: 152
                             end: 157
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -302,7 +290,6 @@ body:
                             span:
                               start: 157
                               end: 160
-                              ctxt: 0
                             value: One
                             raw: One
                         closing:
@@ -310,32 +297,28 @@ body:
                           span:
                             start: 160
                             end: 166
-                            ctxt: 0
                           name:
                             type: Identifier
                             span:
                               start: 162
                               end: 165
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                   - type: BreakStatement
                     span:
                       start: 180
                       end: 186
-                      ctxt: 0
                     label: ~
               - type: SwitchCase
                 span:
                   start: 196
                   end: 275
-                  ctxt: 0
                 test:
                   type: StringLiteral
                   span:
                     start: 201
                     end: 206
-                    ctxt: 0
                   value: two
                   raw: "\"two\""
                 consequent:
@@ -343,26 +326,24 @@ body:
                     span:
                       start: 208
                       end: 275
-                      ctxt: 0
+                    ctxt: 5
                     stmts:
                       - type: ExpressionStatement
                         span:
                           start: 222
                           end: 246
-                          ctxt: 0
                         expression:
                           type: AssignmentExpression
                           span:
                             start: 222
                             end: 245
-                            ctxt: 0
                           operator: "="
                           left:
+                            ctxt: 3
                             optional: false
                             span:
                               start: 222
                               end: 228
-                              ctxt: 2
                             type: Identifier
                             typeAnnotation: ~
                             value: result
@@ -371,7 +352,6 @@ body:
                             span:
                               start: 231
                               end: 245
-                              ctxt: 0
                             opening:
                               type: JSXOpeningElement
                               name:
@@ -379,13 +359,12 @@ body:
                                 span:
                                   start: 232
                                   end: 235
-                                  ctxt: 3
+                                ctxt: 1
                                 value: div
                                 optional: false
                               span:
                                 start: 231
                                 end: 236
-                                ctxt: 0
                               attributes: []
                               selfClosing: false
                               typeArguments: ~
@@ -394,7 +373,6 @@ body:
                                 span:
                                   start: 236
                                   end: 239
-                                  ctxt: 0
                                 value: Two
                                 raw: Two
                             closing:
@@ -402,34 +380,32 @@ body:
                               span:
                                 start: 239
                                 end: 245
-                                ctxt: 0
                               name:
                                 type: Identifier
                                 span:
                                   start: 241
                                   end: 244
-                                  ctxt: 3
+                                ctxt: 1
                                 value: div
                                 optional: false
                       - type: BreakStatement
                         span:
                           start: 259
                           end: 265
-                          ctxt: 0
                         label: ~
           - type: ReturnStatement
             span:
               start: 287
               end: 301
-              ctxt: 0
             argument:
               type: Identifier
               span:
                 start: 294
                 end: 300
-                ctxt: 2
+              ctxt: 3
               value: result
               optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -438,7 +414,7 @@ body:
         span:
           start: 45
           end: 51
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params:
@@ -446,33 +422,30 @@ body:
           span:
             start: 52
             end: 65
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: true
             span:
               start: 52
-              end: 65
-              ctxt: 2
+              end: 56
             type: Identifier
             typeAnnotation:
               type: TsTypeAnnotation
               span:
                 start: 57
                 end: 65
-                ctxt: 0
               typeAnnotation:
                 type: TsKeywordType
                 span:
                   start: 59
                   end: 65
-                  ctxt: 0
                 kind: string
             value: type
       returnType: ~
       span:
         start: 36
         end: 303
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

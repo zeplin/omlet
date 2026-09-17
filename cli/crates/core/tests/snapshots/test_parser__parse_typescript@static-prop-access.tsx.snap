@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "11034148470459287594"
       path: src/static-prop-access.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "11034148470459287594"
       path: src/static-prop-access.tsx
@@ -59,51 +59,46 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "defaultChildren#0"
-      - "div#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Sample#1"
-      - "defaultChildren#0"
-      - "div#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Sample#1"
-      - "defaultChildren#0"
-      - "div#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -111,36 +106,32 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 29
       end: 113
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 62
           end: 113
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 68
               end: 111
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 75
                 end: 110
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -148,13 +139,12 @@ body:
                   span:
                     start: 76
                     end: 79
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 75
                   end: 80
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -163,19 +153,17 @@ body:
                   span:
                     start: 80
                     end: 104
-                    ctxt: 0
                   expression:
                     type: MemberExpression
                     span:
                       start: 81
                       end: 103
-                      ctxt: 0
                     object:
                       type: Identifier
                       span:
                         start: 81
                         end: 87
-                        ctxt: 1
+                      ctxt: 2
                       value: Sample
                       optional: false
                     property:
@@ -183,23 +171,21 @@ body:
                       span:
                         start: 88
                         end: 103
-                        ctxt: 0
                       value: defaultChildren
-                      optional: false
               closing:
                 type: JSXClosingElement
                 span:
                   start: 104
                   end: 110
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 106
                     end: 109
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -207,7 +193,7 @@ body:
         span:
           start: 53
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -215,33 +201,29 @@ body:
       span:
         start: 44
         end: 113
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
   - type: ExpressionStatement
     span:
       start: 115
       end: 149
-      ctxt: 0
     expression:
       type: AssignmentExpression
       span:
         start: 115
         end: 148
-        ctxt: 0
       operator: "="
       left:
         type: MemberExpression
         span:
           start: 115
           end: 137
-          ctxt: 0
         object:
           type: Identifier
           span:
             start: 115
             end: 121
-            ctxt: 1
+          ctxt: 2
           value: Sample
           optional: false
         property:
@@ -249,14 +231,12 @@ body:
           span:
             start: 122
             end: 137
-            ctxt: 0
           value: defaultChildren
-          optional: false
       right:
         type: StringLiteral
         span:
           start: 140
           end: 148
-          ctxt: 0
         value: sample
         raw: "\"sample\""
+

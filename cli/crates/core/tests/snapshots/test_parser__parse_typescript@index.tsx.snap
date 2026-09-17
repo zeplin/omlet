@@ -22,10 +22,10 @@ exports:
           mtype: local
     exported_name: default
   - source:
-      Internal: "NamedComponent#1"
+      Internal: "NamedComponent#2"
     exported_name: NamedComponent
 declarations:
-  - symbol: "NamedComponent#1"
+  - symbol: "NamedComponent#2"
     source:
       hash: "6482229448276103877"
       path: src/hess/component/index.tsx
@@ -45,46 +45,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NamedComponent#1"
-      - "NamedComponent#1"
+      - "NamedComponent#2"
+      - "NamedComponent#2"
     references:
-      - "NamedComponent#1"
+      - "NamedComponent#2"
       - "default#0"
-      - "span#2"
+      - "span#1"
     jsx_references:
-      - "span#2"
-  - owner: "NamedComponent#1"
+      - "span#1"
+  - owner: "NamedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "span#2"
+      - "span#1"
     jsx_references:
-      - "span#2"
-  - owner: "NamedComponent#1"
+      - "span#1"
+  - owner: "NamedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "span#2"
+      - "span#1"
     jsx_references:
-      - "span#2"
+      - "span#1"
 body:
   - type: ExportNamedDeclaration
     span:
       start: 1
       end: 43
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 10
           end: 17
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 10
             end: 17
-            ctxt: 0
+          ctxt: 0
           value: default
           optional: false
         exported: ~
@@ -94,36 +92,31 @@ body:
       span:
         start: 25
         end: 42
-        ctxt: 0
       value: "./componentBody"
       raw: "\"./componentBody\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportDeclaration
     span:
       start: 45
       end: 107
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 78
           end: 107
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 80
               end: 106
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 87
                 end: 105
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -131,13 +124,12 @@ body:
                   span:
                     start: 88
                     end: 92
-                    ctxt: 2
+                  ctxt: 1
                   value: span
                   optional: false
                 span:
                   start: 87
                   end: 93
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -146,7 +138,6 @@ body:
                   span:
                     start: 93
                     end: 98
-                    ctxt: 0
                   value: named
                   raw: named
               closing:
@@ -154,15 +145,15 @@ body:
                 span:
                   start: 98
                   end: 105
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 100
                     end: 104
-                    ctxt: 2
+                  ctxt: 1
                   value: span
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -171,7 +162,7 @@ body:
         span:
           start: 61
           end: 75
-          ctxt: 1
+        ctxt: 2
         value: NamedComponent
         optional: false
       params: []
@@ -179,7 +170,6 @@ body:
       span:
         start: 52
         end: 107
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
 

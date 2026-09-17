@@ -13,19 +13,19 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "yekte#1"
+      Internal: "yekte#2"
     exported_name: yekte
   - source:
-      Internal: "atOnce#1"
+      Internal: "atOnce#2"
     exported_name: atOnce
   - source:
-      Internal: "arte#1"
+      Internal: "arte#2"
     exported_name: concert
   - source:
-      Internal: "holly#1"
+      Internal: "holly#2"
     exported_name: holly
   - source:
-      Internal: "dirty#1"
+      Internal: "dirty#2"
     exported_name: holly
   - source:
       External:
@@ -82,17 +82,17 @@ exports:
           mtype: package
     exported_name: hollyMolly
 declarations:
-  - symbol: "arte#1"
+  - symbol: "arte#2"
     source:
       hash: "11704489377696252861"
       path: src/module-decls/module-named.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('arte' type=inline), context: #1 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"arte\", context: #2 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "arte#1"
+          symbol: "arte#2"
           source:
             hash: "18187564039066053863"
             path: ""
@@ -105,7 +105,7 @@ declarations:
     end:
       line: 1
       column: 14
-  - symbol: "atOnce#1"
+  - symbol: "atOnce#2"
     source:
       hash: "11704489377696252861"
       path: src/module-decls/module-named.ts
@@ -126,17 +126,17 @@ declarations:
     end:
       line: 5
       column: 36
-  - symbol: "dirty#1"
+  - symbol: "dirty#2"
     source:
       hash: "11704489377696252861"
       path: src/module-decls/module-named.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('holly' type=inline), context: #1 }, source: ModuleId { hash: 6415462426383639770, path: \"\", pkg_name: \"molly\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"holly\", context: #2 }, source: ModuleId { hash: 6415462426383639770, path: \"\", pkg_name: \"molly\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "holly#1"
+          symbol: "holly#2"
           source:
             hash: "6415462426383639770"
             path: ""
@@ -149,17 +149,17 @@ declarations:
     end:
       line: 2
       column: 40
-  - symbol: "holly#1"
+  - symbol: "holly#2"
     source:
       hash: "11704489377696252861"
       path: src/module-decls/module-named.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('molly' type=inline), context: #1 }, source: ModuleId { hash: 6415462426383639770, path: \"\", pkg_name: \"molly\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"molly\", context: #2 }, source: ModuleId { hash: 6415462426383639770, path: \"\", pkg_name: \"molly\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "molly#1"
+          symbol: "molly#2"
           source:
             hash: "6415462426383639770"
             path: ""
@@ -172,7 +172,7 @@ declarations:
     end:
       line: 2
       column: 24
-  - symbol: "yekte#1"
+  - symbol: "yekte#2"
     source:
       hash: "11704489377696252861"
       path: src/module-decls/module-named.ts
@@ -197,74 +197,62 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "yekte#1"
-      - "atOnce#1"
-      - "yekte#1"
-      - "atOnce#1"
+      - "yekte#2"
+      - "atOnce#2"
+      - "yekte#2"
+      - "atOnce#2"
     references:
-      - "arte#1"
-      - "atOnce#1"
+      - "arte#2"
+      - "atOnce#2"
       - "cPeep#0"
-      - "concert#2"
+      - "concert#1"
       - "coronado#0"
       - "default#0"
-      - "dirty#1"
+      - "dirty#2"
       - "holly#0"
-      - "holly#1"
+      - "holly#2"
       - "hollyMolly#0"
       - "molly#0"
       - "sPeep#0"
       - "scrimshaw#0"
-      - "tekte#0"
-      - "yekte#0"
-      - "yekte#1"
+      - "yekte#2"
     jsx_references: []
-  - owner: "yekte#1"
+  - owner: "yekte#2"
     parent: "__global#0"
     children: []
-    references:
-      - "tekte#0"
-      - "yekte#0"
+    references: []
     jsx_references: []
-  - owner: "atOnce#1"
+  - owner: "atOnce#2"
     parent: "__global#0"
     children: []
-    references:
-      - "tekte#0"
-      - "yekte#0"
+    references: []
     jsx_references: []
-  - owner: "yekte#1"
+  - owner: "yekte#2"
     parent: "__global#0"
     children: []
-    references:
-      - "tekte#0"
-      - "yekte#0"
+    references: []
     jsx_references: []
-  - owner: "atOnce#1"
+  - owner: "atOnce#2"
     parent: "__global#0"
     children: []
-    references:
-      - "tekte#0"
-      - "yekte#0"
+    references: []
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 30
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 14
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 14
-            ctxt: 1
+          ctxt: 2
           value: arte
           optional: false
         imported: ~
@@ -274,28 +262,26 @@ body:
       span:
         start: 22
         end: 29
-        ctxt: 0
       value: dolly
       raw: "\"dolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 31
       end: 86
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 40
           end: 54
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 49
             end: 54
-            ctxt: 1
+          ctxt: 2
           value: holly
           optional: false
         imported:
@@ -303,7 +289,7 @@ body:
           span:
             start: 40
             end: 45
-            ctxt: 0
+          ctxt: 0
           value: molly
           optional: false
         isTypeOnly: false
@@ -311,13 +297,12 @@ body:
         span:
           start: 56
           end: 70
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 65
             end: 70
-            ctxt: 1
+          ctxt: 2
           value: dirty
           optional: false
         imported:
@@ -325,7 +310,7 @@ body:
           span:
             start: 56
             end: 61
-            ctxt: 0
+          ctxt: 0
           value: holly
           optional: false
         isTypeOnly: false
@@ -334,22 +319,21 @@ body:
       span:
         start: 78
         end: 85
-        ctxt: 0
       value: molly
       raw: "\"molly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 89
       end: 155
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 96
         end: 155
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -357,27 +341,25 @@ body:
           span:
             start: 102
             end: 154
-            ctxt: 0
           id:
             type: ObjectPattern
             span:
               start: 102
               end: 126
-              ctxt: 0
             properties:
               - type: AssignmentPatternProperty
                 span:
                   start: 104
                   end: 109
-                  ctxt: 0
                 key:
-                  type: Identifier
+                  ctxt: 2
+                  optional: false
                   span:
                     start: 104
                     end: 109
-                    ctxt: 1
+                  type: Identifier
+                  typeAnnotation: ~
                   value: yekte
-                  optional: false
                 value: ~
               - type: KeyValuePatternProperty
                 key:
@@ -385,15 +367,13 @@ body:
                   span:
                     start: 111
                     end: 116
-                    ctxt: 0
                   value: tekte
-                  optional: false
                 value:
+                  ctxt: 2
                   optional: false
                   span:
                     start: 118
                     end: 124
-                    ctxt: 1
                   type: Identifier
                   typeAnnotation: ~
                   value: atOnce
@@ -404,7 +384,6 @@ body:
             span:
               start: 130
               end: 154
-              ctxt: 0
             properties:
               - type: KeyValueProperty
                 key:
@@ -412,15 +391,12 @@ body:
                   span:
                     start: 132
                     end: 137
-                    ctxt: 0
                   value: yekte
-                  optional: false
                 value:
                   type: ArrayExpression
                   span:
                     start: 139
                     end: 141
-                    ctxt: 0
                   elements: []
               - type: KeyValueProperty
                 key:
@@ -428,34 +404,29 @@ body:
                   span:
                     start: 143
                     end: 148
-                    ctxt: 0
                   value: tekte
-                  optional: false
                 value:
                   type: ArrayExpression
                   span:
                     start: 150
                     end: 152
-                    ctxt: 0
                   elements: []
           definite: false
   - type: ExportNamedDeclaration
     span:
       start: 156
       end: 205
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 165
           end: 180
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 165
             end: 169
-            ctxt: 1
+          ctxt: 2
           value: arte
           optional: false
         exported:
@@ -463,7 +434,7 @@ body:
           span:
             start: 173
             end: 180
-            ctxt: 2
+          ctxt: 1
           value: concert
           optional: false
         isTypeOnly: false
@@ -471,13 +442,12 @@ body:
         span:
           start: 182
           end: 187
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 182
             end: 187
-            ctxt: 1
+          ctxt: 2
           value: holly
           optional: false
         exported: ~
@@ -486,13 +456,12 @@ body:
         span:
           start: 189
           end: 203
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 189
             end: 194
-            ctxt: 1
+          ctxt: 2
           value: dirty
           optional: false
         exported:
@@ -500,30 +469,28 @@ body:
           span:
             start: 198
             end: 203
-            ctxt: 1
+          ctxt: 2
           value: holly
           optional: false
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 206
       end: 250
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 215
           end: 223
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 215
             end: 223
-            ctxt: 0
+          ctxt: 0
           value: coronado
           optional: false
         exported: ~
@@ -532,13 +499,12 @@ body:
         span:
           start: 225
           end: 234
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 225
             end: 234
-            ctxt: 0
+          ctxt: 0
           value: scrimshaw
           optional: false
         exported: ~
@@ -548,28 +514,25 @@ body:
       span:
         start: 242
         end: 249
-        ctxt: 0
       value: bolly
       raw: "\"bolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 251
       end: 313
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 260
           end: 277
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 260
             end: 268
-            ctxt: 0
+          ctxt: 0
           value: coronado
           optional: false
         exported:
@@ -577,7 +540,7 @@ body:
           span:
             start: 272
             end: 277
-            ctxt: 0
+          ctxt: 0
           value: cPeep
           optional: false
         isTypeOnly: false
@@ -585,13 +548,12 @@ body:
         span:
           start: 279
           end: 297
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 279
             end: 288
-            ctxt: 0
+          ctxt: 0
           value: scrimshaw
           optional: false
         exported:
@@ -599,7 +561,7 @@ body:
           span:
             start: 292
             end: 297
-            ctxt: 0
+          ctxt: 0
           value: sPeep
           optional: false
         isTypeOnly: false
@@ -608,28 +570,25 @@ body:
       span:
         start: 305
         end: 312
-        ctxt: 0
       value: jolly
       raw: "\"jolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
   - type: ExportNamedDeclaration
     span:
       start: 314
       end: 359
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 323
           end: 330
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 323
             end: 330
-            ctxt: 0
+          ctxt: 0
           value: default
           optional: false
         exported: ~
@@ -638,13 +597,12 @@ body:
         span:
           start: 332
           end: 342
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 332
             end: 342
-            ctxt: 0
+          ctxt: 0
           value: hollyMolly
           optional: false
         exported: ~
@@ -654,8 +612,8 @@ body:
       span:
         start: 350
         end: 358
-        ctxt: 0
       value: emolly
       raw: "\"emolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+

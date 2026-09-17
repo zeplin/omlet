@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "WildcardImport#1"
+      Internal: "WildcardImport#2"
     exported_name: WildcardImport
 declarations:
-  - symbol: "DS#1"
+  - symbol: "DS#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,13 +39,13 @@ declarations:
     end:
       line: 4
       column: 15
-  - symbol: "LocalDS#1"
+  - symbol: "LocalDS#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -62,13 +62,13 @@ declarations:
     end:
       line: 2
       column: 20
-  - symbol: "ModuleWithDefaultExport#1"
+  - symbol: "ModuleWithDefaultExport#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 12868499569676321206, path: \"src/wildcard-import/export-default\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 12868499569676321206, path: \"src/wildcard-import/export-default\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -85,13 +85,13 @@ declarations:
     end:
       line: 5
       column: 36
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -108,7 +108,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "WildcardImport#1"
+  - symbol: "WildcardImport#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
@@ -124,17 +124,17 @@ declarations:
     end:
       line: 16
       column: 2
-  - symbol: "ds#1"
+  - symbol: "ds#2"
     source:
       hash: "3086333622448116906"
       path: src/wildcard-import/wildcard-import.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('ds' type=inline), context: #1 }, source: ModuleId { hash: 2743528805318119751, path: \"src/wildcard-import/re-export\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"ds\", context: #2 }, source: ModuleId { hash: 2743528805318119751, path: \"src/wildcard-import/re-export\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ds#1"
+          symbol: "ds#2"
           source:
             hash: "2743528805318119751"
             path: src/wildcard-import/re-export
@@ -151,70 +151,62 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "WildcardImport#1"
-      - "WildcardImport#1"
+      - "WildcardImport#2"
+      - "WildcardImport#2"
     references:
-      - "Button#2"
-      - "DS#1"
-      - "LocalDS#1"
-      - "ModuleWithDefaultExport#1"
-      - "React#1"
-      - "WildcardImport#1"
-      - "default#2"
-      - "ds#1"
+      - "DS#2"
+      - "LocalDS#2"
+      - "ModuleWithDefaultExport#2"
+      - "React#2"
+      - "WildcardImport#2"
+      - "ds#2"
     jsx_references:
-      - "DS#1.Button"
-      - "LocalDS#1.Button"
-      - "ModuleWithDefaultExport#1.default"
-      - "ds#1.Button"
-  - owner: "WildcardImport#1"
+      - "DS#2.Button"
+      - "LocalDS#2.Button"
+      - "ModuleWithDefaultExport#2.default"
+      - "ds#2.Button"
+  - owner: "WildcardImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#2"
-      - "DS#1"
-      - "LocalDS#1"
-      - "ModuleWithDefaultExport#1"
-      - "default#2"
-      - "ds#1"
+      - "DS#2"
+      - "LocalDS#2"
+      - "ModuleWithDefaultExport#2"
+      - "ds#2"
     jsx_references:
-      - "DS#1.Button"
-      - "LocalDS#1.Button"
-      - "ModuleWithDefaultExport#1.default"
-      - "ds#1.Button"
-  - owner: "WildcardImport#1"
+      - "DS#2.Button"
+      - "LocalDS#2.Button"
+      - "ModuleWithDefaultExport#2.default"
+      - "ds#2.Button"
+  - owner: "WildcardImport#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#2"
-      - "DS#1"
-      - "LocalDS#1"
-      - "ModuleWithDefaultExport#1"
-      - "default#2"
-      - "ds#1"
+      - "DS#2"
+      - "LocalDS#2"
+      - "ModuleWithDefaultExport#2"
+      - "ds#2"
     jsx_references:
-      - "DS#1.Button"
-      - "LocalDS#1.Button"
-      - "ModuleWithDefaultExport#1.default"
-      - "ds#1.Button"
+      - "DS#2.Button"
+      - "LocalDS#2.Button"
+      - "ModuleWithDefaultExport#2.default"
+      - "ds#2.Button"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -222,28 +214,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 60
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 35
           end: 47
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 40
             end: 47
-            ctxt: 1
+          ctxt: 2
           value: LocalDS
           optional: false
     source:
@@ -251,28 +241,26 @@ body:
       span:
         start: 53
         end: 59
-        ctxt: 0
       value: "./ds"
       raw: "\"./ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 61
       end: 94
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 70
           end: 72
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 70
             end: 72
-            ctxt: 1
+          ctxt: 2
           value: ds
           optional: false
         imported: ~
@@ -282,28 +270,26 @@ body:
       span:
         start: 80
         end: 93
-        ctxt: 0
       value: "./re-export"
       raw: "\"./re-export\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 95
       end: 120
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 102
           end: 109
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 107
             end: 109
-            ctxt: 1
+          ctxt: 2
           value: DS
           optional: false
     source:
@@ -311,28 +297,26 @@ body:
       span:
         start: 115
         end: 119
-        ctxt: 0
       value: ds
       raw: "\"ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 121
       end: 181
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 128
           end: 156
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 133
             end: 156
-            ctxt: 1
+          ctxt: 2
           value: ModuleWithDefaultExport
           optional: false
     source:
@@ -340,71 +324,66 @@ body:
       span:
         start: 162
         end: 180
-        ctxt: 0
       value: "./export-default"
       raw: "\"./export-default\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 183
       end: 392
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 216
           end: 392
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 222
               end: 390
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 229
                 end: 389
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 239
                   end: 383
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 239
                     end: 241
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 241
                       end: 254
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 254
                       end: 267
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 255
+                          end: 264
                         object:
                           type: Identifier
                           span:
                             start: 255
                             end: 257
-                            ctxt: 1
+                          ctxt: 2
                           value: ds
                           optional: false
                         property:
@@ -412,13 +391,10 @@ body:
                           span:
                             start: 258
                             end: 264
-                            ctxt: 2
                           value: Button
-                          optional: false
                       span:
                         start: 254
                         end: 267
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -428,24 +404,25 @@ body:
                     span:
                       start: 267
                       end: 280
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 280
                       end: 298
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 281
+                          end: 295
                         object:
                           type: Identifier
                           span:
                             start: 281
                             end: 288
-                            ctxt: 1
+                          ctxt: 2
                           value: LocalDS
                           optional: false
                         property:
@@ -453,13 +430,10 @@ body:
                           span:
                             start: 289
                             end: 295
-                            ctxt: 2
                           value: Button
-                          optional: false
                       span:
                         start: 280
                         end: 298
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -469,24 +443,25 @@ body:
                     span:
                       start: 298
                       end: 311
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 311
                       end: 323
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 312
+                          end: 321
                         object:
                           type: Identifier
                           span:
                             start: 312
                             end: 314
-                            ctxt: 1
+                          ctxt: 2
                           value: DS
                           optional: false
                         property:
@@ -494,13 +469,10 @@ body:
                           span:
                             start: 315
                             end: 321
-                            ctxt: 2
                           value: Button
-                          optional: false
                       span:
                         start: 311
                         end: 323
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -510,24 +482,25 @@ body:
                     span:
                       start: 323
                       end: 336
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 336
                       end: 371
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 337
+                          end: 368
                         object:
                           type: Identifier
                           span:
                             start: 337
                             end: 360
-                            ctxt: 1
+                          ctxt: 2
                           value: ModuleWithDefaultExport
                           optional: false
                         property:
@@ -535,13 +508,10 @@ body:
                           span:
                             start: 361
                             end: 368
-                            ctxt: 2
                           value: default
-                          optional: false
                       span:
                         start: 336
                         end: 371
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -551,15 +521,14 @@ body:
                     span:
                       start: 371
                       end: 380
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 380
                     end: 383
-                    ctxt: 0
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -568,7 +537,7 @@ body:
         span:
           start: 199
           end: 213
-          ctxt: 1
+        ctxt: 2
         value: WildcardImport
         optional: false
       params: []
@@ -576,6 +545,6 @@ body:
       span:
         start: 190
         end: 392
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+
