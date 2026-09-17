@@ -57,6 +57,7 @@ interface AnalyzeOptions {
         tsconfigPath?: string;
         hookScript?: string;
     };
+    failOnParseError?: boolean;
     showSummary: boolean;
 }
 
@@ -473,6 +474,15 @@ class WorkspaceAlreadySetupError extends CliError {
     }
 }
 
+class ParseErrorsFound extends CliError {
+    constructor(count: number) {
+        super("Modules failed to parse", {
+            context: { count },
+        });
+        this.name = this.constructor.name;
+    }
+}
+
 class AnalysisError extends CliError {
     readonly reason: string;
 
@@ -811,6 +821,7 @@ async function runAnalysis(repoRoot: string, repository: RepositoryInfo, project
 
 interface AnalysisSummary {
     numberOfModules: number;
+    numberOfFailedModules: number;
     numberOfComponents: number;
     packages: string[];
     componentCountByPackage: {
@@ -836,6 +847,7 @@ function generateAnalysisSummary(results: AnalyzeResult): AnalysisSummary {
 
     return {
         numberOfModules: results.meta.num_of_modules,
+        numberOfFailedModules: results.parser_errors.length,
         numberOfComponents: results.meta.num_of_components,
         packages: Object.keys(results.alias_map.packages).concat(results.alias_map.root.name),
         componentCountByPackage: Object.entries(countByPackage).map<[string, number]>(([packageName, componentSet]) => [packageName, componentSet.size]).reduce<Record<string, number>>((acc, [k, v]) => {
@@ -1220,7 +1232,12 @@ export async function analyzeRepo(projectRoot: string, options: AnalyzeOptions) 
         if (options.showSummary) {
             const analysisSummary = generateAnalysisSummary(analysisResult);
             console.log(`\n${clr.bold("Summary:")}`);
-            console.log(`${INDENT}${analysisSummary.numberOfModules} modules have been scanned successfully and ${clr.bold(clr.cyan(analysisSummary.numberOfComponents))} components detected.\n`);
+            console.log(`${INDENT}${analysisSummary.numberOfModules} modules have been scanned successfully and ${clr.bold(clr.cyan(analysisSummary.numberOfComponents))} components detected.`);
+            if (analysisSummary.numberOfFailedModules > 0) {
+                console.log(`${INDENT}${clr.yellow(`${pluralize("module", analysisSummary.numberOfFailedModules)} failed to parse and ${analysisSummary.numberOfFailedModules === 1 ? "was" : "were"} left out of the analysis.`)}`);
+                console.log(`${INDENT}${clr.dim("Components declared there are missing from the results. Run with --dry-run to list the failures under parser_errors, or use --fail-on-parse-error to fail the run.")}`);
+            }
+            console.log("");
             console.log(`${INDENT}${clr.yellow("Number of components by package:")}`);
             Object.entries(analysisSummary.componentCountByPackage).sort((e1, e2) => e2[1] - e1[1]).forEach(([packageName, count]) => {
                 console.log(`${INDENT}${INDENT}- ${packageName}: ${count ? count : "None"}`);
@@ -1290,6 +1307,20 @@ export async function analyzeToJson(options: AnalyzeToJsonOptions): Promise<Anal
     return analysisResult;
 }
 
+function rejectIncompleteAnalysis(analysisData: AnalyzeResult, options: AnalyzeCmdOptions) {
+    const failedModules = analysisData.parser_errors.length;
+    if (!options.failOnParseError || failedModules === 0) {
+        return;
+    }
+
+    printAnalyzeError(
+        `${pluralize("module", failedModules)} failed to parse`,
+        "The analysis is incomplete. Run with --dry-run to list the failures under parser_errors."
+    );
+
+    throw new ParseErrorsFound(failedModules);
+}
+
 export async function analyze(projectRoot: string, options: AnalyzeCmdOptions) {
     let workspace;
 
@@ -1328,7 +1359,13 @@ export async function analyze(projectRoot: string, options: AnalyzeCmdOptions) {
 
             throw error;
         }
+
+        rejectIncompleteAnalysis(analysisData, options);
     } else {
+        // Before the upload, not after it: the point of the option is that an
+        // incomplete analysis never reaches the dashboard.
+        rejectIncompleteAnalysis(analysisData, options);
+
         if (!workspace) {
             workspace = await getWorkspace();
         }

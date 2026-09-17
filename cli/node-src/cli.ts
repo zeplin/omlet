@@ -174,6 +174,7 @@ interface AnalyzeCmdArgs {
     verify?: boolean;
     quiet: boolean;
     remoteLogin: boolean;
+    failOnParseError: boolean;
 }
 
 function handleAuthenticationError(error: AuthenticationError) {
@@ -202,6 +203,7 @@ program.command("analyze")
     .option("--tsconfig-path <path>", "Path to the tsconfig.json file")
     .option("--hook-script <path>", "Path to the CLI hook script")
     .option("--no-color", "Disable color highlighted output")
+    .option("--fail-on-parse-error", "Exit with a non-zero status code when one or more modules fail to parse", false)
     // .option("--no-verify", "Skip project setup verification")  Setup validation and this option is disabled until docs are updated
     // .option("-q, --quiet", "Report errors only", false)
     .option("--remote-login", "Login to Omlet remotely. Please use the option if you are running the CLI in a remote environment.", isHeadless())
@@ -257,6 +259,7 @@ program.command("analyze")
                 cliVersion: CLI_VERSION,
                 verifySetup: OMLET_VALIDATE, // args.verify ?? true,
                 cliParams,
+                failOnParseError: args.failOnParseError,
                 quiet: true, // args.quiet,
             });
         } catch (e) {
