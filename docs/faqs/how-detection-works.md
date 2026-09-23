@@ -64,6 +64,12 @@ export function ListView() {
 
 Omlet detects and identifies the props defined in each component and tracks the usage of those props in the component instances. See [Props tracking](../dashboard/components/props-tracking.md) for details.
 
+## Component families (subcomponents)
+
+Omlet recognizes when a root component and related components form a component family. This is detected automatically when components follow dotted naming (`Button.Primary`, `Button.Secondary`) or prefix naming (`ButtonPrimary`, `ButtonSecondary`). Omlet also handles subcomponents re-exported as namespaces (`export * as Button from './button-parts'`).
+
+See [Subcomponents](../dashboard/components/subcomponents.md) for how this is surfaced in the dashboard.
+
 ---
 
 ← [FAQs](./README.md) · [Monorepo support](./monorepo-support.md) →

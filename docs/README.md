@@ -40,6 +40,7 @@ Coming from the hosted version at omlet.dev? See [Migrating from the hosted vers
   - [Tags](./dashboard/components/tags.md)
   - [Dependency tree](./dashboard/components/dependency-tree.md)
   - [Props tracking](./dashboard/components/props-tracking.md)
+  - [Subcomponents](./dashboard/components/subcomponents.md)
 - [Workspace & account](./dashboard/workspace-and-account/README.md)
   - [Invite team members](./dashboard/workspace-and-account/invite-team-members.md)
   - [Renaming projects](./dashboard/workspace-and-account/renaming-projects.md)

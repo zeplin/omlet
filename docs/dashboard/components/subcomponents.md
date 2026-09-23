@@ -2,7 +2,12 @@
 
 The **Subcomponents** tab on the **Component Detail** page lists all subcomponents belonging to a component family — components that share the same root name and package as the selected component.
 
-For example, if a design system exports `Button.Primary`, `Button.Secondary`, and `Button.Link`, visiting the detail page for `Button` shows these as subcomponents.
+Omlet recognizes subcomponents in two common patterns:
+
+- **Dotted naming** — `Button.Primary`, `Button.Secondary`, `Button.Link`
+- **Prefix naming** — `ButtonPrimary`, `ButtonSecondary`, `ButtonLink`
+
+Both patterns are detected automatically during CLI analysis, including when subcomponents are exported through namespace re-exports (`export * as Button from './button-parts'`).
 
 ## View subcomponents
 
