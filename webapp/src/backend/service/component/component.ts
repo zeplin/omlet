@@ -755,7 +755,8 @@ export async function getComponentSubcomponents(
     }
 
     const escapedName = escapeRegex(parent.name);
-    const regexPattern = new RegExp(`^${escapedName}\\.`);
+    const dottedRegexPattern = new RegExp(`^${escapedName}\\.`);
+    const prefixRegexPattern = new RegExp(`^${escapedName}[A-Z]\\w*`);
 
     const result = await HistoricComponentIndexModel.aggregate<ComponentAggregationResult>([
         {
@@ -772,8 +773,11 @@ export async function getComponentSubcomponents(
         {
             $match: {
                 "entries.definitionId": { $ne: componentDefinitionId },
-                "entries.component.name": regexPattern,
                 "entries.component.packageName": parent.packageName,
+                $or: [
+                    { "entries.component.name": dottedRegexPattern },
+                    { "entries.component.name": prefixRegexPattern },
+                ],
             },
         },
         {
