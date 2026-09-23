@@ -1,0 +1,80 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/namespace-re-export/reexport.ts
+---
+source_path: src/namespace-re-export/reexport.ts
+id:
+  hash: "16327272716197680975"
+  path: src/namespace-re-export/reexport.ts
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Accordion#0"
+    exported_name: Accordion
+declarations:
+  - symbol: "Accordion#0"
+    source:
+      hash: "16327272716197680975"
+      path: src/namespace-re-export/reexport.ts
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 16817730918706702154, path: \"src/namespace-re-export/accordion-parts\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "<wildcard>#0"
+          source:
+            hash: "16817730918706702154"
+            path: src/namespace-re-export/accordion-parts
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 1
+    end:
+      line: 1
+      column: 48
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children: []
+    references:
+      - "Accordion#0"
+    jsx_references: []
+body:
+  - type: ExportNamedDeclaration
+    span:
+      start: 1
+      end: 48
+      ctxt: 0
+    specifiers:
+      - type: ExportNamespaceSpecifier
+        span:
+          start: 8
+          end: 22
+          ctxt: 0
+        name:
+          type: Identifier
+          span:
+            start: 13
+            end: 22
+            ctxt: 0
+          value: Accordion
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 28
+        end: 47
+        ctxt: 0
+      value: "./accordion-parts"
+      raw: "\"./accordion-parts\""
+    typeOnly: false
+    asserts: ~
+

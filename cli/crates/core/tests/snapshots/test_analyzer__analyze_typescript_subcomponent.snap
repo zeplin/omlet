@@ -1,5 +1,6 @@
 ---
 source: crates/core/tests/test_analyzer.rs
+assertion_line: 677
 expression: "&component_results"
 ---
 num_of_components: 12
@@ -32,6 +33,7 @@ components:
     name: TTable
     export_ids:
       - "typescript-examples:src/subcomponent/table/named:TTable"
+      - "typescript-examples:src/subcomponent/table/wildcard:WTable.TTable"
     package_name: typescript-examples
     source_path: src/subcomponent/table/named.tsx
     dependencies: []
@@ -44,6 +46,7 @@ components:
     name: TTable.Header
     export_ids:
       - "typescript-examples:src/subcomponent/table/named:TTable.Header"
+      - "typescript-examples:src/subcomponent/table/wildcard:WTable.TTable.Header"
     package_name: typescript-examples
     source_path: src/subcomponent/table/named.tsx
     dependencies: []
@@ -83,6 +86,7 @@ components:
       - "typescript-examples:src/subcomponent/table/named:TTable.Cell"
       - "typescript-examples:src/subcomponent/table/object-assign:default.Cell"
       - "typescript-examples:src/subcomponent/table/subcomponents/TCell:default"
+      - "typescript-examples:src/subcomponent/table/wildcard:WTable.TTable.Cell"
     package_name: typescript-examples
     source_path: src/subcomponent/table/subcomponents/TCell.tsx
     dependencies: []
@@ -98,6 +102,7 @@ components:
       - "typescript-examples:src/subcomponent/table/named:TTable.Header.Cell"
       - "typescript-examples:src/subcomponent/table/object-assign:default.Header.Cell"
       - "typescript-examples:src/subcomponent/table/subcomponents/THeadCell:default"
+      - "typescript-examples:src/subcomponent/table/wildcard:WTable.TTable.Header.Cell"
     package_name: typescript-examples
     source_path: src/subcomponent/table/subcomponents/THeadCell.tsx
     dependencies: []
@@ -382,3 +387,4 @@ components:
                     value: JSXElement
     props: []
     html_elements: []
+

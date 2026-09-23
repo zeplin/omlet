@@ -1,0 +1,93 @@
+---
+source: crates/core/tests/test_analyzer.rs
+assertion_line: 1076
+expression: "&component_results"
+---
+num_of_components: 4
+components:
+  - definition_id: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Item"
+    name: Item
+    export_ids:
+      - "typescript-examples:src/namespace-re-export/accordion-parts:Item"
+      - "typescript-examples:src/namespace-re-export/reexport:Accordion.Item"
+    package_name: typescript-examples
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Root"
+    name: Root
+    export_ids:
+      - "typescript-examples:src/namespace-re-export/accordion-parts:Root"
+      - "typescript-examples:src/namespace-re-export/reexport:Accordion.Root"
+    package_name: typescript-examples
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Trigger"
+    name: Trigger
+    export_ids:
+      - "typescript-examples:src/namespace-re-export/accordion-parts:Trigger"
+      - "typescript-examples:src/namespace-re-export/reexport:Accordion.Trigger"
+    package_name: typescript-examples
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:0e8f3730728ec3ac18997c086c167a62dc83a5a03718de3d234d6288f5e27165:App"
+    name: App
+    export_ids:
+      - "typescript-examples:src/namespace-re-export/consumer:App"
+    package_name: typescript-examples
+    source_path: src/namespace-re-export/consumer.tsx
+    dependencies:
+      - from: "typescript-examples:0e8f3730728ec3ac18997c086c167a62dc83a5a03718de3d234d6288f5e27165:App"
+        to: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Item"
+        references:
+          - trace:
+              - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion"
+              - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Item"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 31
+                props: []
+      - from: "typescript-examples:0e8f3730728ec3ac18997c086c167a62dc83a5a03718de3d234d6288f5e27165:App"
+        to: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Root"
+        references:
+          - trace:
+              - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion"
+              - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Root"
+            usages:
+              - start:
+                  line: 6
+                  column: 13
+                end:
+                  line: 6
+                  column: 31
+                props: []
+      - from: "typescript-examples:0e8f3730728ec3ac18997c086c167a62dc83a5a03718de3d234d6288f5e27165:App"
+        to: "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Trigger"
+        references:
+          - trace:
+              - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion"
+              - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Trigger"
+            usages:
+              - start:
+                  line: 8
+                  column: 13
+                end:
+                  line: 8
+                  column: 34
+                props: []
+    props: []
+    html_elements:
+      - div
+

@@ -456,4 +456,19 @@ impl Module {
             })
             .collect()
     }
+
+    pub fn get_namespace_export_target(&self, name: &str) -> Option<&ModuleId> {
+        let export = self.exports.iter().find(|e| e.exported_name == name)?;
+        let symbol = match &export.source {
+            ExportSource::Internal(s) => s,
+            _ => return None,
+        };
+        let decl = self.declarations.iter().find(|d| &d.symbol == symbol)?;
+        match &decl.definition {
+            Definition::ExternalSymbol(sym_with_src) if sym_with_src.symbol.is_wildcard() => {
+                Some(&sym_with_src.source)
+            }
+            _ => None,
+        }
+    }
 }

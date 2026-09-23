@@ -20,7 +20,7 @@ use crate::module_resolver::{ExportId, ModuleId, ModuleResolver, ModuleType};
 use crate::parser::CharacterPosition;
 use crate::parser::{
     symbol::{MemberProperty, DEFAULT_EXPORT_NAME},
-    ExportSource, InferredType, Module, ModuleExport, ParserError, PropDefinition, Reference,
+    Definition, ExportSource, InferredType, Module, ModuleExport, ParserError, PropDefinition, Reference,
     ReferenceWithSource, Symbol, SymbolWithSource, Usage,
 };
 
@@ -483,6 +483,37 @@ impl Analyzer {
                     )
                 }
             };
+        }
+
+        // Check for namespace-alias re-exports (e.g., Accordion.Root from export * as Accordion).
+        // Synthesized exports from namespace aliases have dotted names without member properties,
+        // so we check for a prefix that matches a namespace alias and resolve the remainder in
+        // the target module.
+        if !reference_with_source.reference.has_member_property() {
+            if let Some(first_dot) = export_name.find('.') {
+                let base_name = &export_name[..first_dot];
+                let rest_name = &export_name[first_dot + 1..];
+                if let Some(target_module_id) = module.get_namespace_export_target(base_name) {
+                    if *target_module_id != *module_id && !visited_modules.contains(target_module_id) {
+                        let mut sub_trace = vec![];
+                        let new_reference = ReferenceWithSource::new(
+                            Symbol::from(rest_name).into(),
+                            target_module_id.clone(),
+                        );
+                        let result = Self::resolve_export_recursive(
+                            modules,
+                            &new_reference,
+                            &mut sub_trace,
+                            visited_modules,
+                            &mut None,
+                        );
+                        if let Some(r) = result {
+                            trace.extend(sub_trace);
+                            return Some(r);
+                        }
+                    }
+                }
+            }
         }
 
         let mut first_result: Option<(ReferenceWithSource, Vec<ReferenceWithSource>)> = None;
@@ -1131,7 +1162,60 @@ impl Analyzer {
                     module_exports.insert(Rc::clone(export));
                 }
             } else {
-                module_exports.insert(Rc::clone(export));
+                // Check if this is a namespace alias re-export (export * as X from './y').
+                // Such exports are stored with an Internal source pointing to a local
+                // declaration whose definition is an ExternalSymbol with a wildcard.
+                let maybe_target_module = match &export.source {
+                    ExportSource::Internal(symbol) => module.declarations.iter().find_map(|decl| {
+                        if decl.symbol == *symbol {
+                            if let Definition::ExternalSymbol(sym_with_src) = &decl.definition {
+                                if sym_with_src.symbol.is_wildcard() {
+                                    return Some(sym_with_src.source.clone());
+                                }
+                            }
+                        }
+                        None
+                    }),
+                    _ => None,
+                };
+
+                if let Some(target_module_id) = maybe_target_module {
+                    let target_hash = target_module_id.hash;
+
+                    let target_exports = if let Some(exports) = processed_exports.get(&target_hash) {
+                        exports.clone()
+                    } else if !visited_modules.contains(&target_hash) {
+                        if let Some(target_module) = modules.get(&target_hash) {
+                            Analyzer::expand_module_exports(
+                                modules,
+                                processed_exports,
+                                target_module,
+                                visited_modules,
+                            )
+                        } else {
+                            AHashSet::new()
+                        }
+                    } else {
+                        AHashSet::new()
+                    };
+
+                    let namespace_name = &export.exported_name;
+                    if target_exports.is_empty() {
+                        // If the target module can't be resolved (e.g., external package),
+                        // keep the original namespace alias export.
+                        module_exports.insert(Rc::clone(export));
+                    } else {
+                        for ex in target_exports.iter() {
+                            let transformed = transform_export(&target_module_id, ex);
+                            module_exports.insert(Rc::new(ModuleExport {
+                                source: transformed.source.clone(),
+                                exported_name: format!("{}.{}", namespace_name, transformed.exported_name),
+                            }));
+                        }
+                    }
+                } else {
+                    module_exports.insert(Rc::clone(export));
+                }
             }
         }
 

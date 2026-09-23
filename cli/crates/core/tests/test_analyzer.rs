@@ -1056,6 +1056,27 @@ fn test_analyze_typescript_wildcard_re_export() {
     snap::assert_yaml_snapshot!(&export_results);
 }
 
+// Analysis of files `typescript/src/namespace-re-export/**/*`
+#[test]
+fn test_analyze_typescript_namespace_re_export() {
+    let glob_pattern = vec![String::from("src/namespace-re-export/**/*.{tsx,ts}")];
+    let project_root = get_project_root(&PathBuf::from("../../samples/typescript")).unwrap();
+    let alias_map_path = Some(String::from("../../samples/typescript/alias-map.json"));
+
+    let AnalyzerTestResult {
+        component_results,
+        export_results,
+    } = run_analyzer(
+        &project_root,
+        &glob_pattern,
+        alias_map_path,
+        &Vec::<String>::new(),
+    );
+
+    snap::assert_yaml_snapshot!(&component_results);
+    snap::assert_yaml_snapshot!(&export_results);
+}
+
 // Analysis of files `typescript/src/dynamic-import/**/*`
 #[test]
 fn test_analyze_typescript_dynamic_import() {

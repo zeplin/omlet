@@ -1,0 +1,60 @@
+---
+source: crates/core/tests/test_analyzer.rs
+assertion_line: 1077
+expression: "&export_results"
+---
+num_of_exports: 7
+exports:
+  - name: Accordion.Item
+    source_path: src/namespace-re-export/reexport.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion.Item"
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Item"
+  - name: Accordion.Root
+    source_path: src/namespace-re-export/reexport.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion.Root"
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Root"
+  - name: Accordion.Trigger
+    source_path: src/namespace-re-export/reexport.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:87921a0eafef5fbdd00e4d8f5af1e51f1045b95d5546e963b7519b79cb437e91:Accordion.Trigger"
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Trigger"
+  - name: App
+    source_path: src/namespace-re-export/consumer.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:0e8f3730728ec3ac18997c086c167a62dc83a5a03718de3d234d6288f5e27165:App"
+  - name: Item
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Item"
+  - name: Root
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Root"
+  - name: Trigger
+    source_path: src/namespace-re-export/accordion-parts.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:c985d21d4eaef93f8b7b4e4abbcc77b6d3cf0d50259c96511f2a26a53d836409:Trigger"
+

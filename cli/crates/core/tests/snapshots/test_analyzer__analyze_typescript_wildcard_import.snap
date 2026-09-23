@@ -1,5 +1,6 @@
 ---
 source: crates/core/tests/test_analyzer.rs
+assertion_line: 1034
 expression: "&component_results"
 ---
 num_of_components: 13
@@ -60,6 +61,7 @@ components:
     name: Button
     export_ids:
       - "typescript-examples:src/wildcard-import/ds:Button"
+      - "typescript-examples:src/wildcard-import/wildcard-export:ds.Button"
     package_name: typescript-examples
     source_path: src/wildcard-import/ds.tsx
     dependencies: []
@@ -70,6 +72,7 @@ components:
     name: Link
     export_ids:
       - "typescript-examples:src/wildcard-import/ds:Link"
+      - "typescript-examples:src/wildcard-import/wildcard-export:ds.Link"
     package_name: typescript-examples
     source_path: src/wildcard-import/ds.tsx
     dependencies: []

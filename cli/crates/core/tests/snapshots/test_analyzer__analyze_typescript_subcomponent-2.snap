@@ -1,8 +1,9 @@
 ---
 source: crates/core/tests/test_analyzer.rs
+assertion_line: 678
 expression: "&export_results"
 ---
-num_of_exports: 19
+num_of_exports: 22
 exports:
   - name: TTable
     source_path: src/subcomponent/table/named.tsx
@@ -34,13 +35,40 @@ exports:
     trace_to_declaration:
       - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header.Cell"
       - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
-  - name: WTable
+  - name: WTable.TTable
     source_path: src/subcomponent/table/wildcard.tsx
-    is_component: false
-    inferred_type: "TypeOf<typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:<wildcard>>"
-    resolved_type: "TypeOf<typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:<wildcard>>"
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
     trace_to_declaration:
-      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable"
+      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable.TTable"
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable"
+  - name: WTable.TTable.Cell
+    source_path: src/subcomponent/table/wildcard.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable.TTable.Cell"
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Cell"
+      - "typescript-examples:1c59d241cf0b23b8efe9d74232266742e7fea6c843212b7362eb08e13c6e21be:default"
+  - name: WTable.TTable.Header
+    source_path: src/subcomponent/table/wildcard.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable.TTable.Header"
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header"
+  - name: WTable.TTable.Header.Cell
+    source_path: src/subcomponent/table/wildcard.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:f8d1776c51b6ce89e17e882d108a7308ecdf509be5f8a20fef13b6f65428b197:WTable.TTable.Header.Cell"
+      - "typescript-examples:1ff278b5f25a43cd52121c4649989e1a47f3a990c00936a32824056e2171ab34:TTable.Header.Cell"
+      - "typescript-examples:2e199d92290034bd35ea81584872817a274d9bf089005f537d56b6b48d323de2:default"
   - name: default
     source_path: src/subcomponent/table/default.tsx
     is_component: true
@@ -143,3 +171,4 @@ exports:
     resolved_type: (Function -> JSX)
     trace_to_declaration:
       - "typescript-examples:dac4d870fb704ccce541b65856869f656c1c84d793823bb641338c4412dc45cd:default.THeader"
+

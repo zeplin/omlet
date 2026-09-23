@@ -1,8 +1,9 @@
 ---
 source: crates/core/tests/test_analyzer.rs
+assertion_line: 1035
 expression: "&export_results"
 ---
-num_of_exports: 16
+num_of_exports: 17
 exports:
   - name: Button
     source_path: src/wildcard-import/ds.tsx
@@ -103,13 +104,22 @@ exports:
     trace_to_declaration:
       - "typescript-examples:cde99b04e196727c6d2f4b89b067db4f4ad0100a273fbb1cee5d65c28b01005e:ds"
       - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds"
-  - name: ds
+  - name: ds.Button
     source_path: src/wildcard-import/wildcard-export.ts
-    is_component: false
-    inferred_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
-    resolved_type: "TypeOf<typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:<wildcard>>"
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
     trace_to_declaration:
-      - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds"
+      - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds.Button"
+      - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Button"
+  - name: ds.Link
+    source_path: src/wildcard-import/wildcard-export.ts
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:98c6ba439e2f841eedcf473e72f3e843d885ee6d79233fc4cd033ac276857ed8:ds.Link"
+      - "typescript-examples:bf0d0c920397c9d1106c0d212e0e68b49b760875c939edf8086e9b6fb9c68f42:Link"
   - name: parent
     source_path: src/wildcard-import/parent.ts
     is_component: false

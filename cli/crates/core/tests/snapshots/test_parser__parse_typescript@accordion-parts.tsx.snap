@@ -1,0 +1,383 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/namespace-re-export/accordion-parts.tsx
+---
+source_path: src/namespace-re-export/accordion-parts.tsx
+id:
+  hash: "16817730918706702154"
+  path: src/namespace-re-export/accordion-parts.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Root#1"
+    exported_name: Root
+  - source:
+      Internal: "Item#1"
+    exported_name: Item
+  - source:
+      Internal: "Trigger#1"
+    exported_name: Trigger
+declarations:
+  - symbol: "Item#1"
+    source:
+      hash: "16817730918706702154"
+      path: src/namespace-re-export/accordion-parts.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 5
+      column: 8
+    end:
+      line: 7
+      column: 2
+  - symbol: "Root#1"
+    source:
+      hash: "16817730918706702154"
+      path: src/namespace-re-export/accordion-parts.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 3
+      column: 2
+  - symbol: "Trigger#1"
+    source:
+      hash: "16817730918706702154"
+      path: src/namespace-re-export/accordion-parts.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 9
+      column: 8
+    end:
+      line: 11
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Root#1"
+      - "Root#1"
+      - "Item#1"
+      - "Item#1"
+      - "Trigger#1"
+      - "Trigger#1"
+    references:
+      - "Item#1"
+      - "Root#1"
+      - "Trigger#1"
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Root#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Root#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Item#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Item#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Trigger#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+  - owner: "Trigger#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "div#2"
+    jsx_references:
+      - "div#2"
+body:
+  - type: ExportDeclaration
+    span:
+      start: 1
+      end: 55
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 24
+          end: 55
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 30
+              end: 53
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 37
+                end: 52
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 38
+                    end: 41
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 37
+                  end: 42
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 42
+                    end: 46
+                    ctxt: 0
+                  value: Root
+                  raw: Root
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 46
+                  end: 52
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 48
+                    end: 51
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 17
+          end: 21
+          ctxt: 1
+        value: Root
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 8
+        end: 55
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 57
+      end: 111
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 80
+          end: 111
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 86
+              end: 109
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 93
+                end: 108
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 94
+                    end: 97
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 93
+                  end: 98
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 98
+                    end: 102
+                    ctxt: 0
+                  value: Item
+                  raw: Item
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 102
+                  end: 108
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 104
+                    end: 107
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 73
+          end: 77
+          ctxt: 1
+        value: Item
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 64
+        end: 111
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+  - type: ExportDeclaration
+    span:
+      start: 113
+      end: 173
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 139
+          end: 173
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 145
+              end: 171
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 152
+                end: 170
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 153
+                    end: 156
+                    ctxt: 2
+                  value: div
+                  optional: false
+                span:
+                  start: 152
+                  end: 157
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 157
+                    end: 164
+                    ctxt: 0
+                  value: Trigger
+                  raw: Trigger
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 164
+                  end: 170
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 166
+                    end: 169
+                    ctxt: 2
+                  value: div
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 129
+          end: 136
+          ctxt: 1
+        value: Trigger
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 120
+        end: 173
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+
