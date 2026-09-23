@@ -1,0 +1,365 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/component-assign-propagation/cap-consumer.tsx
+---
+source_path: src/component-assign-propagation/cap-consumer.tsx
+id:
+  hash: "10400399504287183308"
+  path: src/component-assign-propagation/cap-consumer.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "App#1"
+    exported_name: App
+declarations:
+  - symbol: "App#1"
+    source:
+      hash: "10400399504287183308"
+      path: src/component-assign-propagation/cap-consumer.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 4
+      column: 8
+    end:
+      line: 11
+      column: 2
+  - symbol: "NamedTable#1"
+    source:
+      hash: "10400399504287183308"
+      path: src/component-assign-propagation/cap-consumer.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Table' type=inline), context: #1 }, source: ModuleId { hash: 6364153166957996229, path: \"src/component-assign-propagation/cap-named-exported\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "Table#1"
+          source:
+            hash: "6364153166957996229"
+            path: src/component-assign-propagation/cap-named-exported
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 2
+      column: 10
+    end:
+      line: 2
+      column: 29
+  - symbol: "Table#1"
+    source:
+      hash: "10400399504287183308"
+      path: src/component-assign-propagation/cap-consumer.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 18339380002309283090, path: \"src/component-assign-propagation/cap-default-exported\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "default#0"
+          source:
+            hash: "18339380002309283090"
+            path: src/component-assign-propagation/cap-default-exported
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 1
+      column: 13
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "App#1"
+      - "App#1"
+    references:
+      - "App#1"
+      - "Cell#2"
+      - "HeaderCell#2"
+      - "NamedTable#1"
+      - "Table#0"
+      - "Table#1"
+      - "div#2"
+    jsx_references:
+      - "NamedTable#1.HeaderCell"
+      - "Table#1.Cell"
+      - "div#2"
+  - owner: "App#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Cell#2"
+      - "HeaderCell#2"
+      - "NamedTable#1"
+      - "Table#1"
+      - "div#2"
+    jsx_references:
+      - "NamedTable#1.HeaderCell"
+      - "Table#1.Cell"
+      - "div#2"
+  - owner: "App#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "Cell#2"
+      - "HeaderCell#2"
+      - "NamedTable#1"
+      - "Table#1"
+      - "div#2"
+    jsx_references:
+      - "NamedTable#1.HeaderCell"
+      - "Table#1.Cell"
+      - "div#2"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 44
+      ctxt: 0
+    specifiers:
+      - type: ImportDefaultSpecifier
+        span:
+          start: 8
+          end: 13
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 8
+            end: 13
+            ctxt: 1
+          value: Table
+          optional: false
+    source:
+      type: StringLiteral
+      span:
+        start: 19
+        end: 43
+        ctxt: 0
+      value: "./cap-default-exported"
+      raw: "\"./cap-default-exported\""
+    typeOnly: false
+    asserts: ~
+  - type: ImportDeclaration
+    span:
+      start: 45
+      end: 104
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 54
+          end: 73
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 63
+            end: 73
+            ctxt: 1
+          value: NamedTable
+          optional: false
+        imported:
+          type: Identifier
+          span:
+            start: 54
+            end: 59
+            ctxt: 0
+          value: Table
+          optional: false
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 81
+        end: 103
+        ctxt: 0
+      value: "./cap-named-exported"
+      raw: "\"./cap-named-exported\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 106
+      end: 245
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 128
+          end: 245
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 134
+              end: 243
+              ctxt: 0
+            argument:
+              type: ParenthesisExpression
+              span:
+                start: 141
+                end: 242
+                ctxt: 0
+              expression:
+                type: JSXElement
+                span:
+                  start: 151
+                  end: 236
+                  ctxt: 0
+                opening:
+                  type: JSXOpeningElement
+                  name:
+                    type: Identifier
+                    span:
+                      start: 152
+                      end: 155
+                      ctxt: 2
+                    value: div
+                    optional: false
+                  span:
+                    start: 151
+                    end: 156
+                    ctxt: 0
+                  attributes: []
+                  selfClosing: false
+                  typeArguments: ~
+                children:
+                  - type: JSXText
+                    span:
+                      start: 156
+                      end: 169
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 169
+                      end: 183
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: JSXMemberExpression
+                        object:
+                          type: Identifier
+                          span:
+                            start: 170
+                            end: 175
+                            ctxt: 1
+                          value: Table
+                          optional: false
+                        property:
+                          type: Identifier
+                          span:
+                            start: 176
+                            end: 180
+                            ctxt: 2
+                          value: Cell
+                          optional: false
+                      span:
+                        start: 169
+                        end: 183
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 183
+                      end: 196
+                      ctxt: 0
+                    value: "\n\n            "
+                    raw: "\n\n            "
+                  - type: JSXElement
+                    span:
+                      start: 196
+                      end: 221
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: JSXMemberExpression
+                        object:
+                          type: Identifier
+                          span:
+                            start: 197
+                            end: 207
+                            ctxt: 1
+                          value: NamedTable
+                          optional: false
+                        property:
+                          type: Identifier
+                          span:
+                            start: 208
+                            end: 218
+                            ctxt: 2
+                          value: HeaderCell
+                          optional: false
+                      span:
+                        start: 196
+                        end: 221
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: true
+                      typeArguments: ~
+                    children: []
+                    closing: ~
+                  - type: JSXText
+                    span:
+                      start: 221
+                      end: 230
+                      ctxt: 0
+                    value: "\n\n        "
+                    raw: "\n\n        "
+                closing:
+                  type: JSXClosingElement
+                  span:
+                    start: 230
+                    end: 236
+                    ctxt: 0
+                  name:
+                    type: Identifier
+                    span:
+                      start: 232
+                      end: 235
+                      ctxt: 2
+                    value: div
+                    optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 122
+          end: 125
+          ctxt: 1
+        value: App
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 113
+        end: 245
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+

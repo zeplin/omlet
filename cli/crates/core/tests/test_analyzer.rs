@@ -1077,6 +1077,27 @@ fn test_analyze_typescript_namespace_re_export() {
     snap::assert_yaml_snapshot!(&export_results);
 }
 
+// Analysis of files `typescript/src/component-assign-propagation/**/*`
+#[test]
+fn test_analyze_typescript_component_assign_propagation() {
+    let glob_pattern = vec![String::from("src/component-assign-propagation/**/*.{tsx,ts}")];
+    let project_root = get_project_root(&PathBuf::from("../../samples/typescript")).unwrap();
+    let alias_map_path = Some(String::from("../../samples/typescript/alias-map.json"));
+
+    let AnalyzerTestResult {
+        component_results,
+        export_results,
+    } = run_analyzer(
+        &project_root,
+        &glob_pattern,
+        alias_map_path,
+        &Vec::<String>::new(),
+    );
+
+    snap::assert_yaml_snapshot!(&component_results);
+    snap::assert_yaml_snapshot!(&export_results);
+}
+
 // Analysis of files `typescript/src/dynamic-import/**/*`
 #[test]
 fn test_analyze_typescript_dynamic_import() {

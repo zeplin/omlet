@@ -1,0 +1,145 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/component-assign-propagation/cap-header-cell.tsx
+---
+source_path: src/component-assign-propagation/cap-header-cell.tsx
+id:
+  hash: "5000617717995628061"
+  path: src/component-assign-propagation/cap-header-cell.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "HeaderCell#1"
+    exported_name: HeaderCell
+declarations:
+  - symbol: "HeaderCell#1"
+    source:
+      hash: "5000617717995628061"
+      path: src/component-assign-propagation/cap-header-cell.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 3
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "HeaderCell#1"
+      - "HeaderCell#1"
+    references:
+      - "HeaderCell#1"
+      - "th#2"
+    jsx_references:
+      - "th#2"
+  - owner: "HeaderCell#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "th#2"
+    jsx_references:
+      - "th#2"
+  - owner: "HeaderCell#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "th#2"
+    jsx_references:
+      - "th#2"
+body:
+  - type: ExportDeclaration
+    span:
+      start: 1
+      end: 65
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 30
+          end: 65
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 36
+              end: 63
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 43
+                end: 62
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 44
+                    end: 46
+                    ctxt: 2
+                  value: th
+                  optional: false
+                span:
+                  start: 43
+                  end: 47
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 47
+                    end: 57
+                    ctxt: 0
+                  value: HeaderCell
+                  raw: HeaderCell
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 57
+                  end: 62
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 59
+                    end: 61
+                    ctxt: 2
+                  value: th
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 17
+          end: 27
+          ctxt: 1
+        value: HeaderCell
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 8
+        end: 65
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+

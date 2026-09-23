@@ -1,0 +1,145 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/component-assign-propagation/cap-cell.tsx
+---
+source_path: src/component-assign-propagation/cap-cell.tsx
+id:
+  hash: "15959283368935160493"
+  path: src/component-assign-propagation/cap-cell.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Cell#1"
+    exported_name: Cell
+declarations:
+  - symbol: "Cell#1"
+    source:
+      hash: "15959283368935160493"
+      path: src/component-assign-propagation/cap-cell.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<declaration>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 1
+      column: 8
+    end:
+      line: 3
+      column: 2
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Cell#1"
+      - "Cell#1"
+    references:
+      - "Cell#1"
+      - "td#2"
+    jsx_references:
+      - "td#2"
+  - owner: "Cell#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "td#2"
+    jsx_references:
+      - "td#2"
+  - owner: "Cell#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "td#2"
+    jsx_references:
+      - "td#2"
+body:
+  - type: ExportDeclaration
+    span:
+      start: 1
+      end: 53
+      ctxt: 0
+    declaration:
+      async: false
+      body:
+        type: BlockStatement
+        span:
+          start: 24
+          end: 53
+          ctxt: 0
+        stmts:
+          - type: ReturnStatement
+            span:
+              start: 30
+              end: 51
+              ctxt: 0
+            argument:
+              type: JSXElement
+              span:
+                start: 37
+                end: 50
+                ctxt: 0
+              opening:
+                type: JSXOpeningElement
+                name:
+                  type: Identifier
+                  span:
+                    start: 38
+                    end: 40
+                    ctxt: 2
+                  value: td
+                  optional: false
+                span:
+                  start: 37
+                  end: 41
+                  ctxt: 0
+                attributes: []
+                selfClosing: false
+                typeArguments: ~
+              children:
+                - type: JSXText
+                  span:
+                    start: 41
+                    end: 45
+                    ctxt: 0
+                  value: Cell
+                  raw: Cell
+              closing:
+                type: JSXClosingElement
+                span:
+                  start: 45
+                  end: 50
+                  ctxt: 0
+                name:
+                  type: Identifier
+                  span:
+                    start: 47
+                    end: 49
+                    ctxt: 2
+                  value: td
+                  optional: false
+      declare: false
+      decorators: []
+      generator: false
+      identifier:
+        type: Identifier
+        span:
+          start: 17
+          end: 21
+          ctxt: 1
+        value: Cell
+        optional: false
+      params: []
+      returnType: ~
+      span:
+        start: 8
+        end: 53
+        ctxt: 0
+      type: FunctionDeclaration
+      typeParameters: ~
+

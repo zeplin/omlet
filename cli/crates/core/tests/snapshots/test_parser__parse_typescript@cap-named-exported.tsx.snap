@@ -1,0 +1,393 @@
+---
+source: crates/core/tests/test_parser.rs
+assertion_line: 18
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
+input_file: samples/typescript/src/component-assign-propagation/cap-named-exported.tsx
+---
+source_path: src/component-assign-propagation/cap-named-exported.tsx
+id:
+  hash: "6364153166957996229"
+  path: src/component-assign-propagation/cap-named-exported.tsx
+  package_name: UNKNOWN
+  mtype: local
+created_at: ~
+updated_at: ~
+exports:
+  - source:
+      Internal: "Table#1"
+    exported_name: Table
+  - source:
+      External:
+        symbol: "HeaderCell#1"
+        source:
+          hash: "5000617717995628061"
+          path: src/component-assign-propagation/cap-header-cell
+          package_name: UNKNOWN
+          mtype: local
+    exported_name: Table.HeaderCell
+declarations:
+  - symbol: "HeaderCell#1"
+    source:
+      hash: "6364153166957996229"
+      path: src/component-assign-propagation/cap-named-exported.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('HeaderCell' type=dynamic), context: #1 }, source: ModuleId { hash: 5000617717995628061, path: \"src/component-assign-propagation/cap-header-cell\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    inferred_type:
+      TypeOf:
+        symbol:
+          symbol: "HeaderCell#1"
+          source:
+            hash: "5000617717995628061"
+            path: src/component-assign-propagation/cap-header-cell
+            package_name: UNKNOWN
+            mtype: local
+        is_local: false
+    start:
+      line: 1
+      column: 10
+    end:
+      line: 1
+      column: 20
+  - symbol: "Table#1"
+    source:
+      hash: "6364153166957996229"
+      path: src/component-assign-propagation/cap-named-exported.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "<expression>"
+    inferred_type:
+      Function:
+        - JSX
+    start:
+      line: 3
+      column: 14
+    end:
+      line: 3
+      column: 19
+  - symbol: "children#2"
+    source:
+      hash: "6364153166957996229"
+      path: src/component-assign-propagation/cap-named-exported.tsx
+      package_name: UNKNOWN
+      mtype: local
+    definition: "Parameter<Symbol { name: Atom('Table' type=inline), context: #1 }>[0][children]"
+    inferred_type:
+      MemberOf:
+        - ParameterOf:
+            function:
+              symbol: "Table#1"
+              source:
+                hash: "6364153166957996229"
+                path: src/component-assign-propagation/cap-named-exported.tsx
+                package_name: UNKNOWN
+                mtype: local
+            index: 0
+        - Object: children
+    start:
+      line: 3
+      column: 25
+    end:
+      line: 3
+      column: 33
+scopes:
+  - owner: "__global#0"
+    parent: ~
+    children:
+      - "Table#1"
+      - "Table#1"
+    references:
+      - "HeaderCell#0"
+      - "HeaderCell#1"
+      - "React#3"
+      - "ReactNode#0"
+      - "Table#1"
+      - "children#0"
+      - "children#2"
+      - "table#3"
+    jsx_references:
+      - "table#3"
+  - owner: "Table#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "React#3"
+      - "ReactNode#0"
+      - "children#0"
+      - "children#2"
+      - "table#3"
+    jsx_references:
+      - "table#3"
+  - owner: "Table#1"
+    parent: "__global#0"
+    children: []
+    references:
+      - "React#3"
+      - "ReactNode#0"
+      - "children#0"
+      - "children#2"
+      - "table#3"
+    jsx_references:
+      - "table#3"
+body:
+  - type: ImportDeclaration
+    span:
+      start: 1
+      end: 48
+      ctxt: 0
+    specifiers:
+      - type: ImportSpecifier
+        span:
+          start: 10
+          end: 20
+          ctxt: 0
+        local:
+          type: Identifier
+          span:
+            start: 10
+            end: 20
+            ctxt: 1
+          value: HeaderCell
+          optional: false
+        imported: ~
+        isTypeOnly: false
+    source:
+      type: StringLiteral
+      span:
+        start: 28
+        end: 47
+        ctxt: 0
+      value: "./cap-header-cell"
+      raw: "\"./cap-header-cell\""
+    typeOnly: false
+    asserts: ~
+  - type: ExportDeclaration
+    span:
+      start: 50
+      end: 162
+      ctxt: 0
+    declaration:
+      type: VariableDeclaration
+      span:
+        start: 57
+        end: 162
+        ctxt: 0
+      kind: const
+      declare: false
+      declarations:
+        - type: VariableDeclarator
+          span:
+            start: 63
+            end: 161
+            ctxt: 0
+          id:
+            optional: false
+            span:
+              start: 63
+              end: 68
+              ctxt: 1
+            type: Identifier
+            typeAnnotation: ~
+            value: Table
+          init:
+            type: ArrowFunctionExpression
+            span:
+              start: 71
+              end: 161
+              ctxt: 0
+            params:
+              - type: ObjectPattern
+                span:
+                  start: 72
+                  end: 115
+                  ctxt: 0
+                properties:
+                  - type: AssignmentPatternProperty
+                    span:
+                      start: 74
+                      end: 82
+                      ctxt: 0
+                    key:
+                      type: Identifier
+                      span:
+                        start: 74
+                        end: 82
+                        ctxt: 2
+                      value: children
+                      optional: false
+                    value: ~
+                optional: false
+                typeAnnotation:
+                  type: TsTypeAnnotation
+                  span:
+                    start: 84
+                    end: 115
+                    ctxt: 0
+                  typeAnnotation:
+                    type: TsTypeLiteral
+                    span:
+                      start: 86
+                      end: 115
+                      ctxt: 0
+                    members:
+                      - type: TsPropertySignature
+                        span:
+                          start: 88
+                          end: 113
+                          ctxt: 0
+                        readonly: false
+                        key:
+                          type: Identifier
+                          span:
+                            start: 88
+                            end: 96
+                            ctxt: 0
+                          value: children
+                          optional: false
+                        computed: false
+                        optional: false
+                        init: ~
+                        params: []
+                        typeAnnotation:
+                          type: TsTypeAnnotation
+                          span:
+                            start: 96
+                            end: 113
+                            ctxt: 0
+                          typeAnnotation:
+                            type: TsTypeReference
+                            span:
+                              start: 98
+                              end: 113
+                              ctxt: 0
+                            typeName:
+                              type: TsQualifiedName
+                              left:
+                                type: Identifier
+                                span:
+                                  start: 98
+                                  end: 103
+                                  ctxt: 3
+                                value: React
+                                optional: false
+                              right:
+                                type: Identifier
+                                span:
+                                  start: 104
+                                  end: 113
+                                  ctxt: 0
+                                value: ReactNode
+                                optional: false
+                            typeParams: ~
+                        typeParams: ~
+            body:
+              type: BlockStatement
+              span:
+                start: 120
+                end: 161
+                ctxt: 0
+              stmts:
+                - type: ReturnStatement
+                  span:
+                    start: 126
+                    end: 159
+                    ctxt: 0
+                  argument:
+                    type: JSXElement
+                    span:
+                      start: 133
+                      end: 158
+                      ctxt: 0
+                    opening:
+                      type: JSXOpeningElement
+                      name:
+                        type: Identifier
+                        span:
+                          start: 134
+                          end: 139
+                          ctxt: 3
+                        value: table
+                        optional: false
+                      span:
+                        start: 133
+                        end: 140
+                        ctxt: 0
+                      attributes: []
+                      selfClosing: false
+                      typeArguments: ~
+                    children:
+                      - type: JSXExpressionContainer
+                        span:
+                          start: 140
+                          end: 150
+                          ctxt: 0
+                        expression:
+                          type: Identifier
+                          span:
+                            start: 141
+                            end: 149
+                            ctxt: 2
+                          value: children
+                          optional: false
+                    closing:
+                      type: JSXClosingElement
+                      span:
+                        start: 150
+                        end: 158
+                        ctxt: 0
+                      name:
+                        type: Identifier
+                        span:
+                          start: 152
+                          end: 157
+                          ctxt: 3
+                        value: table
+                        optional: false
+            async: false
+            generator: false
+            typeParameters: ~
+            returnType: ~
+          definite: false
+  - type: ExpressionStatement
+    span:
+      start: 164
+      end: 194
+      ctxt: 0
+    expression:
+      type: AssignmentExpression
+      span:
+        start: 164
+        end: 193
+        ctxt: 0
+      operator: "="
+      left:
+        type: MemberExpression
+        span:
+          start: 164
+          end: 180
+          ctxt: 0
+        object:
+          type: Identifier
+          span:
+            start: 164
+            end: 169
+            ctxt: 1
+          value: Table
+          optional: false
+        property:
+          type: Identifier
+          span:
+            start: 170
+            end: 180
+            ctxt: 0
+          value: HeaderCell
+          optional: false
+      right:
+        type: Identifier
+        span:
+          start: 183
+          end: 193
+          ctxt: 1
+        value: HeaderCell
+        optional: false
+

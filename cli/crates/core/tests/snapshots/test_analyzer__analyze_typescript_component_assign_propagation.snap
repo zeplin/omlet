@@ -1,0 +1,104 @@
+---
+source: crates/core/tests/test_analyzer.rs
+assertion_line: 1097
+expression: "&component_results"
+---
+num_of_components: 5
+components:
+  - definition_id: "typescript-examples:520bfcd933f9bc2abb087da4d08a97ac6453b429f3995e24c37f4a533f0195b0:Cell"
+    name: Cell
+    export_ids:
+      - "typescript-examples:src/component-assign-propagation/cap-cell:Cell"
+      - "typescript-examples:src/component-assign-propagation/cap-default-exported:default.Cell"
+    package_name: typescript-examples
+    source_path: src/component-assign-propagation/cap-cell.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - td
+  - definition_id: "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+    name: App
+    export_ids:
+      - "typescript-examples:src/component-assign-propagation/cap-consumer:App"
+    package_name: typescript-examples
+    source_path: src/component-assign-propagation/cap-consumer.tsx
+    dependencies:
+      - from: "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+        to: "typescript-examples:520bfcd933f9bc2abb087da4d08a97ac6453b429f3995e24c37f4a533f0195b0:Cell"
+        references:
+          - trace:
+              - "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default"
+              - "typescript-examples:520bfcd933f9bc2abb087da4d08a97ac6453b429f3995e24c37f4a533f0195b0:Cell"
+            usages:
+              - start:
+                  line: 7
+                  column: 13
+                end:
+                  line: 7
+                  column: 27
+                props: []
+      - from: "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+        to: "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table"
+        references:
+          - trace:
+              - "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table"
+            usages: []
+      - from: "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+        to: "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default"
+        references:
+          - trace:
+              - "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default"
+            usages: []
+      - from: "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+        to: "typescript-examples:a737d13213fbeabefbbb3bd36441c9446296cd7cb2041dfd9a4f4302e83f5488:HeaderCell"
+        references:
+          - trace:
+              - "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table"
+              - "typescript-examples:a737d13213fbeabefbbb3bd36441c9446296cd7cb2041dfd9a4f4302e83f5488:HeaderCell"
+            usages:
+              - start:
+                  line: 8
+                  column: 13
+                end:
+                  line: 8
+                  column: 38
+                props: []
+    props: []
+    html_elements:
+      - div
+  - definition_id: "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default"
+    name: Table
+    export_ids:
+      - "typescript-examples:src/component-assign-propagation/cap-default-exported:default"
+    package_name: typescript-examples
+    source_path: src/component-assign-propagation/cap-default-exported.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - table
+  - definition_id: "typescript-examples:a737d13213fbeabefbbb3bd36441c9446296cd7cb2041dfd9a4f4302e83f5488:HeaderCell"
+    name: HeaderCell
+    export_ids:
+      - "typescript-examples:src/component-assign-propagation/cap-header-cell:HeaderCell"
+      - "typescript-examples:src/component-assign-propagation/cap-named-exported:Table.HeaderCell"
+    package_name: typescript-examples
+    source_path: src/component-assign-propagation/cap-header-cell.tsx
+    dependencies: []
+    props: []
+    html_elements:
+      - th
+  - definition_id: "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table"
+    name: Table
+    export_ids:
+      - "typescript-examples:src/component-assign-propagation/cap-named-exported:Table"
+    package_name: typescript-examples
+    source_path: src/component-assign-propagation/cap-named-exported.tsx
+    dependencies: []
+    props:
+      - name: children
+        default_value: NONE
+    html_elements:
+      - table
+

@@ -1,0 +1,59 @@
+---
+source: crates/core/tests/test_analyzer.rs
+assertion_line: 1098
+expression: "&export_results"
+---
+num_of_exports: 7
+exports:
+  - name: App
+    source_path: src/component-assign-propagation/cap-consumer.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:1a166c107c21d12f93bc11374f8d05f6d4871696708778f78545dc7e360a5465:App"
+  - name: Cell
+    source_path: src/component-assign-propagation/cap-cell.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:520bfcd933f9bc2abb087da4d08a97ac6453b429f3995e24c37f4a533f0195b0:Cell"
+  - name: HeaderCell
+    source_path: src/component-assign-propagation/cap-header-cell.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:a737d13213fbeabefbbb3bd36441c9446296cd7cb2041dfd9a4f4302e83f5488:HeaderCell"
+  - name: Table
+    source_path: src/component-assign-propagation/cap-named-exported.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table"
+  - name: Table.HeaderCell
+    source_path: src/component-assign-propagation/cap-named-exported.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:5681d6d1a8ddadac3662aeb2288045d9f9fd60bf48c28407ea0171069a9289af:Table.HeaderCell"
+      - "typescript-examples:a737d13213fbeabefbbb3bd36441c9446296cd7cb2041dfd9a4f4302e83f5488:HeaderCell"
+  - name: default
+    source_path: src/component-assign-propagation/cap-default-exported.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default"
+  - name: default.Cell
+    source_path: src/component-assign-propagation/cap-default-exported.tsx
+    is_component: true
+    inferred_type: (Function -> JSX)
+    resolved_type: (Function -> JSX)
+    trace_to_declaration:
+      - "typescript-examples:74ae926ad3282fa1b8e8323c5d7a9646c840536ed41c022ce2b72ab9840eb1ab:default.Cell"
+      - "typescript-examples:520bfcd933f9bc2abb087da4d08a97ac6453b429f3995e24c37f4a533f0195b0:Cell"
+
