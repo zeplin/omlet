@@ -87,6 +87,8 @@ describe("`analyze` command", () => {
         );
 
         expect(exitCode).toBe(1);
+        const logContents = fs.readFileSync(path.join(projectRoot, "omlet-cli.log"), "utf8");
+        expect(logContents).toContain("Modules failed to parse");
     });
 
     it("should succeed with --fail-on-parse-error when every module parses", async () => {

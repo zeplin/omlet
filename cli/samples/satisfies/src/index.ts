@@ -1,8 +1,8 @@
 export { Aliased } from "./Aliased";
 export { App } from "./App";
-export { Broken } from "./Broken";
-export { Broken2 } from "./Broken2";
+export { AsConst } from "./AsConst";
+export { AsConstSatisfies } from "./AsConstSatisfies";
 export { List } from "./List";
-export { Ok } from "./Ok";
+export { ObjectSatisfies } from "./ObjectSatisfies";
 export { Page } from "./Page";
 export { Theme } from "./Theme";

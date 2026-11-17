@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Ok } from "./Ok";
+import { AsConst } from "./AsConst";
 
 const meta = {
-    title: "Ok",
-    component: Ok
-} satisfies Meta<typeof Ok>;
+    title: "AsConst",
+    component: AsConst
+} satisfies Meta<typeof AsConst>;
 
 export default meta;
 
