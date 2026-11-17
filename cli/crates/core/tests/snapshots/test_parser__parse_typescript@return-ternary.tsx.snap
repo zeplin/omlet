@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "10525086463255939810"
       path: src/functional-component/return-ternary.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "10525086463255939810"
       path: src/functional-component/return-ternary.tsx
@@ -56,17 +56,17 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "bool#2"
+  - symbol: "bool#3"
     source:
       hash: "10525086463255939810"
       path: src/functional-component/return-ternary.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"Sample\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "Sample#1"
+          symbol: "Sample#2"
           source:
             hash: "10525086463255939810"
             path: src/functional-component/return-ternary.tsx
@@ -83,49 +83,47 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "bool#2"
-      - "div#3"
+      - "React#2"
+      - "Sample#2"
+      - "bool#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "div#3"
+      - "bool#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "div#3"
+      - "bool#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -133,42 +131,38 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 29
       end: 113
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 66
           end: 113
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 72
               end: 111
-              ctxt: 0
             argument:
               type: ConditionalExpression
               span:
                 start: 79
                 end: 110
-                ctxt: 0
               test:
                 type: Identifier
                 span:
                   start: 79
                   end: 83
-                  ctxt: 2
+                ctxt: 3
                 value: bool
                 optional: false
               consequent:
@@ -176,7 +170,6 @@ body:
                 span:
                   start: 86
                   end: 103
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -184,13 +177,12 @@ body:
                     span:
                       start: 87
                       end: 90
-                      ctxt: 3
+                    ctxt: 1
                     value: div
                     optional: false
                   span:
                     start: 86
                     end: 91
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -199,7 +191,6 @@ body:
                     span:
                       start: 91
                       end: 97
-                      ctxt: 0
                     value: Sample
                     raw: Sample
                 closing:
@@ -207,13 +198,12 @@ body:
                   span:
                     start: 97
                     end: 103
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 99
                       end: 102
-                      ctxt: 3
+                    ctxt: 1
                     value: div
                     optional: false
               alternate:
@@ -221,7 +211,7 @@ body:
                 span:
                   start: 106
                   end: 110
-                  ctxt: 0
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -229,7 +219,7 @@ body:
         span:
           start: 53
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params:
@@ -237,14 +227,13 @@ body:
           span:
             start: 60
             end: 64
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: false
             span:
               start: 60
               end: 64
-              ctxt: 2
             type: Identifier
             typeAnnotation: ~
             value: bool
@@ -252,6 +241,6 @@ body:
       span:
         start: 44
         end: 113
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

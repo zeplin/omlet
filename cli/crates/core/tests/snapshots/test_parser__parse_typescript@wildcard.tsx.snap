@@ -22,7 +22,7 @@ declarations:
       path: src/subcomponent/table/wildcard.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 9741756060521682105, path: \"src/subcomponent/table/named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 9741756060521682105, path: \"src/subcomponent/table/named\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -51,19 +51,17 @@ body:
     span:
       start: 1
       end: 35
-      ctxt: 0
     specifiers:
       - type: ExportNamespaceSpecifier
         span:
           start: 8
           end: 19
-          ctxt: 0
         name:
           type: Identifier
           span:
             start: 13
             end: 19
-            ctxt: 0
+          ctxt: 0
           value: WTable
           optional: false
     source:
@@ -71,8 +69,8 @@ body:
       span:
         start: 25
         end: 34
-        ctxt: 0
       value: "./named"
       raw: "\"./named\""
     typeOnly: false
-    asserts: ~
+    with: ~
+

@@ -13,19 +13,19 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "returnFortyTwo#1"
+      Internal: "returnFortyTwo#2"
     exported_name: returnFortyTwo
   - source:
-      Internal: "renderSample#1"
+      Internal: "renderSample#2"
     exported_name: renderSample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "308502106715802148"
       path: src/functional-component/control-statements/conditional-if/return-direct/imported/utils.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -42,7 +42,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "renderSample#1"
+  - symbol: "renderSample#2"
     source:
       hash: "308502106715802148"
       path: src/functional-component/control-statements/conditional-if/return-direct/imported/utils.tsx
@@ -58,7 +58,7 @@ declarations:
     end:
       line: 9
       column: 2
-  - symbol: "returnFortyTwo#1"
+  - symbol: "returnFortyTwo#2"
     source:
       hash: "308502106715802148"
       path: src/functional-component/control-statements/conditional-if/return-direct/imported/utils.tsx
@@ -78,59 +78,57 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "returnFortyTwo#1"
-      - "returnFortyTwo#1"
-      - "renderSample#1"
-      - "renderSample#1"
+      - "returnFortyTwo#2"
+      - "returnFortyTwo#2"
+      - "renderSample#2"
+      - "renderSample#2"
     references:
-      - "React#1"
-      - "div#2"
-      - "renderSample#1"
-      - "returnFortyTwo#1"
+      - "React#2"
+      - "div#1"
+      - "renderSample#2"
+      - "returnFortyTwo#2"
     jsx_references:
-      - "div#2"
-  - owner: "returnFortyTwo#1"
+      - "div#1"
+  - owner: "returnFortyTwo#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "returnFortyTwo#1"
+  - owner: "returnFortyTwo#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "renderSample#1"
+  - owner: "renderSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "renderSample#1"
+      - "div#1"
+  - owner: "renderSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -138,38 +136,35 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 80
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 62
           end: 80
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 68
               end: 78
-              ctxt: 0
             argument:
               type: NumericLiteral
               span:
                 start: 75
                 end: 77
-                ctxt: 0
               value: 42.0
               raw: "42"
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -178,7 +173,7 @@ body:
         span:
           start: 45
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: returnFortyTwo
         optional: false
       params: []
@@ -186,34 +181,29 @@ body:
       span:
         start: 36
         end: 80
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 82
       end: 146
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 113
           end: 146
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 119
               end: 144
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 126
                 end: 143
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -221,13 +211,12 @@ body:
                   span:
                     start: 127
                     end: 130
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 126
                   end: 131
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -236,7 +225,6 @@ body:
                   span:
                     start: 131
                     end: 137
-                    ctxt: 0
                   value: Sample
                   raw: Sample
               closing:
@@ -244,15 +232,15 @@ body:
                 span:
                   start: 137
                   end: 143
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 139
                     end: 142
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -261,7 +249,7 @@ body:
         span:
           start: 98
           end: 110
-          ctxt: 1
+        ctxt: 2
         value: renderSample
         optional: false
       params: []
@@ -269,6 +257,6 @@ body:
       span:
         start: 89
         end: 146
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

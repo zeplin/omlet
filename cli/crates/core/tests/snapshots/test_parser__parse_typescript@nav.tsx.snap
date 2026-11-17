@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "UserMenu#1"
+      Internal: "UserMenu#2"
     exported_name: UserMenu
   - source:
-      Internal: "UserAvatar#1"
+      Internal: "UserAvatar#2"
     exported_name: UserAvatar
   - source:
       External:
@@ -28,17 +28,17 @@ exports:
           mtype: local
     exported_name: Header
 declarations:
-  - symbol: "MenuLayout#1"
+  - symbol: "MenuLayout#2"
     source:
       hash: "8219741811766528831"
       path: src/simple/components/nav.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('MenuLayout' type=dynamic), context: #1 }, source: ModuleId { hash: 13205311809720263179, path: \"src/simple/components/core\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"MenuLayout\", context: #2 }, source: ModuleId { hash: 13205311809720263179, path: \"src/simple/components/core\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "MenuLayout#1"
+          symbol: "MenuLayout#2"
           source:
             hash: "13205311809720263179"
             path: src/simple/components/core
@@ -51,7 +51,7 @@ declarations:
     end:
       line: 1
       column: 20
-  - symbol: "UserAvatar#1"
+  - symbol: "UserAvatar#2"
     source:
       hash: "8219741811766528831"
       path: src/simple/components/nav.tsx
@@ -67,7 +67,7 @@ declarations:
     end:
       line: 17
       column: 2
-  - symbol: "UserMenu#1"
+  - symbol: "UserMenu#2"
     source:
       hash: "8219741811766528831"
       path: src/simple/components/nav.tsx
@@ -87,76 +87,74 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "UserMenu#1"
-      - "UserMenu#1"
-      - "UserAvatar#1"
-      - "UserAvatar#1"
+      - "UserMenu#2"
+      - "UserMenu#2"
+      - "UserAvatar#2"
+      - "UserAvatar#2"
     references:
       - "CoreHeader#0"
       - "Header#0"
-      - "MenuLayout#1"
-      - "UserAvatar#1"
-      - "UserMenu#1"
-      - "div#2"
-      - "img#2"
+      - "MenuLayout#2"
+      - "UserAvatar#2"
+      - "UserMenu#2"
+      - "div#1"
+      - "img#1"
     jsx_references:
-      - "MenuLayout#1"
-      - "div#2"
-      - "img#2"
-  - owner: "UserMenu#1"
+      - "MenuLayout#2"
+      - "div#1"
+      - "img#1"
+  - owner: "UserMenu#2"
     parent: "__global#0"
     children: []
     references:
-      - "MenuLayout#1"
-      - "div#2"
+      - "MenuLayout#2"
+      - "div#1"
     jsx_references:
-      - "MenuLayout#1"
-      - "div#2"
-  - owner: "UserMenu#1"
+      - "MenuLayout#2"
+      - "div#1"
+  - owner: "UserMenu#2"
     parent: "__global#0"
     children: []
     references:
-      - "MenuLayout#1"
-      - "div#2"
+      - "MenuLayout#2"
+      - "div#1"
     jsx_references:
-      - "MenuLayout#1"
-      - "div#2"
-  - owner: "UserAvatar#1"
+      - "MenuLayout#2"
+      - "div#1"
+  - owner: "UserAvatar#2"
     parent: "__global#0"
     children: []
     references:
-      - "MenuLayout#1"
-      - "img#2"
+      - "MenuLayout#2"
+      - "img#1"
     jsx_references:
-      - "MenuLayout#1"
-      - "img#2"
-  - owner: "UserAvatar#1"
+      - "MenuLayout#2"
+      - "img#1"
+  - owner: "UserAvatar#2"
     parent: "__global#0"
     children: []
     references:
-      - "MenuLayout#1"
-      - "img#2"
+      - "MenuLayout#2"
+      - "img#1"
     jsx_references:
-      - "MenuLayout#1"
-      - "img#2"
+      - "MenuLayout#2"
+      - "img#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 37
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 20
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 20
-            ctxt: 1
+          ctxt: 2
           value: MenuLayout
           optional: false
         imported: ~
@@ -166,42 +164,37 @@ body:
       span:
         start: 28
         end: 36
-        ctxt: 0
       value: "./core"
       raw: "\"./core\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 39
       end: 151
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 66
           end: 151
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 72
               end: 149
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 79
                 end: 148
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 89
                   end: 142
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -209,13 +202,12 @@ body:
                     span:
                       start: 90
                       end: 100
-                      ctxt: 1
+                    ctxt: 2
                     value: MenuLayout
                     optional: false
                   span:
                     start: 89
                     end: 101
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -224,14 +216,12 @@ body:
                     span:
                       start: 101
                       end: 114
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 114
                       end: 120
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -239,13 +229,12 @@ body:
                         span:
                           start: 115
                           end: 118
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 114
                         end: 120
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -255,23 +244,22 @@ body:
                     span:
                       start: 120
                       end: 129
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 129
                     end: 142
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 131
                       end: 141
-                      ctxt: 1
+                    ctxt: 2
                     value: MenuLayout
                     optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -280,7 +268,7 @@ body:
         span:
           start: 55
           end: 63
-          ctxt: 1
+        ctxt: 2
         value: UserMenu
         optional: false
       params: []
@@ -288,40 +276,34 @@ body:
       span:
         start: 46
         end: 151
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 153
       end: 267
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 182
           end: 267
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 188
               end: 265
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 195
                 end: 264
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 205
                   end: 258
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -329,13 +311,12 @@ body:
                     span:
                       start: 206
                       end: 216
-                      ctxt: 1
+                    ctxt: 2
                     value: MenuLayout
                     optional: false
                   span:
                     start: 205
                     end: 217
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -344,14 +325,12 @@ body:
                     span:
                       start: 217
                       end: 230
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 230
                       end: 236
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -359,13 +338,12 @@ body:
                         span:
                           start: 231
                           end: 234
-                          ctxt: 2
+                        ctxt: 1
                         value: img
                         optional: false
                       span:
                         start: 230
                         end: 236
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -375,23 +353,22 @@ body:
                     span:
                       start: 236
                       end: 245
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 245
                     end: 258
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 247
                       end: 257
-                      ctxt: 1
+                    ctxt: 2
                     value: MenuLayout
                     optional: false
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -400,7 +377,7 @@ body:
         span:
           start: 169
           end: 179
-          ctxt: 1
+        ctxt: 2
         value: UserAvatar
         optional: false
       params: []
@@ -408,26 +385,23 @@ body:
       span:
         start: 160
         end: 267
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportNamedDeclaration
     span:
       start: 270
       end: 316
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 279
           end: 299
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 279
             end: 289
-            ctxt: 0
+          ctxt: 0
           value: CoreHeader
           optional: false
         exported:
@@ -435,7 +409,7 @@ body:
           span:
             start: 293
             end: 299
-            ctxt: 0
+          ctxt: 0
           value: Header
           optional: false
         isTypeOnly: false
@@ -444,9 +418,8 @@ body:
       span:
         start: 307
         end: 315
-        ctxt: 0
       value: "./core"
       raw: "\"./core\""
     typeOnly: false
-    asserts: ~
+    with: ~
 

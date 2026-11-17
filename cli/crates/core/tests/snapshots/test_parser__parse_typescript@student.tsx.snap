@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Student#1"
+      Internal: "Student#2"
     exported_name: Student
 declarations:
-  - symbol: "Student#1"
+  - symbol: "Student#2"
     source:
       hash: "15746666990134602105"
       path: src/student.tsx
@@ -32,18 +32,18 @@ declarations:
     end:
       line: 3
       column: 2
-  - symbol: "age#2"
+  - symbol: "age#3"
     source:
       hash: "15746666990134602105"
       path: src/student.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Student' type=inline), context: #1 }>[0][age]"
+    definition: "Parameter<Symbol { name: \"Student\", context: #2 }>[0][age]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "Student#1"
+              symbol: "Student#2"
               source:
                 hash: "15746666990134602105"
                 path: src/student.tsx
@@ -57,18 +57,18 @@ declarations:
     end:
       line: 1
       column: 35
-  - symbol: "name#2"
+  - symbol: "name#3"
     source:
       hash: "15746666990134602105"
       path: src/student.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Student' type=inline), context: #1 }>[0][name]"
+    definition: "Parameter<Symbol { name: \"Student\", context: #2 }>[0][name]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "Student#1"
+              symbol: "Student#2"
               source:
                 hash: "15746666990134602105"
                 path: src/student.tsx
@@ -86,65 +86,61 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Student#1"
-      - "Student#1"
+      - "Student#2"
+      - "Student#2"
     references:
-      - "Student#1"
+      - "Student#2"
       - "age#0"
-      - "age#2"
-      - "div#3"
+      - "age#3"
+      - "div#1"
       - "name#0"
-      - "name#2"
+      - "name#3"
     jsx_references:
-      - "div#3"
-  - owner: "Student#1"
+      - "div#1"
+  - owner: "Student#2"
     parent: "__global#0"
     children: []
     references:
       - "age#0"
-      - "age#2"
-      - "div#3"
+      - "age#3"
+      - "div#1"
       - "name#0"
-      - "name#2"
+      - "name#3"
     jsx_references:
-      - "div#3"
-  - owner: "Student#1"
+      - "div#1"
+  - owner: "Student#2"
     parent: "__global#0"
     children: []
     references:
       - "age#0"
-      - "age#2"
-      - "div#3"
+      - "age#3"
+      - "div#1"
       - "name#0"
-      - "name#2"
+      - "name#3"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 110
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 70
           end: 110
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 76
               end: 108
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 83
                 end: 107
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -152,13 +148,12 @@ body:
                   span:
                     start: 84
                     end: 87
-                    ctxt: 3
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 83
                   end: 88
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -167,40 +162,36 @@ body:
                   span:
                     start: 88
                     end: 94
-                    ctxt: 0
                   expression:
                     type: Identifier
                     span:
                       start: 89
                       end: 93
-                      ctxt: 2
+                    ctxt: 3
                     value: name
                     optional: false
                 - type: JSXText
                   span:
                     start: 94
                     end: 95
-                    ctxt: 0
                   value: (
                   raw: (
                 - type: JSXExpressionContainer
                   span:
                     start: 95
                     end: 100
-                    ctxt: 0
                   expression:
                     type: Identifier
                     span:
                       start: 96
                       end: 99
-                      ctxt: 2
+                    ctxt: 3
                     value: age
                     optional: false
                 - type: JSXText
                   span:
                     start: 100
                     end: 101
-                    ctxt: 0
                   value: )
                   raw: )
               closing:
@@ -208,15 +199,15 @@ body:
                 span:
                   start: 101
                   end: 107
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 103
                     end: 106
-                    ctxt: 3
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -225,7 +216,7 @@ body:
         span:
           start: 17
           end: 24
-          ctxt: 1
+        ctxt: 2
         value: Student
         optional: false
       params:
@@ -233,42 +224,40 @@ body:
           span:
             start: 25
             end: 68
-            ctxt: 0
           decorators: []
           pat:
             type: ObjectPattern
             span:
               start: 25
               end: 68
-              ctxt: 0
             properties:
               - type: AssignmentPatternProperty
                 span:
                   start: 26
                   end: 30
-                  ctxt: 0
                 key:
-                  type: Identifier
+                  ctxt: 3
+                  optional: false
                   span:
                     start: 26
                     end: 30
-                    ctxt: 2
+                  type: Identifier
+                  typeAnnotation: ~
                   value: name
-                  optional: false
                 value: ~
               - type: AssignmentPatternProperty
                 span:
                   start: 32
                   end: 35
-                  ctxt: 0
                 key:
-                  type: Identifier
+                  ctxt: 3
+                  optional: false
                   span:
                     start: 32
                     end: 35
-                    ctxt: 2
+                  type: Identifier
+                  typeAnnotation: ~
                   value: age
-                  optional: false
                 value: ~
             optional: false
             typeAnnotation:
@@ -276,82 +265,68 @@ body:
               span:
                 start: 36
                 end: 68
-                ctxt: 0
               typeAnnotation:
                 type: TsTypeLiteral
                 span:
                   start: 38
                   end: 68
-                  ctxt: 0
                 members:
                   - type: TsPropertySignature
                     span:
                       start: 40
                       end: 53
-                      ctxt: 0
                     readonly: false
                     key:
                       type: Identifier
                       span:
                         start: 40
                         end: 44
-                        ctxt: 0
+                      ctxt: 0
                       value: name
                       optional: false
                     computed: false
                     optional: false
-                    init: ~
-                    params: []
                     typeAnnotation:
                       type: TsTypeAnnotation
                       span:
                         start: 44
                         end: 52
-                        ctxt: 0
                       typeAnnotation:
                         type: TsKeywordType
                         span:
                           start: 46
                           end: 52
-                          ctxt: 0
                         kind: string
-                    typeParams: ~
                   - type: TsPropertySignature
                     span:
                       start: 54
                       end: 66
-                      ctxt: 0
                     readonly: false
                     key:
                       type: Identifier
                       span:
                         start: 54
                         end: 57
-                        ctxt: 0
+                      ctxt: 0
                       value: age
                       optional: false
                     computed: false
                     optional: false
-                    init: ~
-                    params: []
                     typeAnnotation:
                       type: TsTypeAnnotation
                       span:
                         start: 57
                         end: 65
-                        ctxt: 0
                       typeAnnotation:
                         type: TsKeywordType
                         span:
                           start: 59
                           end: 65
-                          ctxt: 0
                         kind: number
-                    typeParams: ~
       returnType: ~
       span:
         start: 8
         end: 110
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

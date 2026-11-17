@@ -13,19 +13,19 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "thirtyone#1"
+      Internal: "thirtyone#2"
     exported_name: thirtyone
   - source:
-      Internal: "thirteen#1"
+      Internal: "thirteen#2"
     exported_name: default
   - source:
-      Internal: "Mahmut#1"
+      Internal: "Mahmut#2"
     exported_name: default
   - source:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "Mahmut#1"
+  - symbol: "Mahmut#2"
     source:
       hash: "3285890919254012266"
       path: src/module-decls/module-default.ts
@@ -53,13 +53,13 @@ declarations:
     end:
       line: 6
       column: 21
-  - symbol: "dolly#1"
+  - symbol: "dolly#2"
     source:
       hash: "3285890919254012266"
       path: src/module-decls/module-default.ts
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 18187564039066053863, path: \"\", pkg_name: \"dolly\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -76,7 +76,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "thirteen#1"
+  - symbol: "thirteen#2"
     source:
       hash: "3285890919254012266"
       path: src/module-decls/module-default.ts
@@ -91,7 +91,7 @@ declarations:
     end:
       line: 4
       column: 39
-  - symbol: "thirtyone#1"
+  - symbol: "thirtyone#2"
     source:
       hash: "3285890919254012266"
       path: src/module-decls/module-default.ts
@@ -110,47 +110,47 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "thirtyone#1"
-      - "thirtyone#1"
-      - "thirteen#1"
-      - "thirteen#1"
-      - "Mahmut#1"
-      - "Mahmut#1"
+      - "thirtyone#2"
+      - "thirtyone#2"
+      - "thirteen#2"
+      - "thirteen#2"
+      - "Mahmut#2"
+      - "Mahmut#2"
       - "default#0"
     references:
-      - "Mahmut#1"
-      - "dolly#1"
-      - "thirteen#1"
-      - "thirtyone#1"
+      - "Mahmut#2"
+      - "dolly#2"
+      - "thirteen#2"
+      - "thirtyone#2"
     jsx_references: []
-  - owner: "thirtyone#1"
+  - owner: "thirtyone#2"
     parent: "__global#0"
     children: []
     references:
-      - "thirtyone#1"
+      - "thirtyone#2"
     jsx_references: []
-  - owner: "thirtyone#1"
+  - owner: "thirtyone#2"
     parent: "__global#0"
     children: []
     references:
-      - "thirtyone#1"
+      - "thirtyone#2"
     jsx_references: []
-  - owner: "thirteen#1"
+  - owner: "thirteen#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "thirteen#1"
+  - owner: "thirteen#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "Mahmut#1"
+  - owner: "Mahmut#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "Mahmut#1"
+  - owner: "Mahmut#2"
     parent: "__global#0"
     children: []
     references: []
@@ -165,19 +165,17 @@ body:
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: dolly
           optional: false
     source:
@@ -185,46 +183,44 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: dolly
       raw: "\"dolly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 73
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 57
           end: 73
-          ctxt: 0
         stmts:
           - type: ExpressionStatement
             span:
               start: 59
               end: 71
-              ctxt: 0
             expression:
               type: CallExpression
               span:
                 start: 59
                 end: 70
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 59
                   end: 68
-                  ctxt: 1
+                ctxt: 2
                 value: thirtyone
                 optional: false
               arguments: []
               typeArguments: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -233,7 +229,7 @@ body:
         span:
           start: 45
           end: 54
-          ctxt: 1
+        ctxt: 2
         value: thirtyone
         optional: false
       params: []
@@ -241,23 +237,21 @@ body:
       span:
         start: 36
         end: 73
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDefaultDeclaration
     span:
       start: 74
       end: 112
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 109
           end: 112
-          ctxt: 0
         stmts: []
+      ctxt: 4
       decorators: []
       generator: false
       identifier:
@@ -265,7 +259,7 @@ body:
         span:
           start: 98
           end: 106
-          ctxt: 1
+        ctxt: 2
         value: thirteen
         optional: false
       params: []
@@ -273,23 +267,22 @@ body:
       span:
         start: 89
         end: 112
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
   - type: ExportDefaultDeclaration
     span:
       start: 113
       end: 144
-      ctxt: 0
     decl:
       body: []
+      ctxt: 0
       decorators: []
       identifier:
         type: Identifier
         span:
           start: 134
           end: 140
-          ctxt: 1
+        ctxt: 2
         value: Mahmut
         optional: false
       implements: []
@@ -297,7 +290,6 @@ body:
       span:
         start: 128
         end: 144
-        ctxt: 0
       superClass: ~
       superTypeParams: ~
       type: ClassExpression
@@ -306,12 +298,11 @@ body:
     span:
       start: 145
       end: 165
-      ctxt: 0
     expression:
       type: NumericLiteral
       span:
         start: 160
         end: 164
-        ctxt: 0
       value: 1331.0
       raw: "1331"
+

@@ -16,7 +16,7 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "StyledSample#1"
+  - symbol: "StyledSample#2"
     source:
       hash: "2016052195397884037"
       path: src/styled-component/from-tag.tsx
@@ -28,7 +28,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "2016052195397884037"
                     path: src/styled-component/from-tag.tsx
@@ -53,7 +53,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "StyledSample#1"
+          symbol: "StyledSample#2"
           source:
             hash: "2016052195397884037"
             path: src/styled-component/from-tag.tsx
@@ -66,13 +66,13 @@ declarations:
     end:
       line: 7
       column: 29
-  - symbol: "styled#1"
+  - symbol: "styled#2"
     source:
       hash: "2016052195397884037"
       path: src/styled-component/from-tag.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -93,44 +93,40 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "StyledSample#1"
+      - "StyledSample#2"
       - "default#0"
     references:
-      - "StyledSample#1"
-      - "div#0"
-      - "styled#1"
+      - "StyledSample#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "StyledSample#1"
+  - owner: "StyledSample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#0"
-      - "styled#1"
+      - "styled#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "StyledSample#1"
+      - "StyledSample#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 40
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 14
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 14
-            ctxt: 1
+          ctxt: 2
           value: styled
           optional: false
     source:
@@ -138,16 +134,16 @@ body:
       span:
         start: 20
         end: 39
-        ctxt: 0
       value: styled-components
       raw: "\"styled-components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 42
       end: 104
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -155,13 +151,12 @@ body:
         span:
           start: 48
           end: 103
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 48
             end: 60
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: StyledSample
@@ -170,19 +165,18 @@ body:
           span:
             start: 63
             end: 103
-            ctxt: 0
+          ctxt: 0
           tag:
             type: MemberExpression
             span:
               start: 63
               end: 73
-              ctxt: 0
             object:
               type: Identifier
               span:
                 start: 63
                 end: 69
-                ctxt: 1
+              ctxt: 2
               value: styled
               optional: false
             property:
@@ -190,23 +184,19 @@ body:
               span:
                 start: 70
                 end: 73
-                ctxt: 0
               value: div
-              optional: false
           typeParameters: ~
           template:
             type: TemplateLiteral
             span:
               start: 73
               end: 103
-              ctxt: 0
             expressions: []
             quasis:
               - type: TemplateElement
                 span:
                   start: 74
                   end: 102
-                  ctxt: 0
                 tail: true
                 cooked: "\n    background-color: red;\n"
                 raw: "\n    background-color: red;\n"
@@ -215,12 +205,12 @@ body:
     span:
       start: 106
       end: 134
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 121
         end: 133
-        ctxt: 1
+      ctxt: 2
       value: StyledSample
       optional: false
+

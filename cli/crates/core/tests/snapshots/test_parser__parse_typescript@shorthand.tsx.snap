@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Shorthand#1"
+      Internal: "Shorthand#2"
     exported_name: default
 declarations:
-  - symbol: "Box#1"
+  - symbol: "Box#2"
     source:
       hash: "17506279538006558429"
       path: src/object-properties/shorthand.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Box' type=inline), context: #1 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Box\", context: #2 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Box#1"
+          symbol: "Box#2"
           source:
             hash: "10072812099332075239"
             path: ""
@@ -39,13 +39,13 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "17506279538006558429"
       path: src/object-properties/shorthand.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -62,7 +62,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Shorthand#1"
+  - symbol: "Shorthand#2"
     source:
       hash: "17506279538006558429"
       path: src/object-properties/shorthand.tsx
@@ -82,52 +82,47 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Shorthand#1"
-      - "Shorthand#1"
+      - "Shorthand#2"
+      - "Shorthand#2"
     references:
-      - "Box#1"
-      - "React#1"
-      - "Shorthand#1"
-      - "key#2"
-      - "sx#0"
+      - "Box#2"
+      - "React#2"
+      - "Shorthand#2"
+      - "key#1"
     jsx_references:
-      - "Box#1"
-  - owner: "Shorthand#1"
+      - "Box#2"
+  - owner: "Shorthand#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "key#2"
-      - "sx#0"
+      - "Box#2"
+      - "key#1"
     jsx_references:
-      - "Box#1"
-  - owner: "Shorthand#1"
+      - "Box#2"
+  - owner: "Shorthand#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "key#2"
-      - "sx#0"
+      - "Box#2"
+      - "key#1"
     jsx_references:
-      - "Box#1"
+      - "Box#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -135,28 +130,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 64
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 37
           end: 40
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 40
-            ctxt: 1
+          ctxt: 2
           value: Box
           optional: false
         imported: ~
@@ -166,42 +159,37 @@ body:
       span:
         start: 48
         end: 63
-        ctxt: 0
       value: "@mui/material"
       raw: "\"@mui/material\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 66
       end: 248
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 102
           end: 248
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 108
               end: 246
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 115
                 end: 245
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 125
                   end: 239
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -209,45 +197,39 @@ body:
                     span:
                       start: 126
                       end: 129
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
                   span:
                     start: 125
                     end: 192
-                    ctxt: 0
                   attributes:
                     - type: JSXAttribute
                       span:
                         start: 142
                         end: 182
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 142
                           end: 144
-                          ctxt: 0
                         value: sx
-                        optional: false
                       value:
                         type: JSXExpressionContainer
                         span:
                           start: 145
                           end: 182
-                          ctxt: 0
                         expression:
                           type: ObjectExpression
                           span:
                             start: 146
                             end: 181
-                            ctxt: 0
                           properties:
                             - type: Identifier
                               span:
                                 start: 164
                                 end: 167
-                                ctxt: 2
+                              ctxt: 1
                               value: key
                               optional: false
                   selfClosing: false
@@ -257,23 +239,22 @@ body:
                     span:
                       start: 192
                       end: 233
-                      ctxt: 0
-                    value: "\n\n            Styled with sx prop\n\n        "
-                    raw: "\n\n            Styled with sx prop\n\n        "
+                    value: "\n            Styled with sx prop\n        "
+                    raw: "\n            Styled with sx prop\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 233
                     end: 239
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 235
                       end: 238
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -281,7 +262,7 @@ body:
         span:
           start: 90
           end: 99
-          ctxt: 1
+        ctxt: 2
         value: Shorthand
         optional: false
       params: []
@@ -289,6 +270,6 @@ body:
       span:
         start: 81
         end: 248
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

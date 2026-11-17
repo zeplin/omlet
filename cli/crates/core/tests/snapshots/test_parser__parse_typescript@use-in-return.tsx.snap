@@ -13,19 +13,19 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "OldButton#1"
+      Internal: "OldButton#2"
     exported_name: OldButton
   - source:
-      Internal: "NewButton#1"
+      Internal: "NewButton#2"
     exported_name: NewButton
   - source:
-      Internal: "NewButtonByUsingUtil#1"
+      Internal: "NewButtonByUsingUtil#2"
     exported_name: NewButtonByUsingUtil
   - source:
-      Internal: "Parent#1"
+      Internal: "Parent#2"
     exported_name: Parent
 declarations:
-  - symbol: "NewButton#1"
+  - symbol: "NewButton#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -37,7 +37,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "wrapper#1"
+                  symbol: "wrapper#2"
                   source:
                     hash: "3315798198329579439"
                     path: src/wildcard-import/use-in-return.tsx
@@ -52,7 +52,7 @@ declarations:
     end:
       line: 16
       column: 23
-  - symbol: "NewButtonByUsingUtil#1"
+  - symbol: "NewButtonByUsingUtil#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -65,7 +65,7 @@ declarations:
             - MemberOf:
                 - TypeOf:
                     symbol:
-                      symbol: "util#1"
+                      symbol: "util#2"
                       source:
                         hash: "3315798198329579439"
                         path: src/wildcard-import/use-in-return.tsx
@@ -81,13 +81,13 @@ declarations:
     end:
       line: 18
       column: 34
-  - symbol: "NewDS#1"
+  - symbol: "NewDS#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 3516152902168980351, path: \"\", pkg_name: \"ds\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -104,7 +104,7 @@ declarations:
     end:
       line: 2
       column: 18
-  - symbol: "OldButton#1"
+  - symbol: "OldButton#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -116,7 +116,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "wrapper#1"
+                  symbol: "wrapper#2"
                   source:
                     hash: "3315798198329579439"
                     path: src/wildcard-import/use-in-return.tsx
@@ -131,13 +131,13 @@ declarations:
     end:
       line: 15
       column: 23
-  - symbol: "OldDS#1"
+  - symbol: "OldDS#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 14625591195093695410, path: \"src/wildcard-import/ds\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -154,7 +154,7 @@ declarations:
     end:
       line: 1
       column: 18
-  - symbol: "Parent#1"
+  - symbol: "Parent#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -170,17 +170,17 @@ declarations:
     end:
       line: 28
       column: 2
-  - symbol: "flag#2"
+  - symbol: "flag#3"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('wrapper' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"wrapper\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "wrapper#1"
+          symbol: "wrapper#2"
           source:
             hash: "3315798198329579439"
             path: src/wildcard-import/use-in-return.tsx
@@ -192,8 +192,8 @@ declarations:
       column: 18
     end:
       line: 4
-      column: 32
-  - symbol: "util#1"
+      column: 22
+  - symbol: "util#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -205,7 +205,7 @@ declarations:
         wrapper:
           TypeOf:
             symbol:
-              symbol: "wrapper#1"
+              symbol: "wrapper#2"
               source:
                 hash: "3315798198329579439"
                 path: src/wildcard-import/use-in-return.tsx
@@ -218,7 +218,7 @@ declarations:
     end:
       line: 11
       column: 11
-  - symbol: "wrapper#1"
+  - symbol: "wrapper#2"
     source:
       hash: "3315798198329579439"
       path: src/wildcard-import/use-in-return.tsx
@@ -229,7 +229,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "OldDS#1"
+              symbol: "OldDS#2"
               source:
                 hash: "3315798198329579439"
                 path: src/wildcard-import/use-in-return.tsx
@@ -238,7 +238,7 @@ declarations:
             is_local: true
         - TypeOf:
             symbol:
-              symbol: "NewDS#1"
+              symbol: "NewDS#2"
               source:
                 hash: "3315798198329579439"
                 path: src/wildcard-import/use-in-return.tsx
@@ -255,130 +255,118 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "wrapper#1"
-      - "util#1"
-      - "OldButton#1"
-      - "OldButton#1"
-      - "NewButton#1"
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "NewButtonByUsingUtil#1"
-      - "Parent#1"
-      - "Parent#1"
+      - "wrapper#2"
+      - "util#2"
+      - "OldButton#2"
+      - "OldButton#2"
+      - "NewButton#2"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "NewButtonByUsingUtil#2"
+      - "Parent#2"
+      - "Parent#2"
     references:
-      - "Button#0"
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "NewDS#1"
-      - "OldButton#1"
-      - "OldDS#1"
-      - "Parent#1"
-      - "flag#2"
-      - "util#1"
-      - "wrapper#0"
-      - "wrapper#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "NewDS#2"
+      - "OldButton#2"
+      - "OldDS#2"
+      - "Parent#2"
+      - "flag#3"
+      - "util#2"
+      - "wrapper#2"
     jsx_references:
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "OldButton#1"
-  - owner: "wrapper#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "OldButton#2"
+  - owner: "wrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "NewDS#1"
-      - "OldDS#1"
-      - "flag#2"
+      - "NewDS#2"
+      - "OldDS#2"
+      - "flag#3"
     jsx_references: []
-  - owner: "util#1"
+  - owner: "util#2"
     parent: "__global#0"
     children: []
     references:
-      - "wrapper#1"
+      - "wrapper#2"
     jsx_references: []
-  - owner: "OldButton#1"
+  - owner: "OldButton#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "wrapper#1"
+      - "wrapper#2"
     jsx_references: []
-  - owner: "OldButton#1"
+  - owner: "OldButton#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "wrapper#1"
+      - "wrapper#2"
     jsx_references: []
-  - owner: "NewButton#1"
+  - owner: "NewButton#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "wrapper#1"
+      - "wrapper#2"
     jsx_references: []
-  - owner: "NewButton#1"
+  - owner: "NewButton#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "wrapper#1"
+      - "wrapper#2"
     jsx_references: []
-  - owner: "NewButtonByUsingUtil#1"
+  - owner: "NewButtonByUsingUtil#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "util#1"
-      - "wrapper#0"
+      - "util#2"
     jsx_references: []
-  - owner: "NewButtonByUsingUtil#1"
+  - owner: "NewButtonByUsingUtil#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#0"
-      - "util#1"
-      - "wrapper#0"
+      - "util#2"
     jsx_references: []
-  - owner: "Parent#1"
+  - owner: "Parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "OldButton#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "OldButton#2"
     jsx_references:
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "OldButton#1"
-  - owner: "Parent#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "OldButton#2"
+  - owner: "Parent#2"
     parent: "__global#0"
     children: []
     references:
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "OldButton#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "OldButton#2"
     jsx_references:
-      - "NewButton#1"
-      - "NewButtonByUsingUtil#1"
-      - "OldButton#1"
+      - "NewButton#2"
+      - "NewButtonByUsingUtil#2"
+      - "OldButton#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 31
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 8
           end: 18
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 13
             end: 18
-            ctxt: 1
+          ctxt: 2
           value: OldDS
           optional: false
     source:
@@ -386,28 +374,26 @@ body:
       span:
         start: 24
         end: 30
-        ctxt: 0
       value: "./ds"
       raw: "\"./ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 32
       end: 60
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 39
           end: 49
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 44
             end: 49
-            ctxt: 1
+          ctxt: 2
           value: NewDS
           optional: false
     source:
@@ -415,30 +401,28 @@ body:
       span:
         start: 55
         end: 59
-        ctxt: 0
       value: ds
       raw: "\"ds\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 95
         end: 159
-        ctxt: 0
       stmts:
         - type: IfStatement
           span:
             start: 101
             end: 139
-            ctxt: 0
           test:
             type: Identifier
             span:
               start: 104
               end: 108
-              ctxt: 2
+            ctxt: 3
             value: flag
             optional: false
           consequent:
@@ -446,19 +430,18 @@ body:
             span:
               start: 110
               end: 139
-              ctxt: 0
+            ctxt: 4
             stmts:
               - type: ReturnStatement
                 span:
                   start: 120
                   end: 133
-                  ctxt: 0
                 argument:
                   type: Identifier
                   span:
                     start: 127
                     end: 132
-                    ctxt: 1
+                  ctxt: 2
                   value: OldDS
                   optional: false
           alternate: ~
@@ -466,15 +449,15 @@ body:
           span:
             start: 144
             end: 157
-            ctxt: 0
           argument:
             type: Identifier
             span:
               start: 151
               end: 156
-              ctxt: 1
+            ctxt: 2
             value: NewDS
             optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -483,7 +466,7 @@ body:
       span:
         start: 71
         end: 78
-        ctxt: 1
+      ctxt: 2
       value: wrapper
       optional: false
     params:
@@ -491,41 +474,37 @@ body:
         span:
           start: 79
           end: 93
-          ctxt: 0
         decorators: []
         pat:
+          ctxt: 3
           optional: true
           span:
             start: 79
-            end: 93
-            ctxt: 2
+            end: 83
           type: Identifier
           typeAnnotation:
             type: TsTypeAnnotation
             span:
               start: 84
               end: 93
-              ctxt: 0
             typeAnnotation:
               type: TsKeywordType
               span:
                 start: 86
                 end: 93
-                ctxt: 0
               kind: boolean
           value: flag
     returnType: ~
     span:
       start: 62
       end: 159
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: VariableDeclaration
     span:
       start: 161
       end: 190
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -533,13 +512,12 @@ body:
         span:
           start: 167
           end: 189
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 167
             end: 171
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: util
@@ -548,13 +526,12 @@ body:
           span:
             start: 174
             end: 189
-            ctxt: 0
           properties:
             - type: Identifier
               span:
                 start: 180
                 end: 187
-                ctxt: 1
+              ctxt: 2
               value: wrapper
               optional: false
         definite: false
@@ -562,13 +539,12 @@ body:
     span:
       start: 192
       end: 238
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 199
         end: 238
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -576,13 +552,12 @@ body:
           span:
             start: 205
             end: 237
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 205
               end: 214
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: OldButton
@@ -591,19 +566,18 @@ body:
             span:
               start: 217
               end: 237
-              ctxt: 0
             object:
               type: CallExpression
               span:
                 start: 217
                 end: 230
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 217
                   end: 224
-                  ctxt: 1
+                ctxt: 2
                 value: wrapper
                 optional: false
               arguments:
@@ -613,7 +587,6 @@ body:
                     span:
                       start: 225
                       end: 229
-                      ctxt: 0
                     value: true
               typeArguments: ~
             property:
@@ -621,21 +594,18 @@ body:
               span:
                 start: 231
                 end: 237
-                ctxt: 0
               value: Button
-              optional: false
           definite: false
   - type: ExportDeclaration
     span:
       start: 239
       end: 286
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 246
         end: 286
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -643,13 +613,12 @@ body:
           span:
             start: 252
             end: 285
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 252
               end: 261
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: NewButton
@@ -658,19 +627,18 @@ body:
             span:
               start: 264
               end: 285
-              ctxt: 0
             object:
               type: CallExpression
               span:
                 start: 264
                 end: 278
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 264
                   end: 271
-                  ctxt: 1
+                ctxt: 2
                 value: wrapper
                 optional: false
               arguments:
@@ -680,7 +648,6 @@ body:
                     span:
                       start: 272
                       end: 277
-                      ctxt: 0
                     value: false
               typeArguments: ~
             property:
@@ -688,21 +655,18 @@ body:
               span:
                 start: 279
                 end: 285
-                ctxt: 0
               value: Button
-              optional: false
           definite: false
   - type: ExportDeclaration
     span:
       start: 288
       end: 350
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 295
         end: 350
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -710,13 +674,12 @@ body:
           span:
             start: 301
             end: 349
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 301
               end: 321
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: NewButtonByUsingUtil
@@ -725,25 +688,23 @@ body:
             span:
               start: 324
               end: 349
-              ctxt: 0
             object:
               type: CallExpression
               span:
                 start: 324
                 end: 342
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: MemberExpression
                 span:
                   start: 324
                   end: 336
-                  ctxt: 0
                 object:
                   type: Identifier
                   span:
                     start: 324
                     end: 328
-                    ctxt: 1
+                  ctxt: 2
                   value: util
                   optional: false
                 property:
@@ -751,9 +712,7 @@ body:
                   span:
                     start: 329
                     end: 336
-                    ctxt: 0
                   value: wrapper
-                  optional: false
               arguments:
                 - spread: ~
                   expression:
@@ -761,7 +720,6 @@ body:
                     span:
                       start: 337
                       end: 341
-                      ctxt: 0
                     value: true
               typeArguments: ~
             property:
@@ -769,60 +727,50 @@ body:
               span:
                 start: 343
                 end: 349
-                ctxt: 0
               value: Button
-              optional: false
           definite: false
   - type: ExportDeclaration
     span:
       start: 352
       end: 512
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 377
           end: 512
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 383
               end: 510
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 390
                 end: 509
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 400
                   end: 503
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 400
                     end: 402
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 402
                       end: 415
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 415
                       end: 428
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -830,13 +778,12 @@ body:
                         span:
                           start: 416
                           end: 425
-                          ctxt: 1
+                        ctxt: 2
                         value: OldButton
                         optional: false
                       span:
                         start: 415
                         end: 428
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -846,14 +793,12 @@ body:
                     span:
                       start: 428
                       end: 441
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 441
                       end: 454
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -861,13 +806,12 @@ body:
                         span:
                           start: 442
                           end: 451
-                          ctxt: 1
+                        ctxt: 2
                         value: NewButton
                         optional: false
                       span:
                         start: 441
                         end: 454
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -877,14 +821,12 @@ body:
                     span:
                       start: 454
                       end: 467
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 467
                       end: 491
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -892,13 +834,12 @@ body:
                         span:
                           start: 468
                           end: 488
-                          ctxt: 1
+                        ctxt: 2
                         value: NewButtonByUsingUtil
                         optional: false
                       span:
                         start: 467
                         end: 491
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -908,15 +849,14 @@ body:
                     span:
                       start: 491
                       end: 500
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 500
                     end: 503
-                    ctxt: 0
+      ctxt: 5
       declare: false
       decorators: []
       generator: false
@@ -925,7 +865,7 @@ body:
         span:
           start: 368
           end: 374
-          ctxt: 1
+        ctxt: 2
         value: Parent
         optional: false
       params: []
@@ -933,6 +873,6 @@ body:
       span:
         start: 359
         end: 512
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

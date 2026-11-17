@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "3946311647649057671"
       path: src/functional-component/control-statements/conditional-switch/return-direct/switch-default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "3946311647649057671"
       path: src/functional-component/control-statements/conditional-switch/return-direct/switch-default.tsx
@@ -57,17 +57,17 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "type#2"
+  - symbol: "type#3"
     source:
       hash: "3946311647649057671"
       path: src/functional-component/control-statements/conditional-switch/return-direct/switch-default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"Sample\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "Sample#1"
+          symbol: "Sample#2"
           source:
             hash: "3946311647649057671"
             path: src/functional-component/control-statements/conditional-switch/return-direct/switch-default.tsx
@@ -79,54 +79,52 @@ declarations:
       column: 24
     end:
       line: 3
-      column: 37
+      column: 28
 scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "div#3"
-      - "type#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "type#3"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "type#2"
+      - "div#1"
+      - "type#3"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#3"
-      - "type#2"
+      - "div#1"
+      - "type#3"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -134,36 +132,34 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 29
       end: 254
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 67
           end: 254
-          ctxt: 0
         stmts:
           - type: SwitchStatement
             span:
               start: 73
               end: 252
-              ctxt: 0
+            bodyCtxt: 4
             discriminant:
               type: Identifier
               span:
                 start: 81
                 end: 85
-                ctxt: 2
+              ctxt: 3
               value: type
               optional: false
             cases:
@@ -171,13 +167,11 @@ body:
                 span:
                   start: 97
                   end: 134
-                  ctxt: 0
                 test:
                   type: StringLiteral
                   span:
                     start: 102
                     end: 107
-                    ctxt: 0
                   value: one
                   raw: "\"one\""
                 consequent:
@@ -185,26 +179,22 @@ body:
                     span:
                       start: 121
                       end: 134
-                      ctxt: 0
                     argument:
                       type: StringLiteral
                       span:
                         start: 128
                         end: 133
-                        ctxt: 0
                       value: One
                       raw: "\"One\""
               - type: SwitchCase
                 span:
                   start: 144
                   end: 189
-                  ctxt: 0
                 test:
                   type: StringLiteral
                   span:
                     start: 149
                     end: 154
-                    ctxt: 0
                   value: two
                   raw: "\"two\""
                 consequent:
@@ -212,39 +202,34 @@ body:
                     span:
                       start: 156
                       end: 189
-                      ctxt: 0
+                    ctxt: 5
                     stmts:
                       - type: ReturnStatement
                         span:
                           start: 170
                           end: 179
-                          ctxt: 0
                         argument:
                           type: NumericLiteral
                           span:
                             start: 177
                             end: 178
-                            ctxt: 0
                           value: 2.0
                           raw: "2"
               - type: SwitchCase
                 span:
                   start: 199
                   end: 246
-                  ctxt: 0
                 test: ~
                 consequent:
                   - type: ReturnStatement
                     span:
                       start: 220
                       end: 246
-                      ctxt: 0
                     argument:
                       type: JSXElement
                       span:
                         start: 227
                         end: 245
-                        ctxt: 0
                       opening:
                         type: JSXOpeningElement
                         name:
@@ -252,13 +237,12 @@ body:
                           span:
                             start: 228
                             end: 231
-                            ctxt: 3
+                          ctxt: 1
                           value: div
                           optional: false
                         span:
                           start: 227
                           end: 232
-                          ctxt: 0
                         attributes: []
                         selfClosing: false
                         typeArguments: ~
@@ -267,7 +251,6 @@ body:
                           span:
                             start: 232
                             end: 239
-                            ctxt: 0
                           value: Default
                           raw: Default
                       closing:
@@ -275,15 +258,15 @@ body:
                         span:
                           start: 239
                           end: 245
-                          ctxt: 0
                         name:
                           type: Identifier
                           span:
                             start: 241
                             end: 244
-                            ctxt: 3
+                          ctxt: 1
                           value: div
                           optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -292,7 +275,7 @@ body:
         span:
           start: 45
           end: 51
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params:
@@ -300,33 +283,30 @@ body:
           span:
             start: 52
             end: 65
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: true
             span:
               start: 52
-              end: 65
-              ctxt: 2
+              end: 56
             type: Identifier
             typeAnnotation:
               type: TsTypeAnnotation
               span:
                 start: 57
                 end: 65
-                ctxt: 0
               typeAnnotation:
                 type: TsKeywordType
                 span:
                   start: 59
                   end: 65
-                  ctxt: 0
                 kind: string
             value: type
       returnType: ~
       span:
         start: 36
         end: 254
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

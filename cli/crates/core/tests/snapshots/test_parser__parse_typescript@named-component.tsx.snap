@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "NamedComponent#1"
+      Internal: "NamedComponent#2"
     exported_name: NamedComponent
 declarations:
-  - symbol: "NamedComponent#1"
+  - symbol: "NamedComponent#2"
     source:
       hash: "7320389123309671077"
       path: src/dynamic-import/named-component.tsx
@@ -36,53 +36,49 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NamedComponent#1"
-      - "NamedComponent#1"
+      - "NamedComponent#2"
+      - "NamedComponent#2"
     references:
-      - "NamedComponent#1"
-      - "button#2"
+      - "NamedComponent#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "NamedComponent#1"
+      - "button#1"
+  - owner: "NamedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "NamedComponent#1"
+      - "button#1"
+  - owner: "NamedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
+      - "button#1"
 body:
   - type: ExportDeclaration
     span:
       start: 2
       end: 73
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 35
           end: 73
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 41
               end: 71
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 48
                 end: 70
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -90,13 +86,12 @@ body:
                   span:
                     start: 49
                     end: 55
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
                 span:
                   start: 48
                   end: 56
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -105,7 +100,6 @@ body:
                   span:
                     start: 56
                     end: 61
-                    ctxt: 0
                   value: Hello
                   raw: Hello
               closing:
@@ -113,15 +107,15 @@ body:
                 span:
                   start: 61
                   end: 70
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 63
                     end: 69
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -130,7 +124,7 @@ body:
         span:
           start: 18
           end: 32
-          ctxt: 1
+        ctxt: 2
         value: NamedComponent
         optional: false
       params: []
@@ -138,6 +132,6 @@ body:
       span:
         start: 9
         end: 73
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

@@ -13,23 +13,23 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "WrappedComponent#1"
+      Internal: "WrappedComponent#2"
     exported_name: WrappedComponent
   - source:
-      Internal: "PlainComponent#1"
+      Internal: "PlainComponent#2"
     exported_name: PlainComponent
 declarations:
-  - symbol: "ComponentWithIntl#1"
+  - symbol: "ComponentWithIntl#2"
     source:
       hash: "15060290214910995762"
       path: src/wrapped-components/components.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('ComponentWithIntl' type=dynamic), context: #1 }, source: ModuleId { hash: 3026677710442868220, path: \"src/wrapped-components/wrapped-components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"ComponentWithIntl\", context: #2 }, source: ModuleId { hash: 3026677710442868220, path: \"src/wrapped-components/wrapped-components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ComponentWithIntl#1"
+          symbol: "ComponentWithIntl#2"
           source:
             hash: "3026677710442868220"
             path: src/wrapped-components/wrapped-components
@@ -42,7 +42,7 @@ declarations:
     end:
       line: 1
       column: 27
-  - symbol: "PlainComponent#1"
+  - symbol: "PlainComponent#2"
     source:
       hash: "15060290214910995762"
       path: src/wrapped-components/components.tsx
@@ -58,7 +58,7 @@ declarations:
     end:
       line: 11
       column: 2
-  - symbol: "WrappedComponent#1"
+  - symbol: "WrappedComponent#2"
     source:
       hash: "15060290214910995762"
       path: src/wrapped-components/components.tsx
@@ -78,68 +78,66 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "WrappedComponent#1"
-      - "WrappedComponent#1"
-      - "PlainComponent#1"
-      - "PlainComponent#1"
+      - "WrappedComponent#2"
+      - "WrappedComponent#2"
+      - "PlainComponent#2"
+      - "PlainComponent#2"
     references:
-      - "ComponentWithIntl#1"
-      - "PlainComponent#1"
-      - "WrappedComponent#1"
-      - "div#2"
+      - "ComponentWithIntl#2"
+      - "PlainComponent#2"
+      - "WrappedComponent#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithIntl#1"
-      - "div#2"
-  - owner: "WrappedComponent#1"
+      - "ComponentWithIntl#2"
+      - "div#1"
+  - owner: "WrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrappedComponent#1"
+      - "div#1"
+  - owner: "WrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "PlainComponent#1"
+      - "div#1"
+  - owner: "PlainComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentWithIntl#1"
-      - "div#2"
+      - "ComponentWithIntl#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithIntl#1"
-      - "div#2"
-  - owner: "PlainComponent#1"
+      - "ComponentWithIntl#2"
+      - "div#1"
+  - owner: "PlainComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentWithIntl#1"
-      - "div#2"
+      - "ComponentWithIntl#2"
+      - "div#1"
     jsx_references:
-      - "ComponentWithIntl#1"
-      - "div#2"
+      - "ComponentWithIntl#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 58
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 27
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 27
-            ctxt: 1
+          ctxt: 2
           value: ComponentWithIntl
           optional: false
         imported: ~
@@ -149,36 +147,32 @@ body:
       span:
         start: 35
         end: 57
-        ctxt: 0
       value: "./wrapped-components"
       raw: "\"./wrapped-components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 60
       end: 122
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 95
           end: 122
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 101
               end: 120
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 108
                 end: 119
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -186,13 +180,12 @@ body:
                   span:
                     start: 109
                     end: 112
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 108
                   end: 113
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -202,15 +195,15 @@ body:
                 span:
                   start: 113
                   end: 119
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 115
                     end: 118
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -219,7 +212,7 @@ body:
         span:
           start: 76
           end: 92
-          ctxt: 1
+        ctxt: 2
         value: WrappedComponent
         optional: false
       params: []
@@ -227,34 +220,29 @@ body:
       span:
         start: 67
         end: 122
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 124
       end: 218
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 157
           end: 218
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 163
               end: 216
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 170
                 end: 215
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -262,13 +250,12 @@ body:
                   span:
                     start: 171
                     end: 174
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 170
                   end: 175
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -277,14 +264,12 @@ body:
                   span:
                     start: 175
                     end: 184
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 184
                     end: 204
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -292,13 +277,12 @@ body:
                       span:
                         start: 185
                         end: 202
-                        ctxt: 1
+                      ctxt: 2
                       value: ComponentWithIntl
                       optional: false
                     span:
                       start: 184
                       end: 204
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -308,23 +292,22 @@ body:
                   span:
                     start: 204
                     end: 209
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 209
                   end: 215
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 211
                     end: 214
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -333,7 +316,7 @@ body:
         span:
           start: 140
           end: 154
-          ctxt: 1
+        ctxt: 2
         value: PlainComponent
         optional: false
       params: []
@@ -341,6 +324,6 @@ body:
       span:
         start: 131
         end: 218
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

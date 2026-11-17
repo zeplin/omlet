@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "WithCustomWrapper#1"
+      Internal: "WithCustomWrapper#2"
     exported_name: WithCustomWrapper
 declarations:
-  - symbol: "ImportedComponent#1"
+  - symbol: "ImportedComponent#2"
     source:
       hash: "4215404662257008312"
       path: src/dynamic-import/with-custom-wrapper.tsx
@@ -27,7 +27,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "lazyComponent#1"
+              symbol: "lazyComponent#2"
               source:
                 hash: "4215404662257008312"
                 path: src/dynamic-import/with-custom-wrapper.tsx
@@ -50,7 +50,7 @@ declarations:
     end:
       line: 5
       column: 24
-  - symbol: "WithCustomWrapper#1"
+  - symbol: "WithCustomWrapper#2"
     source:
       hash: "4215404662257008312"
       path: src/dynamic-import/with-custom-wrapper.tsx
@@ -66,17 +66,17 @@ declarations:
     end:
       line: 14
       column: 2
-  - symbol: "callback#2"
+  - symbol: "callback#3"
     source:
       hash: "4215404662257008312"
       path: src/dynamic-import/with-custom-wrapper.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('lazyComponent' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"lazyComponent\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "lazyComponent#1"
+          symbol: "lazyComponent#2"
           source:
             hash: "4215404662257008312"
             path: src/dynamic-import/with-custom-wrapper.tsx
@@ -89,7 +89,7 @@ declarations:
     end:
       line: 1
       column: 32
-  - symbol: "lazyComponent#1"
+  - symbol: "lazyComponent#2"
     source:
       hash: "4215404662257008312"
       path: src/dynamic-import/with-custom-wrapper.tsx
@@ -102,7 +102,7 @@ declarations:
             - ReturnTypeOf:
                 - TypeOf:
                     symbol:
-                      symbol: "callback#2"
+                      symbol: "callback#3"
                       source:
                         hash: "4215404662257008312"
                         path: src/dynamic-import/with-custom-wrapper.tsx
@@ -121,83 +121,78 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "lazyComponent#1"
-      - "ImportedComponent#1"
-      - "WithCustomWrapper#1"
-      - "WithCustomWrapper#1"
+      - "lazyComponent#2"
+      - "ImportedComponent#2"
+      - "WithCustomWrapper#2"
+      - "WithCustomWrapper#2"
     references:
-      - "ImportedComponent#1"
-      - "WithCustomWrapper#1"
-      - "callback#2"
-      - "default#0"
-      - "div#3"
-      - "lazyComponent#1"
+      - "ImportedComponent#2"
+      - "WithCustomWrapper#2"
+      - "callback#3"
+      - "div#1"
+      - "lazyComponent#2"
     jsx_references:
-      - "ImportedComponent#1"
-      - "div#3"
-  - owner: "lazyComponent#1"
+      - "ImportedComponent#2"
+      - "div#1"
+  - owner: "lazyComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "callback#2"
-      - "default#0"
+      - "callback#3"
     jsx_references: []
-  - owner: "ImportedComponent#1"
+  - owner: "ImportedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "lazyComponent#1"
+      - "lazyComponent#2"
     jsx_references: []
-  - owner: "WithCustomWrapper#1"
+  - owner: "WithCustomWrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "ImportedComponent#1"
-      - "div#3"
+      - "ImportedComponent#2"
+      - "div#1"
     jsx_references:
-      - "ImportedComponent#1"
-      - "div#3"
-  - owner: "WithCustomWrapper#1"
+      - "ImportedComponent#2"
+      - "div#1"
+  - owner: "WithCustomWrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "ImportedComponent#1"
-      - "div#3"
+      - "ImportedComponent#2"
+      - "div#1"
     jsx_references:
-      - "ImportedComponent#1"
-      - "div#3"
+      - "ImportedComponent#2"
+      - "div#1"
 body:
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 34
         end: 68
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 40
             end: 66
-            ctxt: 0
           argument:
             type: MemberExpression
             span:
               start: 47
               end: 65
-              ctxt: 0
             object:
               type: CallExpression
               span:
                 start: 47
                 end: 57
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 47
                   end: 55
-                  ctxt: 2
+                ctxt: 3
                 value: callback
                 optional: false
               arguments: []
@@ -207,9 +202,8 @@ body:
               span:
                 start: 58
                 end: 65
-                ctxt: 0
               value: default
-              optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -218,7 +212,7 @@ body:
       span:
         start: 10
         end: 23
-        ctxt: 1
+      ctxt: 2
       value: lazyComponent
       optional: false
     params:
@@ -226,14 +220,13 @@ body:
         span:
           start: 24
           end: 32
-          ctxt: 0
         decorators: []
         pat:
+          ctxt: 3
           optional: false
           span:
             start: 24
             end: 32
-            ctxt: 2
           type: Identifier
           typeAnnotation: ~
           value: callback
@@ -241,14 +234,13 @@ body:
     span:
       start: 1
       end: 68
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: VariableDeclaration
     span:
       start: 70
       end: 148
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -256,13 +248,12 @@ body:
         span:
           start: 76
           end: 147
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 76
             end: 93
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: ImportedComponent
@@ -271,13 +262,13 @@ body:
           span:
             start: 96
             end: 147
-            ctxt: 0
+          ctxt: 0
           callee:
             type: Identifier
             span:
               start: 96
               end: 109
-              ctxt: 1
+            ctxt: 2
             value: lazyComponent
             optional: false
           arguments:
@@ -287,20 +278,20 @@ body:
                 span:
                   start: 110
                   end: 146
-                  ctxt: 0
+                ctxt: 4
                 params: []
                 body:
                   type: CallExpression
                   span:
                     start: 116
                     end: 146
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Import
                     span:
                       start: 116
                       end: 122
-                      ctxt: 0
+                    phase: evaluation
                   arguments:
                     - spread: ~
                       expression:
@@ -308,7 +299,6 @@ body:
                         span:
                           start: 123
                           end: 145
-                          ctxt: 0
                         value: "./imported-component"
                         raw: "\"./imported-component\""
                   typeArguments: ~
@@ -322,52 +312,44 @@ body:
     span:
       start: 150
       end: 307
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 186
           end: 307
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 192
               end: 305
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 199
                 end: 304
-                ctxt: 0
               expression:
                 type: JSXFragment
                 span:
                   start: 209
                   end: 298
-                  ctxt: 0
                 opening:
                   type: JSXOpeningFragment
                   span:
                     start: 209
                     end: 211
-                    ctxt: 0
                 children:
                   - type: JSXText
                     span:
                       start: 211
                       end: 224
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 224
                       end: 244
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -375,13 +357,12 @@ body:
                         span:
                           start: 225
                           end: 242
-                          ctxt: 1
+                        ctxt: 2
                         value: ImportedComponent
                         optional: false
                       span:
                         start: 224
                         end: 244
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -391,14 +372,12 @@ body:
                     span:
                       start: 244
                       end: 257
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 257
                       end: 286
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -406,13 +385,12 @@ body:
                         span:
                           start: 258
                           end: 261
-                          ctxt: 3
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 257
                         end: 262
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -421,7 +399,6 @@ body:
                         span:
                           start: 262
                           end: 280
-                          ctxt: 0
                         value: some sync jsx code
                         raw: some sync jsx code
                     closing:
@@ -429,28 +406,26 @@ body:
                       span:
                         start: 280
                         end: 286
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 282
                           end: 285
-                          ctxt: 3
+                        ctxt: 1
                         value: div
                         optional: false
                   - type: JSXText
                     span:
                       start: 286
                       end: 295
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingFragment
                   span:
                     start: 295
                     end: 298
-                    ctxt: 0
+      ctxt: 5
       declare: false
       decorators: []
       generator: false
@@ -459,7 +434,7 @@ body:
         span:
           start: 166
           end: 183
-          ctxt: 1
+        ctxt: 2
         value: WithCustomWrapper
         optional: false
       params: []
@@ -467,6 +442,6 @@ body:
       span:
         start: 157
         end: 307
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

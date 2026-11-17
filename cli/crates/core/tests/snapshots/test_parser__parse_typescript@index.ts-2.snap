@@ -1,6 +1,6 @@
 ---
 source: crates/core/tests/test_parser.rs
-expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
 input_file: samples/typescript/src/wildcard-re-export/components/Divider/index.ts
 ---
 source_path: src/wildcard-re-export/components/Divider/index.ts
@@ -33,14 +33,13 @@ body:
     span:
       start: 1
       end: 39
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 15
         end: 38
-        ctxt: 0
       value: "@mui/material/Divider"
       raw: "\"@mui/material/Divider\""
-    asserts: ~
+    typeOnly: false
+    with: ~
 

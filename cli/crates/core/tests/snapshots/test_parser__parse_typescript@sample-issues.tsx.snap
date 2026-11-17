@@ -13,35 +13,35 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "IntlComponent#1"
+      Internal: "IntlComponent#2"
     exported_name: IntlComponent
   - source:
-      Internal: "Button#1"
+      Internal: "Button#2"
     exported_name: Button
   - source:
-      Internal: "HoveringComponent#1"
+      Internal: "HoveringComponent#2"
     exported_name: HoveringComponent
   - source:
-      Internal: "CopperSimpleComponent#1"
+      Internal: "CopperSimpleComponent#2"
     exported_name: CopperSimpleComponent
   - source:
-      Internal: "WrappedCopperComponent#1"
+      Internal: "WrappedCopperComponent#2"
     exported_name: WrappedCopperComponent
   - source:
-      Internal: "WrappedCopperClassComponent#1"
+      Internal: "WrappedCopperClassComponent#2"
     exported_name: WrappedCopperClassComponent
   - source:
-      Internal: "SampleComponent#1"
+      Internal: "SampleComponent#2"
     exported_name: SampleComponent
   - source:
-      Internal: "StyledWrappedComponent#1"
+      Internal: "StyledWrappedComponent#2"
     exported_name: StyledWrappedComponent
   - source:
-      Internal: "ComponentWrappedByObjectAssign#1"
+      Internal: "ComponentWrappedByObjectAssign#2"
     exported_name: ComponentWrappedByObjectAssign
   - source:
       External:
-        symbol: "CopperButton#1"
+        symbol: "CopperButton#2"
         source:
           hash: "14036575237387688534"
           path: ""
@@ -49,10 +49,10 @@ exports:
           mtype: package
     exported_name: StyledWrappedComponent.CopperButton
   - source:
-      Internal: "SampleComponent#1"
+      Internal: "SampleComponent#2"
     exported_name: StyledWrappedComponent.SampleComponent
   - source:
-      Internal: "WrappedCopperComponent#1"
+      Internal: "WrappedCopperComponent#2"
     exported_name: StyledWrappedComponent.WrappedCopperComponent
 declarations:
   - symbol: "<anonymous-1>#0"
@@ -66,7 +66,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "WrappedComponent#4"
+            symbol: "WrappedComponent#6"
             source:
               hash: "17109372023467422174"
               path: src/wrapped-components/sample-issues.tsx
@@ -122,7 +122,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "Component#1"
+            symbol: "Component#2"
             source:
               hash: "17109372023467422174"
               path: src/wrapped-components/sample-issues.tsx
@@ -135,7 +135,7 @@ declarations:
     end:
       line: 34
       column: 2
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -146,7 +146,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "withRef#1"
+              symbol: "withRef#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -160,17 +160,17 @@ declarations:
     end:
       line: 12
       column: 20
-  - symbol: "Component#1"
+  - symbol: "Component#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Component' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Component\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Component#1"
+          symbol: "Component#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -183,7 +183,7 @@ declarations:
     end:
       line: 1
       column: 19
-  - symbol: "ComponentWrappedByObjectAssign#1"
+  - symbol: "ComponentWrappedByObjectAssign#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -195,7 +195,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "Object#2"
+                  symbol: "Object#1"
                   source:
                     hash: "17109372023467422174"
                     path: src/wrapped-components/sample-issues.tsx
@@ -205,7 +205,7 @@ declarations:
             - Object: assign
         - - TypeOf:
               symbol:
-                symbol: "StyledWrappedComponent#1"
+                symbol: "StyledWrappedComponent#2"
                 source:
                   hash: "17109372023467422174"
                   path: src/wrapped-components/sample-issues.tsx
@@ -216,7 +216,7 @@ declarations:
               CopperButton:
                 TypeOf:
                   symbol:
-                    symbol: "CopperButton#1"
+                    symbol: "CopperButton#2"
                     source:
                       hash: "17109372023467422174"
                       path: src/wrapped-components/sample-issues.tsx
@@ -226,7 +226,7 @@ declarations:
               SampleComponent:
                 TypeOf:
                   symbol:
-                    symbol: "SampleComponent#1"
+                    symbol: "SampleComponent#2"
                     source:
                       hash: "17109372023467422174"
                       path: src/wrapped-components/sample-issues.tsx
@@ -236,7 +236,7 @@ declarations:
               WrappedCopperComponent:
                 TypeOf:
                   symbol:
-                    symbol: "WrappedCopperComponent#1"
+                    symbol: "WrappedCopperComponent#2"
                     source:
                       hash: "17109372023467422174"
                       path: src/wrapped-components/sample-issues.tsx
@@ -249,17 +249,17 @@ declarations:
     end:
       line: 51
       column: 44
-  - symbol: "CopperButton#1"
+  - symbol: "CopperButton#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('CopperButton' type=dynamic), context: #1 }, source: ModuleId { hash: 14036575237387688534, path: \"\", pkg_name: \"@acme/copper\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"CopperButton\", context: #2 }, source: ModuleId { hash: 14036575237387688534, path: \"\", pkg_name: \"@acme/copper\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "CopperButton#1"
+          symbol: "CopperButton#2"
           source:
             hash: "14036575237387688534"
             path: ""
@@ -272,7 +272,7 @@ declarations:
     end:
       line: 2
       column: 22
-  - symbol: "CopperSimpleComponent#1"
+  - symbol: "CopperSimpleComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -288,7 +288,7 @@ declarations:
     end:
       line: 22
       column: 35
-  - symbol: "HoveringComponent#1"
+  - symbol: "HoveringComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -299,7 +299,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "withHoverRegion#1"
+              symbol: "withHoverRegion#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -308,7 +308,7 @@ declarations:
             is_local: true
         - - TypeOf:
               symbol:
-                symbol: "LocalComponent#1"
+                symbol: "LocalComponent#2"
                 source:
                   hash: "17109372023467422174"
                   path: src/wrapped-components/sample-issues.tsx
@@ -321,7 +321,7 @@ declarations:
     end:
       line: 19
       column: 31
-  - symbol: "IntlComponent#1"
+  - symbol: "IntlComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -332,7 +332,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "injectIntl#1"
+              symbol: "injectIntl#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -341,7 +341,7 @@ declarations:
             is_local: true
         - - TypeOf:
               symbol:
-                symbol: "LocalComponent#1"
+                symbol: "LocalComponent#2"
                 source:
                   hash: "17109372023467422174"
                   path: src/wrapped-components/sample-issues.tsx
@@ -354,7 +354,7 @@ declarations:
     end:
       line: 9
       column: 27
-  - symbol: "LocalComponent#1"
+  - symbol: "LocalComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -370,7 +370,7 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "SampleComponent#1"
+  - symbol: "SampleComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -386,7 +386,7 @@ declarations:
     end:
       line: 36
       column: 29
-  - symbol: "StyledWrappedComponent#1"
+  - symbol: "StyledWrappedComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -398,7 +398,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "Styled#2"
+                  symbol: "Styled#1"
                   source:
                     hash: "17109372023467422174"
                     path: src/wrapped-components/sample-issues.tsx
@@ -407,7 +407,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "styles#2"
+                    symbol: "styles#1"
                     source:
                       hash: "17109372023467422174"
                       path: src/wrapped-components/sample-issues.tsx
@@ -416,7 +416,7 @@ declarations:
                   is_local: true
         - - TypeOf:
               symbol:
-                symbol: "SampleComponent#1"
+                symbol: "SampleComponent#2"
                 source:
                   hash: "17109372023467422174"
                   path: src/wrapped-components/sample-issues.tsx
@@ -429,17 +429,17 @@ declarations:
     end:
       line: 49
       column: 36
-  - symbol: "WrappedComponent#4"
+  - symbol: "WrappedComponent#6"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withHoverRegion' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withHoverRegion\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withHoverRegion#1"
+          symbol: "withHoverRegion#2"
           source:
             hash: "17109372023467422174"
             path: src/wrapped-components/sample-issues.tsx
@@ -452,7 +452,7 @@ declarations:
     end:
       line: 15
       column: 42
-  - symbol: "WrappedCopperClassComponent#1"
+  - symbol: "WrappedCopperClassComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -463,7 +463,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "forwardRef#1"
+              symbol: "forwardRef#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -473,7 +473,7 @@ declarations:
         - - Class:
               TypeOf:
                 symbol:
-                  symbol: "Component#1"
+                  symbol: "Component#2"
                   source:
                     hash: "17109372023467422174"
                     path: src/wrapped-components/sample-issues.tsx
@@ -486,7 +486,7 @@ declarations:
     end:
       line: 30
       column: 41
-  - symbol: "WrappedCopperComponent#1"
+  - symbol: "WrappedCopperComponent#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -497,7 +497,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "forwardRef#1"
+              symbol: "forwardRef#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -512,18 +512,18 @@ declarations:
     end:
       line: 26
       column: 36
-  - symbol: "classes#5"
+  - symbol: "classes#10"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('SampleComponent' type=dynamic), context: #1 }>[0][classes]"
+    definition: "Parameter<Symbol { name: \"SampleComponent\", context: #2 }>[0][classes]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "SampleComponent#1"
+              symbol: "SampleComponent#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -537,17 +537,17 @@ declarations:
     end:
       line: 37
       column: 12
-  - symbol: "component#3"
+  - symbol: "component#4"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withRef' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withRef\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withRef#1"
+          symbol: "withRef#2"
           source:
             hash: "17109372023467422174"
             path: src/wrapped-components/sample-issues.tsx
@@ -560,17 +560,17 @@ declarations:
     end:
       line: 11
       column: 27
-  - symbol: "forwardRef#1"
+  - symbol: "forwardRef#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('forwardRef' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"forwardRef\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "forwardRef#1"
+          symbol: "forwardRef#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -583,17 +583,17 @@ declarations:
     end:
       line: 1
       column: 31
-  - symbol: "injectIntl#1"
+  - symbol: "injectIntl#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('injectIntl' type=dynamic), context: #1 }, source: ModuleId { hash: 12848967743216371208, path: \"\", pkg_name: \"react-intl\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"injectIntl\", context: #2 }, source: ModuleId { hash: 12848967743216371208, path: \"\", pkg_name: \"react-intl\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "injectIntl#1"
+          symbol: "injectIntl#2"
           source:
             hash: "12848967743216371208"
             path: ""
@@ -606,18 +606,18 @@ declarations:
     end:
       line: 3
       column: 20
-  - symbol: "items#5"
+  - symbol: "items#10"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('SampleComponent' type=dynamic), context: #1 }>[0][items]"
+    definition: "Parameter<Symbol { name: \"SampleComponent\", context: #2 }>[0][items]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "SampleComponent#1"
+              symbol: "SampleComponent#2"
               source:
                 hash: "17109372023467422174"
                 path: src/wrapped-components/sample-issues.tsx
@@ -631,7 +631,7 @@ declarations:
     end:
       line: 38
       column: 10
-  - symbol: "withHoverRegion#1"
+  - symbol: "withHoverRegion#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -643,7 +643,7 @@ declarations:
         - Class:
             TypeOf:
               symbol:
-                symbol: "WrappedComponent#4"
+                symbol: "WrappedComponent#6"
                 source:
                   hash: "17109372023467422174"
                   path: src/wrapped-components/sample-issues.tsx
@@ -656,7 +656,7 @@ declarations:
     end:
       line: 18
       column: 2
-  - symbol: "withRef#1"
+  - symbol: "withRef#2"
     source:
       hash: "17109372023467422174"
       path: src/wrapped-components/sample-issues.tsx
@@ -668,7 +668,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "forwardRef#1"
+                  symbol: "forwardRef#2"
                   source:
                     hash: "17109372023467422174"
                     path: src/wrapped-components/sample-issues.tsx
@@ -677,7 +677,7 @@ declarations:
                 is_local: true
             - - TypeOf:
                   symbol:
-                    symbol: "component#3"
+                    symbol: "component#4"
                     source:
                       hash: "17109372023467422174"
                       path: src/wrapped-components/sample-issues.tsx
@@ -694,392 +694,363 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "LocalComponent#1"
-      - "IntlComponent#1"
-      - "IntlComponent#1"
-      - "withRef#1"
-      - "Button#1"
-      - "Button#1"
-      - "withHoverRegion#1"
+      - "LocalComponent#2"
+      - "IntlComponent#2"
+      - "IntlComponent#2"
+      - "withRef#2"
+      - "Button#2"
+      - "Button#2"
+      - "withHoverRegion#2"
       - "<anonymous-2>#0"
-      - "HoveringComponent#1"
-      - "HoveringComponent#1"
-      - "CopperSimpleComponent#1"
-      - "CopperSimpleComponent#1"
+      - "HoveringComponent#2"
+      - "HoveringComponent#2"
+      - "CopperSimpleComponent#2"
+      - "CopperSimpleComponent#2"
       - "<anonymous-5>#0"
-      - "WrappedCopperComponent#1"
-      - "WrappedCopperComponent#1"
+      - "WrappedCopperComponent#2"
+      - "WrappedCopperComponent#2"
       - "<anonymous-8>#0"
-      - "WrappedCopperClassComponent#1"
-      - "WrappedCopperClassComponent#1"
+      - "WrappedCopperClassComponent#2"
+      - "WrappedCopperClassComponent#2"
       - "<anonymous-11>#0"
-      - "SampleComponent#1"
-      - "SampleComponent#1"
-      - "StyledWrappedComponent#1"
-      - "StyledWrappedComponent#1"
-      - "ComponentWrappedByObjectAssign#1"
-      - "ComponentWrappedByObjectAssign#1"
+      - "SampleComponent#2"
+      - "SampleComponent#2"
+      - "StyledWrappedComponent#2"
+      - "StyledWrappedComponent#2"
+      - "ComponentWrappedByObjectAssign#2"
+      - "ComponentWrappedByObjectAssign#2"
     references:
-      - "Button#1"
-      - "Component#1"
-      - "ComponentWrappedByObjectAssign#1"
-      - "CopperButton#1"
-      - "CopperSimpleComponent#1"
-      - "HoveringComponent#1"
-      - "IntlComponent#1"
-      - "LocalComponent#1"
-      - "Object#2"
-      - "SampleComponent#1"
-      - "Styled#2"
-      - "StyledWrappedComponent#1"
-      - "WrappedComponent#4"
-      - "WrappedCopperClassComponent#1"
-      - "WrappedCopperComponent#1"
-      - "assign#0"
-      - "className#0"
-      - "classes#0"
-      - "classes#5"
-      - "component#3"
-      - "div#2"
-      - "forwardRef#1"
-      - "img#2"
-      - "injectIntl#1"
-      - "item#6"
-      - "items#5"
-      - "key#0"
-      - "list#0"
-      - "map#0"
-      - "render#0"
-      - "slug#0"
-      - "styles#2"
-      - "ul#2"
-      - "withHoverRegion#1"
-      - "withRef#1"
+      - "Button#2"
+      - "Component#2"
+      - "ComponentWrappedByObjectAssign#2"
+      - "CopperButton#2"
+      - "CopperSimpleComponent#2"
+      - "HoveringComponent#2"
+      - "IntlComponent#2"
+      - "LocalComponent#2"
+      - "Object#1"
+      - "SampleComponent#2"
+      - "Styled#1"
+      - "StyledWrappedComponent#2"
+      - "WrappedComponent#6"
+      - "WrappedCopperClassComponent#2"
+      - "WrappedCopperComponent#2"
+      - "classes#10"
+      - "component#4"
+      - "div#1"
+      - "forwardRef#2"
+      - "img#1"
+      - "injectIntl#2"
+      - "item#11"
+      - "items#10"
+      - "styles#1"
+      - "ul#1"
+      - "withHoverRegion#2"
+      - "withRef#2"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-      - "img#2"
-      - "ul#2"
-  - owner: "LocalComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+      - "img#1"
+      - "ul#1"
+  - owner: "LocalComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "img#2"
+      - "img#1"
     jsx_references:
-      - "img#2"
-  - owner: "IntlComponent#1"
+      - "img#1"
+  - owner: "IntlComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LocalComponent#1"
-      - "injectIntl#1"
+      - "LocalComponent#2"
+      - "injectIntl#2"
     jsx_references: []
-  - owner: "IntlComponent#1"
+  - owner: "IntlComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LocalComponent#1"
-      - "injectIntl#1"
+      - "LocalComponent#2"
+      - "injectIntl#2"
     jsx_references: []
-  - owner: "withRef#1"
+  - owner: "withRef#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#3"
-      - "forwardRef#1"
+      - "component#4"
+      - "forwardRef#2"
     jsx_references: []
-  - owner: "Button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "withRef#1"
+      - "withRef#2"
     jsx_references: []
-  - owner: "Button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "withRef#1"
+      - "withRef#2"
     jsx_references: []
-  - owner: "withHoverRegion#1"
+  - owner: "withHoverRegion#2"
     parent: "__global#0"
     children:
       - "<anonymous-1>#0"
     references:
-      - "WrappedComponent#4"
+      - "WrappedComponent#6"
     jsx_references: []
   - owner: "<anonymous-1>#0"
-    parent: "withHoverRegion#1"
+    parent: "withHoverRegion#2"
     children: []
     references:
-      - "WrappedComponent#4"
+      - "WrappedComponent#6"
     jsx_references: []
   - owner: "<anonymous-2>#0"
     parent: "__global#0"
     children: []
     references:
-      - "WrappedComponent#4"
+      - "WrappedComponent#6"
     jsx_references: []
-  - owner: "HoveringComponent#1"
+  - owner: "HoveringComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LocalComponent#1"
-      - "withHoverRegion#1"
+      - "LocalComponent#2"
+      - "withHoverRegion#2"
     jsx_references: []
-  - owner: "HoveringComponent#1"
+  - owner: "HoveringComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "LocalComponent#1"
-      - "withHoverRegion#1"
+      - "LocalComponent#2"
+      - "withHoverRegion#2"
     jsx_references: []
-  - owner: "CopperSimpleComponent#1"
+  - owner: "CopperSimpleComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-3>#0"
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-3>#0"
-    parent: "CopperSimpleComponent#1"
+    parent: "CopperSimpleComponent#2"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "CopperSimpleComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "CopperSimpleComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-4>#0"
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-4>#0"
-    parent: "CopperSimpleComponent#1"
+    parent: "CopperSimpleComponent#2"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-5>#0"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "WrappedCopperComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "WrappedCopperComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-6>#0"
     references:
-      - "CopperButton#1"
-      - "div#2"
-      - "forwardRef#1"
+      - "CopperButton#2"
+      - "div#1"
+      - "forwardRef#2"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-6>#0"
-    parent: "WrappedCopperComponent#1"
+    parent: "WrappedCopperComponent#2"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "WrappedCopperComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "WrappedCopperComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-7>#0"
     references:
-      - "CopperButton#1"
-      - "div#2"
-      - "forwardRef#1"
+      - "CopperButton#2"
+      - "div#1"
+      - "forwardRef#2"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-7>#0"
-    parent: "WrappedCopperComponent#1"
+    parent: "WrappedCopperComponent#2"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-8>#0"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "WrappedCopperClassComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "WrappedCopperClassComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-9>#0"
     references:
-      - "Component#1"
-      - "CopperButton#1"
-      - "div#2"
-      - "forwardRef#1"
-      - "render#0"
+      - "Component#2"
+      - "CopperButton#2"
+      - "div#1"
+      - "forwardRef#2"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-9>#0"
-    parent: "WrappedCopperClassComponent#1"
+    parent: "WrappedCopperClassComponent#2"
     children: []
     references:
-      - "Component#1"
-      - "CopperButton#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "WrappedCopperClassComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "WrappedCopperClassComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-10>#0"
     references:
-      - "Component#1"
-      - "CopperButton#1"
-      - "div#2"
-      - "forwardRef#1"
-      - "render#0"
+      - "Component#2"
+      - "CopperButton#2"
+      - "div#1"
+      - "forwardRef#2"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-10>#0"
-    parent: "WrappedCopperClassComponent#1"
+    parent: "WrappedCopperClassComponent#2"
     children: []
     references:
-      - "Component#1"
-      - "CopperButton#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
+      - "CopperButton#2"
+      - "div#1"
   - owner: "<anonymous-11>#0"
     parent: "__global#0"
     children: []
     references:
-      - "Component#1"
-      - "CopperButton#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "CopperButton#2"
+      - "div#1"
     jsx_references:
-      - "CopperButton#1"
-      - "div#2"
-  - owner: "SampleComponent#1"
+      - "CopperButton#2"
+      - "div#1"
+  - owner: "SampleComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "className#0"
-      - "classes#0"
-      - "classes#5"
-      - "item#6"
-      - "items#5"
-      - "key#0"
-      - "list#0"
-      - "map#0"
-      - "slug#0"
-      - "ul#2"
+      - "CopperButton#2"
+      - "classes#10"
+      - "item#11"
+      - "items#10"
+      - "ul#1"
     jsx_references:
-      - "CopperButton#1"
-      - "ul#2"
-  - owner: "SampleComponent#1"
+      - "CopperButton#2"
+      - "ul#1"
+  - owner: "SampleComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "className#0"
-      - "classes#0"
-      - "classes#5"
-      - "item#6"
-      - "items#5"
-      - "key#0"
-      - "list#0"
-      - "map#0"
-      - "slug#0"
-      - "ul#2"
+      - "CopperButton#2"
+      - "classes#10"
+      - "item#11"
+      - "items#10"
+      - "ul#1"
     jsx_references:
-      - "CopperButton#1"
-      - "ul#2"
-  - owner: "StyledWrappedComponent#1"
+      - "CopperButton#2"
+      - "ul#1"
+  - owner: "StyledWrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "SampleComponent#1"
-      - "Styled#2"
-      - "styles#2"
+      - "SampleComponent#2"
+      - "Styled#1"
+      - "styles#1"
     jsx_references: []
-  - owner: "StyledWrappedComponent#1"
+  - owner: "StyledWrappedComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "SampleComponent#1"
-      - "Styled#2"
-      - "styles#2"
+      - "SampleComponent#2"
+      - "Styled#1"
+      - "styles#1"
     jsx_references: []
-  - owner: "ComponentWrappedByObjectAssign#1"
+  - owner: "ComponentWrappedByObjectAssign#2"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "Object#2"
-      - "SampleComponent#1"
-      - "StyledWrappedComponent#1"
-      - "WrappedCopperComponent#1"
-      - "assign#0"
+      - "CopperButton#2"
+      - "Object#1"
+      - "SampleComponent#2"
+      - "StyledWrappedComponent#2"
+      - "WrappedCopperComponent#2"
     jsx_references: []
-  - owner: "ComponentWrappedByObjectAssign#1"
+  - owner: "ComponentWrappedByObjectAssign#2"
     parent: "__global#0"
     children: []
     references:
-      - "CopperButton#1"
-      - "Object#2"
-      - "SampleComponent#1"
-      - "StyledWrappedComponent#1"
-      - "WrappedCopperComponent#1"
-      - "assign#0"
+      - "CopperButton#2"
+      - "Object#1"
+      - "SampleComponent#2"
+      - "StyledWrappedComponent#2"
+      - "WrappedCopperComponent#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 47
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 19
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 19
-            ctxt: 1
+          ctxt: 2
           value: Component
           optional: false
         imported: ~
@@ -1088,13 +1059,12 @@ body:
         span:
           start: 21
           end: 31
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 21
             end: 31
-            ctxt: 1
+          ctxt: 2
           value: forwardRef
           optional: false
         imported: ~
@@ -1104,28 +1074,26 @@ body:
       span:
         start: 39
         end: 46
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 48
       end: 92
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 57
           end: 69
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 57
             end: 69
-            ctxt: 1
+          ctxt: 2
           value: CopperButton
           optional: false
         imported: ~
@@ -1135,28 +1103,26 @@ body:
       span:
         start: 77
         end: 91
-        ctxt: 0
       value: "@acme/copper"
       raw: "\"@acme/copper\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 93
       end: 133
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 102
           end: 112
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 102
             end: 112
-            ctxt: 1
+          ctxt: 2
           value: injectIntl
           optional: false
         imported: ~
@@ -1166,30 +1132,27 @@ body:
       span:
         start: 120
         end: 132
-        ctxt: 0
       value: react-intl
       raw: "\"react-intl\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 161
         end: 183
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 167
             end: 181
-            ctxt: 0
           argument:
             type: JSXElement
             span:
               start: 174
               end: 180
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -1197,18 +1160,18 @@ body:
                 span:
                   start: 175
                   end: 178
-                  ctxt: 2
+                ctxt: 1
                 value: img
                 optional: false
               span:
                 start: 174
                 end: 180
-                ctxt: 0
               attributes: []
               selfClosing: true
               typeArguments: ~
             children: []
             closing: ~
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -1217,7 +1180,7 @@ body:
       span:
         start: 144
         end: 158
-        ctxt: 1
+      ctxt: 2
       value: LocalComponent
       optional: false
     params: []
@@ -1225,20 +1188,18 @@ body:
     span:
       start: 135
       end: 183
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 185
       end: 241
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 192
         end: 241
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1246,13 +1207,12 @@ body:
           span:
             start: 198
             end: 240
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 198
               end: 211
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: IntlComponent
@@ -1261,13 +1221,13 @@ body:
             span:
               start: 214
               end: 240
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 214
                 end: 224
-                ctxt: 1
+              ctxt: 2
               value: injectIntl
               optional: false
             arguments:
@@ -1277,7 +1237,7 @@ body:
                   span:
                     start: 225
                     end: 239
-                    ctxt: 1
+                  ctxt: 2
                   value: LocalComponent
                   optional: false
             typeArguments: ~
@@ -1286,7 +1246,7 @@ body:
     span:
       start: 243
       end: 296
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -1294,13 +1254,12 @@ body:
         span:
           start: 249
           end: 295
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 249
             end: 256
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: withRef
@@ -1309,13 +1268,13 @@ body:
           span:
             start: 259
             end: 295
-            ctxt: 0
+          ctxt: 4
           params:
-            - optional: false
+            - ctxt: 4
+              optional: false
               span:
                 start: 260
                 end: 269
-                ctxt: 3
               type: Identifier
               typeAnnotation: ~
               value: component
@@ -1324,13 +1283,13 @@ body:
             span:
               start: 274
               end: 295
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 274
                 end: 284
-                ctxt: 1
+              ctxt: 2
               value: forwardRef
               optional: false
             arguments:
@@ -1340,7 +1299,7 @@ body:
                   span:
                     start: 285
                     end: 294
-                    ctxt: 3
+                  ctxt: 4
                   value: component
                   optional: false
             typeArguments: ~
@@ -1353,13 +1312,12 @@ body:
     span:
       start: 297
       end: 338
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 304
         end: 338
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1367,13 +1325,12 @@ body:
           span:
             start: 310
             end: 337
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 310
               end: 316
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: Button
@@ -1382,13 +1339,13 @@ body:
             span:
               start: 319
               end: 337
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 319
                 end: 326
-                ctxt: 1
+              ctxt: 2
               value: withRef
               optional: false
             arguments:
@@ -1398,14 +1355,13 @@ body:
                   span:
                     start: 327
                     end: 336
-                    ctxt: 0
+                  ctxt: 5
                   params: []
                   body:
-                    type: BlockStatement
+                    type: FunctionBody
                     span:
                       start: 333
                       end: 336
-                      ctxt: 0
                     stmts: []
                   async: false
                   generator: false
@@ -1415,19 +1371,18 @@ body:
           definite: false
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 384
         end: 438
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 390
             end: 436
-            ctxt: 0
           argument:
             body: []
+            ctxt: 0
             decorators: []
             identifier: ~
             implements: []
@@ -1435,18 +1390,18 @@ body:
             span:
               start: 397
               end: 435
-              ctxt: 0
             superClass:
               type: Identifier
               span:
                 start: 411
                 end: 427
-                ctxt: 4
+              ctxt: 6
               value: WrappedComponent
               optional: false
             superTypeParams: ~
             type: ClassExpression
             typeParams: ~
+    ctxt: 6
     declare: false
     decorators: []
     generator: false
@@ -1455,7 +1410,7 @@ body:
       span:
         start: 350
         end: 365
-        ctxt: 1
+      ctxt: 2
       value: withHoverRegion
       optional: false
     params:
@@ -1463,14 +1418,13 @@ body:
         span:
           start: 366
           end: 382
-          ctxt: 0
         decorators: []
         pat:
+          ctxt: 6
           optional: false
           span:
             start: 366
             end: 382
-            ctxt: 4
           type: Identifier
           typeAnnotation: ~
           value: WrappedComponent
@@ -1478,20 +1432,18 @@ body:
     span:
       start: 341
       end: 438
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 439
       end: 504
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 446
         end: 504
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1499,13 +1451,12 @@ body:
           span:
             start: 452
             end: 503
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 452
               end: 469
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: HoveringComponent
@@ -1514,13 +1465,13 @@ body:
             span:
               start: 472
               end: 503
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 472
                 end: 487
-                ctxt: 1
+              ctxt: 2
               value: withHoverRegion
               optional: false
             arguments:
@@ -1530,7 +1481,7 @@ body:
                   span:
                     start: 488
                     end: 502
-                    ctxt: 1
+                  ctxt: 2
                   value: LocalComponent
                   optional: false
             typeArguments: ~
@@ -1539,13 +1490,12 @@ body:
     span:
       start: 507
       end: 618
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 514
         end: 618
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1553,36 +1503,32 @@ body:
           span:
             start: 520
             end: 617
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 520
               end: 541
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: CopperSimpleComponent
           init:
             async: false
             body:
-              type: BlockStatement
+              type: FunctionBody
               span:
                 start: 556
                 end: 617
-                ctxt: 0
               stmts:
                 - type: ReturnStatement
                   span:
                     start: 562
                     end: 615
-                    ctxt: 0
                   argument:
                     type: JSXElement
                     span:
                       start: 569
                       end: 614
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -1590,13 +1536,12 @@ body:
                         span:
                           start: 570
                           end: 573
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 569
                         end: 574
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -1605,7 +1550,6 @@ body:
                         span:
                           start: 574
                           end: 608
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
@@ -1613,13 +1557,12 @@ body:
                             span:
                               start: 575
                               end: 587
-                              ctxt: 1
+                            ctxt: 2
                             value: CopperButton
                             optional: false
                           span:
                             start: 574
                             end: 588
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -1628,7 +1571,6 @@ body:
                             span:
                               start: 588
                               end: 593
-                              ctxt: 0
                             value: Hello
                             raw: Hello
                         closing:
@@ -1636,13 +1578,12 @@ body:
                           span:
                             start: 593
                             end: 608
-                            ctxt: 0
                           name:
                             type: Identifier
                             span:
                               start: 595
                               end: 607
-                              ctxt: 1
+                            ctxt: 2
                             value: CopperButton
                             optional: false
                     closing:
@@ -1650,15 +1591,15 @@ body:
                       span:
                         start: 608
                         end: 614
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 610
                           end: 613
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
+            ctxt: 7
             decorators: []
             generator: false
             identifier: ~
@@ -1667,7 +1608,6 @@ body:
             span:
               start: 544
               end: 617
-              ctxt: 0
             type: FunctionExpression
             typeParameters: ~
           definite: false
@@ -1675,13 +1615,12 @@ body:
     span:
       start: 620
       end: 744
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 627
         end: 744
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1689,13 +1628,12 @@ body:
           span:
             start: 633
             end: 743
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 633
               end: 655
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrappedCopperComponent
@@ -1704,13 +1642,13 @@ body:
             span:
               start: 658
               end: 743
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 658
                 end: 668
-                ctxt: 1
+              ctxt: 2
               value: forwardRef
               optional: false
             arguments:
@@ -1718,23 +1656,20 @@ body:
                 expression:
                   async: false
                   body:
-                    type: BlockStatement
+                    type: FunctionBody
                     span:
                       start: 681
                       end: 742
-                      ctxt: 0
                     stmts:
                       - type: ReturnStatement
                         span:
                           start: 687
                           end: 740
-                          ctxt: 0
                         argument:
                           type: JSXElement
                           span:
                             start: 694
                             end: 739
-                            ctxt: 0
                           opening:
                             type: JSXOpeningElement
                             name:
@@ -1742,13 +1677,12 @@ body:
                               span:
                                 start: 695
                                 end: 698
-                                ctxt: 2
+                              ctxt: 1
                               value: div
                               optional: false
                             span:
                               start: 694
                               end: 699
-                              ctxt: 0
                             attributes: []
                             selfClosing: false
                             typeArguments: ~
@@ -1757,7 +1691,6 @@ body:
                               span:
                                 start: 699
                                 end: 733
-                                ctxt: 0
                               opening:
                                 type: JSXOpeningElement
                                 name:
@@ -1765,13 +1698,12 @@ body:
                                   span:
                                     start: 700
                                     end: 712
-                                    ctxt: 1
+                                  ctxt: 2
                                   value: CopperButton
                                   optional: false
                                 span:
                                   start: 699
                                   end: 713
-                                  ctxt: 0
                                 attributes: []
                                 selfClosing: false
                                 typeArguments: ~
@@ -1780,7 +1712,6 @@ body:
                                   span:
                                     start: 713
                                     end: 718
-                                    ctxt: 0
                                   value: Hello
                                   raw: Hello
                               closing:
@@ -1788,13 +1719,12 @@ body:
                                 span:
                                   start: 718
                                   end: 733
-                                  ctxt: 0
                                 name:
                                   type: Identifier
                                   span:
                                     start: 720
                                     end: 732
-                                    ctxt: 1
+                                  ctxt: 2
                                   value: CopperButton
                                   optional: false
                           closing:
@@ -1802,15 +1732,15 @@ body:
                             span:
                               start: 733
                               end: 739
-                              ctxt: 0
                             name:
                               type: Identifier
                               span:
                                 start: 735
                                 end: 738
-                                ctxt: 2
+                              ctxt: 1
                               value: div
                               optional: false
+                  ctxt: 8
                   decorators: []
                   generator: false
                   identifier: ~
@@ -1819,7 +1749,6 @@ body:
                   span:
                     start: 669
                     end: 742
-                    ctxt: 0
                   type: FunctionExpression
                   typeParameters: ~
             typeArguments: ~
@@ -1828,13 +1757,12 @@ body:
     span:
       start: 746
       end: 912
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 753
         end: 912
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -1842,13 +1770,12 @@ body:
           span:
             start: 759
             end: 911
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 759
               end: 786
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrappedCopperClassComponent
@@ -1857,13 +1784,13 @@ body:
             span:
               start: 789
               end: 911
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 789
                 end: 799
-                ctxt: 1
+              ctxt: 2
               value: forwardRef
               optional: false
             arguments:
@@ -1874,40 +1801,34 @@ body:
                       span:
                         start: 830
                         end: 908
-                        ctxt: 0
                       key:
                         type: Identifier
                         span:
                           start: 830
                           end: 836
-                          ctxt: 0
                         value: render
-                        optional: false
                       function:
                         params: []
                         decorators: []
                         span:
                           start: 830
                           end: 908
-                          ctxt: 0
+                        ctxt: 9
                         body:
-                          type: BlockStatement
+                          type: FunctionBody
                           span:
                             start: 839
                             end: 908
-                            ctxt: 0
                           stmts:
                             - type: ReturnStatement
                               span:
                                 start: 849
                                 end: 902
-                                ctxt: 0
                               argument:
                                 type: JSXElement
                                 span:
                                   start: 856
                                   end: 901
-                                  ctxt: 0
                                 opening:
                                   type: JSXOpeningElement
                                   name:
@@ -1915,13 +1836,12 @@ body:
                                     span:
                                       start: 857
                                       end: 860
-                                      ctxt: 2
+                                    ctxt: 1
                                     value: div
                                     optional: false
                                   span:
                                     start: 856
                                     end: 861
-                                    ctxt: 0
                                   attributes: []
                                   selfClosing: false
                                   typeArguments: ~
@@ -1930,7 +1850,6 @@ body:
                                     span:
                                       start: 861
                                       end: 895
-                                      ctxt: 0
                                     opening:
                                       type: JSXOpeningElement
                                       name:
@@ -1938,13 +1857,12 @@ body:
                                         span:
                                           start: 862
                                           end: 874
-                                          ctxt: 1
+                                        ctxt: 2
                                         value: CopperButton
                                         optional: false
                                       span:
                                         start: 861
                                         end: 875
-                                        ctxt: 0
                                       attributes: []
                                       selfClosing: false
                                       typeArguments: ~
@@ -1953,7 +1871,6 @@ body:
                                         span:
                                           start: 875
                                           end: 880
-                                          ctxt: 0
                                         value: Hello
                                         raw: Hello
                                     closing:
@@ -1961,13 +1878,12 @@ body:
                                       span:
                                         start: 880
                                         end: 895
-                                        ctxt: 0
                                       name:
                                         type: Identifier
                                         span:
                                           start: 882
                                           end: 894
-                                          ctxt: 1
+                                        ctxt: 2
                                         value: CopperButton
                                         optional: false
                                 closing:
@@ -1975,13 +1891,12 @@ body:
                                   span:
                                     start: 895
                                     end: 901
-                                    ctxt: 0
                                   name:
                                     type: Identifier
                                     span:
                                       start: 897
                                       end: 900
-                                      ctxt: 2
+                                    ctxt: 1
                                     value: div
                                     optional: false
                         generator: false
@@ -1994,6 +1909,7 @@ body:
                       isAbstract: false
                       isOptional: false
                       isOverride: false
+                  ctxt: 0
                   decorators: []
                   identifier: ~
                   implements: []
@@ -2001,13 +1917,12 @@ body:
                   span:
                     start: 800
                     end: 910
-                    ctxt: 0
                   superClass:
                     type: Identifier
                     span:
                       start: 814
                       end: 823
-                      ctxt: 1
+                    ctxt: 2
                     value: Component
                     optional: false
                   superTypeParams: ~
@@ -2019,13 +1934,12 @@ body:
     span:
       start: 914
       end: 1182
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 921
         end: 1182
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -2033,13 +1947,12 @@ body:
           span:
             start: 927
             end: 1181
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 927
               end: 942
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: SampleComponent
@@ -2048,68 +1961,63 @@ body:
             span:
               start: 945
               end: 1181
-              ctxt: 0
+            ctxt: 10
             params:
               - type: ObjectPattern
                 span:
                   start: 946
                   end: 973
-                  ctxt: 0
                 properties:
                   - type: AssignmentPatternProperty
                     span:
                       start: 952
                       end: 959
-                      ctxt: 0
                     key:
-                      type: Identifier
+                      ctxt: 10
+                      optional: false
                       span:
                         start: 952
                         end: 959
-                        ctxt: 5
+                      type: Identifier
+                      typeAnnotation: ~
                       value: classes
-                      optional: false
                     value: ~
                   - type: AssignmentPatternProperty
                     span:
                       start: 965
                       end: 970
-                      ctxt: 0
                     key:
-                      type: Identifier
+                      ctxt: 10
+                      optional: false
                       span:
                         start: 965
                         end: 970
-                        ctxt: 5
+                      type: Identifier
+                      typeAnnotation: ~
                       value: items
-                      optional: false
                     value: ~
                 optional: false
                 typeAnnotation: ~
             body:
-              type: BlockStatement
+              type: FunctionBody
               span:
                 start: 978
                 end: 1181
-                ctxt: 0
               stmts:
                 - type: ReturnStatement
                   span:
                     start: 984
                     end: 1179
-                    ctxt: 0
                   argument:
                     type: ParenthesisExpression
                     span:
                       start: 991
                       end: 1178
-                      ctxt: 0
                     expression:
                       type: JSXElement
                       span:
                         start: 1001
                         end: 1172
-                        ctxt: 0
                       opening:
                         type: JSXOpeningElement
                         name:
@@ -2117,45 +2025,39 @@ body:
                           span:
                             start: 1002
                             end: 1004
-                            ctxt: 2
+                          ctxt: 1
                           value: ul
                           optional: false
                         span:
                           start: 1001
                           end: 1030
-                          ctxt: 0
                         attributes:
                           - type: JSXAttribute
                             span:
                               start: 1005
                               end: 1029
-                              ctxt: 0
                             name:
                               type: Identifier
                               span:
                                 start: 1005
                                 end: 1014
-                                ctxt: 0
                               value: className
-                              optional: false
                             value:
                               type: JSXExpressionContainer
                               span:
                                 start: 1015
                                 end: 1029
-                                ctxt: 0
                               expression:
                                 type: MemberExpression
                                 span:
                                   start: 1016
                                   end: 1028
-                                  ctxt: 0
                                 object:
                                   type: Identifier
                                   span:
                                     start: 1016
                                     end: 1023
-                                    ctxt: 5
+                                  ctxt: 10
                                   value: classes
                                   optional: false
                                 property:
@@ -2163,9 +2065,7 @@ body:
                                   span:
                                     start: 1024
                                     end: 1028
-                                    ctxt: 0
                                   value: list
-                                  optional: false
                         selfClosing: false
                         typeArguments: ~
                       children:
@@ -2173,32 +2073,29 @@ body:
                           span:
                             start: 1030
                             end: 1043
-                            ctxt: 0
-                          value: "\n\n            "
-                          raw: "\n\n            "
+                          value: "\n            "
+                          raw: "\n            "
                         - type: JSXExpressionContainer
                           span:
                             start: 1043
                             end: 1158
-                            ctxt: 0
                           expression:
                             type: CallExpression
                             span:
                               start: 1044
                               end: 1157
-                              ctxt: 0
+                            ctxt: 0
                             callee:
                               type: MemberExpression
                               span:
                                 start: 1044
                                 end: 1053
-                                ctxt: 0
                               object:
                                 type: Identifier
                                 span:
                                   start: 1044
                                   end: 1049
-                                  ctxt: 5
+                                ctxt: 10
                                 value: items
                                 optional: false
                               property:
@@ -2206,9 +2103,7 @@ body:
                                 span:
                                   start: 1050
                                   end: 1053
-                                  ctxt: 0
                                 value: map
-                                optional: false
                             arguments:
                               - spread: ~
                                 expression:
@@ -2216,13 +2111,13 @@ body:
                                   span:
                                     start: 1054
                                     end: 1156
-                                    ctxt: 0
+                                  ctxt: 11
                                   params:
-                                    - optional: false
+                                    - ctxt: 11
+                                      optional: false
                                       span:
                                         start: 1055
                                         end: 1059
-                                        ctxt: 6
                                       type: Identifier
                                       typeAnnotation: ~
                                       value: item
@@ -2231,13 +2126,11 @@ body:
                                     span:
                                       start: 1064
                                       end: 1156
-                                      ctxt: 0
                                     expression:
                                       type: JSXElement
                                       span:
                                         start: 1082
                                         end: 1142
-                                        ctxt: 0
                                       opening:
                                         type: JSXOpeningElement
                                         name:
@@ -2245,45 +2138,39 @@ body:
                                           span:
                                             start: 1083
                                             end: 1095
-                                            ctxt: 1
+                                          ctxt: 2
                                           value: CopperButton
                                           optional: false
                                         span:
                                           start: 1082
                                           end: 1142
-                                          ctxt: 0
                                         attributes:
                                           - type: JSXAttribute
                                             span:
                                               start: 1096
                                               end: 1111
-                                              ctxt: 0
                                             name:
                                               type: Identifier
                                               span:
                                                 start: 1096
                                                 end: 1099
-                                                ctxt: 0
                                               value: key
-                                              optional: false
                                             value:
                                               type: JSXExpressionContainer
                                               span:
                                                 start: 1100
                                                 end: 1111
-                                                ctxt: 0
                                               expression:
                                                 type: MemberExpression
                                                 span:
                                                   start: 1101
                                                   end: 1110
-                                                  ctxt: 0
                                                 object:
                                                   type: Identifier
                                                   span:
                                                     start: 1101
                                                     end: 1105
-                                                    ctxt: 6
+                                                  ctxt: 11
                                                   value: item
                                                   optional: false
                                                 property:
@@ -2291,47 +2178,40 @@ body:
                                                   span:
                                                     start: 1106
                                                     end: 1110
-                                                    ctxt: 0
                                                   value: slug
-                                                  optional: false
                                           - type: JSXAttribute
                                             span:
                                               start: 1112
                                               end: 1129
-                                              ctxt: 0
                                             name:
                                               type: Identifier
                                               span:
                                                 start: 1112
                                                 end: 1119
-                                                ctxt: 0
                                               value: classes
-                                              optional: false
                                             value:
                                               type: JSXExpressionContainer
                                               span:
                                                 start: 1120
                                                 end: 1129
-                                                ctxt: 0
                                               expression:
                                                 type: Identifier
                                                 span:
                                                   start: 1121
                                                   end: 1128
-                                                  ctxt: 5
+                                                ctxt: 10
                                                 value: classes
                                                 optional: false
                                           - type: SpreadElement
                                             spread:
                                               start: 1131
                                               end: 1134
-                                              ctxt: 0
                                             arguments:
                                               type: Identifier
                                               span:
                                                 start: 1134
                                                 end: 1138
-                                                ctxt: 6
+                                              ctxt: 11
                                               value: item
                                               optional: false
                                         selfClosing: true
@@ -2347,21 +2227,19 @@ body:
                           span:
                             start: 1158
                             end: 1167
-                            ctxt: 0
-                          value: "\n\n        "
-                          raw: "\n\n        "
+                          value: "\n        "
+                          raw: "\n        "
                       closing:
                         type: JSXClosingElement
                         span:
                           start: 1167
                           end: 1172
-                          ctxt: 0
                         name:
                           type: Identifier
                           span:
                             start: 1169
                             end: 1171
-                            ctxt: 2
+                          ctxt: 1
                           value: ul
                           optional: false
             async: false
@@ -2373,13 +2251,12 @@ body:
     span:
       start: 1184
       end: 1258
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 1191
         end: 1258
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -2387,13 +2264,12 @@ body:
           span:
             start: 1197
             end: 1257
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 1197
               end: 1219
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: StyledWrappedComponent
@@ -2402,19 +2278,19 @@ body:
             span:
               start: 1222
               end: 1257
-              ctxt: 0
+            ctxt: 0
             callee:
               type: CallExpression
               span:
                 start: 1222
                 end: 1240
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 1222
                   end: 1228
-                  ctxt: 2
+                ctxt: 1
                 value: Styled
                 optional: false
               arguments:
@@ -2424,7 +2300,7 @@ body:
                     span:
                       start: 1233
                       end: 1239
-                      ctxt: 2
+                    ctxt: 1
                     value: styles
                     optional: false
               typeArguments:
@@ -2432,13 +2308,11 @@ body:
                 span:
                   start: 1228
                   end: 1232
-                  ctxt: 0
                 params:
                   - type: TsTypeLiteral
                     span:
                       start: 1229
                       end: 1231
-                      ctxt: 0
                     members: []
             arguments:
               - spread: ~
@@ -2447,7 +2321,7 @@ body:
                   span:
                     start: 1241
                     end: 1256
-                    ctxt: 1
+                  ctxt: 2
                   value: SampleComponent
                   optional: false
             typeArguments: ~
@@ -2456,13 +2330,12 @@ body:
     span:
       start: 1260
       end: 1628
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 1267
         end: 1628
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -2470,13 +2343,12 @@ body:
           span:
             start: 1273
             end: 1627
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 1273
               end: 1303
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: ComponentWrappedByObjectAssign
@@ -2485,19 +2357,18 @@ body:
             span:
               start: 1306
               end: 1627
-              ctxt: 0
+            ctxt: 0
             callee:
               type: MemberExpression
               span:
                 start: 1306
                 end: 1319
-                ctxt: 0
               object:
                 type: Identifier
                 span:
                   start: 1306
                   end: 1312
-                  ctxt: 2
+                ctxt: 1
                 value: Object
                 optional: false
               property:
@@ -2505,9 +2376,7 @@ body:
                 span:
                   start: 1313
                   end: 1319
-                  ctxt: 0
                 value: assign
-                optional: false
             arguments:
               - spread: ~
                 expression:
@@ -2515,7 +2384,7 @@ body:
                   span:
                     start: 1320
                     end: 1342
-                    ctxt: 1
+                  ctxt: 2
                   value: StyledWrappedComponent
                   optional: false
               - spread: ~
@@ -2524,28 +2393,28 @@ body:
                   span:
                     start: 1344
                     end: 1626
-                    ctxt: 0
                   properties:
                     - type: Identifier
                       span:
                         start: 1406
                         end: 1421
-                        ctxt: 1
+                      ctxt: 2
                       value: SampleComponent
                       optional: false
                     - type: Identifier
                       span:
                         start: 1513
                         end: 1535
-                        ctxt: 1
+                      ctxt: 2
                       value: WrappedCopperComponent
                       optional: false
                     - type: Identifier
                       span:
                         start: 1612
                         end: 1624
-                        ctxt: 1
+                      ctxt: 2
                       value: CopperButton
                       optional: false
             typeArguments: ~
           definite: false
+

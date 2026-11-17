@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "9407152561824906855"
       path: src/functional-component/return-var/local-object-destruct-inline-rename.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "9407152561824906855"
       path: src/functional-component/return-var/local-object-destruct-inline-rename.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "renamedComponent#2"
+              symbol: "renamedComponent#3"
               source:
                 hash: "9407152561824906855"
                 path: src/functional-component/return-var/local-object-destruct-inline-rename.tsx
@@ -63,7 +63,7 @@ declarations:
     end:
       line: 9
       column: 2
-  - symbol: "renamedComponent#2"
+  - symbol: "renamedComponent#3"
     source:
       hash: "9407152561824906855"
       path: src/functional-component/return-var/local-object-destruct-inline-rename.tsx
@@ -85,79 +85,71 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
-      - "renamedComponent#2"
+      - "Sample#2"
+      - "Sample#2"
+      - "renamedComponent#3"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "component#0"
-      - "div#3"
-      - "renamedComponent#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "renamedComponent#3"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "renamedComponent#2"
+      - "renamedComponent#3"
     references:
-      - "component#0"
-      - "div#3"
-      - "renamedComponent#2"
+      - "div#1"
+      - "renamedComponent#3"
     jsx_references:
-      - "div#3"
-  - owner: "renamedComponent#2"
-    parent: "Sample#1"
+      - "div#1"
+  - owner: "renamedComponent#3"
+    parent: "Sample#2"
     children: []
     references:
-      - "component#0"
-      - "div#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "renamedComponent#2"
+      - "renamedComponent#3"
     references:
-      - "component#0"
-      - "div#3"
-      - "renamedComponent#2"
+      - "div#1"
+      - "renamedComponent#3"
     jsx_references:
-      - "div#3"
-  - owner: "renamedComponent#2"
-    parent: "Sample#1"
+      - "div#1"
+  - owner: "renamedComponent#3"
+    parent: "Sample#2"
     children: []
     references:
-      - "component#0"
-      - "div#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
-  - owner: "renamedComponent#2"
+      - "div#1"
+  - owner: "renamedComponent#3"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "div#3"
+      - "div#1"
     jsx_references:
-      - "div#3"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -165,30 +157,28 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 29
       end: 185
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 62
           end: 185
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 68
               end: 153
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -196,13 +186,11 @@ body:
                 span:
                   start: 74
                   end: 152
-                  ctxt: 0
                 id:
                   type: ObjectPattern
                   span:
                     start: 74
                     end: 105
-                    ctxt: 0
                   properties:
                     - type: KeyValuePatternProperty
                       key:
@@ -210,15 +198,13 @@ body:
                         span:
                           start: 76
                           end: 85
-                          ctxt: 0
                         value: component
-                        optional: false
                       value:
+                        ctxt: 3
                         optional: false
                         span:
                           start: 87
                           end: 103
-                          ctxt: 2
                         type: Identifier
                         typeAnnotation: ~
                         value: renamedComponent
@@ -229,7 +215,6 @@ body:
                   span:
                     start: 108
                     end: 152
-                    ctxt: 0
                   properties:
                     - type: KeyValueProperty
                       key:
@@ -237,15 +222,12 @@ body:
                         span:
                           start: 118
                           end: 127
-                          ctxt: 0
                         value: component
-                        optional: false
                       value:
                         type: JSXElement
                         span:
                           start: 129
                           end: 146
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
@@ -253,13 +235,12 @@ body:
                             span:
                               start: 130
                               end: 133
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                           span:
                             start: 129
                             end: 134
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -268,7 +249,6 @@ body:
                             span:
                               start: 134
                               end: 140
-                              ctxt: 0
                             value: Sample
                             raw: Sample
                         closing:
@@ -276,13 +256,12 @@ body:
                           span:
                             start: 140
                             end: 146
-                            ctxt: 0
                           name:
                             type: Identifier
                             span:
                               start: 142
                               end: 145
-                              ctxt: 3
+                            ctxt: 1
                             value: div
                             optional: false
                 definite: false
@@ -290,15 +269,15 @@ body:
             span:
               start: 159
               end: 183
-              ctxt: 0
             argument:
               type: Identifier
               span:
                 start: 166
                 end: 182
-                ctxt: 2
+              ctxt: 3
               value: renamedComponent
               optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -306,7 +285,7 @@ body:
         span:
           start: 53
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -314,6 +293,6 @@ body:
       span:
         start: 44
         end: 185
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

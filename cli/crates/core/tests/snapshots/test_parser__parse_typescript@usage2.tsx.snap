@@ -16,7 +16,7 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "TableUser2#1"
+  - symbol: "TableUser2#2"
     source:
       hash: "4480349871818005544"
       path: src/subcomponent/table/usage2.tsx
@@ -32,17 +32,17 @@ declarations:
     end:
       line: 3
       column: 17
-  - symbol: "WTable#1"
+  - symbol: "WTable#2"
     source:
       hash: "4480349871818005544"
       path: src/subcomponent/table/usage2.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('WTable' type=inline), context: #1 }, source: ModuleId { hash: 1969776906375578802, path: \"src/subcomponent/table/wildcard\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"WTable\", context: #2 }, source: ModuleId { hash: 1969776906375578802, path: \"src/subcomponent/table/wildcard\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "WTable#1"
+          symbol: "WTable#2"
           source:
             hash: "1969776906375578802"
             path: src/subcomponent/table/wildcard
@@ -65,7 +65,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "TableUser2#1"
+          symbol: "TableUser2#2"
           source:
             hash: "4480349871818005544"
             path: src/subcomponent/table/usage2.tsx
@@ -82,56 +82,48 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "TableUser2#1"
+      - "TableUser2#2"
       - "default#0"
     references:
-      - "Cell#2"
-      - "Header#2"
-      - "TTable#2"
-      - "TableUser2#1"
-      - "WTable#1"
+      - "TableUser2#2"
+      - "WTable#2"
     jsx_references:
-      - "WTable#1.TTable"
-      - "WTable#1.TTable.Cell"
-      - "WTable#1.TTable.Header"
-      - "WTable#1.TTable.Header.Cell"
-  - owner: "TableUser2#1"
+      - "WTable#2.TTable"
+      - "WTable#2.TTable.Cell"
+      - "WTable#2.TTable.Header"
+      - "WTable#2.TTable.Header.Cell"
+  - owner: "TableUser2#2"
     parent: "__global#0"
     children: []
     references:
-      - "Cell#2"
-      - "Header#2"
-      - "TTable#2"
-      - "WTable#1"
+      - "WTable#2"
     jsx_references:
-      - "WTable#1.TTable"
-      - "WTable#1.TTable.Cell"
-      - "WTable#1.TTable.Header"
-      - "WTable#1.TTable.Header.Cell"
+      - "WTable#2.TTable"
+      - "WTable#2.TTable.Cell"
+      - "WTable#2.TTable.Header"
+      - "WTable#2.TTable.Header.Cell"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "TableUser2#1"
+      - "TableUser2#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 38
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 16
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 16
-            ctxt: 1
+          ctxt: 2
           value: WTable
           optional: false
         imported: ~
@@ -141,16 +133,16 @@ body:
       span:
         start: 25
         end: 37
-        ctxt: 0
       value: "./wildcard"
       raw: "\"./wildcard\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 40
       end: 418
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -158,13 +150,12 @@ body:
         span:
           start: 46
           end: 417
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 46
             end: 56
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: TableUser2
@@ -173,42 +164,41 @@ body:
           span:
             start: 59
             end: 417
-            ctxt: 0
+          ctxt: 3
           params: []
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 65
               end: 417
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 71
                   end: 415
-                  ctxt: 0
                 argument:
                   type: ParenthesisExpression
                   span:
                     start: 78
                     end: 414
-                    ctxt: 0
                   expression:
                     type: JSXElement
                     span:
                       start: 88
                       end: 408
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 89
+                          end: 102
                         object:
                           type: Identifier
                           span:
                             start: 89
                             end: 95
-                            ctxt: 1
+                          ctxt: 2
                           value: WTable
                           optional: false
                         property:
@@ -216,13 +206,10 @@ body:
                           span:
                             start: 96
                             end: 102
-                            ctxt: 2
                           value: TTable
-                          optional: false
                       span:
                         start: 88
                         end: 103
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -231,26 +218,30 @@ body:
                         span:
                           start: 103
                           end: 116
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXElement
                         span:
                           start: 116
                           end: 295
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 117
+                              end: 137
                             object:
                               type: JSXMemberExpression
+                              span:
+                                start: 117
+                                end: 130
                               object:
                                 type: Identifier
                                 span:
                                   start: 117
                                   end: 123
-                                  ctxt: 1
+                                ctxt: 2
                                 value: WTable
                                 optional: false
                               property:
@@ -258,21 +249,16 @@ body:
                                 span:
                                   start: 124
                                   end: 130
-                                  ctxt: 2
                                 value: TTable
-                                optional: false
                             property:
                               type: Identifier
                               span:
                                 start: 131
                                 end: 137
-                                ctxt: 2
                               value: Header
-                              optional: false
                           span:
                             start: 116
                             end: 138
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -281,28 +267,35 @@ body:
                             span:
                               start: 138
                               end: 155
-                              ctxt: 0
-                            value: "\n\n                "
-                            raw: "\n\n                "
+                            value: "\n                "
+                            raw: "\n                "
                           - type: JSXElement
                             span:
                               start: 155
                               end: 259
-                              ctxt: 0
                             opening:
                               type: JSXOpeningElement
                               name:
                                 type: JSXMemberExpression
+                                span:
+                                  start: 156
+                                  end: 181
                                 object:
                                   type: JSXMemberExpression
+                                  span:
+                                    start: 156
+                                    end: 176
                                   object:
                                     type: JSXMemberExpression
+                                    span:
+                                      start: 156
+                                      end: 169
                                     object:
                                       type: Identifier
                                       span:
                                         start: 156
                                         end: 162
-                                        ctxt: 1
+                                      ctxt: 2
                                       value: WTable
                                       optional: false
                                     property:
@@ -310,29 +303,22 @@ body:
                                       span:
                                         start: 163
                                         end: 169
-                                        ctxt: 2
                                       value: TTable
-                                      optional: false
                                   property:
                                     type: Identifier
                                     span:
                                       start: 170
                                       end: 176
-                                      ctxt: 2
                                     value: Header
-                                    optional: false
                                 property:
                                   type: Identifier
                                   span:
                                     start: 177
                                     end: 181
-                                    ctxt: 2
                                   value: Cell
-                                  optional: false
                               span:
                                 start: 155
                                 end: 182
-                                ctxt: 0
                               attributes: []
                               selfClosing: false
                               typeArguments: ~
@@ -341,27 +327,34 @@ body:
                                 span:
                                   start: 182
                                   end: 231
-                                  ctxt: 0
-                                value: "\n\n                    Header Cell\n\n                "
-                                raw: "\n\n                    Header Cell\n\n                "
+                                value: "\n                    Header Cell\n                "
+                                raw: "\n                    Header Cell\n                "
                             closing:
                               type: JSXClosingElement
                               span:
                                 start: 231
                                 end: 259
-                                ctxt: 0
                               name:
                                 type: JSXMemberExpression
+                                span:
+                                  start: 233
+                                  end: 258
                                 object:
                                   type: JSXMemberExpression
+                                  span:
+                                    start: 233
+                                    end: 253
                                   object:
                                     type: JSXMemberExpression
+                                    span:
+                                      start: 233
+                                      end: 246
                                     object:
                                       type: Identifier
                                       span:
                                         start: 233
                                         end: 239
-                                        ctxt: 1
+                                      ctxt: 2
                                       value: WTable
                                       optional: false
                                     property:
@@ -369,48 +362,46 @@ body:
                                       span:
                                         start: 240
                                         end: 246
-                                        ctxt: 2
                                       value: TTable
-                                      optional: false
                                   property:
                                     type: Identifier
                                     span:
                                       start: 247
                                       end: 253
-                                      ctxt: 2
                                     value: Header
-                                    optional: false
                                 property:
                                   type: Identifier
                                   span:
                                     start: 254
                                     end: 258
-                                    ctxt: 2
                                   value: Cell
-                                  optional: false
                           - type: JSXText
                             span:
                               start: 259
                               end: 272
-                              ctxt: 0
-                            value: "\n\n            "
-                            raw: "\n\n            "
+                            value: "\n            "
+                            raw: "\n            "
                         closing:
                           type: JSXClosingElement
                           span:
                             start: 272
                             end: 295
-                            ctxt: 0
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 274
+                              end: 294
                             object:
                               type: JSXMemberExpression
+                              span:
+                                start: 274
+                                end: 287
                               object:
                                 type: Identifier
                                 span:
                                   start: 274
                                   end: 280
-                                  ctxt: 1
+                                ctxt: 2
                                 value: WTable
                                 optional: false
                               property:
@@ -418,41 +409,41 @@ body:
                                 span:
                                   start: 281
                                   end: 287
-                                  ctxt: 2
                                 value: TTable
-                                optional: false
                             property:
                               type: Identifier
                               span:
                                 start: 288
                                 end: 294
-                                ctxt: 2
                               value: Header
-                              optional: false
                       - type: JSXText
                         span:
                           start: 295
                           end: 308
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXElement
                         span:
                           start: 308
                           end: 383
-                          ctxt: 0
                         opening:
                           type: JSXOpeningElement
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 309
+                              end: 327
                             object:
                               type: JSXMemberExpression
+                              span:
+                                start: 309
+                                end: 322
                               object:
                                 type: Identifier
                                 span:
                                   start: 309
                                   end: 315
-                                  ctxt: 1
+                                ctxt: 2
                                 value: WTable
                                 optional: false
                               property:
@@ -460,21 +451,16 @@ body:
                                 span:
                                   start: 316
                                   end: 322
-                                  ctxt: 2
                                 value: TTable
-                                optional: false
                             property:
                               type: Identifier
                               span:
                                 start: 323
                                 end: 327
-                                ctxt: 2
                               value: Cell
-                              optional: false
                           span:
                             start: 308
                             end: 328
-                            ctxt: 0
                           attributes: []
                           selfClosing: false
                           typeArguments: ~
@@ -483,25 +469,29 @@ body:
                             span:
                               start: 328
                               end: 362
-                              ctxt: 0
-                            value: "\n\n                Cell\n\n            "
-                            raw: "\n\n                Cell\n\n            "
+                            value: "\n                Cell\n            "
+                            raw: "\n                Cell\n            "
                         closing:
                           type: JSXClosingElement
                           span:
                             start: 362
                             end: 383
-                            ctxt: 0
                           name:
                             type: JSXMemberExpression
+                            span:
+                              start: 364
+                              end: 382
                             object:
                               type: JSXMemberExpression
+                              span:
+                                start: 364
+                                end: 377
                               object:
                                 type: Identifier
                                 span:
                                   start: 364
                                   end: 370
-                                  ctxt: 1
+                                ctxt: 2
                                 value: WTable
                                 optional: false
                               property:
@@ -509,38 +499,35 @@ body:
                                 span:
                                   start: 371
                                   end: 377
-                                  ctxt: 2
                                 value: TTable
-                                optional: false
                             property:
                               type: Identifier
                               span:
                                 start: 378
                                 end: 382
-                                ctxt: 2
                               value: Cell
-                              optional: false
                       - type: JSXText
                         span:
                           start: 383
                           end: 392
-                          ctxt: 0
-                        value: "\n\n        "
-                        raw: "\n\n        "
+                        value: "\n        "
+                        raw: "\n        "
                     closing:
                       type: JSXClosingElement
                       span:
                         start: 392
                         end: 408
-                        ctxt: 0
                       name:
                         type: JSXMemberExpression
+                        span:
+                          start: 394
+                          end: 407
                         object:
                           type: Identifier
                           span:
                             start: 394
                             end: 400
-                            ctxt: 1
+                          ctxt: 2
                           value: WTable
                           optional: false
                         property:
@@ -548,9 +535,7 @@ body:
                           span:
                             start: 401
                             end: 407
-                            ctxt: 2
                           value: TTable
-                          optional: false
           async: false
           generator: false
           typeParameters: ~
@@ -560,12 +545,12 @@ body:
     span:
       start: 420
       end: 446
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 435
         end: 445
-        ctxt: 1
+      ctxt: 2
       value: TableUser2
       optional: false
+

@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "Component#1"
+  - symbol: "Component#2"
     source:
       hash: "14888567799352851563"
       path: src/class-component/class-component-2.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Component' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Component\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Component#1"
+          symbol: "Component#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -39,13 +39,13 @@ declarations:
     end:
       line: 1
       column: 26
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "14888567799352851563"
       path: src/class-component/class-component-2.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -62,7 +62,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "14888567799352851563"
       path: src/class-component/class-component-2.tsx
@@ -73,7 +73,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "Component#1"
+            symbol: "Component#2"
             source:
               hash: "14888567799352851563"
               path: src/class-component/class-component-2.tsx
@@ -90,65 +90,59 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "Component#1"
-      - "React#1"
-      - "Sample#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#1"
-      - "div#2"
-      - "render#0"
+      - "Component#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 42
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
       - type: ImportSpecifier
         span:
           start: 17
           end: 26
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 17
             end: 26
-            ctxt: 1
+          ctxt: 2
           value: Component
           optional: false
         imported: ~
@@ -158,56 +152,49 @@ body:
       span:
         start: 34
         end: 41
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 43
       end: 139
-      ctxt: 0
     declaration:
       body:
         - type: ClassMethod
           span:
             start: 87
             end: 137
-            ctxt: 0
           key:
             type: Identifier
             span:
               start: 87
               end: 93
-              ctxt: 0
             value: render
-            optional: false
           function:
             params: []
             decorators: []
             span:
               start: 87
               end: 137
-              ctxt: 0
+            ctxt: 3
             body:
-              type: BlockStatement
+              type: FunctionBody
               span:
                 start: 96
                 end: 137
-                ctxt: 0
               stmts:
                 - type: ReturnStatement
                   span:
                     start: 106
                     end: 131
-                    ctxt: 0
                   argument:
                     type: JSXElement
                     span:
                       start: 113
                       end: 130
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -215,13 +202,12 @@ body:
                         span:
                           start: 114
                           end: 117
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 113
                         end: 118
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -230,7 +216,6 @@ body:
                         span:
                           start: 118
                           end: 124
-                          ctxt: 0
                         value: sample
                         raw: sample
                     closing:
@@ -238,13 +223,12 @@ body:
                       span:
                         start: 124
                         end: 130
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 126
                           end: 129
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
             generator: false
@@ -257,6 +241,7 @@ body:
           isAbstract: false
           isOptional: false
           isOverride: false
+      ctxt: 0
       declare: false
       decorators: []
       identifier:
@@ -264,7 +249,7 @@ body:
         span:
           start: 56
           end: 62
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       implements: []
@@ -272,15 +257,15 @@ body:
       span:
         start: 50
         end: 139
-        ctxt: 0
       superClass:
         type: Identifier
         span:
           start: 71
           end: 80
-          ctxt: 1
+        ctxt: 2
         value: Component
         optional: false
       superTypeParams: ~
       type: ClassDeclaration
       typeParams: ~
+

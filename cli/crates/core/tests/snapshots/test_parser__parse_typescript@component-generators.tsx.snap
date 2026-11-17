@@ -13,22 +13,22 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "MahmutCan#1"
+      Internal: "MahmutCan#2"
     exported_name: MahmutCan
   - source:
-      Internal: "generateTimerComponent#1"
+      Internal: "generateTimerComponent#2"
     exported_name: generateTimerComponent
   - source:
-      Internal: "ComponentFactory#1"
+      Internal: "ComponentFactory#2"
     exported_name: ComponentFactory
   - source:
-      Internal: "CountdownTimer#1"
+      Internal: "CountdownTimer#2"
     exported_name: CountdownTimer
   - source:
-      Internal: "LapTimer#1"
+      Internal: "LapTimer#2"
     exported_name: LapTimer
 declarations:
-  - symbol: "C#1"
+  - symbol: "C#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -40,7 +40,7 @@ declarations:
         MemberOf:
           - TypeOf:
               symbol:
-                symbol: "react#1"
+                symbol: "react#2"
                 source:
                   hash: "1785547129105989954"
                   path: src/component-generators.tsx
@@ -54,7 +54,7 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "ComponentFactory#1"
+  - symbol: "ComponentFactory#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -68,7 +68,7 @@ declarations:
     end:
       line: 21
       column: 2
-  - symbol: "CountdownTimer#1"
+  - symbol: "CountdownTimer#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -84,7 +84,7 @@ declarations:
     end:
       line: 27
       column: 2
-  - symbol: "LapTimer#1"
+  - symbol: "LapTimer#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -100,7 +100,7 @@ declarations:
     end:
       line: 34
       column: 2
-  - symbol: "MahmutCan#1"
+  - symbol: "MahmutCan#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -115,17 +115,17 @@ declarations:
     end:
       line: 9
       column: 32
-  - symbol: "Timer#1"
+  - symbol: "Timer#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Timer' type=inline), context: #1 }, source: ModuleId { hash: 8041371829929616090, path: \"src/timer-utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Timer\", context: #2 }, source: ModuleId { hash: 8041371829929616090, path: \"src/timer-utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Timer#1"
+          symbol: "Timer#2"
           source:
             hash: "8041371829929616090"
             path: src/timer-utils
@@ -138,7 +138,7 @@ declarations:
     end:
       line: 1
       column: 15
-  - symbol: "TimerComp#4"
+  - symbol: "TimerComp#7"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -149,7 +149,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "generateTimerComponent#1"
+              symbol: "generateTimerComponent#2"
               source:
                 hash: "1785547129105989954"
                 path: src/component-generators.tsx
@@ -165,7 +165,7 @@ declarations:
     end:
       line: 24
       column: 20
-  - symbol: "TimerComp#5"
+  - symbol: "TimerComp#8"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -177,7 +177,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "factory#5"
+                  symbol: "factory#8"
                   source:
                     hash: "1785547129105989954"
                     path: src/component-generators.tsx
@@ -192,7 +192,7 @@ declarations:
     end:
       line: 31
       column: 20
-  - symbol: "factory#5"
+  - symbol: "factory#8"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -206,7 +206,7 @@ declarations:
     end:
       line: 30
       column: 18
-  - symbol: "generateTimerComponent#1"
+  - symbol: "generateTimerComponent#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
@@ -223,17 +223,17 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "props#4"
+  - symbol: "props#7"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('CountdownTimer' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"CountdownTimer\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "CountdownTimer#1"
+          symbol: "CountdownTimer#2"
           source:
             hash: "1785547129105989954"
             path: src/component-generators.tsx
@@ -246,17 +246,17 @@ declarations:
     end:
       line: 23
       column: 37
-  - symbol: "props#5"
+  - symbol: "props#8"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('LapTimer' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"LapTimer\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "LapTimer#1"
+          symbol: "LapTimer#2"
           source:
             hash: "1785547129105989954"
             path: src/component-generators.tsx
@@ -269,13 +269,13 @@ declarations:
     end:
       line: 29
       column: 31
-  - symbol: "react#1"
+  - symbol: "react#2"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -292,18 +292,18 @@ declarations:
     end:
       line: 3
       column: 18
-  - symbol: "type#2"
+  - symbol: "type#4"
     source:
       hash: "1785547129105989954"
       path: src/component-generators.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('generateTimerComponent' type=dynamic), context: #1 }>[0][type]"
+    definition: "Parameter<Symbol { name: \"generateTimerComponent\", context: #2 }>[0][type]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "generateTimerComponent#1"
+              symbol: "generateTimerComponent#2"
               source:
                 hash: "1785547129105989954"
                 path: src/component-generators.tsx
@@ -321,237 +321,205 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "C#1"
-      - "MahmutCan#1"
-      - "MahmutCan#1"
-      - "generateTimerComponent#1"
-      - "generateTimerComponent#1"
-      - "ComponentFactory#1"
-      - "ComponentFactory#1"
-      - "CountdownTimer#1"
-      - "CountdownTimer#1"
-      - "TimerComp#4"
-      - "LapTimer#1"
-      - "LapTimer#1"
-      - "factory#5"
-      - "TimerComp#5"
+      - "C#2"
+      - "MahmutCan#2"
+      - "MahmutCan#2"
+      - "generateTimerComponent#2"
+      - "generateTimerComponent#2"
+      - "ComponentFactory#2"
+      - "ComponentFactory#2"
+      - "CountdownTimer#2"
+      - "CountdownTimer#2"
+      - "TimerComp#7"
+      - "LapTimer#2"
+      - "LapTimer#2"
+      - "factory#8"
+      - "TimerComp#8"
     references:
-      - "C#1"
-      - "Component#0"
-      - "ComponentFactory#1"
-      - "CountdownTimer#1"
-      - "LapTimer#1"
-      - "MahmutCan#1"
-      - "Timer#1"
-      - "TimerComp#4"
-      - "TimerComp#5"
-      - "factory#5"
-      - "generateTimerComponent#1"
-      - "initialValue#0"
-      - "label#0"
-      - "lapTimer#0"
-      - "props#3"
-      - "props#4"
+      - "C#2"
+      - "ComponentFactory#2"
+      - "CountdownTimer#2"
+      - "LapTimer#2"
+      - "MahmutCan#2"
+      - "Timer#2"
+      - "TimerComp#7"
+      - "TimerComp#8"
+      - "factory#8"
+      - "generateTimerComponent#2"
       - "props#5"
-      - "react#1"
-      - "type#0"
-      - "type#2"
+      - "props#7"
+      - "props#8"
+      - "react#2"
+      - "type#4"
     jsx_references:
-      - "MahmutCan#1"
-      - "Timer#1"
-      - "TimerComp#4"
-      - "TimerComp#5"
-  - owner: "C#1"
+      - "MahmutCan#2"
+      - "Timer#2"
+      - "TimerComp#7"
+      - "TimerComp#8"
+  - owner: "C#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#0"
-      - "react#1"
+      - "react#2"
     jsx_references: []
-  - owner: "MahmutCan#1"
+  - owner: "MahmutCan#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "MahmutCan#1"
+  - owner: "MahmutCan#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "generateTimerComponent#1"
+  - owner: "generateTimerComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "MahmutCan#1"
-      - "Timer#1"
-      - "props#3"
-      - "type#0"
-      - "type#2"
-    jsx_references:
-      - "MahmutCan#1"
-      - "Timer#1"
-  - owner: "generateTimerComponent#1"
-    parent: "__global#0"
-    children: []
-    references:
-      - "MahmutCan#1"
-      - "Timer#1"
-      - "props#3"
-      - "type#0"
-      - "type#2"
-    jsx_references:
-      - "MahmutCan#1"
-      - "Timer#1"
-  - owner: "ComponentFactory#1"
-    parent: "__global#0"
-    children: []
-    references:
-      - "generateTimerComponent#1"
-      - "lapTimer#0"
-      - "type#0"
-    jsx_references: []
-  - owner: "ComponentFactory#1"
-    parent: "__global#0"
-    children: []
-    references:
-      - "generateTimerComponent#1"
-      - "lapTimer#0"
-      - "type#0"
-    jsx_references: []
-  - owner: "CountdownTimer#1"
-    parent: "__global#0"
-    children:
-      - "TimerComp#4"
-    references:
-      - "TimerComp#4"
-      - "generateTimerComponent#1"
-      - "initialValue#0"
-      - "label#0"
-      - "props#4"
-      - "type#0"
-    jsx_references:
-      - "TimerComp#4"
-  - owner: "TimerComp#4"
-    parent: "CountdownTimer#1"
-    children: []
-    references:
-      - "generateTimerComponent#1"
-      - "type#0"
-    jsx_references: []
-  - owner: "CountdownTimer#1"
-    parent: "__global#0"
-    children:
-      - "TimerComp#4"
-    references:
-      - "TimerComp#4"
-      - "generateTimerComponent#1"
-      - "initialValue#0"
-      - "label#0"
-      - "props#4"
-      - "type#0"
-    jsx_references:
-      - "TimerComp#4"
-  - owner: "TimerComp#4"
-    parent: "CountdownTimer#1"
-    children: []
-    references:
-      - "generateTimerComponent#1"
-      - "type#0"
-    jsx_references: []
-  - owner: "TimerComp#4"
-    parent: "__global#0"
-    children: []
-    references:
-      - "generateTimerComponent#1"
-      - "type#0"
-    jsx_references: []
-  - owner: "LapTimer#1"
-    parent: "__global#0"
-    children:
-      - "factory#5"
-      - "TimerComp#5"
-    references:
-      - "ComponentFactory#1"
-      - "TimerComp#5"
-      - "factory#5"
-      - "initialValue#0"
-      - "label#0"
-      - "lapTimer#0"
+      - "MahmutCan#2"
+      - "Timer#2"
       - "props#5"
+      - "type#4"
     jsx_references:
-      - "TimerComp#5"
-  - owner: "factory#5"
-    parent: "LapTimer#1"
+      - "MahmutCan#2"
+      - "Timer#2"
+  - owner: "generateTimerComponent#2"
+    parent: "__global#0"
     children: []
     references:
-      - "ComponentFactory#1"
-    jsx_references: []
-  - owner: "TimerComp#5"
-    parent: "LapTimer#1"
+      - "MahmutCan#2"
+      - "Timer#2"
+      - "props#5"
+      - "type#4"
+    jsx_references:
+      - "MahmutCan#2"
+      - "Timer#2"
+  - owner: "ComponentFactory#2"
+    parent: "__global#0"
     children: []
     references:
-      - "factory#5"
-      - "lapTimer#0"
+      - "generateTimerComponent#2"
     jsx_references: []
-  - owner: "LapTimer#1"
+  - owner: "ComponentFactory#2"
+    parent: "__global#0"
+    children: []
+    references:
+      - "generateTimerComponent#2"
+    jsx_references: []
+  - owner: "CountdownTimer#2"
     parent: "__global#0"
     children:
-      - "factory#5"
-      - "TimerComp#5"
+      - "TimerComp#7"
     references:
-      - "ComponentFactory#1"
-      - "TimerComp#5"
-      - "factory#5"
-      - "initialValue#0"
-      - "label#0"
-      - "lapTimer#0"
-      - "props#5"
+      - "TimerComp#7"
+      - "generateTimerComponent#2"
+      - "props#7"
     jsx_references:
-      - "TimerComp#5"
-  - owner: "factory#5"
-    parent: "LapTimer#1"
+      - "TimerComp#7"
+  - owner: "TimerComp#7"
+    parent: "CountdownTimer#2"
     children: []
     references:
-      - "ComponentFactory#1"
+      - "generateTimerComponent#2"
     jsx_references: []
-  - owner: "TimerComp#5"
-    parent: "LapTimer#1"
+  - owner: "CountdownTimer#2"
+    parent: "__global#0"
+    children:
+      - "TimerComp#7"
+    references:
+      - "TimerComp#7"
+      - "generateTimerComponent#2"
+      - "props#7"
+    jsx_references:
+      - "TimerComp#7"
+  - owner: "TimerComp#7"
+    parent: "CountdownTimer#2"
     children: []
     references:
-      - "factory#5"
-      - "lapTimer#0"
+      - "generateTimerComponent#2"
     jsx_references: []
-  - owner: "factory#5"
+  - owner: "TimerComp#7"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentFactory#1"
+      - "generateTimerComponent#2"
     jsx_references: []
-  - owner: "TimerComp#5"
+  - owner: "LapTimer#2"
+    parent: "__global#0"
+    children:
+      - "factory#8"
+      - "TimerComp#8"
+    references:
+      - "ComponentFactory#2"
+      - "TimerComp#8"
+      - "factory#8"
+      - "props#8"
+    jsx_references:
+      - "TimerComp#8"
+  - owner: "factory#8"
+    parent: "LapTimer#2"
+    children: []
+    references:
+      - "ComponentFactory#2"
+    jsx_references: []
+  - owner: "TimerComp#8"
+    parent: "LapTimer#2"
+    children: []
+    references:
+      - "factory#8"
+    jsx_references: []
+  - owner: "LapTimer#2"
+    parent: "__global#0"
+    children:
+      - "factory#8"
+      - "TimerComp#8"
+    references:
+      - "ComponentFactory#2"
+      - "TimerComp#8"
+      - "factory#8"
+      - "props#8"
+    jsx_references:
+      - "TimerComp#8"
+  - owner: "factory#8"
+    parent: "LapTimer#2"
+    children: []
+    references:
+      - "ComponentFactory#2"
+    jsx_references: []
+  - owner: "TimerComp#8"
+    parent: "LapTimer#2"
+    children: []
+    references:
+      - "factory#8"
+    jsx_references: []
+  - owner: "factory#8"
     parent: "__global#0"
     children: []
     references:
-      - "factory#5"
-      - "lapTimer#0"
+      - "ComponentFactory#2"
+    jsx_references: []
+  - owner: "TimerComp#8"
+    parent: "__global#0"
+    children: []
+    references:
+      - "factory#8"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 39
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 15
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 15
-            ctxt: 1
+          ctxt: 2
           value: Timer
           optional: false
         imported: ~
@@ -561,28 +529,26 @@ body:
       span:
         start: 23
         end: 38
-        ctxt: 0
       value: "./timer-utils"
       raw: "\"./timer-utils\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 41
       end: 72
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 48
           end: 58
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 53
             end: 58
-            ctxt: 1
+          ctxt: 2
           value: react
           optional: false
     source:
@@ -590,12 +556,13 @@ body:
       span:
         start: 64
         end: 71
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - body: []
+    ctxt: 0
     declare: false
     decorators: []
     identifier:
@@ -603,7 +570,7 @@ body:
       span:
         start: 80
         end: 81
-        ctxt: 1
+      ctxt: 2
       value: C
       optional: false
     implements: []
@@ -611,19 +578,17 @@ body:
     span:
       start: 74
       end: 110
-      ctxt: 0
     superClass:
       type: MemberExpression
       span:
         start: 90
         end: 105
-        ctxt: 0
       object:
         type: Identifier
         span:
           start: 90
           end: 95
-          ctxt: 1
+        ctxt: 2
         value: react
         optional: false
       property:
@@ -631,9 +596,7 @@ body:
         span:
           start: 96
           end: 105
-          ctxt: 0
         value: Component
-        optional: false
     superTypeParams: ~
     type: ClassDeclaration
     typeParams: ~
@@ -641,16 +604,15 @@ body:
     span:
       start: 112
       end: 143
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 140
           end: 143
-          ctxt: 0
         stmts: []
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -659,7 +621,7 @@ body:
         span:
           start: 128
           end: 137
-          ctxt: 1
+        ctxt: 2
         value: MahmutCan
         optional: false
       params: []
@@ -667,40 +629,36 @@ body:
       span:
         start: 119
         end: 143
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 145
       end: 287
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 194
           end: 287
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 200
               end: 285
-              ctxt: 0
             argument:
               type: ArrowFunctionExpression
               span:
                 start: 207
                 end: 284
-                ctxt: 0
+              ctxt: 5
               params:
-                - optional: false
+                - ctxt: 5
+                  optional: false
                   span:
                     start: 208
                     end: 213
-                    ctxt: 3
                   type: Identifier
                   typeAnnotation: ~
                   value: props
@@ -709,13 +667,11 @@ body:
                 span:
                   start: 218
                   end: 284
-                  ctxt: 0
                 expression:
                   type: JSXElement
                   span:
                     start: 228
                     end: 278
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -723,52 +679,46 @@ body:
                       span:
                         start: 229
                         end: 234
-                        ctxt: 1
+                      ctxt: 2
                       value: Timer
                       optional: false
                     span:
                       start: 228
                       end: 258
-                      ctxt: 0
                     attributes:
                       - type: JSXAttribute
                         span:
                           start: 235
                           end: 246
-                          ctxt: 0
                         name:
                           type: Identifier
                           span:
                             start: 235
                             end: 239
-                            ctxt: 0
                           value: type
-                          optional: false
                         value:
                           type: JSXExpressionContainer
                           span:
                             start: 240
                             end: 246
-                            ctxt: 0
                           expression:
                             type: Identifier
                             span:
                               start: 241
                               end: 245
-                              ctxt: 2
+                            ctxt: 4
                             value: type
                             optional: false
                       - type: SpreadElement
                         spread:
                           start: 248
                           end: 251
-                          ctxt: 0
                         arguments:
                           type: Identifier
                           span:
                             start: 251
                             end: 256
-                            ctxt: 3
+                          ctxt: 5
                           value: props
                           optional: false
                     selfClosing: false
@@ -778,7 +728,6 @@ body:
                       span:
                         start: 258
                         end: 270
-                        ctxt: 0
                       opening:
                         type: JSXOpeningElement
                         name:
@@ -786,13 +735,12 @@ body:
                           span:
                             start: 259
                             end: 268
-                            ctxt: 1
+                          ctxt: 2
                           value: MahmutCan
                           optional: false
                         span:
                           start: 258
                           end: 270
-                          ctxt: 0
                         attributes: []
                         selfClosing: true
                         typeArguments: ~
@@ -803,19 +751,19 @@ body:
                     span:
                       start: 270
                       end: 278
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 272
                         end: 277
-                        ctxt: 1
+                      ctxt: 2
                       value: Timer
                       optional: false
               async: false
               generator: false
               typeParameters: ~
               returnType: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -824,7 +772,7 @@ body:
         span:
           start: 161
           end: 183
-          ctxt: 1
+        ctxt: 2
         value: generateTimerComponent
         optional: false
       params:
@@ -832,28 +780,26 @@ body:
           span:
             start: 184
             end: 192
-            ctxt: 0
           decorators: []
           pat:
             type: ObjectPattern
             span:
               start: 184
               end: 192
-              ctxt: 0
             properties:
               - type: AssignmentPatternProperty
                 span:
                   start: 186
                   end: 190
-                  ctxt: 0
                 key:
-                  type: Identifier
+                  ctxt: 4
+                  optional: false
                   span:
                     start: 186
                     end: 190
-                    ctxt: 2
+                  type: Identifier
+                  typeAnnotation: ~
                   value: type
-                  optional: false
                 value: ~
             optional: false
             typeAnnotation: ~
@@ -861,60 +807,53 @@ body:
       span:
         start: 152
         end: 287
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 289
       end: 401
-      ctxt: 0
     declaration:
       body:
         - type: ClassMethod
           span:
             start: 325
             end: 399
-            ctxt: 0
           key:
             type: Identifier
             span:
               start: 325
               end: 333
-              ctxt: 0
             value: lapTimer
-            optional: false
           function:
             params: []
             decorators: []
             span:
               start: 325
               end: 399
-              ctxt: 0
+            ctxt: 6
             body:
-              type: BlockStatement
+              type: FunctionBody
               span:
                 start: 336
                 end: 399
-                ctxt: 0
               stmts:
                 - type: ReturnStatement
                   span:
                     start: 346
                     end: 393
-                    ctxt: 0
                   argument:
                     type: CallExpression
                     span:
                       start: 353
                       end: 392
-                      ctxt: 0
+                    ctxt: 0
                     callee:
                       type: Identifier
                       span:
                         start: 353
                         end: 375
-                        ctxt: 1
+                      ctxt: 2
                       value: generateTimerComponent
                       optional: false
                     arguments:
@@ -924,7 +863,6 @@ body:
                           span:
                             start: 376
                             end: 391
-                            ctxt: 0
                           properties:
                             - type: KeyValueProperty
                               key:
@@ -932,15 +870,12 @@ body:
                                 span:
                                   start: 378
                                   end: 382
-                                  ctxt: 0
                                 value: type
-                                optional: false
                               value:
                                 type: StringLiteral
                                 span:
                                   start: 384
                                   end: 389
-                                  ctxt: 0
                                 value: lap
                                 raw: "\"lap\""
                     typeArguments: ~
@@ -954,6 +889,7 @@ body:
           isAbstract: false
           isOptional: false
           isOverride: false
+      ctxt: 0
       declare: false
       decorators: []
       identifier:
@@ -961,7 +897,7 @@ body:
         span:
           start: 302
           end: 318
-          ctxt: 1
+        ctxt: 2
         value: ComponentFactory
         optional: false
       implements: []
@@ -969,7 +905,6 @@ body:
       span:
         start: 296
         end: 401
-        ctxt: 0
       superClass: ~
       superTypeParams: ~
       type: ClassDeclaration
@@ -978,21 +913,19 @@ body:
     span:
       start: 403
       end: 598
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 441
           end: 598
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 447
               end: 511
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -1000,13 +933,12 @@ body:
                 span:
                   start: 453
                   end: 510
-                  ctxt: 0
                 id:
+                  ctxt: 7
                   optional: false
                   span:
                     start: 453
                     end: 462
-                    ctxt: 4
                   type: Identifier
                   typeAnnotation: ~
                   value: TimerComp
@@ -1015,13 +947,13 @@ body:
                   span:
                     start: 465
                     end: 510
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Identifier
                     span:
                       start: 465
                       end: 487
-                      ctxt: 1
+                    ctxt: 2
                     value: generateTimerComponent
                     optional: false
                   arguments:
@@ -1031,7 +963,6 @@ body:
                         span:
                           start: 488
                           end: 509
-                          ctxt: 0
                         properties:
                           - type: KeyValueProperty
                             key:
@@ -1039,15 +970,12 @@ body:
                               span:
                                 start: 490
                                 end: 494
-                                ctxt: 0
                               value: type
-                              optional: false
                             value:
                               type: StringLiteral
                               span:
                                 start: 496
                                 end: 507
-                                ctxt: 0
                               value: countdown
                               raw: "\"countdown\""
                   typeArguments: ~
@@ -1056,13 +984,11 @@ body:
             span:
               start: 517
               end: 596
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 524
                 end: 595
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -1070,66 +996,56 @@ body:
                   span:
                     start: 525
                     end: 534
-                    ctxt: 4
+                  ctxt: 7
                   value: TimerComp
                   optional: false
                 span:
                   start: 524
                   end: 595
-                  ctxt: 0
                 attributes:
                   - type: JSXAttribute
                     span:
                       start: 535
                       end: 559
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 535
                         end: 540
-                        ctxt: 0
                       value: label
-                      optional: false
                     value:
                       type: StringLiteral
                       span:
                         start: 541
                         end: 559
-                        ctxt: 0
                       value: Time to take off
                       raw: "\"Time to take off\""
                   - type: JSXAttribute
                     span:
                       start: 560
                       end: 593
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 560
                         end: 572
-                        ctxt: 0
                       value: initialValue
-                      optional: false
                     value:
                       type: JSXExpressionContainer
                       span:
                         start: 573
                         end: 593
-                        ctxt: 0
                       expression:
                         type: MemberExpression
                         span:
                           start: 574
                           end: 592
-                          ctxt: 0
                         object:
                           type: Identifier
                           span:
                             start: 574
                             end: 579
-                            ctxt: 4
+                          ctxt: 7
                           value: props
                           optional: false
                         property:
@@ -1137,13 +1053,12 @@ body:
                           span:
                             start: 580
                             end: 592
-                            ctxt: 0
                           value: initialValue
-                          optional: false
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 7
       declare: false
       decorators: []
       generator: false
@@ -1152,7 +1067,7 @@ body:
         span:
           start: 419
           end: 433
-          ctxt: 1
+        ctxt: 2
         value: CountdownTimer
         optional: false
       params:
@@ -1160,14 +1075,13 @@ body:
           span:
             start: 434
             end: 439
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 7
             optional: false
             span:
               start: 434
               end: 439
-              ctxt: 4
             type: Identifier
             typeAnnotation: ~
             value: props
@@ -1175,28 +1089,25 @@ body:
       span:
         start: 410
         end: 598
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 600
       end: 806
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 632
           end: 806
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 638
               end: 677
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -1204,13 +1115,12 @@ body:
                 span:
                   start: 644
                   end: 676
-                  ctxt: 0
                 id:
+                  ctxt: 8
                   optional: false
                   span:
                     start: 644
                     end: 651
-                    ctxt: 5
                   type: Identifier
                   typeAnnotation: ~
                   value: factory
@@ -1219,13 +1129,13 @@ body:
                   span:
                     start: 654
                     end: 676
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Identifier
                     span:
                       start: 658
                       end: 674
-                      ctxt: 1
+                    ctxt: 2
                     value: ComponentFactory
                     optional: false
                   arguments: []
@@ -1235,7 +1145,7 @@ body:
             span:
               start: 682
               end: 719
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -1243,13 +1153,12 @@ body:
                 span:
                   start: 688
                   end: 718
-                  ctxt: 0
                 id:
+                  ctxt: 8
                   optional: false
                   span:
                     start: 688
                     end: 697
-                    ctxt: 5
                   type: Identifier
                   typeAnnotation: ~
                   value: TimerComp
@@ -1258,19 +1167,18 @@ body:
                   span:
                     start: 700
                     end: 718
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: MemberExpression
                     span:
                       start: 700
                       end: 716
-                      ctxt: 0
                     object:
                       type: Identifier
                       span:
                         start: 700
                         end: 707
-                        ctxt: 5
+                      ctxt: 8
                       value: factory
                       optional: false
                     property:
@@ -1278,9 +1186,7 @@ body:
                       span:
                         start: 708
                         end: 716
-                        ctxt: 0
                       value: lapTimer
-                      optional: false
                   arguments: []
                   typeArguments: ~
                 definite: false
@@ -1288,13 +1194,11 @@ body:
             span:
               start: 725
               end: 804
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 732
                 end: 803
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -1302,66 +1206,56 @@ body:
                   span:
                     start: 733
                     end: 742
-                    ctxt: 5
+                  ctxt: 8
                   value: TimerComp
                   optional: false
                 span:
                   start: 732
                   end: 803
-                  ctxt: 0
                 attributes:
                   - type: JSXAttribute
                     span:
                       start: 743
                       end: 767
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 743
                         end: 748
-                        ctxt: 0
                       value: label
-                      optional: false
                     value:
                       type: StringLiteral
                       span:
                         start: 749
                         end: 767
-                        ctxt: 0
                       value: Time to take off
                       raw: "\"Time to take off\""
                   - type: JSXAttribute
                     span:
                       start: 768
                       end: 801
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 768
                         end: 780
-                        ctxt: 0
                       value: initialValue
-                      optional: false
                     value:
                       type: JSXExpressionContainer
                       span:
                         start: 781
                         end: 801
-                        ctxt: 0
                       expression:
                         type: MemberExpression
                         span:
                           start: 782
                           end: 800
-                          ctxt: 0
                         object:
                           type: Identifier
                           span:
                             start: 782
                             end: 787
-                            ctxt: 5
+                          ctxt: 8
                           value: props
                           optional: false
                         property:
@@ -1369,13 +1263,12 @@ body:
                           span:
                             start: 788
                             end: 800
-                            ctxt: 0
                           value: initialValue
-                          optional: false
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 8
       declare: false
       decorators: []
       generator: false
@@ -1384,7 +1277,7 @@ body:
         span:
           start: 616
           end: 624
-          ctxt: 1
+        ctxt: 2
         value: LapTimer
         optional: false
       params:
@@ -1392,14 +1285,13 @@ body:
           span:
             start: 625
             end: 630
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 8
             optional: false
             span:
               start: 625
               end: 630
-              ctxt: 5
             type: Identifier
             typeAnnotation: ~
             value: props
@@ -1407,6 +1299,6 @@ body:
       span:
         start: 607
         end: 806
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

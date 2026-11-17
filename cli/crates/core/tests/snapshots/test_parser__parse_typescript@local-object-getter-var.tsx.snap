@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "6831603066083695155"
       path: src/functional-component/return-var/local-object-getter-var.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "6831603066083695155"
       path: src/functional-component/return-var/local-object-getter-var.tsx
@@ -51,7 +51,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "props#1"
+                  symbol: "props#2"
                   source:
                     hash: "6831603066083695155"
                     path: src/functional-component/return-var/local-object-getter-var.tsx
@@ -65,7 +65,7 @@ declarations:
     end:
       line: 12
       column: 2
-  - symbol: "props#1"
+  - symbol: "props#2"
     source:
       hash: "6831603066083695155"
       path: src/functional-component/return-var/local-object-getter-var.tsx
@@ -88,59 +88,51 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "props#1"
-      - "Sample#1"
-      - "Sample#1"
+      - "props#2"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "component#0"
-      - "div#2"
-      - "number#0"
-      - "props#1"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "props#2"
     jsx_references:
-      - "div#2"
-  - owner: "props#1"
+      - "div#1"
+  - owner: "props#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "div#2"
-      - "number#0"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "props#1"
+      - "props#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "props#1"
+      - "props#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -148,16 +140,16 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 29
       end: 125
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -165,13 +157,12 @@ body:
         span:
           start: 35
           end: 124
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 35
             end: 40
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: props
@@ -180,7 +171,6 @@ body:
           span:
             start: 43
             end: 124
-            ctxt: 0
           properties:
             - type: KeyValueProperty
               key:
@@ -188,120 +178,114 @@ body:
                 span:
                   start: 49
                   end: 55
-                  ctxt: 0
                 value: number
-                optional: false
               value:
                 type: NumericLiteral
                 span:
                   start: 57
                   end: 59
-                  ctxt: 0
                 value: 42.0
                 raw: "42"
             - type: GetterProperty
               span:
                 start: 65
                 end: 122
-                ctxt: 0
               key:
                 type: Identifier
                 span:
                   start: 69
                   end: 78
-                  ctxt: 0
                 value: component
-                optional: false
-              typeAnnotation: ~
-              body:
-                type: BlockStatement
+              function:
+                params: []
+                decorators: []
                 span:
-                  start: 81
+                  start: 65
                   end: 122
-                  ctxt: 0
-                stmts:
-                  - type: ReturnStatement
-                    span:
-                      start: 91
-                      end: 116
-                      ctxt: 0
-                    argument:
-                      type: JSXElement
+                ctxt: 3
+                body:
+                  type: FunctionBody
+                  span:
+                    start: 81
+                    end: 122
+                  stmts:
+                    - type: ReturnStatement
                       span:
-                        start: 98
-                        end: 115
-                        ctxt: 0
-                      opening:
-                        type: JSXOpeningElement
-                        name:
-                          type: Identifier
-                          span:
-                            start: 99
-                            end: 102
-                            ctxt: 2
-                          value: div
-                          optional: false
+                        start: 91
+                        end: 116
+                      argument:
+                        type: JSXElement
                         span:
                           start: 98
-                          end: 103
-                          ctxt: 0
-                        attributes: []
-                        selfClosing: false
-                        typeArguments: ~
-                      children:
-                        - type: JSXText
-                          span:
-                            start: 103
-                            end: 109
-                            ctxt: 0
-                          value: Sample
-                          raw: Sample
-                      closing:
-                        type: JSXClosingElement
-                        span:
-                          start: 109
                           end: 115
-                          ctxt: 0
-                        name:
-                          type: Identifier
+                        opening:
+                          type: JSXOpeningElement
+                          name:
+                            type: Identifier
+                            span:
+                              start: 99
+                              end: 102
+                            ctxt: 1
+                            value: div
+                            optional: false
                           span:
-                            start: 111
-                            end: 114
-                            ctxt: 2
-                          value: div
-                          optional: false
+                            start: 98
+                            end: 103
+                          attributes: []
+                          selfClosing: false
+                          typeArguments: ~
+                        children:
+                          - type: JSXText
+                            span:
+                              start: 103
+                              end: 109
+                            value: Sample
+                            raw: Sample
+                        closing:
+                          type: JSXClosingElement
+                          span:
+                            start: 109
+                            end: 115
+                          name:
+                            type: Identifier
+                            span:
+                              start: 111
+                              end: 114
+                            ctxt: 1
+                            value: div
+                            optional: false
+                generator: false
+                async: false
+                typeParameters: ~
+                returnType: ~
         definite: false
   - type: ExportDefaultDeclaration
     span:
       start: 127
       end: 191
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 160
           end: 191
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 166
               end: 189
-              ctxt: 0
             argument:
               type: MemberExpression
               span:
                 start: 173
                 end: 188
-                ctxt: 0
               object:
                 type: Identifier
                 span:
                   start: 173
                   end: 178
-                  ctxt: 1
+                ctxt: 2
                 value: props
                 optional: false
               property:
@@ -309,9 +293,8 @@ body:
                 span:
                   start: 179
                   end: 188
-                  ctxt: 0
                 value: component
-                optional: false
+      ctxt: 4
       decorators: []
       generator: false
       identifier:
@@ -319,7 +302,7 @@ body:
         span:
           start: 151
           end: 157
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -327,6 +310,6 @@ body:
       span:
         start: 142
         end: 191
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

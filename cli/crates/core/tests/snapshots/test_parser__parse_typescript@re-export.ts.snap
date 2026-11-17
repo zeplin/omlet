@@ -1,6 +1,6 @@
 ---
 source: crates/core/tests/test_parser.rs
-expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n            &project_root, &module_resolver).unwrap()"
+expression: "&parser::Module::new(&RelativePathBuf::from_path(path.strip_prefix(&project_root).unwrap()).unwrap(),\n&project_root, &module_resolver,).unwrap()"
 input_file: samples/typescript/src/wildcard-import/re-export.ts
 ---
 source_path: src/wildcard-import/re-export.ts
@@ -34,19 +34,17 @@ body:
     span:
       start: 1
       end: 40
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 10
           end: 12
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 10
             end: 12
-            ctxt: 0
+          ctxt: 0
           value: ds
           optional: false
         exported: ~
@@ -56,9 +54,8 @@ body:
       span:
         start: 20
         end: 39
-        ctxt: 0
       value: "./wildcard-export"
       raw: "\"./wildcard-export\""
     typeOnly: false
-    asserts: ~
+    with: ~
 

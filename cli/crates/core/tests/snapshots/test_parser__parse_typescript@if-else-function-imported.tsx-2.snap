@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "result#2"
+              symbol: "result#3"
               source:
                 hash: "7109160199459794716"
                 path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
@@ -63,17 +63,17 @@ declarations:
     end:
       line: 14
       column: 2
-  - symbol: "bool#2"
+  - symbol: "bool#3"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('Sample' type=inline), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"Sample\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "Sample#1"
+          symbol: "Sample#2"
           source:
             hash: "7109160199459794716"
             path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
@@ -85,18 +85,18 @@ declarations:
       column: 24
     end:
       line: 4
-      column: 37
-  - symbol: "renderSample#1"
+      column: 28
+  - symbol: "renderSample#2"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('renderSample' type=dynamic), context: #1 }, source: ModuleId { hash: 8016342090393809860, path: \"src/functional-component/control-statements/conditional-if/return-var/imported/utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"renderSample\", context: #2 }, source: ModuleId { hash: 8016342090393809860, path: \"src/functional-component/control-statements/conditional-if/return-var/imported/utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "renderSample#1"
+          symbol: "renderSample#2"
           source:
             hash: "8016342090393809860"
             path: src/functional-component/control-statements/conditional-if/return-var/imported/utils
@@ -109,7 +109,7 @@ declarations:
     end:
       line: 2
       column: 38
-  - symbol: "result#2"
+  - symbol: "result#3"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
@@ -123,17 +123,17 @@ declarations:
     end:
       line: 5
       column: 15
-  - symbol: "returnFortyTwo#1"
+  - symbol: "returnFortyTwo#2"
     source:
       hash: "7109160199459794716"
       path: src/functional-component/control-statements/conditional-if/return-var/imported/if-else-function-imported.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('returnFortyTwo' type=dynamic), context: #1 }, source: ModuleId { hash: 8016342090393809860, path: \"src/functional-component/control-statements/conditional-if/return-var/imported/utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"returnFortyTwo\", context: #2 }, source: ModuleId { hash: 8016342090393809860, path: \"src/functional-component/control-statements/conditional-if/return-var/imported/utils\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "returnFortyTwo#1"
+          symbol: "returnFortyTwo#2"
           source:
             hash: "8016342090393809860"
             path: src/functional-component/control-statements/conditional-if/return-var/imported/utils
@@ -150,52 +150,50 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "bool#2"
-      - "renderSample#1"
-      - "result#2"
-      - "returnFortyTwo#1"
+      - "React#2"
+      - "Sample#2"
+      - "bool#3"
+      - "renderSample#2"
+      - "result#3"
+      - "returnFortyTwo#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "renderSample#1"
-      - "result#2"
-      - "returnFortyTwo#1"
+      - "bool#3"
+      - "renderSample#2"
+      - "result#3"
+      - "returnFortyTwo#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "bool#2"
-      - "renderSample#1"
-      - "result#2"
-      - "returnFortyTwo#1"
+      - "bool#3"
+      - "renderSample#2"
+      - "result#3"
+      - "returnFortyTwo#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -203,28 +201,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 83
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 37
           end: 51
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 51
-            ctxt: 1
+          ctxt: 2
           value: returnFortyTwo
           optional: false
         imported: ~
@@ -233,13 +229,12 @@ body:
         span:
           start: 53
           end: 65
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 53
             end: 65
-            ctxt: 1
+          ctxt: 2
           value: renderSample
           optional: false
         imported: ~
@@ -249,30 +244,28 @@ body:
       span:
         start: 73
         end: 82
-        ctxt: 0
       value: "./utils"
       raw: "\"./utils\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 85
       end: 266
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 123
           end: 266
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 129
               end: 140
-              ctxt: 0
+            ctxt: 0
             kind: let
             declare: false
             declarations:
@@ -280,13 +273,12 @@ body:
                 span:
                   start: 133
                   end: 139
-                  ctxt: 0
                 id:
+                  ctxt: 3
                   optional: false
                   span:
                     start: 133
                     end: 139
-                    ctxt: 2
                   type: Identifier
                   typeAnnotation: ~
                   value: result
@@ -296,13 +288,12 @@ body:
             span:
               start: 146
               end: 244
-              ctxt: 0
             test:
               type: Identifier
               span:
                 start: 150
                 end: 154
-                ctxt: 2
+              ctxt: 3
               value: bool
               optional: false
             consequent:
@@ -310,26 +301,24 @@ body:
               span:
                 start: 156
                 end: 198
-                ctxt: 0
+              ctxt: 4
               stmts:
                 - type: ExpressionStatement
                   span:
                     start: 166
                     end: 192
-                    ctxt: 0
                   expression:
                     type: AssignmentExpression
                     span:
                       start: 166
                       end: 191
-                      ctxt: 0
                     operator: "="
                     left:
+                      ctxt: 3
                       optional: false
                       span:
                         start: 166
                         end: 172
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: result
@@ -338,13 +327,13 @@ body:
                       span:
                         start: 175
                         end: 191
-                        ctxt: 0
+                      ctxt: 0
                       callee:
                         type: Identifier
                         span:
                           start: 175
                           end: 189
-                          ctxt: 1
+                        ctxt: 2
                         value: returnFortyTwo
                         optional: false
                       arguments: []
@@ -354,26 +343,24 @@ body:
               span:
                 start: 204
                 end: 244
-                ctxt: 0
+              ctxt: 5
               stmts:
                 - type: ExpressionStatement
                   span:
                     start: 214
                     end: 238
-                    ctxt: 0
                   expression:
                     type: AssignmentExpression
                     span:
                       start: 214
                       end: 237
-                      ctxt: 0
                     operator: "="
                     left:
+                      ctxt: 3
                       optional: false
                       span:
                         start: 214
                         end: 220
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: result
@@ -382,13 +369,13 @@ body:
                       span:
                         start: 223
                         end: 237
-                        ctxt: 0
+                      ctxt: 0
                       callee:
                         type: Identifier
                         span:
                           start: 223
                           end: 235
-                          ctxt: 1
+                        ctxt: 2
                         value: renderSample
                         optional: false
                       arguments: []
@@ -397,15 +384,15 @@ body:
             span:
               start: 250
               end: 264
-              ctxt: 0
             argument:
               type: Identifier
               span:
                 start: 257
                 end: 263
-                ctxt: 2
+              ctxt: 3
               value: result
               optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -414,7 +401,7 @@ body:
         span:
           start: 101
           end: 107
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params:
@@ -422,33 +409,30 @@ body:
           span:
             start: 108
             end: 121
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: false
             span:
               start: 108
-              end: 121
-              ctxt: 2
+              end: 112
             type: Identifier
             typeAnnotation:
               type: TsTypeAnnotation
               span:
                 start: 112
                 end: 121
-                ctxt: 0
               typeAnnotation:
                 type: TsKeywordType
                 span:
                   start: 114
                   end: 121
-                  ctxt: 0
                 kind: boolean
             value: bool
       returnType: ~
       span:
         start: 92
         end: 266
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

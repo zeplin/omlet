@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Hess#1"
+      Internal: "Hess#2"
     exported_name: default
 declarations:
-  - symbol: "Hess#1"
+  - symbol: "Hess#2"
     source:
       hash: "14088769045505691862"
       path: src/hess/main.tsx
@@ -32,13 +32,13 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "HessComponent#1"
+  - symbol: "HessComponent#2"
     source:
       hash: "14088769045505691862"
       path: src/hess/main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 6482229448276103877, path: \"src/hess/component\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 6482229448276103877, path: \"src/hess/component\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -55,17 +55,17 @@ declarations:
     end:
       line: 1
       column: 21
-  - symbol: "Mahmut#1"
+  - symbol: "Mahmut#2"
     source:
       hash: "14088769045505691862"
       path: src/hess/main.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('NamedComponent' type=dynamic), context: #1 }, source: ModuleId { hash: 6482229448276103877, path: \"src/hess/component\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"NamedComponent\", context: #2 }, source: ModuleId { hash: 6482229448276103877, path: \"src/hess/component\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "NamedComponent#1"
+          symbol: "NamedComponent#2"
           source:
             hash: "6482229448276103877"
             path: src/hess/component
@@ -82,65 +82,62 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Hess#1"
-      - "Hess#1"
+      - "Hess#2"
+      - "Hess#2"
     references:
-      - "Hess#1"
-      - "HessComponent#1"
-      - "Mahmut#1"
+      - "Hess#2"
+      - "HessComponent#2"
+      - "Mahmut#2"
       - "NamedComponent#0"
     jsx_references:
-      - "HessComponent#1"
-      - "Mahmut#1"
-  - owner: "Hess#1"
+      - "HessComponent#2"
+      - "Mahmut#2"
+  - owner: "Hess#2"
     parent: "__global#0"
     children: []
     references:
-      - "HessComponent#1"
-      - "Mahmut#1"
+      - "HessComponent#2"
+      - "Mahmut#2"
     jsx_references:
-      - "HessComponent#1"
-      - "Mahmut#1"
-  - owner: "Hess#1"
+      - "HessComponent#2"
+      - "Mahmut#2"
+  - owner: "Hess#2"
     parent: "__global#0"
     children: []
     references:
-      - "HessComponent#1"
-      - "Mahmut#1"
+      - "HessComponent#2"
+      - "Mahmut#2"
     jsx_references:
-      - "HessComponent#1"
-      - "Mahmut#1"
+      - "HessComponent#2"
+      - "Mahmut#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 71
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 21
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 21
-            ctxt: 1
+          ctxt: 2
           value: HessComponent
           optional: false
       - type: ImportSpecifier
         span:
           start: 25
           end: 49
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 43
             end: 49
-            ctxt: 1
+          ctxt: 2
           value: Mahmut
           optional: false
         imported:
@@ -148,7 +145,7 @@ body:
           span:
             start: 25
             end: 39
-            ctxt: 0
+          ctxt: 0
           value: NamedComponent
           optional: false
         isTypeOnly: false
@@ -157,36 +154,32 @@ body:
       span:
         start: 57
         end: 70
-        ctxt: 0
       value: "./component"
       raw: "\"./component\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 73
       end: 164
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 104
           end: 164
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 110
               end: 162
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 117
                 end: 161
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -194,13 +187,12 @@ body:
                   span:
                     start: 118
                     end: 131
-                    ctxt: 1
+                  ctxt: 2
                   value: HessComponent
                   optional: false
                 span:
                   start: 117
                   end: 132
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -209,7 +201,6 @@ body:
                   span:
                     start: 132
                     end: 141
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -217,13 +208,12 @@ body:
                       span:
                         start: 133
                         end: 139
-                        ctxt: 1
+                      ctxt: 2
                       value: Mahmut
                       optional: false
                     span:
                       start: 132
                       end: 141
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -233,7 +223,6 @@ body:
                   span:
                     start: 141
                     end: 145
-                    ctxt: 0
                   value: hess
                   raw: hess
               closing:
@@ -241,15 +230,15 @@ body:
                 span:
                   start: 145
                   end: 161
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 147
                     end: 160
-                    ctxt: 1
+                  ctxt: 2
                   value: HessComponent
                   optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -257,7 +246,7 @@ body:
         span:
           start: 97
           end: 101
-          ctxt: 1
+        ctxt: 2
         value: Hess
         optional: false
       params: []
@@ -265,6 +254,6 @@ body:
       span:
         start: 88
         end: 164
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

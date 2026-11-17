@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "withWrapperJsx#1"
+      Internal: "withWrapperJsx#2"
     exported_name: withWrapperJsx
   - source:
-      Internal: "withWrapperNoJsx#1"
+      Internal: "withWrapperNoJsx#2"
     exported_name: withWrapperNoJsx
   - source:
-      Internal: "withClassWrapperJsx#1"
+      Internal: "withClassWrapperJsx#2"
     exported_name: withClassWrapperJsx
   - source:
-      Internal: "withClassWrapperNoJsx#1"
+      Internal: "withClassWrapperNoJsx#2"
     exported_name: withClassWrapperNoJsx
 declarations:
   - symbol: "<anonymous-1>#0"
@@ -36,7 +36,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "WrappedComponent#5"
+            symbol: "WrappedComponent#7"
             source:
               hash: "5681964003813486762"
               path: src/wrapped-components/wrappers.tsx
@@ -60,7 +60,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "WrappedComponent#6"
+            symbol: "WrappedComponent#9"
             source:
               hash: "5681964003813486762"
               path: src/wrapped-components/wrappers.tsx
@@ -73,17 +73,17 @@ declarations:
     end:
       line: 20
       column: 6
-  - symbol: "Component#2"
+  - symbol: "Component#3"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withWrapperJsx' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withWrapperJsx\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withWrapperJsx#1"
+          symbol: "withWrapperJsx#2"
           source:
             hash: "5681964003813486762"
             path: src/wrapped-components/wrappers.tsx
@@ -96,17 +96,17 @@ declarations:
     end:
       line: 1
       column: 41
-  - symbol: "Component#4"
+  - symbol: "Component#5"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withWrapperNoJsx' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withWrapperNoJsx\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withWrapperNoJsx#1"
+          symbol: "withWrapperNoJsx#2"
           source:
             hash: "5681964003813486762"
             path: src/wrapped-components/wrappers.tsx
@@ -119,17 +119,17 @@ declarations:
     end:
       line: 5
       column: 43
-  - symbol: "WrappedComponent#5"
+  - symbol: "WrappedComponent#7"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withClassWrapperJsx' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withClassWrapperJsx\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withClassWrapperJsx#1"
+          symbol: "withClassWrapperJsx#2"
           source:
             hash: "5681964003813486762"
             path: src/wrapped-components/wrappers.tsx
@@ -142,17 +142,17 @@ declarations:
     end:
       line: 9
       column: 53
-  - symbol: "WrappedComponent#6"
+  - symbol: "WrappedComponent#9"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('withClassWrapperNoJsx' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"withClassWrapperNoJsx\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "withClassWrapperNoJsx#1"
+          symbol: "withClassWrapperNoJsx#2"
           source:
             hash: "5681964003813486762"
             path: src/wrapped-components/wrappers.tsx
@@ -165,7 +165,7 @@ declarations:
     end:
       line: 18
       column: 55
-  - symbol: "withClassWrapperJsx#1"
+  - symbol: "withClassWrapperJsx#2"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
@@ -177,7 +177,7 @@ declarations:
         - Class:
             TypeOf:
               symbol:
-                symbol: "WrappedComponent#5"
+                symbol: "WrappedComponent#7"
                 source:
                   hash: "5681964003813486762"
                   path: src/wrapped-components/wrappers.tsx
@@ -190,7 +190,7 @@ declarations:
     end:
       line: 16
       column: 2
-  - symbol: "withClassWrapperNoJsx#1"
+  - symbol: "withClassWrapperNoJsx#2"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
@@ -202,7 +202,7 @@ declarations:
         - Class:
             TypeOf:
               symbol:
-                symbol: "WrappedComponent#6"
+                symbol: "WrappedComponent#9"
                 source:
                   hash: "5681964003813486762"
                   path: src/wrapped-components/wrappers.tsx
@@ -215,7 +215,7 @@ declarations:
     end:
       line: 21
       column: 2
-  - symbol: "withWrapperJsx#1"
+  - symbol: "withWrapperJsx#2"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
@@ -232,7 +232,7 @@ declarations:
     end:
       line: 3
       column: 2
-  - symbol: "withWrapperNoJsx#1"
+  - symbol: "withWrapperNoJsx#2"
     source:
       hash: "5681964003813486762"
       path: src/wrapped-components/wrappers.tsx
@@ -244,7 +244,7 @@ declarations:
         - Function:
             - TypeOf:
                 symbol:
-                  symbol: "Component#4"
+                  symbol: "Component#5"
                   source:
                     hash: "5681964003813486762"
                     path: src/wrapped-components/wrappers.tsx
@@ -261,178 +261,168 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "withWrapperJsx#1"
-      - "withWrapperJsx#1"
-      - "withWrapperNoJsx#1"
-      - "withWrapperNoJsx#1"
-      - "withClassWrapperJsx#1"
-      - "withClassWrapperJsx#1"
+      - "withWrapperJsx#2"
+      - "withWrapperJsx#2"
+      - "withWrapperNoJsx#2"
+      - "withWrapperNoJsx#2"
+      - "withClassWrapperJsx#2"
+      - "withClassWrapperJsx#2"
       - "<anonymous-3>#0"
-      - "withClassWrapperNoJsx#1"
-      - "withClassWrapperNoJsx#1"
+      - "withClassWrapperNoJsx#2"
+      - "withClassWrapperNoJsx#2"
       - "<anonymous-6>#0"
     references:
-      - "Component#2"
-      - "Component#4"
-      - "WrappedComponent#5"
-      - "WrappedComponent#6"
-      - "div#3"
-      - "render#0"
-      - "withClassWrapperJsx#1"
-      - "withClassWrapperNoJsx#1"
-      - "withWrapperJsx#1"
-      - "withWrapperNoJsx#1"
+      - "Component#3"
+      - "Component#5"
+      - "WrappedComponent#7"
+      - "WrappedComponent#9"
+      - "div#1"
+      - "withClassWrapperJsx#2"
+      - "withClassWrapperNoJsx#2"
+      - "withWrapperJsx#2"
+      - "withWrapperNoJsx#2"
     jsx_references:
-      - "Component#2"
-      - "WrappedComponent#5"
-      - "div#3"
-  - owner: "withWrapperJsx#1"
+      - "Component#3"
+      - "WrappedComponent#7"
+      - "div#1"
+  - owner: "withWrapperJsx#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#2"
-      - "div#3"
+      - "Component#3"
+      - "div#1"
     jsx_references:
-      - "Component#2"
-      - "div#3"
-  - owner: "withWrapperJsx#1"
+      - "Component#3"
+      - "div#1"
+  - owner: "withWrapperJsx#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#2"
-      - "div#3"
+      - "Component#3"
+      - "div#1"
     jsx_references:
-      - "Component#2"
-      - "div#3"
-  - owner: "withWrapperNoJsx#1"
+      - "Component#3"
+      - "div#1"
+  - owner: "withWrapperNoJsx#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#4"
+      - "Component#5"
     jsx_references: []
-  - owner: "withWrapperNoJsx#1"
+  - owner: "withWrapperNoJsx#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#4"
+      - "Component#5"
     jsx_references: []
-  - owner: "withClassWrapperJsx#1"
+  - owner: "withClassWrapperJsx#2"
     parent: "__global#0"
     children:
       - "<anonymous-1>#0"
     references:
-      - "WrappedComponent#5"
-      - "div#3"
-      - "render#0"
+      - "WrappedComponent#7"
+      - "div#1"
     jsx_references:
-      - "WrappedComponent#5"
-      - "div#3"
+      - "WrappedComponent#7"
+      - "div#1"
   - owner: "<anonymous-1>#0"
-    parent: "withClassWrapperJsx#1"
+    parent: "withClassWrapperJsx#2"
     children: []
     references:
-      - "WrappedComponent#5"
-      - "div#3"
-      - "render#0"
+      - "WrappedComponent#7"
+      - "div#1"
     jsx_references:
-      - "WrappedComponent#5"
-      - "div#3"
-  - owner: "withClassWrapperJsx#1"
+      - "WrappedComponent#7"
+      - "div#1"
+  - owner: "withClassWrapperJsx#2"
     parent: "__global#0"
     children:
       - "<anonymous-2>#0"
     references:
-      - "WrappedComponent#5"
-      - "div#3"
-      - "render#0"
+      - "WrappedComponent#7"
+      - "div#1"
     jsx_references:
-      - "WrappedComponent#5"
-      - "div#3"
+      - "WrappedComponent#7"
+      - "div#1"
   - owner: "<anonymous-2>#0"
-    parent: "withClassWrapperJsx#1"
+    parent: "withClassWrapperJsx#2"
     children: []
     references:
-      - "WrappedComponent#5"
-      - "div#3"
-      - "render#0"
+      - "WrappedComponent#7"
+      - "div#1"
     jsx_references:
-      - "WrappedComponent#5"
-      - "div#3"
+      - "WrappedComponent#7"
+      - "div#1"
   - owner: "<anonymous-3>#0"
     parent: "__global#0"
     children: []
     references:
-      - "WrappedComponent#5"
-      - "div#3"
-      - "render#0"
+      - "WrappedComponent#7"
+      - "div#1"
     jsx_references:
-      - "WrappedComponent#5"
-      - "div#3"
-  - owner: "withClassWrapperNoJsx#1"
+      - "WrappedComponent#7"
+      - "div#1"
+  - owner: "withClassWrapperNoJsx#2"
     parent: "__global#0"
     children:
       - "<anonymous-4>#0"
     references:
-      - "WrappedComponent#6"
+      - "WrappedComponent#9"
     jsx_references: []
   - owner: "<anonymous-4>#0"
-    parent: "withClassWrapperNoJsx#1"
+    parent: "withClassWrapperNoJsx#2"
     children: []
     references:
-      - "WrappedComponent#6"
+      - "WrappedComponent#9"
     jsx_references: []
-  - owner: "withClassWrapperNoJsx#1"
+  - owner: "withClassWrapperNoJsx#2"
     parent: "__global#0"
     children:
       - "<anonymous-5>#0"
     references:
-      - "WrappedComponent#6"
+      - "WrappedComponent#9"
     jsx_references: []
   - owner: "<anonymous-5>#0"
-    parent: "withClassWrapperNoJsx#1"
+    parent: "withClassWrapperNoJsx#2"
     children: []
     references:
-      - "WrappedComponent#6"
+      - "WrappedComponent#9"
     jsx_references: []
   - owner: "<anonymous-6>#0"
     parent: "__global#0"
     children: []
     references:
-      - "WrappedComponent#6"
+      - "WrappedComponent#9"
     jsx_references: []
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 88
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 43
           end: 88
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 49
               end: 86
-              ctxt: 0
             argument:
               type: ArrowFunctionExpression
               span:
                 start: 56
                 end: 85
-                ctxt: 0
+              ctxt: 4
               params: []
               body:
                 type: JSXElement
                 span:
                   start: 62
                   end: 85
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -440,13 +430,12 @@ body:
                     span:
                       start: 63
                       end: 66
-                      ctxt: 3
+                    ctxt: 1
                     value: div
                     optional: false
                   span:
                     start: 62
                     end: 67
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -455,7 +444,6 @@ body:
                     span:
                       start: 67
                       end: 79
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -463,13 +451,12 @@ body:
                         span:
                           start: 68
                           end: 77
-                          ctxt: 2
+                        ctxt: 3
                         value: Component
                         optional: false
                       span:
                         start: 67
                         end: 79
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -480,19 +467,19 @@ body:
                   span:
                     start: 79
                     end: 85
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 81
                       end: 84
-                      ctxt: 3
+                    ctxt: 1
                     value: div
                     optional: false
               async: false
               generator: false
               typeParameters: ~
               returnType: ~
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -501,7 +488,7 @@ body:
         span:
           start: 17
           end: 31
-          ctxt: 1
+        ctxt: 2
         value: withWrapperJsx
         optional: false
       params:
@@ -509,14 +496,13 @@ body:
           span:
             start: 32
             end: 41
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: false
             span:
               start: 32
               end: 41
-              ctxt: 2
             type: Identifier
             typeAnnotation: ~
             value: Component
@@ -524,47 +510,44 @@ body:
       span:
         start: 8
         end: 88
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 90
       end: 165
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 134
           end: 165
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 140
               end: 163
-              ctxt: 0
             argument:
               type: ArrowFunctionExpression
               span:
                 start: 147
                 end: 162
-                ctxt: 0
+              ctxt: 6
               params: []
               body:
                 type: Identifier
                 span:
                   start: 153
                   end: 162
-                  ctxt: 4
+                ctxt: 5
                 value: Component
                 optional: false
               async: false
               generator: false
               typeParameters: ~
               returnType: ~
+      ctxt: 5
       declare: false
       decorators: []
       generator: false
@@ -573,7 +556,7 @@ body:
         span:
           start: 106
           end: 122
-          ctxt: 1
+        ctxt: 2
         value: withWrapperNoJsx
         optional: false
       params:
@@ -581,14 +564,13 @@ body:
           span:
             start: 123
             end: 132
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 5
             optional: false
             span:
               start: 123
               end: 132
-              ctxt: 4
             type: Identifier
             typeAnnotation: ~
             value: Component
@@ -596,68 +578,58 @@ body:
       span:
         start: 97
         end: 165
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 167
       end: 356
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 221
           end: 356
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 227
               end: 354
-              ctxt: 0
             argument:
               body:
                 - type: ClassMethod
                   span:
                     start: 276
                     end: 347
-                    ctxt: 0
                   key:
                     type: Identifier
                     span:
                       start: 276
                       end: 282
-                      ctxt: 0
                     value: render
-                    optional: false
                   function:
                     params: []
                     decorators: []
                     span:
                       start: 276
                       end: 347
-                      ctxt: 0
+                    ctxt: 8
                     body:
-                      type: BlockStatement
+                      type: FunctionBody
                       span:
                         start: 285
                         end: 347
-                        ctxt: 0
                       stmts:
                         - type: ReturnStatement
                           span:
                             start: 299
                             end: 337
-                            ctxt: 0
                           argument:
                             type: JSXElement
                             span:
                               start: 306
                               end: 336
-                              ctxt: 0
                             opening:
                               type: JSXOpeningElement
                               name:
@@ -665,13 +637,12 @@ body:
                                 span:
                                   start: 307
                                   end: 310
-                                  ctxt: 3
+                                ctxt: 1
                                 value: div
                                 optional: false
                               span:
                                 start: 306
                                 end: 311
-                                ctxt: 0
                               attributes: []
                               selfClosing: false
                               typeArguments: ~
@@ -680,7 +651,6 @@ body:
                                 span:
                                   start: 311
                                   end: 330
-                                  ctxt: 0
                                 opening:
                                   type: JSXOpeningElement
                                   name:
@@ -688,13 +658,12 @@ body:
                                     span:
                                       start: 312
                                       end: 328
-                                      ctxt: 5
+                                    ctxt: 7
                                     value: WrappedComponent
                                     optional: false
                                   span:
                                     start: 311
                                     end: 330
-                                    ctxt: 0
                                   attributes: []
                                   selfClosing: true
                                   typeArguments: ~
@@ -705,13 +674,12 @@ body:
                               span:
                                 start: 330
                                 end: 336
-                                ctxt: 0
                               name:
                                 type: Identifier
                                 span:
                                   start: 332
                                   end: 335
-                                  ctxt: 3
+                                ctxt: 1
                                 value: div
                                 optional: false
                     generator: false
@@ -724,6 +692,7 @@ body:
                   isAbstract: false
                   isOptional: false
                   isOverride: false
+              ctxt: 0
               decorators: []
               identifier: ~
               implements: []
@@ -731,18 +700,18 @@ body:
               span:
                 start: 234
                 end: 353
-                ctxt: 0
               superClass:
                 type: Identifier
                 span:
                   start: 248
                   end: 264
-                  ctxt: 5
+                ctxt: 7
                 value: WrappedComponent
                 optional: false
               superTypeParams: ~
               type: ClassExpression
               typeParams: ~
+      ctxt: 7
       declare: false
       decorators: []
       generator: false
@@ -751,7 +720,7 @@ body:
         span:
           start: 183
           end: 202
-          ctxt: 1
+        ctxt: 2
         value: withClassWrapperJsx
         optional: false
       params:
@@ -759,14 +728,13 @@ body:
           span:
             start: 203
             end: 219
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 7
             optional: false
             span:
               start: 203
               end: 219
-              ctxt: 5
             type: Identifier
             typeAnnotation: ~
             value: WrappedComponent
@@ -774,30 +742,27 @@ body:
       span:
         start: 174
         end: 356
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 358
       end: 468
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 414
           end: 468
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 420
               end: 466
-              ctxt: 0
             argument:
               body: []
+              ctxt: 0
               decorators: []
               identifier: ~
               implements: []
@@ -805,18 +770,18 @@ body:
               span:
                 start: 427
                 end: 465
-                ctxt: 0
               superClass:
                 type: Identifier
                 span:
                   start: 441
                   end: 457
-                  ctxt: 6
+                ctxt: 9
                 value: WrappedComponent
                 optional: false
               superTypeParams: ~
               type: ClassExpression
               typeParams: ~
+      ctxt: 9
       declare: false
       decorators: []
       generator: false
@@ -825,7 +790,7 @@ body:
         span:
           start: 374
           end: 395
-          ctxt: 1
+        ctxt: 2
         value: withClassWrapperNoJsx
         optional: false
       params:
@@ -833,14 +798,13 @@ body:
           span:
             start: 396
             end: 412
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 9
             optional: false
             span:
               start: 396
               end: 412
-              ctxt: 6
             type: Identifier
             typeAnnotation: ~
             value: WrappedComponent
@@ -848,6 +812,6 @@ body:
       span:
         start: 365
         end: 468
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

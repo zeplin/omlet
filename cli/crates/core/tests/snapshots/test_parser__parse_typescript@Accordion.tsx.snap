@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Accordion#1"
+      Internal: "Accordion#2"
     exported_name: Accordion
 declarations:
-  - symbol: "Accordion#1"
+  - symbol: "Accordion#2"
     source:
       hash: "4572580924016863595"
       path: src/wildcard-re-export/components/Accordion/Accordion.tsx
@@ -36,53 +36,49 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Accordion#1"
-      - "Accordion#1"
+      - "Accordion#2"
+      - "Accordion#2"
     references:
-      - "Accordion#1"
-      - "div#2"
+      - "Accordion#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Accordion#1"
+      - "div#1"
+  - owner: "Accordion#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Accordion#1"
+      - "div#1"
+  - owner: "Accordion#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ExportDeclaration
     span:
       start: 2
       end: 66
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 30
           end: 66
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 36
               end: 64
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 43
                 end: 63
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -90,13 +86,12 @@ body:
                   span:
                     start: 44
                     end: 47
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 43
                   end: 48
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -105,7 +100,6 @@ body:
                   span:
                     start: 48
                     end: 57
-                    ctxt: 0
                   value: Accordion
                   raw: Accordion
               closing:
@@ -113,15 +107,15 @@ body:
                 span:
                   start: 57
                   end: 63
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 59
                     end: 62
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -130,7 +124,7 @@ body:
         span:
           start: 18
           end: 27
-          ctxt: 1
+        ctxt: 2
         value: Accordion
         optional: false
       params: []
@@ -138,6 +132,6 @@ body:
       span:
         start: 9
         end: 66
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

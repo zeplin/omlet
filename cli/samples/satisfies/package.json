@@ -1,0 +1,6 @@
+{
+  "name": "satisfies-examples",
+  "version": "1.0.0",
+  "description": "Modules exercising the TypeScript satisfies operator",
+  "license": "ISC"
+}

@@ -13,28 +13,28 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "DoubleWrapper#1"
+      Internal: "DoubleWrapper#2"
     exported_name: DoubleWrapper
   - source:
-      Internal: "Wrapper#1"
+      Internal: "Wrapper#2"
     exported_name: Wrapper
   - source:
-      Internal: "Wrapped#1"
+      Internal: "Wrapped#2"
     exported_name: Wrapped
   - source:
-      Internal: "WrappedWithComponentArg#1"
+      Internal: "WrappedWithComponentArg#2"
     exported_name: WrappedWithComponentArg
   - source:
-      Internal: "WrapperWithComponentArg#1"
+      Internal: "WrapperWithComponentArg#2"
     exported_name: WrapperWithComponentArg
   - source:
-      Internal: "WrappedFromWrapperWithComponentArg#1"
+      Internal: "WrappedFromWrapperWithComponentArg#2"
     exported_name: WrappedFromWrapperWithComponentArg
   - source:
-      Internal: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+      Internal: "WrappedWithComponentArgFromWrapperWithComponentArg#2"
     exported_name: WrappedWithComponentArgFromWrapperWithComponentArg
 declarations:
-  - symbol: "DoubleWrapper#1"
+  - symbol: "DoubleWrapper#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -52,7 +52,7 @@ declarations:
     end:
       line: 1
       column: 27
-  - symbol: "Wrapped#1"
+  - symbol: "Wrapped#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -63,7 +63,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "Wrapper#1"
+              symbol: "Wrapper#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -77,7 +77,7 @@ declarations:
     end:
       line: 4
       column: 21
-  - symbol: "WrappedFromWrapperWithComponentArg#1"
+  - symbol: "WrappedFromWrapperWithComponentArg#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -88,7 +88,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "WrapperWithComponentArg#1"
+              symbol: "WrapperWithComponentArg#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -102,7 +102,7 @@ declarations:
     end:
       line: 8
       column: 48
-  - symbol: "WrappedWithComponentArg#1"
+  - symbol: "WrappedWithComponentArg#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -113,7 +113,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "Wrapper#1"
+              symbol: "Wrapper#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -128,7 +128,7 @@ declarations:
     end:
       line: 5
       column: 37
-  - symbol: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+  - symbol: "WrappedWithComponentArgFromWrapperWithComponentArg#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -139,7 +139,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "WrapperWithComponentArg#1"
+              symbol: "WrapperWithComponentArg#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -154,7 +154,7 @@ declarations:
     end:
       line: 9
       column: 64
-  - symbol: "Wrapper#1"
+  - symbol: "Wrapper#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -165,7 +165,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "DoubleWrapper#1"
+              symbol: "DoubleWrapper#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -179,7 +179,7 @@ declarations:
     end:
       line: 3
       column: 21
-  - symbol: "WrapperWithComponentArg#1"
+  - symbol: "WrapperWithComponentArg#2"
     source:
       hash: "253563904563892470"
       path: src/wrapped-components/double-wrapper.tsx
@@ -190,7 +190,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "DoubleWrapper#1"
+              symbol: "DoubleWrapper#2"
               source:
                 hash: "253563904563892470"
                 path: src/wrapped-components/double-wrapper.tsx
@@ -209,141 +209,140 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "DoubleWrapper#1"
-      - "DoubleWrapper#1"
-      - "Wrapper#1"
-      - "Wrapper#1"
-      - "Wrapped#1"
-      - "Wrapped#1"
-      - "WrappedWithComponentArg#1"
-      - "WrappedWithComponentArg#1"
-      - "WrapperWithComponentArg#1"
-      - "WrapperWithComponentArg#1"
-      - "WrappedFromWrapperWithComponentArg#1"
-      - "WrappedFromWrapperWithComponentArg#1"
-      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
-      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+      - "DoubleWrapper#2"
+      - "DoubleWrapper#2"
+      - "Wrapper#2"
+      - "Wrapper#2"
+      - "Wrapped#2"
+      - "Wrapped#2"
+      - "WrappedWithComponentArg#2"
+      - "WrappedWithComponentArg#2"
+      - "WrapperWithComponentArg#2"
+      - "WrapperWithComponentArg#2"
+      - "WrappedFromWrapperWithComponentArg#2"
+      - "WrappedFromWrapperWithComponentArg#2"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#2"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#2"
     references:
-      - "DoubleWrapper#1"
-      - "Wrapped#1"
-      - "WrappedFromWrapperWithComponentArg#1"
-      - "WrappedWithComponentArg#1"
-      - "WrappedWithComponentArgFromWrapperWithComponentArg#1"
-      - "Wrapper#1"
-      - "WrapperWithComponentArg#1"
-      - "div#2"
+      - "DoubleWrapper#2"
+      - "Wrapped#2"
+      - "WrappedFromWrapperWithComponentArg#2"
+      - "WrappedWithComponentArg#2"
+      - "WrappedWithComponentArgFromWrapperWithComponentArg#2"
+      - "Wrapper#2"
+      - "WrapperWithComponentArg#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "DoubleWrapper#1"
+      - "div#1"
+  - owner: "DoubleWrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "DoubleWrapper#1"
+      - "div#1"
+  - owner: "DoubleWrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Wrapper#1"
+      - "div#1"
+  - owner: "Wrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "DoubleWrapper#1"
+      - "DoubleWrapper#2"
     jsx_references: []
-  - owner: "Wrapper#1"
+  - owner: "Wrapper#2"
     parent: "__global#0"
     children: []
     references:
-      - "DoubleWrapper#1"
+      - "DoubleWrapper#2"
     jsx_references: []
-  - owner: "Wrapped#1"
+  - owner: "Wrapped#2"
     parent: "__global#0"
     children: []
     references:
-      - "Wrapper#1"
+      - "Wrapper#2"
     jsx_references: []
-  - owner: "Wrapped#1"
+  - owner: "Wrapped#2"
     parent: "__global#0"
     children: []
     references:
-      - "Wrapper#1"
+      - "Wrapper#2"
     jsx_references: []
-  - owner: "WrappedWithComponentArg#1"
+  - owner: "WrappedWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "Wrapper#1"
-      - "div#2"
+      - "Wrapper#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrappedWithComponentArg#1"
+      - "div#1"
+  - owner: "WrappedWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "Wrapper#1"
-      - "div#2"
+      - "Wrapper#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrapperWithComponentArg#1"
+      - "div#1"
+  - owner: "WrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "DoubleWrapper#1"
-      - "div#2"
+      - "DoubleWrapper#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrapperWithComponentArg#1"
+      - "div#1"
+  - owner: "WrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "DoubleWrapper#1"
-      - "div#2"
+      - "DoubleWrapper#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrappedFromWrapperWithComponentArg#1"
+      - "div#1"
+  - owner: "WrappedFromWrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "WrapperWithComponentArg#1"
+      - "WrapperWithComponentArg#2"
     jsx_references: []
-  - owner: "WrappedFromWrapperWithComponentArg#1"
+  - owner: "WrappedFromWrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "WrapperWithComponentArg#1"
+      - "WrapperWithComponentArg#2"
     jsx_references: []
-  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "WrapperWithComponentArg#1"
-      - "div#2"
+      - "WrapperWithComponentArg#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#1"
+      - "div#1"
+  - owner: "WrappedWithComponentArgFromWrapperWithComponentArg#2"
     parent: "__global#0"
     children: []
     references:
-      - "WrapperWithComponentArg#1"
-      - "div#2"
+      - "WrapperWithComponentArg#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 72
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 8
         end: 72
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -351,13 +350,12 @@ body:
           span:
             start: 14
             end: 71
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 14
               end: 27
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: DoubleWrapper
@@ -366,28 +364,27 @@ body:
             span:
               start: 31
               end: 71
-              ctxt: 0
+            ctxt: 3
             params: []
             body:
               type: ArrowFunctionExpression
               span:
                 start: 37
                 end: 71
-                ctxt: 0
+              ctxt: 4
               params: []
               body:
                 type: ArrowFunctionExpression
                 span:
                   start: 43
                   end: 71
-                  ctxt: 0
+                ctxt: 5
                 params: []
                 body:
                   type: JSXElement
                   span:
                     start: 49
                     end: 71
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -395,13 +392,12 @@ body:
                       span:
                         start: 50
                         end: 53
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                     span:
                       start: 49
                       end: 54
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -410,7 +406,6 @@ body:
                       span:
                         start: 54
                         end: 65
-                        ctxt: 0
                       value: Hello World
                       raw: Hello World
                   closing:
@@ -418,13 +413,12 @@ body:
                     span:
                       start: 65
                       end: 71
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 67
                         end: 70
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                 async: false
@@ -444,13 +438,12 @@ body:
     span:
       start: 74
       end: 113
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 81
         end: 113
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -458,13 +451,12 @@ body:
           span:
             start: 87
             end: 112
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 87
               end: 94
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: Wrapper
@@ -473,13 +465,13 @@ body:
             span:
               start: 97
               end: 112
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 97
                 end: 110
-                ctxt: 1
+              ctxt: 2
               value: DoubleWrapper
               optional: false
             arguments: []
@@ -489,13 +481,12 @@ body:
     span:
       start: 114
       end: 147
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 121
         end: 147
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -503,13 +494,12 @@ body:
           span:
             start: 127
             end: 146
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 127
               end: 134
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: Wrapped
@@ -518,13 +508,13 @@ body:
             span:
               start: 137
               end: 146
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 137
                 end: 144
-                ctxt: 1
+              ctxt: 2
               value: Wrapper
               optional: false
             arguments: []
@@ -534,13 +524,12 @@ body:
     span:
       start: 148
       end: 221
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 155
         end: 221
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -548,13 +537,12 @@ body:
           span:
             start: 161
             end: 220
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 161
               end: 184
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrappedWithComponentArg
@@ -563,13 +551,13 @@ body:
             span:
               start: 187
               end: 220
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 187
                 end: 194
-                ctxt: 1
+              ctxt: 2
               value: Wrapper
               optional: false
             arguments:
@@ -579,14 +567,13 @@ body:
                   span:
                     start: 195
                     end: 219
-                    ctxt: 0
+                  ctxt: 6
                   params: []
                   body:
                     type: JSXElement
                     span:
                       start: 201
                       end: 219
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -594,13 +581,12 @@ body:
                         span:
                           start: 202
                           end: 205
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 201
                         end: 206
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -609,7 +595,6 @@ body:
                         span:
                           start: 206
                           end: 213
-                          ctxt: 0
                         value: Foo Bar
                         raw: Foo Bar
                     closing:
@@ -617,13 +602,12 @@ body:
                       span:
                         start: 213
                         end: 219
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 215
                           end: 218
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                   async: false
@@ -636,13 +620,12 @@ body:
     span:
       start: 223
       end: 302
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 230
         end: 302
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -650,13 +633,12 @@ body:
           span:
             start: 236
             end: 301
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 236
               end: 259
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrapperWithComponentArg
@@ -665,13 +647,13 @@ body:
             span:
               start: 262
               end: 301
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 262
                 end: 275
-                ctxt: 1
+              ctxt: 2
               value: DoubleWrapper
               optional: false
             arguments:
@@ -681,14 +663,13 @@ body:
                   span:
                     start: 276
                     end: 300
-                    ctxt: 0
+                  ctxt: 7
                   params: []
                   body:
                     type: JSXElement
                     span:
                       start: 282
                       end: 300
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -696,13 +677,12 @@ body:
                         span:
                           start: 283
                           end: 286
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 282
                         end: 287
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -711,7 +691,6 @@ body:
                         span:
                           start: 287
                           end: 294
-                          ctxt: 0
                         value: Foo Bar
                         raw: Foo Bar
                     closing:
@@ -719,13 +698,12 @@ body:
                       span:
                         start: 294
                         end: 300
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 296
                           end: 299
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                   async: false
@@ -738,13 +716,12 @@ body:
     span:
       start: 303
       end: 379
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 310
         end: 379
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -752,13 +729,12 @@ body:
           span:
             start: 316
             end: 378
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 316
               end: 350
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrappedFromWrapperWithComponentArg
@@ -767,13 +743,13 @@ body:
             span:
               start: 353
               end: 378
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 353
                 end: 376
-                ctxt: 1
+              ctxt: 2
               value: WrapperWithComponentArg
               optional: false
             arguments: []
@@ -783,13 +759,12 @@ body:
     span:
       start: 380
       end: 496
-      ctxt: 0
     declaration:
       type: VariableDeclaration
       span:
         start: 387
         end: 496
-        ctxt: 0
+      ctxt: 0
       kind: const
       declare: false
       declarations:
@@ -797,13 +772,12 @@ body:
           span:
             start: 393
             end: 495
-            ctxt: 0
           id:
+            ctxt: 2
             optional: false
             span:
               start: 393
               end: 443
-              ctxt: 1
             type: Identifier
             typeAnnotation: ~
             value: WrappedWithComponentArgFromWrapperWithComponentArg
@@ -812,13 +786,13 @@ body:
             span:
               start: 446
               end: 495
-              ctxt: 0
+            ctxt: 0
             callee:
               type: Identifier
               span:
                 start: 446
                 end: 469
-                ctxt: 1
+              ctxt: 2
               value: WrapperWithComponentArg
               optional: false
             arguments:
@@ -828,14 +802,13 @@ body:
                   span:
                     start: 470
                     end: 494
-                    ctxt: 0
+                  ctxt: 8
                   params: []
                   body:
                     type: JSXElement
                     span:
                       start: 476
                       end: 494
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -843,13 +816,12 @@ body:
                         span:
                           start: 477
                           end: 480
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 476
                         end: 481
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -858,7 +830,6 @@ body:
                         span:
                           start: 481
                           end: 488
-                          ctxt: 0
                         value: Foo Bar
                         raw: Foo Bar
                     closing:
@@ -866,13 +837,12 @@ body:
                       span:
                         start: 488
                         end: 494
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 490
                           end: 493
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                   async: false
@@ -881,3 +851,4 @@ body:
                   returnType: ~
             typeArguments: ~
           definite: false
+

@@ -16,13 +16,13 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "ComponentReal#1"
+  - symbol: "ComponentReal#2"
     source:
       hash: "10335023068409944853"
       path: src/hess/component/componentBody.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 4391586875326609996, path: \"src/hess/component/real\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 4391586875326609996, path: \"src/hess/component/real\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -49,7 +49,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ComponentReal#1"
+          symbol: "ComponentReal#2"
           source:
             hash: "10335023068409944853"
             path: src/hess/component/componentBody.tsx
@@ -68,32 +68,30 @@ scopes:
     children:
       - "default#0"
     references:
-      - "ComponentReal#1"
+      - "ComponentReal#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "ComponentReal#1"
+      - "ComponentReal#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 36
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 21
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 21
-            ctxt: 1
+          ctxt: 2
           value: ComponentReal
           optional: false
     source:
@@ -101,21 +99,21 @@ body:
       span:
         start: 27
         end: 35
-        ctxt: 0
       value: "./real"
       raw: "\"./real\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultExpression
     span:
       start: 38
       end: 67
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 53
         end: 66
-        ctxt: 1
+      ctxt: 2
       value: ComponentReal
       optional: false
+

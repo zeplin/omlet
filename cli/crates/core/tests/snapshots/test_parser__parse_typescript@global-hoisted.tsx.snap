@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "8364784910543648892"
       path: src/functional-component/return-func/global-hoisted.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "8364784910543648892"
       path: src/functional-component/return-func/global-hoisted.tsx
@@ -51,7 +51,7 @@ declarations:
         - ReturnTypeOf:
             - TypeOf:
                 symbol:
-                  symbol: "generateComponent#1"
+                  symbol: "generateComponent#2"
                   source:
                     hash: "8364784910543648892"
                     path: src/functional-component/return-func/global-hoisted.tsx
@@ -65,7 +65,7 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "generateComponent#1"
+  - symbol: "generateComponent#2"
     source:
       hash: "8364784910543648892"
       path: src/functional-component/return-func/global-hoisted.tsx
@@ -85,53 +85,51 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
-      - "generateComponent#1"
+      - "Sample#2"
+      - "Sample#2"
+      - "generateComponent#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "div#2"
-      - "generateComponent#1"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "generateComponent#2"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "generateComponent#1"
+      - "generateComponent#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "generateComponent#1"
+      - "generateComponent#2"
     jsx_references: []
-  - owner: "generateComponent#1"
+  - owner: "generateComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -139,46 +137,44 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 29
       end: 97
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 62
           end: 97
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 68
               end: 95
-              ctxt: 0
             argument:
               type: CallExpression
               span:
                 start: 75
                 end: 94
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: Identifier
                 span:
                   start: 75
                   end: 92
-                  ctxt: 1
+                ctxt: 2
                 value: generateComponent
                 optional: false
               arguments: []
               typeArguments: ~
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -186,7 +182,7 @@ body:
         span:
           start: 53
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -194,28 +190,24 @@ body:
       span:
         start: 44
         end: 97
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 128
         end: 161
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 134
             end: 159
-            ctxt: 0
           argument:
             type: JSXElement
             span:
               start: 141
               end: 158
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -223,13 +215,12 @@ body:
                 span:
                   start: 142
                   end: 145
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
               span:
                 start: 141
                 end: 146
-                ctxt: 0
               attributes: []
               selfClosing: false
               typeArguments: ~
@@ -238,7 +229,6 @@ body:
                 span:
                   start: 146
                   end: 152
-                  ctxt: 0
                 value: Sample
                 raw: Sample
             closing:
@@ -246,15 +236,15 @@ body:
               span:
                 start: 152
                 end: 158
-                ctxt: 0
               name:
                 type: Identifier
                 span:
                   start: 154
                   end: 157
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
+    ctxt: 4
     declare: false
     decorators: []
     generator: false
@@ -263,7 +253,7 @@ body:
       span:
         start: 108
         end: 125
-        ctxt: 1
+      ctxt: 2
       value: generateComponent
       optional: false
     params: []
@@ -271,6 +261,6 @@ body:
     span:
       start: 99
       end: 161
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
+

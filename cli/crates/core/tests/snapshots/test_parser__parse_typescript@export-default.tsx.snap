@@ -61,27 +61,23 @@ body:
     span:
       start: 1
       end: 60
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 28
           end: 60
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 34
               end: 58
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 41
                 end: 57
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -89,13 +85,12 @@ body:
                   span:
                     start: 42
                     end: 45
-                    ctxt: 1
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 41
                   end: 46
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -104,7 +99,6 @@ body:
                   span:
                     start: 46
                     end: 51
-                    ctxt: 0
                   value: hello
                   raw: hello
               closing:
@@ -112,15 +106,15 @@ body:
                 span:
                   start: 51
                   end: 57
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 53
                     end: 56
-                    ctxt: 1
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier: ~
@@ -129,6 +123,6 @@ body:
       span:
         start: 16
         end: 60
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

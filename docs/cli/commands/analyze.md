@@ -70,6 +70,14 @@ Default: `false`. Adds detailed log output in the CLI.
 
 Scanned results are output locally to `omlet.out.json` only — nothing is uploaded. Useful for inspecting results before sending them to the web app.
 
+### `--fail-on-parse-error`
+
+Default: `false`. Exit with status code `1` when one or more modules fail to parse.
+
+A module that fails to parse is left out of the analysis entirely: its components are never detected, and usages of those components are missing from the modules that do parse. By default the run still succeeds, and the summary only reports how many modules were scanned. Use this option in CI to catch the situation instead of silently publishing an incomplete analysis.
+
+Run with `--dry-run` to see which modules failed and why — they are listed under `parser_errors` in `omlet.out.json`.
+
 ### `-h` / `--help`
 
 `omlet analyze -h` prints all available options with explanations.

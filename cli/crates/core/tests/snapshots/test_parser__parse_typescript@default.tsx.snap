@@ -25,7 +25,7 @@ exports:
           mtype: local
     exported_name: default.Cell
   - source:
-      Internal: "THeader#1"
+      Internal: "THeader#2"
     exported_name: default.Header
   - source:
       External:
@@ -37,17 +37,17 @@ exports:
           mtype: local
     exported_name: default.Header.Cell
 declarations:
-  - symbol: "ReactNode#1"
+  - symbol: "ReactNode#2"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('ReactNode' type=dynamic), context: #1 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"ReactNode\", context: #2 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ReactNode#1"
+          symbol: "ReactNode#2"
           source:
             hash: "11002248552354871051"
             path: ""
@@ -60,13 +60,13 @@ declarations:
     end:
       line: 1
       column: 19
-  - symbol: "TCell#1"
+  - symbol: "TCell#2"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 13376300841447631315, path: \"src/subcomponent/table/subcomponents/TCell\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 13376300841447631315, path: \"src/subcomponent/table/subcomponents/TCell\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -83,13 +83,13 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "THeadCell#1"
+  - symbol: "THeadCell#2"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 15749251122785755894, path: \"src/subcomponent/table/subcomponents/THeadCell\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 15749251122785755894, path: \"src/subcomponent/table/subcomponents/THeadCell\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -106,7 +106,7 @@ declarations:
     end:
       line: 3
       column: 17
-  - symbol: "THeader#1"
+  - symbol: "THeader#2"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
@@ -122,7 +122,7 @@ declarations:
     end:
       line: 14
       column: 14
-  - symbol: "TTable#1"
+  - symbol: "TTable#2"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
@@ -138,18 +138,18 @@ declarations:
     end:
       line: 6
       column: 13
-  - symbol: "children#2"
+  - symbol: "children#3"
     source:
       hash: "1747330713613470887"
       path: src/subcomponent/table/default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('TTable' type=inline), context: #1 }>[0][children]"
+    definition: "Parameter<Symbol { name: \"TTable\", context: #2 }>[0][children]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "TTable#1"
+              symbol: "TTable#2"
               source:
                 hash: "1747330713613470887"
                 path: src/subcomponent/table/default.tsx
@@ -169,12 +169,12 @@ declarations:
       path: src/subcomponent/table/default.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('THeader' type=inline), context: #1 }>[0][children]"
+    definition: "Parameter<Symbol { name: \"THeader\", context: #2 }>[0][children]"
     inferred_type:
       MemberOf:
         - ParameterOf:
             function:
-              symbol: "THeader#1"
+              symbol: "THeader#2"
               source:
                 hash: "1747330713613470887"
                 path: src/subcomponent/table/default.tsx
@@ -198,7 +198,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "TTable#1"
+          symbol: "TTable#2"
           source:
             hash: "1747330713613470887"
             path: src/subcomponent/table/default.tsx
@@ -215,69 +215,65 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "TTable#1"
-      - "THeader#1"
+      - "TTable#2"
+      - "THeader#2"
       - "default#0"
     references:
-      - "Cell#0"
-      - "Header#0"
-      - "ReactNode#1"
-      - "TCell#1"
-      - "THeadCell#1"
-      - "THeader#1"
-      - "TTable#1"
+      - "ReactNode#2"
+      - "TCell#2"
+      - "THeadCell#2"
+      - "THeader#2"
+      - "TTable#2"
       - "children#0"
-      - "children#2"
+      - "children#3"
       - "children#4"
-      - "table#3"
-      - "thead#3"
+      - "table#1"
+      - "thead#1"
     jsx_references:
-      - "table#3"
-      - "thead#3"
-  - owner: "TTable#1"
+      - "table#1"
+      - "thead#1"
+  - owner: "TTable#2"
     parent: "__global#0"
     children: []
     references:
-      - "ReactNode#1"
+      - "ReactNode#2"
       - "children#0"
-      - "children#2"
-      - "table#3"
+      - "children#3"
+      - "table#1"
     jsx_references:
-      - "table#3"
-  - owner: "THeader#1"
+      - "table#1"
+  - owner: "THeader#2"
     parent: "__global#0"
     children: []
     references:
-      - "ReactNode#1"
+      - "ReactNode#2"
       - "children#0"
       - "children#4"
-      - "thead#3"
+      - "thead#1"
     jsx_references:
-      - "thead#3"
+      - "thead#1"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "TTable#1"
+      - "TTable#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 35
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 19
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 19
-            ctxt: 1
+          ctxt: 2
           value: ReactNode
           optional: false
         imported: ~
@@ -287,28 +283,26 @@ body:
       span:
         start: 27
         end: 34
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 36
       end: 78
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 43
           end: 48
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 43
             end: 48
-            ctxt: 1
+          ctxt: 2
           value: TCell
           optional: false
     source:
@@ -316,28 +310,26 @@ body:
       span:
         start: 54
         end: 77
-        ctxt: 0
       value: "./subcomponents/TCell"
       raw: "\"./subcomponents/TCell\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 79
       end: 129
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 86
           end: 95
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 86
             end: 95
-            ctxt: 1
+          ctxt: 2
           value: THeadCell
           optional: false
     source:
@@ -345,16 +337,16 @@ body:
       span:
         start: 101
         end: 128
-        ctxt: 0
       value: "./subcomponents/THeadCell"
       raw: "\"./subcomponents/THeadCell\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 132
       end: 271
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -362,13 +354,12 @@ body:
         span:
           start: 138
           end: 270
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 138
             end: 144
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: TTable
@@ -377,27 +368,26 @@ body:
           span:
             start: 147
             end: 270
-            ctxt: 0
+          ctxt: 3
           params:
             - type: ObjectPattern
               span:
                 start: 148
                 end: 186
-                ctxt: 0
               properties:
                 - type: AssignmentPatternProperty
                   span:
                     start: 150
                     end: 158
-                    ctxt: 0
                   key:
-                    type: Identifier
+                    ctxt: 3
+                    optional: false
                     span:
                       start: 150
                       end: 158
-                      ctxt: 2
+                    type: Identifier
+                    typeAnnotation: ~
                     value: children
-                    optional: false
                   value: ~
               optional: false
               typeAnnotation:
@@ -405,78 +395,66 @@ body:
                 span:
                   start: 160
                   end: 186
-                  ctxt: 0
                 typeAnnotation:
                   type: TsTypeLiteral
                   span:
                     start: 162
                     end: 186
-                    ctxt: 0
                   members:
                     - type: TsPropertySignature
                       span:
                         start: 164
                         end: 184
-                        ctxt: 0
                       readonly: false
                       key:
                         type: Identifier
                         span:
                           start: 164
                           end: 172
-                          ctxt: 0
+                        ctxt: 0
                         value: children
                         optional: false
                       computed: false
                       optional: false
-                      init: ~
-                      params: []
                       typeAnnotation:
                         type: TsTypeAnnotation
                         span:
                           start: 172
                           end: 183
-                          ctxt: 0
                         typeAnnotation:
                           type: TsTypeReference
                           span:
                             start: 174
                             end: 183
-                            ctxt: 0
                           typeName:
                             type: Identifier
                             span:
                               start: 174
                               end: 183
-                              ctxt: 1
+                            ctxt: 2
                             value: ReactNode
                             optional: false
                           typeParams: ~
-                      typeParams: ~
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 191
               end: 270
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 197
                   end: 268
-                  ctxt: 0
                 argument:
                   type: ParenthesisExpression
                   span:
                     start: 204
                     end: 267
-                    ctxt: 0
                   expression:
                     type: JSXElement
                     span:
                       start: 214
                       end: 261
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -484,13 +462,12 @@ body:
                         span:
                           start: 215
                           end: 220
-                          ctxt: 3
+                        ctxt: 1
                         value: table
                         optional: false
                       span:
                         start: 214
                         end: 221
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -499,41 +476,37 @@ body:
                         span:
                           start: 221
                           end: 234
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXExpressionContainer
                         span:
                           start: 234
                           end: 244
-                          ctxt: 0
                         expression:
                           type: Identifier
                           span:
                             start: 235
                             end: 243
-                            ctxt: 2
+                          ctxt: 3
                           value: children
                           optional: false
                       - type: JSXText
                         span:
                           start: 244
                           end: 253
-                          ctxt: 0
-                        value: "\n\n        "
-                        raw: "\n\n        "
+                        value: "\n        "
+                        raw: "\n        "
                     closing:
                       type: JSXClosingElement
                       span:
                         start: 253
                         end: 261
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 255
                           end: 260
-                          ctxt: 3
+                        ctxt: 1
                         value: table
                         optional: false
           async: false
@@ -545,7 +518,7 @@ body:
     span:
       start: 273
       end: 413
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -553,13 +526,12 @@ body:
         span:
           start: 279
           end: 412
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 279
             end: 286
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: THeader
@@ -568,27 +540,26 @@ body:
           span:
             start: 289
             end: 412
-            ctxt: 0
+          ctxt: 4
           params:
             - type: ObjectPattern
               span:
                 start: 290
                 end: 328
-                ctxt: 0
               properties:
                 - type: AssignmentPatternProperty
                   span:
                     start: 292
                     end: 300
-                    ctxt: 0
                   key:
-                    type: Identifier
+                    ctxt: 4
+                    optional: false
                     span:
                       start: 292
                       end: 300
-                      ctxt: 4
+                    type: Identifier
+                    typeAnnotation: ~
                     value: children
-                    optional: false
                   value: ~
               optional: false
               typeAnnotation:
@@ -596,78 +567,66 @@ body:
                 span:
                   start: 302
                   end: 328
-                  ctxt: 0
                 typeAnnotation:
                   type: TsTypeLiteral
                   span:
                     start: 304
                     end: 328
-                    ctxt: 0
                   members:
                     - type: TsPropertySignature
                       span:
                         start: 306
                         end: 326
-                        ctxt: 0
                       readonly: false
                       key:
                         type: Identifier
                         span:
                           start: 306
                           end: 314
-                          ctxt: 0
+                        ctxt: 0
                         value: children
                         optional: false
                       computed: false
                       optional: false
-                      init: ~
-                      params: []
                       typeAnnotation:
                         type: TsTypeAnnotation
                         span:
                           start: 314
                           end: 325
-                          ctxt: 0
                         typeAnnotation:
                           type: TsTypeReference
                           span:
                             start: 316
                             end: 325
-                            ctxt: 0
                           typeName:
                             type: Identifier
                             span:
                               start: 316
                               end: 325
-                              ctxt: 1
+                            ctxt: 2
                             value: ReactNode
                             optional: false
                           typeParams: ~
-                      typeParams: ~
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 333
               end: 412
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 339
                   end: 410
-                  ctxt: 0
                 argument:
                   type: ParenthesisExpression
                   span:
                     start: 346
                     end: 409
-                    ctxt: 0
                   expression:
                     type: JSXElement
                     span:
                       start: 356
                       end: 403
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -675,13 +634,12 @@ body:
                         span:
                           start: 357
                           end: 362
-                          ctxt: 3
+                        ctxt: 1
                         value: thead
                         optional: false
                       span:
                         start: 356
                         end: 363
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -690,41 +648,37 @@ body:
                         span:
                           start: 363
                           end: 376
-                          ctxt: 0
-                        value: "\n\n            "
-                        raw: "\n\n            "
+                        value: "\n            "
+                        raw: "\n            "
                       - type: JSXExpressionContainer
                         span:
                           start: 376
                           end: 386
-                          ctxt: 0
                         expression:
                           type: Identifier
                           span:
                             start: 377
                             end: 385
-                            ctxt: 4
+                          ctxt: 4
                           value: children
                           optional: false
                       - type: JSXText
                         span:
                           start: 386
                           end: 395
-                          ctxt: 0
-                        value: "\n\n        "
-                        raw: "\n\n        "
+                        value: "\n        "
+                        raw: "\n        "
                     closing:
                       type: JSXClosingElement
                       span:
                         start: 395
                         end: 403
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 397
                           end: 402
-                          ctxt: 3
+                        ctxt: 1
                         value: thead
                         optional: false
           async: false
@@ -736,26 +690,23 @@ body:
     span:
       start: 415
       end: 435
-      ctxt: 0
     expression:
       type: AssignmentExpression
       span:
         start: 415
         end: 434
-        ctxt: 0
       operator: "="
       left:
         type: MemberExpression
         span:
           start: 415
           end: 426
-          ctxt: 0
         object:
           type: Identifier
           span:
             start: 415
             end: 421
-            ctxt: 1
+          ctxt: 2
           value: TTable
           optional: false
         property:
@@ -763,41 +714,36 @@ body:
           span:
             start: 422
             end: 426
-            ctxt: 0
           value: Cell
-          optional: false
       right:
         type: Identifier
         span:
           start: 429
           end: 434
-          ctxt: 1
+        ctxt: 2
         value: TCell
         optional: false
   - type: ExpressionStatement
     span:
       start: 436
       end: 460
-      ctxt: 0
     expression:
       type: AssignmentExpression
       span:
         start: 436
         end: 459
-        ctxt: 0
       operator: "="
       left:
         type: MemberExpression
         span:
           start: 436
           end: 449
-          ctxt: 0
         object:
           type: Identifier
           span:
             start: 436
             end: 442
-            ctxt: 1
+          ctxt: 2
           value: TTable
           optional: false
         property:
@@ -805,47 +751,41 @@ body:
           span:
             start: 443
             end: 449
-            ctxt: 0
           value: Header
-          optional: false
       right:
         type: Identifier
         span:
           start: 452
           end: 459
-          ctxt: 1
+        ctxt: 2
         value: THeader
         optional: false
   - type: ExpressionStatement
     span:
       start: 461
       end: 492
-      ctxt: 0
     expression:
       type: AssignmentExpression
       span:
         start: 461
         end: 491
-        ctxt: 0
       operator: "="
       left:
         type: MemberExpression
         span:
           start: 461
           end: 479
-          ctxt: 0
         object:
           type: MemberExpression
           span:
             start: 461
             end: 474
-            ctxt: 0
           object:
             type: Identifier
             span:
               start: 461
               end: 467
-              ctxt: 1
+            ctxt: 2
             value: TTable
             optional: false
           property:
@@ -853,35 +793,31 @@ body:
             span:
               start: 468
               end: 474
-              ctxt: 0
             value: Header
-            optional: false
         property:
           type: Identifier
           span:
             start: 475
             end: 479
-            ctxt: 0
           value: Cell
-          optional: false
       right:
         type: Identifier
         span:
           start: 482
           end: 491
-          ctxt: 1
+        ctxt: 2
         value: THeadCell
         optional: false
   - type: ExportDefaultExpression
     span:
       start: 494
       end: 516
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 509
         end: 515
-        ctxt: 1
+      ctxt: 2
       value: TTable
       optional: false
+

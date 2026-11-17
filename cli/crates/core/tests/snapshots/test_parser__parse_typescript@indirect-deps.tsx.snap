@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "ExportedFooter#1"
+      Internal: "ExportedFooter#2"
     exported_name: ExportedFooter
   - source:
-      Internal: "Dialog#1"
+      Internal: "Dialog#2"
     exported_name: Dialog
   - source:
-      Internal: "AnotherDialog#1"
+      Internal: "AnotherDialog#2"
     exported_name: AnotherDialog
 declarations:
-  - symbol: "AnotherDialog#1"
+  - symbol: "AnotherDialog#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -38,17 +38,17 @@ declarations:
     end:
       line: 38
       column: 2
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Button' type=inline), context: #1 }, source: ModuleId { hash: 4369040476700946144, path: \"src/indirect-deps/used-indirectly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Button\", context: #2 }, source: ModuleId { hash: 4369040476700946144, path: \"src/indirect-deps/used-indirectly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Button#1"
+          symbol: "Button#2"
           source:
             hash: "4369040476700946144"
             path: src/indirect-deps/used-indirectly
@@ -61,7 +61,7 @@ declarations:
     end:
       line: 1
       column: 16
-  - symbol: "Dialog#1"
+  - symbol: "Dialog#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -77,7 +77,7 @@ declarations:
     end:
       line: 28
       column: 2
-  - symbol: "ExportedFooter#1"
+  - symbol: "ExportedFooter#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -93,7 +93,7 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "Footer#1"
+  - symbol: "Footer#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -109,17 +109,17 @@ declarations:
     end:
       line: 13
       column: 2
-  - symbol: "Input#1"
+  - symbol: "Input#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Input' type=inline), context: #1 }, source: ModuleId { hash: 4369040476700946144, path: \"src/indirect-deps/used-indirectly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Input\", context: #2 }, source: ModuleId { hash: 4369040476700946144, path: \"src/indirect-deps/used-indirectly\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Input#1"
+          symbol: "Input#2"
           source:
             hash: "4369040476700946144"
             path: src/indirect-deps/used-indirectly
@@ -132,7 +132,7 @@ declarations:
     end:
       line: 1
       column: 23
-  - symbol: "InputComp#3"
+  - symbol: "InputComp#6"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -143,7 +143,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "getInput#1"
+              symbol: "getInput#2"
               source:
                 hash: "12139914938646175938"
                 path: src/indirect-deps/indirect-deps.tsx
@@ -157,7 +157,7 @@ declarations:
     end:
       line: 20
       column: 20
-  - symbol: "InputComp#4"
+  - symbol: "InputComp#7"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -168,7 +168,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "getInput#1"
+              symbol: "getInput#2"
               source:
                 hash: "12139914938646175938"
                 path: src/indirect-deps/indirect-deps.tsx
@@ -182,7 +182,7 @@ declarations:
     end:
       line: 31
       column: 20
-  - symbol: "getInput#1"
+  - symbol: "getInput#2"
     source:
       hash: "12139914938646175938"
       path: src/indirect-deps/indirect-deps.tsx
@@ -193,7 +193,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "Input#1"
+              symbol: "Input#2"
               source:
                 hash: "12139914938646175938"
                 path: src/indirect-deps/indirect-deps.tsx
@@ -210,187 +210,185 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "ExportedFooter#1"
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "getInput#1"
-      - "Dialog#1"
-      - "Dialog#1"
-      - "InputComp#3"
-      - "AnotherDialog#1"
-      - "AnotherDialog#1"
-      - "InputComp#4"
+      - "ExportedFooter#2"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "getInput#2"
+      - "Dialog#2"
+      - "Dialog#2"
+      - "InputComp#6"
+      - "AnotherDialog#2"
+      - "AnotherDialog#2"
+      - "InputComp#7"
     references:
-      - "AnotherDialog#1"
-      - "Button#1"
-      - "Dialog#1"
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "Input#1"
-      - "InputComp#3"
-      - "InputComp#4"
-      - "div#2"
-      - "getInput#1"
-      - "h1#2"
+      - "AnotherDialog#2"
+      - "Button#2"
+      - "Dialog#2"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "Input#2"
+      - "InputComp#6"
+      - "InputComp#7"
+      - "div#1"
+      - "getInput#2"
+      - "h1#1"
     jsx_references:
-      - "Button#1"
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "InputComp#3"
-      - "InputComp#4"
-      - "div#2"
-      - "h1#2"
-  - owner: "ExportedFooter#1"
+      - "Button#2"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "InputComp#6"
+      - "InputComp#7"
+      - "div#1"
+      - "h1#1"
+  - owner: "ExportedFooter#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
-      - "div#2"
+      - "Button#2"
+      - "div#1"
     jsx_references:
-      - "Button#1"
-      - "div#2"
-  - owner: "ExportedFooter#1"
+      - "Button#2"
+      - "div#1"
+  - owner: "ExportedFooter#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
-      - "div#2"
+      - "Button#2"
+      - "div#1"
     jsx_references:
-      - "Button#1"
-      - "div#2"
-  - owner: "Footer#1"
+      - "Button#2"
+      - "div#1"
+  - owner: "Footer#2"
     parent: "__global#0"
     children: []
     references:
-      - "Button#1"
-      - "div#2"
+      - "Button#2"
+      - "div#1"
     jsx_references:
-      - "Button#1"
-      - "div#2"
-  - owner: "getInput#1"
+      - "Button#2"
+      - "div#1"
+  - owner: "getInput#2"
     parent: "__global#0"
     children: []
     references:
-      - "Input#1"
+      - "Input#2"
     jsx_references: []
-  - owner: "Dialog#1"
+  - owner: "Dialog#2"
     parent: "__global#0"
     children:
-      - "InputComp#3"
+      - "InputComp#6"
     references:
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "InputComp#3"
-      - "div#2"
-      - "getInput#1"
-      - "h1#2"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "InputComp#6"
+      - "div#1"
+      - "getInput#2"
+      - "h1#1"
     jsx_references:
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "InputComp#3"
-      - "div#2"
-      - "h1#2"
-  - owner: "InputComp#3"
-    parent: "Dialog#1"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "InputComp#6"
+      - "div#1"
+      - "h1#1"
+  - owner: "InputComp#6"
+    parent: "Dialog#2"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
-  - owner: "Dialog#1"
+  - owner: "Dialog#2"
     parent: "__global#0"
     children:
-      - "InputComp#3"
+      - "InputComp#6"
     references:
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "InputComp#3"
-      - "div#2"
-      - "getInput#1"
-      - "h1#2"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "InputComp#6"
+      - "div#1"
+      - "getInput#2"
+      - "h1#1"
     jsx_references:
-      - "ExportedFooter#1"
-      - "Footer#1"
-      - "InputComp#3"
-      - "div#2"
-      - "h1#2"
-  - owner: "InputComp#3"
-    parent: "Dialog#1"
+      - "ExportedFooter#2"
+      - "Footer#2"
+      - "InputComp#6"
+      - "div#1"
+      - "h1#1"
+  - owner: "InputComp#6"
+    parent: "Dialog#2"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
-  - owner: "InputComp#3"
+  - owner: "InputComp#6"
     parent: "__global#0"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
-  - owner: "AnotherDialog#1"
+  - owner: "AnotherDialog#2"
     parent: "__global#0"
     children:
-      - "InputComp#4"
+      - "InputComp#7"
     references:
-      - "ExportedFooter#1"
-      - "InputComp#4"
-      - "div#2"
-      - "getInput#1"
-      - "h1#2"
+      - "ExportedFooter#2"
+      - "InputComp#7"
+      - "div#1"
+      - "getInput#2"
+      - "h1#1"
     jsx_references:
-      - "ExportedFooter#1"
-      - "InputComp#4"
-      - "div#2"
-      - "h1#2"
-  - owner: "InputComp#4"
-    parent: "AnotherDialog#1"
+      - "ExportedFooter#2"
+      - "InputComp#7"
+      - "div#1"
+      - "h1#1"
+  - owner: "InputComp#7"
+    parent: "AnotherDialog#2"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
-  - owner: "AnotherDialog#1"
+  - owner: "AnotherDialog#2"
     parent: "__global#0"
     children:
-      - "InputComp#4"
+      - "InputComp#7"
     references:
-      - "ExportedFooter#1"
-      - "InputComp#4"
-      - "div#2"
-      - "getInput#1"
-      - "h1#2"
+      - "ExportedFooter#2"
+      - "InputComp#7"
+      - "div#1"
+      - "getInput#2"
+      - "h1#1"
     jsx_references:
-      - "ExportedFooter#1"
-      - "InputComp#4"
-      - "div#2"
-      - "h1#2"
-  - owner: "InputComp#4"
-    parent: "AnotherDialog#1"
+      - "ExportedFooter#2"
+      - "InputComp#7"
+      - "div#1"
+      - "h1#1"
+  - owner: "InputComp#7"
+    parent: "AnotherDialog#2"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
-  - owner: "InputComp#4"
+  - owner: "InputComp#7"
     parent: "__global#0"
     children: []
     references:
-      - "getInput#1"
+      - "getInput#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 51
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 16
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 16
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         imported: ~
@@ -399,13 +397,12 @@ body:
         span:
           start: 18
           end: 23
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 18
             end: 23
-            ctxt: 1
+          ctxt: 2
           value: Input
           optional: false
         imported: ~
@@ -415,36 +412,32 @@ body:
       span:
         start: 31
         end: 50
-        ctxt: 0
       value: "./used-indirectly"
       raw: "\"./used-indirectly\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 53
       end: 136
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 86
           end: 136
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 92
               end: 134
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 99
                 end: 133
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -452,13 +445,12 @@ body:
                   span:
                     start: 100
                     end: 103
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 99
                   end: 104
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -467,14 +459,12 @@ body:
                   span:
                     start: 104
                     end: 113
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 113
                     end: 122
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -482,13 +472,12 @@ body:
                       span:
                         start: 114
                         end: 120
-                        ctxt: 1
+                      ctxt: 2
                       value: Button
                       optional: false
                     span:
                       start: 113
                       end: 122
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -498,23 +487,22 @@ body:
                   span:
                     start: 122
                     end: 127
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 127
                   end: 133
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 129
                     end: 132
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -523,7 +511,7 @@ body:
         span:
           start: 69
           end: 83
-          ctxt: 1
+        ctxt: 2
         value: ExportedFooter
         optional: false
       params: []
@@ -531,28 +519,24 @@ body:
       span:
         start: 60
         end: 136
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 156
         end: 206
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 162
             end: 204
-            ctxt: 0
           argument:
             type: JSXElement
             span:
               start: 169
               end: 203
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -560,13 +544,12 @@ body:
                 span:
                   start: 170
                   end: 173
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
               span:
                 start: 169
                 end: 174
-                ctxt: 0
               attributes: []
               selfClosing: false
               typeArguments: ~
@@ -575,14 +558,12 @@ body:
                 span:
                   start: 174
                   end: 183
-                  ctxt: 0
-                value: "\n\n        "
-                raw: "\n\n        "
+                value: "\n        "
+                raw: "\n        "
               - type: JSXElement
                 span:
                   start: 183
                   end: 192
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -590,13 +571,12 @@ body:
                     span:
                       start: 184
                       end: 190
-                      ctxt: 1
+                    ctxt: 2
                     value: Button
                     optional: false
                   span:
                     start: 183
                     end: 192
-                    ctxt: 0
                   attributes: []
                   selfClosing: true
                   typeArguments: ~
@@ -606,23 +586,22 @@ body:
                 span:
                   start: 192
                   end: 197
-                  ctxt: 0
-                value: "\n\n    "
-                raw: "\n\n    "
+                value: "\n    "
+                raw: "\n    "
             closing:
               type: JSXClosingElement
               span:
                 start: 197
                 end: 203
-                ctxt: 0
               name:
                 type: Identifier
                 span:
                   start: 199
                   end: 202
-                  ctxt: 2
+                ctxt: 1
                 value: div
                 optional: false
+    ctxt: 4
     declare: false
     decorators: []
     generator: false
@@ -631,7 +610,7 @@ body:
       span:
         start: 147
         end: 153
-        ctxt: 1
+      ctxt: 2
       value: Footer
       optional: false
     params: []
@@ -639,30 +618,28 @@ body:
     span:
       start: 138
       end: 206
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 228
         end: 249
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 234
             end: 247
-            ctxt: 0
           argument:
             type: Identifier
             span:
               start: 241
               end: 246
-              ctxt: 1
+            ctxt: 2
             value: Input
             optional: false
+    ctxt: 5
     declare: false
     decorators: []
     generator: false
@@ -671,7 +648,7 @@ body:
       span:
         start: 217
         end: 225
-        ctxt: 1
+      ctxt: 2
       value: getInput
       optional: false
     params: []
@@ -679,28 +656,25 @@ body:
     span:
       start: 208
       end: 249
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 251
       end: 431
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 276
           end: 431
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 282
               end: 311
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -708,13 +682,12 @@ body:
                 span:
                   start: 288
                   end: 310
-                  ctxt: 0
                 id:
+                  ctxt: 6
                   optional: false
                   span:
                     start: 288
                     end: 297
-                    ctxt: 3
                   type: Identifier
                   typeAnnotation: ~
                   value: InputComp
@@ -723,13 +696,13 @@ body:
                   span:
                     start: 300
                     end: 310
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Identifier
                     span:
                       start: 300
                       end: 308
-                      ctxt: 1
+                    ctxt: 2
                     value: getInput
                     optional: false
                   arguments: []
@@ -739,13 +712,11 @@ body:
             span:
               start: 317
               end: 429
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 324
                 end: 428
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -753,13 +724,12 @@ body:
                   span:
                     start: 325
                     end: 328
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 324
                   end: 329
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -768,14 +738,12 @@ body:
                   span:
                     start: 329
                     end: 338
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 338
                     end: 352
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -783,13 +751,12 @@ body:
                       span:
                         start: 339
                         end: 341
-                        ctxt: 2
+                      ctxt: 1
                       value: h1
                       optional: false
                     span:
                       start: 338
                       end: 342
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -798,7 +765,6 @@ body:
                       span:
                         start: 342
                         end: 347
-                        ctxt: 0
                       value: Hello
                       raw: Hello
                   closing:
@@ -806,27 +772,24 @@ body:
                     span:
                       start: 347
                       end: 352
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 349
                         end: 351
-                        ctxt: 2
+                      ctxt: 1
                       value: h1
                       optional: false
                 - type: JSXText
                   span:
                     start: 352
                     end: 361
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 361
                     end: 373
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -834,13 +797,12 @@ body:
                       span:
                         start: 362
                         end: 371
-                        ctxt: 3
+                      ctxt: 6
                       value: InputComp
                       optional: false
                     span:
                       start: 361
                       end: 373
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -850,14 +812,12 @@ body:
                   span:
                     start: 373
                     end: 382
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 382
                     end: 391
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -865,13 +825,12 @@ body:
                       span:
                         start: 383
                         end: 389
-                        ctxt: 1
+                      ctxt: 2
                       value: Footer
                       optional: false
                     span:
                       start: 382
                       end: 391
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -881,14 +840,12 @@ body:
                   span:
                     start: 391
                     end: 400
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 400
                     end: 417
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -896,13 +853,12 @@ body:
                       span:
                         start: 401
                         end: 415
-                        ctxt: 1
+                      ctxt: 2
                       value: ExportedFooter
                       optional: false
                     span:
                       start: 400
                       end: 417
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -912,23 +868,22 @@ body:
                   span:
                     start: 417
                     end: 422
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 422
                   end: 428
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 424
                     end: 427
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 6
       declare: false
       decorators: []
       generator: false
@@ -937,7 +892,7 @@ body:
         span:
           start: 267
           end: 273
-          ctxt: 1
+        ctxt: 2
         value: Dialog
         optional: false
       params: []
@@ -945,28 +900,25 @@ body:
       span:
         start: 258
         end: 431
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 433
       end: 602
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 465
           end: 602
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 471
               end: 500
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -974,13 +926,12 @@ body:
                 span:
                   start: 477
                   end: 499
-                  ctxt: 0
                 id:
+                  ctxt: 7
                   optional: false
                   span:
                     start: 477
                     end: 486
-                    ctxt: 4
                   type: Identifier
                   typeAnnotation: ~
                   value: InputComp
@@ -989,13 +940,13 @@ body:
                   span:
                     start: 489
                     end: 499
-                    ctxt: 0
+                  ctxt: 0
                   callee:
                     type: Identifier
                     span:
                       start: 489
                       end: 497
-                      ctxt: 1
+                    ctxt: 2
                     value: getInput
                     optional: false
                   arguments: []
@@ -1005,13 +956,11 @@ body:
             span:
               start: 506
               end: 600
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 513
                 end: 599
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -1019,13 +968,12 @@ body:
                   span:
                     start: 514
                     end: 517
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 513
                   end: 518
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -1034,14 +982,12 @@ body:
                   span:
                     start: 518
                     end: 527
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 527
                     end: 541
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -1049,13 +995,12 @@ body:
                       span:
                         start: 528
                         end: 530
-                        ctxt: 2
+                      ctxt: 1
                       value: h1
                       optional: false
                     span:
                       start: 527
                       end: 531
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -1064,7 +1009,6 @@ body:
                       span:
                         start: 531
                         end: 536
-                        ctxt: 0
                       value: Hello
                       raw: Hello
                   closing:
@@ -1072,27 +1016,24 @@ body:
                     span:
                       start: 536
                       end: 541
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 538
                         end: 540
-                        ctxt: 2
+                      ctxt: 1
                       value: h1
                       optional: false
                 - type: JSXText
                   span:
                     start: 541
                     end: 550
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 550
                     end: 562
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -1100,13 +1041,12 @@ body:
                       span:
                         start: 551
                         end: 560
-                        ctxt: 4
+                      ctxt: 7
                       value: InputComp
                       optional: false
                     span:
                       start: 550
                       end: 562
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -1116,14 +1056,12 @@ body:
                   span:
                     start: 562
                     end: 571
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 571
                     end: 588
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -1131,13 +1069,12 @@ body:
                       span:
                         start: 572
                         end: 586
-                        ctxt: 1
+                      ctxt: 2
                       value: ExportedFooter
                       optional: false
                     span:
                       start: 571
                       end: 588
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -1147,23 +1084,22 @@ body:
                   span:
                     start: 588
                     end: 593
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 593
                   end: 599
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 595
                     end: 598
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 7
       declare: false
       decorators: []
       generator: false
@@ -1172,7 +1108,7 @@ body:
         span:
           start: 449
           end: 462
-          ctxt: 1
+        ctxt: 2
         value: AnotherDialog
         optional: false
       params: []
@@ -1180,6 +1116,6 @@ body:
       span:
         start: 440
         end: 602
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

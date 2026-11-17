@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "AbsoluteImportParent#1"
+      Internal: "AbsoluteImportParent#2"
     exported_name: AbsoluteImportParent
 declarations:
-  - symbol: "AbsoluteImportChild#1"
+  - symbol: "AbsoluteImportChild#2"
     source:
       hash: "11593960075287755948"
       path: src/absolute-import/absolute-import-parent.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('AbsoluteImportChild' type=dynamic), context: #1 }, source: ModuleId { hash: 15844164544862610796, path: \"package/src/absolute-import/absolute-import-child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"AbsoluteImportChild\", context: #2 }, source: ModuleId { hash: 15844164544862610796, path: \"package/src/absolute-import/absolute-import-child\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "AbsoluteImportChild#1"
+          symbol: "AbsoluteImportChild#2"
           source:
             hash: "15844164544862610796"
             path: package/src/absolute-import/absolute-import-child
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 4
       column: 28
-  - symbol: "AbsoluteImportParent#1"
+  - symbol: "AbsoluteImportParent#2"
     source:
       hash: "11593960075287755948"
       path: src/absolute-import/absolute-import-parent.tsx
@@ -59,51 +59,49 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "AbsoluteImportParent#1"
-      - "AbsoluteImportParent#1"
+      - "AbsoluteImportParent#2"
+      - "AbsoluteImportParent#2"
     references:
-      - "AbsoluteImportChild#1"
-      - "AbsoluteImportParent#1"
-      - "div#2"
+      - "AbsoluteImportChild#2"
+      - "AbsoluteImportParent#2"
+      - "div#1"
     jsx_references:
-      - "AbsoluteImportChild#1"
-      - "div#2"
-  - owner: "AbsoluteImportParent#1"
+      - "AbsoluteImportChild#2"
+      - "div#1"
+  - owner: "AbsoluteImportParent#2"
     parent: "__global#0"
     children: []
     references:
-      - "AbsoluteImportChild#1"
-      - "div#2"
+      - "AbsoluteImportChild#2"
+      - "div#1"
     jsx_references:
-      - "AbsoluteImportChild#1"
-      - "div#2"
-  - owner: "AbsoluteImportParent#1"
+      - "AbsoluteImportChild#2"
+      - "div#1"
+  - owner: "AbsoluteImportParent#2"
     parent: "__global#0"
     children: []
     references:
-      - "AbsoluteImportChild#1"
-      - "div#2"
+      - "AbsoluteImportChild#2"
+      - "div#1"
     jsx_references:
-      - "AbsoluteImportChild#1"
-      - "div#2"
+      - "AbsoluteImportChild#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 269
       end: 356
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 277
           end: 296
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 277
             end: 296
-            ctxt: 1
+          ctxt: 2
           value: AbsoluteImportChild
           optional: false
         imported: ~
@@ -113,36 +111,32 @@ body:
       span:
         start: 303
         end: 355
-        ctxt: 0
       value: /package/src/absolute-import/absolute-import-child
       raw: "\"/package/src/absolute-import/absolute-import-child\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 358
       end: 486
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 397
           end: 486
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 403
               end: 484
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 410
                 end: 483
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -150,13 +144,12 @@ body:
                   span:
                     start: 411
                     end: 414
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 410
                   end: 415
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -165,14 +158,12 @@ body:
                   span:
                     start: 415
                     end: 424
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 424
                     end: 441
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -180,13 +171,12 @@ body:
                       span:
                         start: 425
                         end: 428
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                     span:
                       start: 424
                       end: 429
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -195,7 +185,6 @@ body:
                       span:
                         start: 429
                         end: 435
-                        ctxt: 0
                       value: Parent
                       raw: Parent
                   closing:
@@ -203,27 +192,24 @@ body:
                     span:
                       start: 435
                       end: 441
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 437
                         end: 440
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                 - type: JSXText
                   span:
                     start: 441
                     end: 450
-                    ctxt: 0
-                  value: "\n\n        "
-                  raw: "\n\n        "
+                  value: "\n        "
+                  raw: "\n        "
                 - type: JSXElement
                   span:
                     start: 450
                     end: 472
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -231,13 +217,12 @@ body:
                       span:
                         start: 451
                         end: 470
-                        ctxt: 1
+                      ctxt: 2
                       value: AbsoluteImportChild
                       optional: false
                     span:
                       start: 450
                       end: 472
-                      ctxt: 0
                     attributes: []
                     selfClosing: true
                     typeArguments: ~
@@ -247,23 +232,22 @@ body:
                   span:
                     start: 472
                     end: 477
-                    ctxt: 0
-                  value: "\n\n    "
-                  raw: "\n\n    "
+                  value: "\n    "
+                  raw: "\n    "
               closing:
                 type: JSXClosingElement
                 span:
                   start: 477
                   end: 483
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 479
                     end: 482
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -272,7 +256,7 @@ body:
         span:
           start: 374
           end: 394
-          ctxt: 1
+        ctxt: 2
         value: AbsoluteImportParent
         optional: false
       params: []
@@ -280,6 +264,6 @@ body:
       span:
         start: 365
         end: 486
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

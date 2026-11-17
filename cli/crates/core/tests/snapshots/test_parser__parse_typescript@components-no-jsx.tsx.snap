@@ -13,13 +13,13 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "ComponentWithoutJSX#1"
+      Internal: "ComponentWithoutJSX#2"
     exported_name: ComponentWithoutJSX
   - source:
-      Internal: "AnotherComponentWithoutJSX#1"
+      Internal: "AnotherComponentWithoutJSX#2"
     exported_name: Tool
 declarations:
-  - symbol: "AnotherComponentWithoutJSX#1"
+  - symbol: "AnotherComponentWithoutJSX#2"
     source:
       hash: "909876588202224156"
       path: src/jsx-refs/components-no-jsx.tsx
@@ -34,7 +34,7 @@ declarations:
     end:
       line: 6
       column: 2
-  - symbol: "ComponentWithoutJSX#1"
+  - symbol: "ComponentWithoutJSX#2"
     source:
       hash: "909876588202224156"
       path: src/jsx-refs/components-no-jsx.tsx
@@ -53,25 +53,25 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "ComponentWithoutJSX#1"
-      - "ComponentWithoutJSX#1"
-      - "AnotherComponentWithoutJSX#1"
+      - "ComponentWithoutJSX#2"
+      - "ComponentWithoutJSX#2"
+      - "AnotherComponentWithoutJSX#2"
     references:
-      - "AnotherComponentWithoutJSX#1"
-      - "ComponentWithoutJSX#1"
-      - "Tool#2"
+      - "AnotherComponentWithoutJSX#2"
+      - "ComponentWithoutJSX#2"
+      - "Tool#1"
     jsx_references: []
-  - owner: "ComponentWithoutJSX#1"
+  - owner: "ComponentWithoutJSX#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "ComponentWithoutJSX#1"
+  - owner: "ComponentWithoutJSX#2"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "AnotherComponentWithoutJSX#1"
+  - owner: "AnotherComponentWithoutJSX#2"
     parent: "__global#0"
     children: []
     references: []
@@ -81,16 +81,15 @@ body:
     span:
       start: 1
       end: 42
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 39
           end: 42
-          ctxt: 0
         stmts: []
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -99,7 +98,7 @@ body:
         span:
           start: 17
           end: 36
-          ctxt: 1
+        ctxt: 2
         value: ComponentWithoutJSX
         optional: false
       params: []
@@ -107,17 +106,16 @@ body:
       span:
         start: 8
         end: 42
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 82
         end: 86
-        ctxt: 0
       stmts: []
+    ctxt: 4
     declare: false
     decorators: []
     generator: false
@@ -126,7 +124,7 @@ body:
       span:
         start: 53
         end: 79
-        ctxt: 1
+      ctxt: 2
       value: AnotherComponentWithoutJSX
       optional: false
     params: []
@@ -134,26 +132,23 @@ body:
     span:
       start: 44
       end: 86
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportNamedDeclaration
     span:
       start: 88
       end: 134
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 97
           end: 131
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 97
             end: 123
-            ctxt: 1
+          ctxt: 2
           value: AnotherComponentWithoutJSX
           optional: false
         exported:
@@ -161,10 +156,11 @@ body:
           span:
             start: 127
             end: 131
-            ctxt: 2
+          ctxt: 1
           value: Tool
           optional: false
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
+

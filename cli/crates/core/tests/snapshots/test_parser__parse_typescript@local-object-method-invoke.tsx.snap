@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "17026461206793308175"
       path: src/functional-component/return-var/local-object-method-invoke.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "17026461206793308175"
       path: src/functional-component/return-var/local-object-method-invoke.tsx
@@ -52,7 +52,7 @@ declarations:
             - MemberOf:
                 - TypeOf:
                     symbol:
-                      symbol: "props#1"
+                      symbol: "props#2"
                       source:
                         hash: "17026461206793308175"
                         path: src/functional-component/return-var/local-object-method-invoke.tsx
@@ -67,7 +67,7 @@ declarations:
     end:
       line: 12
       column: 2
-  - symbol: "props#1"
+  - symbol: "props#2"
     source:
       hash: "17026461206793308175"
       path: src/functional-component/return-var/local-object-method-invoke.tsx
@@ -90,59 +90,51 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "props#1"
-      - "Sample#1"
-      - "Sample#1"
+      - "props#2"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "component#0"
-      - "div#2"
-      - "number#0"
-      - "props#1"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
+      - "props#2"
     jsx_references:
-      - "div#2"
-  - owner: "props#1"
+      - "div#1"
+  - owner: "props#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "div#2"
-      - "number#0"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "props#1"
+      - "props#2"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "component#0"
-      - "props#1"
+      - "props#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -150,16 +142,16 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 29
       end: 121
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -167,13 +159,12 @@ body:
         span:
           start: 35
           end: 120
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 35
             end: 40
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: props
@@ -182,7 +173,6 @@ body:
           span:
             start: 43
             end: 120
-            ctxt: 0
           properties:
             - type: KeyValueProperty
               key:
@@ -190,36 +180,30 @@ body:
                 span:
                   start: 49
                   end: 55
-                  ctxt: 0
                 value: number
-                optional: false
               value:
                 type: NumericLiteral
                 span:
                   start: 57
                   end: 59
-                  ctxt: 0
                 value: 42.0
                 raw: "42"
             - async: false
               body:
-                type: BlockStatement
+                type: FunctionBody
                 span:
                   start: 77
                   end: 118
-                  ctxt: 0
                 stmts:
                   - type: ReturnStatement
                     span:
                       start: 87
                       end: 112
-                      ctxt: 0
                     argument:
                       type: JSXElement
                       span:
                         start: 94
                         end: 111
-                        ctxt: 0
                       opening:
                         type: JSXOpeningElement
                         name:
@@ -227,13 +211,12 @@ body:
                           span:
                             start: 95
                             end: 98
-                            ctxt: 2
+                          ctxt: 1
                           value: div
                           optional: false
                         span:
                           start: 94
                           end: 99
-                          ctxt: 0
                         attributes: []
                         selfClosing: false
                         typeArguments: ~
@@ -242,7 +225,6 @@ body:
                           span:
                             start: 99
                             end: 105
-                            ctxt: 0
                           value: Sample
                           raw: Sample
                       closing:
@@ -250,15 +232,15 @@ body:
                         span:
                           start: 105
                           end: 111
-                          ctxt: 0
                         name:
                           type: Identifier
                           span:
                             start: 107
                             end: 110
-                            ctxt: 2
+                          ctxt: 1
                           value: div
                           optional: false
+              ctxt: 3
               decorators: []
               generator: false
               key:
@@ -266,15 +248,12 @@ body:
                 span:
                   start: 65
                   end: 74
-                  ctxt: 0
                 value: component
-                optional: false
               params: []
               returnType: ~
               span:
                 start: 65
                 end: 118
-                ctxt: 0
               type: MethodProperty
               typeParameters: ~
         definite: false
@@ -282,39 +261,35 @@ body:
     span:
       start: 123
       end: 189
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 156
           end: 189
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 162
               end: 187
-              ctxt: 0
             argument:
               type: CallExpression
               span:
                 start: 169
                 end: 186
-                ctxt: 0
+              ctxt: 0
               callee:
                 type: MemberExpression
                 span:
                   start: 169
                   end: 184
-                  ctxt: 0
                 object:
                   type: Identifier
                   span:
                     start: 169
                     end: 174
-                    ctxt: 1
+                  ctxt: 2
                   value: props
                   optional: false
                 property:
@@ -322,11 +297,10 @@ body:
                   span:
                     start: 175
                     end: 184
-                    ctxt: 0
                   value: component
-                  optional: false
               arguments: []
               typeArguments: ~
+      ctxt: 4
       decorators: []
       generator: false
       identifier:
@@ -334,7 +308,7 @@ body:
         span:
           start: 147
           end: 153
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -342,6 +316,6 @@ body:
       span:
         start: 138
         end: 189
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

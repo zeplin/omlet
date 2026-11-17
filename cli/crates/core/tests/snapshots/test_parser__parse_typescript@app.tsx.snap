@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "App#1"
+      Internal: "App#2"
     exported_name: App
 declarations:
-  - symbol: "Accordion#1"
+  - symbol: "Accordion#2"
     source:
       hash: "16893505410422607949"
       path: src/wildcard-re-export/app.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Accordion' type=dynamic), context: #1 }, source: ModuleId { hash: 12011020999155121260, path: \"src/wildcard-re-export/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Accordion\", context: #2 }, source: ModuleId { hash: 12011020999155121260, path: \"src/wildcard-re-export/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Accordion#1"
+          symbol: "Accordion#2"
           source:
             hash: "12011020999155121260"
             path: src/wildcard-re-export/components
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 19
-  - symbol: "App#1"
+  - symbol: "App#2"
     source:
       hash: "16893505410422607949"
       path: src/wildcard-re-export/app.tsx
@@ -55,17 +55,17 @@ declarations:
     end:
       line: 10
       column: 2
-  - symbol: "Divider#1"
+  - symbol: "Divider#2"
     source:
       hash: "16893505410422607949"
       path: src/wildcard-re-export/app.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Divider' type=inline), context: #1 }, source: ModuleId { hash: 12011020999155121260, path: \"src/wildcard-re-export/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Divider\", context: #2 }, source: ModuleId { hash: 12011020999155121260, path: \"src/wildcard-re-export/components\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Divider#1"
+          symbol: "Divider#2"
           source:
             hash: "12011020999155121260"
             path: src/wildcard-re-export/components
@@ -82,57 +82,55 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "App#1"
-      - "App#1"
+      - "App#2"
+      - "App#2"
     references:
-      - "Accordion#1"
-      - "App#1"
-      - "Divider#1"
-      - "div#2"
+      - "Accordion#2"
+      - "App#2"
+      - "Divider#2"
+      - "div#1"
     jsx_references:
-      - "Accordion#1"
-      - "Divider#1"
-      - "div#2"
-  - owner: "App#1"
+      - "Accordion#2"
+      - "Divider#2"
+      - "div#1"
+  - owner: "App#2"
     parent: "__global#0"
     children: []
     references:
-      - "Accordion#1"
-      - "Divider#1"
-      - "div#2"
+      - "Accordion#2"
+      - "Divider#2"
+      - "div#1"
     jsx_references:
-      - "Accordion#1"
-      - "Divider#1"
-      - "div#2"
-  - owner: "App#1"
+      - "Accordion#2"
+      - "Divider#2"
+      - "div#1"
+  - owner: "App#2"
     parent: "__global#0"
     children: []
     references:
-      - "Accordion#1"
-      - "Divider#1"
-      - "div#2"
+      - "Accordion#2"
+      - "Divider#2"
+      - "div#1"
     jsx_references:
-      - "Accordion#1"
-      - "Divider#1"
-      - "div#2"
+      - "Accordion#2"
+      - "Divider#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 51
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 10
           end: 19
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 10
             end: 19
-            ctxt: 1
+          ctxt: 2
           value: Accordion
           optional: false
         imported: ~
@@ -141,13 +139,12 @@ body:
         span:
           start: 21
           end: 28
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 21
             end: 28
-            ctxt: 1
+          ctxt: 2
           value: Divider
           optional: false
         imported: ~
@@ -157,42 +154,37 @@ body:
       span:
         start: 36
         end: 50
-        ctxt: 0
       value: "./components"
       raw: "\"./components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDeclaration
     span:
       start: 53
       end: 177
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 75
           end: 177
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 81
               end: 175
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 88
                 end: 174
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 98
                   end: 168
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -200,13 +192,12 @@ body:
                     span:
                       start: 99
                       end: 102
-                      ctxt: 2
+                    ctxt: 1
                     value: div
                     optional: false
                   span:
                     start: 98
                     end: 103
-                    ctxt: 0
                   attributes: []
                   selfClosing: false
                   typeArguments: ~
@@ -215,14 +206,12 @@ body:
                     span:
                       start: 103
                       end: 116
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 116
                       end: 127
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -230,13 +219,12 @@ body:
                         span:
                           start: 117
                           end: 124
-                          ctxt: 1
+                        ctxt: 2
                         value: Divider
                         optional: false
                       span:
                         start: 116
                         end: 127
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -246,14 +234,12 @@ body:
                     span:
                       start: 127
                       end: 140
-                      ctxt: 0
-                    value: "\n\n            "
-                    raw: "\n\n            "
+                    value: "\n            "
+                    raw: "\n            "
                   - type: JSXElement
                     span:
                       start: 140
                       end: 153
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -261,13 +247,12 @@ body:
                         span:
                           start: 141
                           end: 150
-                          ctxt: 1
+                        ctxt: 2
                         value: Accordion
                         optional: false
                       span:
                         start: 140
                         end: 153
-                        ctxt: 0
                       attributes: []
                       selfClosing: true
                       typeArguments: ~
@@ -277,23 +262,22 @@ body:
                     span:
                       start: 153
                       end: 162
-                      ctxt: 0
-                    value: "\n\n        "
-                    raw: "\n\n        "
+                    value: "\n        "
+                    raw: "\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 162
                     end: 168
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 164
                       end: 167
-                      ctxt: 2
+                    ctxt: 1
                     value: div
                     optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -302,7 +286,7 @@ body:
         span:
           start: 69
           end: 72
-          ctxt: 1
+        ctxt: 2
         value: App
         optional: false
       params: []
@@ -310,6 +294,6 @@ body:
       span:
         start: 60
         end: 177
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "NamedComponentReExport#1"
+      Internal: "NamedComponentReExport#2"
     exported_name: NamedComponentReExport
 declarations:
-  - symbol: "NamedComponentReExport#1"
+  - symbol: "NamedComponentReExport#2"
     source:
       hash: "14726289558862714903"
       path: src/module-decls/default-export/default-export-reexport/component.tsx
@@ -36,53 +36,49 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NamedComponentReExport#1"
-      - "NamedComponentReExport#1"
+      - "NamedComponentReExport#2"
+      - "NamedComponentReExport#2"
     references:
-      - "NamedComponentReExport#1"
-      - "div#2"
+      - "NamedComponentReExport#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "NamedComponentReExport#1"
+      - "div#1"
+  - owner: "NamedComponentReExport#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "NamedComponentReExport#1"
+      - "div#1"
+  - owner: "NamedComponentReExport#2"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 69
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 42
           end: 69
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 48
               end: 67
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 55
                 end: 66
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -90,13 +86,12 @@ body:
                   span:
                     start: 56
                     end: 59
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
                 span:
                   start: 55
                   end: 60
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -106,15 +101,15 @@ body:
                 span:
                   start: 60
                   end: 66
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 62
                     end: 65
-                    ctxt: 2
+                  ctxt: 1
                   value: div
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -123,7 +118,7 @@ body:
         span:
           start: 17
           end: 39
-          ctxt: 1
+        ctxt: 2
         value: NamedComponentReExport
         optional: false
       params: []
@@ -131,6 +126,6 @@ body:
       span:
         start: 8
         end: 69
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

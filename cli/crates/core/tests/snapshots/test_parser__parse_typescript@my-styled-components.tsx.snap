@@ -22,10 +22,10 @@ exports:
           mtype: package
     exported_name: "<wildcard>"
   - source:
-      Internal: "defaultStyled#1"
+      Internal: "defaultStyled#2"
     exported_name: default
 declarations:
-  - symbol: "defaultStyled#1"
+  - symbol: "defaultStyled#2"
     source:
       hash: "17217891852522968423"
       path: src/styled-component-workaround/my-styled-components.tsx
@@ -36,7 +36,7 @@ declarations:
       Union:
         - TypeOf:
             symbol:
-              symbol: "styled#1"
+              symbol: "styled#2"
               source:
                 hash: "17217891852522968423"
                 path: src/styled-component-workaround/my-styled-components.tsx
@@ -46,7 +46,7 @@ declarations:
         - MemberOf:
             - TypeOf:
                 symbol:
-                  symbol: "styled#1"
+                  symbol: "styled#2"
                   source:
                     hash: "17217891852522968423"
                     path: src/styled-component-workaround/my-styled-components.tsx
@@ -60,13 +60,13 @@ declarations:
     end:
       line: 5
       column: 20
-  - symbol: "styled#1"
+  - symbol: "styled#2"
     source:
       hash: "17217891852522968423"
       path: src/styled-component-workaround/my-styled-components.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 3407005538810520906, path: \"\", pkg_name: \"styled-components\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -87,38 +87,34 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "defaultStyled#1"
+      - "defaultStyled#2"
     references:
-      - "default#0"
-      - "default#2"
-      - "defaultStyled#1"
-      - "styled#1"
+      - "default#1"
+      - "defaultStyled#2"
+      - "styled#2"
     jsx_references: []
-  - owner: "defaultStyled#1"
+  - owner: "defaultStyled#2"
     parent: "__global#0"
     children: []
     references:
-      - "default#0"
-      - "styled#1"
+      - "styled#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 40
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 14
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 14
-            ctxt: 1
+          ctxt: 2
           value: styled
           optional: false
     source:
@@ -126,30 +122,29 @@ body:
       span:
         start: 20
         end: 39
-        ctxt: 0
       value: styled-components
       raw: "\"styled-components\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportAllDeclaration
     span:
       start: 42
       end: 76
-      ctxt: 0
     source:
       type: StringLiteral
       span:
         start: 56
         end: 75
-        ctxt: 0
       value: styled-components
       raw: "\"styled-components\""
-    asserts: ~
+    typeOnly: false
+    with: ~
   - type: VariableDeclaration
     span:
       start: 78
       end: 155
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -157,13 +152,12 @@ body:
         span:
           start: 84
           end: 154
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 84
             end: 97
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: defaultStyled
@@ -172,27 +166,24 @@ body:
           span:
             start: 100
             end: 154
-            ctxt: 0
           test:
             type: BinaryExpression
             span:
               start: 100
               end: 128
-              ctxt: 0
             operator: "==="
             left:
               type: UnaryExpression
               span:
                 start: 100
                 end: 113
-                ctxt: 0
               operator: typeof
               argument:
                 type: Identifier
                 span:
                   start: 107
                   end: 113
-                  ctxt: 1
+                ctxt: 2
                 value: styled
                 optional: false
             right:
@@ -200,7 +191,6 @@ body:
               span:
                 start: 118
                 end: 128
-                ctxt: 0
               value: function
               raw: "\"function\""
           consequent:
@@ -208,7 +198,7 @@ body:
             span:
               start: 131
               end: 137
-              ctxt: 1
+            ctxt: 2
             value: styled
             optional: false
           alternate:
@@ -216,13 +206,12 @@ body:
             span:
               start: 140
               end: 154
-              ctxt: 0
             object:
               type: Identifier
               span:
                 start: 140
                 end: 146
-                ctxt: 1
+              ctxt: 2
               value: styled
               optional: false
             property:
@@ -230,27 +219,23 @@ body:
               span:
                 start: 147
                 end: 154
-                ctxt: 0
               value: default
-              optional: false
         definite: false
   - type: ExportNamedDeclaration
     span:
       start: 157
       end: 193
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 166
           end: 190
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 166
             end: 179
-            ctxt: 1
+          ctxt: 2
           value: defaultStyled
           optional: false
         exported:
@@ -258,10 +243,11 @@ body:
           span:
             start: 183
             end: 190
-            ctxt: 2
+          ctxt: 1
           value: default
           optional: false
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
+

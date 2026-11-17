@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "ArrayValues#1"
+      Internal: "ArrayValues#2"
     exported_name: default
 declarations:
-  - symbol: "ArrayValues#1"
+  - symbol: "ArrayValues#2"
     source:
       hash: "5598330605699558522"
       path: src/object-properties/array-values.tsx
@@ -32,17 +32,17 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "Box#1"
+  - symbol: "Box#2"
     source:
       hash: "5598330605699558522"
       path: src/object-properties/array-values.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Box' type=inline), context: #1 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Box\", context: #2 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Box#1"
+          symbol: "Box#2"
           source:
             hash: "10072812099332075239"
             path: ""
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "5598330605699558522"
       path: src/object-properties/array-values.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -82,55 +82,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "ArrayValues#1"
-      - "ArrayValues#1"
+      - "ArrayValues#2"
+      - "ArrayValues#2"
     references:
-      - "ArrayValues#1"
-      - "Box#1"
-      - "React#1"
-      - "gridTemplateColumns#0"
-      - "margin#0"
-      - "sx#0"
+      - "ArrayValues#2"
+      - "Box#2"
+      - "React#2"
     jsx_references:
-      - "Box#1"
-  - owner: "ArrayValues#1"
+      - "Box#2"
+  - owner: "ArrayValues#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "gridTemplateColumns#0"
-      - "margin#0"
-      - "sx#0"
+      - "Box#2"
     jsx_references:
-      - "Box#1"
-  - owner: "ArrayValues#1"
+      - "Box#2"
+  - owner: "ArrayValues#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "gridTemplateColumns#0"
-      - "margin#0"
-      - "sx#0"
+      - "Box#2"
     jsx_references:
-      - "Box#1"
+      - "Box#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -138,28 +127,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 64
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 37
           end: 40
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 40
-            ctxt: 1
+          ctxt: 2
           value: Box
           optional: false
         imported: ~
@@ -169,42 +156,37 @@ body:
       span:
         start: 48
         end: 63
-        ctxt: 0
       value: "@mui/material"
       raw: "\"@mui/material\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 66
       end: 324
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 104
           end: 324
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 110
               end: 322
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 117
                 end: 321
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 127
                   end: 315
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -212,39 +194,33 @@ body:
                     span:
                       start: 128
                       end: 131
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
                   span:
                     start: 127
                     end: 268
-                    ctxt: 0
                   attributes:
                     - type: JSXAttribute
                       span:
                         start: 144
                         end: 258
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 144
                           end: 146
-                          ctxt: 0
                         value: sx
-                        optional: false
                       value:
                         type: JSXExpressionContainer
                         span:
                           start: 147
                           end: 258
-                          ctxt: 0
                         expression:
                           type: ObjectExpression
                           span:
                             start: 148
                             end: 257
-                            ctxt: 0
                           properties:
                             - type: KeyValueProperty
                               key:
@@ -252,15 +228,12 @@ body:
                                 span:
                                   start: 166
                                   end: 172
-                                  ctxt: 0
                                 value: margin
-                                optional: false
                               value:
                                 type: ArrayExpression
                                 span:
                                   start: 174
                                   end: 189
-                                  ctxt: 0
                                 elements:
                                   - spread: ~
                                     expression:
@@ -268,7 +241,6 @@ body:
                                       span:
                                         start: 175
                                         end: 176
-                                        ctxt: 0
                                       value: 0.0
                                       raw: "0"
                                   - spread: ~
@@ -277,7 +249,6 @@ body:
                                       span:
                                         start: 178
                                         end: 180
-                                        ctxt: 0
                                       value: 10.0
                                       raw: "10"
                                   - spread: ~
@@ -286,7 +257,6 @@ body:
                                       span:
                                         start: 182
                                         end: 184
-                                        ctxt: 0
                                       value: 20.0
                                       raw: "20"
                                   - spread: ~
@@ -295,7 +265,6 @@ body:
                                       span:
                                         start: 186
                                         end: 188
-                                        ctxt: 0
                                       value: 30.0
                                       raw: "30"
                             - type: KeyValueProperty
@@ -304,15 +273,12 @@ body:
                                 span:
                                   start: 207
                                   end: 226
-                                  ctxt: 0
                                 value: gridTemplateColumns
-                                optional: false
                               value:
                                 type: ArrayExpression
                                 span:
                                   start: 228
                                   end: 242
-                                  ctxt: 0
                                 elements:
                                   - spread: ~
                                     expression:
@@ -320,7 +286,6 @@ body:
                                       span:
                                         start: 229
                                         end: 234
-                                        ctxt: 0
                                       value: 1fr
                                       raw: "\"1fr\""
                                   - spread: ~
@@ -329,7 +294,6 @@ body:
                                       span:
                                         start: 236
                                         end: 241
-                                        ctxt: 0
                                       value: 2fr
                                       raw: "\"2fr\""
                   selfClosing: false
@@ -339,23 +303,22 @@ body:
                     span:
                       start: 268
                       end: 309
-                      ctxt: 0
-                    value: "\n\n            Styled with sx prop\n\n        "
-                    raw: "\n\n            Styled with sx prop\n\n        "
+                    value: "\n            Styled with sx prop\n        "
+                    raw: "\n            Styled with sx prop\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 309
                     end: 315
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 311
                       end: 314
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -363,7 +326,7 @@ body:
         span:
           start: 90
           end: 101
-          ctxt: 1
+        ctxt: 2
         value: ArrayValues
         optional: false
       params: []
@@ -371,6 +334,6 @@ body:
       span:
         start: 81
         end: 324
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

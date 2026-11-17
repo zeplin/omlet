@@ -13,13 +13,13 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Button#1"
+      Internal: "Button#2"
     exported_name: Button
   - source:
-      Internal: "Input#1"
+      Internal: "Input#2"
     exported_name: Input
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "4369040476700946144"
       path: src/indirect-deps/used-indirectly.tsx
@@ -35,7 +35,7 @@ declarations:
     end:
       line: 3
       column: 2
-  - symbol: "Input#1"
+  - symbol: "Input#2"
     source:
       hash: "4369040476700946144"
       path: src/indirect-deps/used-indirectly.tsx
@@ -55,75 +55,68 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Button#1"
-      - "Button#1"
-      - "Input#1"
-      - "Input#1"
+      - "Button#2"
+      - "Button#2"
+      - "Input#2"
+      - "Input#2"
     references:
-      - "Button#1"
-      - "Input#1"
-      - "button#2"
-      - "input#2"
-      - "type#0"
+      - "Button#2"
+      - "Input#2"
+      - "button#1"
+      - "input#1"
     jsx_references:
-      - "button#2"
-      - "input#2"
-  - owner: "Button#1"
+      - "button#1"
+      - "input#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "Button#1"
+      - "button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
-  - owner: "Input#1"
+      - "button#1"
+  - owner: "Input#2"
     parent: "__global#0"
     children: []
     references:
-      - "input#2"
-      - "type#0"
+      - "input#1"
     jsx_references:
-      - "input#2"
-  - owner: "Input#1"
+      - "input#1"
+  - owner: "Input#2"
     parent: "__global#0"
     children: []
     references:
-      - "input#2"
-      - "type#0"
+      - "input#1"
     jsx_references:
-      - "input#2"
+      - "input#1"
 body:
   - type: ExportDeclaration
     span:
       start: 1
       end: 70
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 26
           end: 70
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 32
               end: 68
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 39
                 end: 67
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -131,13 +124,12 @@ body:
                   span:
                     start: 40
                     end: 46
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
                 span:
                   start: 39
                   end: 47
-                  ctxt: 0
                 attributes: []
                 selfClosing: false
                 typeArguments: ~
@@ -146,7 +138,6 @@ body:
                   span:
                     start: 47
                     end: 58
-                    ctxt: 0
                   value: click click
                   raw: click click
               closing:
@@ -154,15 +145,15 @@ body:
                 span:
                   start: 58
                   end: 67
-                  ctxt: 0
                 name:
                   type: Identifier
                   span:
                     start: 60
                     end: 66
-                    ctxt: 2
+                  ctxt: 1
                   value: button
                   optional: false
+      ctxt: 3
       declare: false
       decorators: []
       generator: false
@@ -171,7 +162,7 @@ body:
         span:
           start: 17
           end: 23
-          ctxt: 1
+        ctxt: 2
         value: Button
         optional: false
       params: []
@@ -179,34 +170,29 @@ body:
       span:
         start: 8
         end: 70
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
   - type: ExportDeclaration
     span:
       start: 72
       end: 132
-      ctxt: 0
     declaration:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 96
           end: 132
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 102
               end: 130
-              ctxt: 0
             argument:
               type: JSXElement
               span:
                 start: 109
                 end: 129
-                ctxt: 0
               opening:
                 type: JSXOpeningElement
                 name:
@@ -214,39 +200,35 @@ body:
                   span:
                     start: 110
                     end: 115
-                    ctxt: 2
+                  ctxt: 1
                   value: input
                   optional: false
                 span:
                   start: 109
                   end: 129
-                  ctxt: 0
                 attributes:
                   - type: JSXAttribute
                     span:
                       start: 116
                       end: 127
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 116
                         end: 120
-                        ctxt: 0
                       value: type
-                      optional: false
                     value:
                       type: StringLiteral
                       span:
                         start: 121
                         end: 127
-                        ctxt: 0
                       value: text
                       raw: "\"text\""
                 selfClosing: true
                 typeArguments: ~
               children: []
               closing: ~
+      ctxt: 4
       declare: false
       decorators: []
       generator: false
@@ -255,7 +237,7 @@ body:
         span:
           start: 88
           end: 93
-          ctxt: 1
+        ctxt: 2
         value: Input
         optional: false
       params: []
@@ -263,6 +245,6 @@ body:
       span:
         start: 79
         end: 132
-        ctxt: 0
       type: FunctionDeclaration
       typeParameters: ~
+

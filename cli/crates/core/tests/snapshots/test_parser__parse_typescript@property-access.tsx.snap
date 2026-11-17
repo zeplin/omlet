@@ -13,20 +13,20 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "PropertyAccess#1"
+      Internal: "PropertyAccess#2"
     exported_name: default
 declarations:
-  - symbol: "Box#1"
+  - symbol: "Box#2"
     source:
       hash: "7342811217206971394"
       path: src/object-properties/property-access.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('Box' type=inline), context: #1 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"Box\", context: #2 }, source: ModuleId { hash: 10072812099332075239, path: \"\", pkg_name: \"@mui/material\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "Box#1"
+          symbol: "Box#2"
           source:
             hash: "10072812099332075239"
             path: ""
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 2
       column: 13
-  - symbol: "PropertyAccess#1"
+  - symbol: "PropertyAccess#2"
     source:
       hash: "7342811217206971394"
       path: src/object-properties/property-access.tsx
@@ -55,13 +55,13 @@ declarations:
     end:
       line: 15
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "7342811217206971394"
       path: src/object-properties/property-access.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -78,17 +78,17 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "key1#2"
+  - symbol: "key1#3"
     source:
       hash: "7342811217206971394"
       path: src/object-properties/property-access.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('PropertyAccess' type=dynamic), context: #1 }>[0]"
+    definition: "Parameter<Symbol { name: \"PropertyAccess\", context: #2 }>[0]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "PropertyAccess#1"
+          symbol: "PropertyAccess#2"
           source:
             hash: "7342811217206971394"
             path: src/object-properties/property-access.tsx
@@ -101,17 +101,17 @@ declarations:
     end:
       line: 4
       column: 44
-  - symbol: "key2#2"
+  - symbol: "key2#3"
     source:
       hash: "7342811217206971394"
       path: src/object-properties/property-access.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "Parameter<Symbol { name: Atom('PropertyAccess' type=dynamic), context: #1 }>[1]"
+    definition: "Parameter<Symbol { name: \"PropertyAccess\", context: #2 }>[1]"
     inferred_type:
       ParameterOf:
         function:
-          symbol: "PropertyAccess#1"
+          symbol: "PropertyAccess#2"
           source:
             hash: "7342811217206971394"
             path: src/object-properties/property-access.tsx
@@ -128,67 +128,50 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "PropertyAccess#1"
-      - "PropertyAccess#1"
+      - "PropertyAccess#2"
+      - "PropertyAccess#2"
     references:
-      - "Box#1"
-      - "PropertyAccess#1"
-      - "React#1"
-      - "dynamicMargin#0"
-      - "dynamicPadding#0"
-      - "key1#2"
-      - "key2#2"
-      - "margin#0"
-      - "padding#0"
-      - "sx#0"
+      - "Box#2"
+      - "PropertyAccess#2"
+      - "React#2"
+      - "key1#3"
+      - "key2#3"
     jsx_references:
-      - "Box#1"
-  - owner: "PropertyAccess#1"
+      - "Box#2"
+  - owner: "PropertyAccess#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "dynamicMargin#0"
-      - "dynamicPadding#0"
-      - "key1#2"
-      - "key2#2"
-      - "margin#0"
-      - "padding#0"
-      - "sx#0"
+      - "Box#2"
+      - "key1#3"
+      - "key2#3"
     jsx_references:
-      - "Box#1"
-  - owner: "PropertyAccess#1"
+      - "Box#2"
+  - owner: "PropertyAccess#2"
     parent: "__global#0"
     children: []
     references:
-      - "Box#1"
-      - "dynamicMargin#0"
-      - "dynamicPadding#0"
-      - "key1#2"
-      - "key2#2"
-      - "margin#0"
-      - "padding#0"
-      - "sx#0"
+      - "Box#2"
+      - "key1#3"
+      - "key2#3"
     jsx_references:
-      - "Box#1"
+      - "Box#2"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -196,28 +179,26 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 28
       end: 64
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 37
           end: 40
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 37
             end: 40
-            ctxt: 1
+          ctxt: 2
           value: Box
           optional: false
         imported: ~
@@ -227,42 +208,37 @@ body:
       span:
         start: 48
         end: 63
-        ctxt: 0
       value: "@mui/material"
       raw: "\"@mui/material\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 66
       end: 336
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 117
           end: 336
-          ctxt: 0
         stmts:
           - type: ReturnStatement
             span:
               start: 123
               end: 334
-              ctxt: 0
             argument:
               type: ParenthesisExpression
               span:
                 start: 130
                 end: 333
-                ctxt: 0
               expression:
                 type: JSXElement
                 span:
                   start: 140
                   end: 327
-                  ctxt: 0
                 opening:
                   type: JSXOpeningElement
                   name:
@@ -270,39 +246,33 @@ body:
                     span:
                       start: 141
                       end: 144
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
                   span:
                     start: 140
                     end: 280
-                    ctxt: 0
                   attributes:
                     - type: JSXAttribute
                       span:
                         start: 157
                         end: 270
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 157
                           end: 159
-                          ctxt: 0
                         value: sx
-                        optional: false
                       value:
                         type: JSXExpressionContainer
                         span:
                           start: 160
                           end: 270
-                          ctxt: 0
                         expression:
                           type: ObjectExpression
                           span:
                             start: 161
                             end: 269
-                            ctxt: 0
                           properties:
                             - type: KeyValueProperty
                               key:
@@ -310,21 +280,18 @@ body:
                                 span:
                                   start: 179
                                   end: 193
-                                  ctxt: 0
                                 value: dynamicPadding
-                                optional: false
                               value:
                                 type: MemberExpression
                                 span:
                                   start: 195
                                   end: 207
-                                  ctxt: 0
                                 object:
                                   type: Identifier
                                   span:
                                     start: 195
                                     end: 199
-                                    ctxt: 2
+                                  ctxt: 3
                                   value: key1
                                   optional: false
                                 property:
@@ -332,36 +299,30 @@ body:
                                   span:
                                     start: 200
                                     end: 207
-                                    ctxt: 0
                                   value: padding
-                                  optional: false
                             - type: KeyValueProperty
                               key:
                                 type: Identifier
                                 span:
                                   start: 225
                                   end: 238
-                                  ctxt: 0
                                 value: dynamicMargin
-                                optional: false
                               value:
                                 type: MemberExpression
                                 span:
                                   start: 240
                                   end: 254
-                                  ctxt: 0
                                 object:
                                   type: MemberExpression
                                   span:
                                     start: 240
                                     end: 251
-                                    ctxt: 0
                                   object:
                                     type: Identifier
                                     span:
                                       start: 240
                                       end: 244
-                                      ctxt: 2
+                                    ctxt: 3
                                     value: key2
                                     optional: false
                                   property:
@@ -369,21 +330,17 @@ body:
                                     span:
                                       start: 245
                                       end: 251
-                                      ctxt: 0
                                     value: margin
-                                    optional: false
                                 property:
                                   type: Computed
                                   span:
                                     start: 251
                                     end: 254
-                                    ctxt: 0
                                   expression:
                                     type: NumericLiteral
                                     span:
                                       start: 252
                                       end: 253
-                                      ctxt: 0
                                     value: 0.0
                                     raw: "0"
                   selfClosing: false
@@ -393,23 +350,22 @@ body:
                     span:
                       start: 280
                       end: 321
-                      ctxt: 0
-                    value: "\n\n            Styled with sx prop\n\n        "
-                    raw: "\n\n            Styled with sx prop\n\n        "
+                    value: "\n            Styled with sx prop\n        "
+                    raw: "\n            Styled with sx prop\n        "
                 closing:
                   type: JSXClosingElement
                   span:
                     start: 321
                     end: 327
-                    ctxt: 0
                   name:
                     type: Identifier
                     span:
                       start: 323
                       end: 326
-                      ctxt: 1
+                    ctxt: 2
                     value: Box
                     optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -417,7 +373,7 @@ body:
         span:
           start: 90
           end: 104
-          ctxt: 1
+        ctxt: 2
         value: PropertyAccess
         optional: false
       params:
@@ -425,14 +381,13 @@ body:
           span:
             start: 105
             end: 109
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: false
             span:
               start: 105
               end: 109
-              ctxt: 2
             type: Identifier
             typeAnnotation: ~
             value: key1
@@ -440,14 +395,13 @@ body:
           span:
             start: 111
             end: 115
-            ctxt: 0
           decorators: []
           pat:
+            ctxt: 3
             optional: false
             span:
               start: 111
               end: 115
-              ctxt: 2
             type: Identifier
             typeAnnotation: ~
             value: key2
@@ -455,6 +409,6 @@ body:
       span:
         start: 81
         end: 336
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

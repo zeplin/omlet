@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: Sample
 declarations:
-  - symbol: "BaseComponent#1"
+  - symbol: "BaseComponent#2"
     source:
       hash: "15137159298720990290"
       path: src/class-component/class-component-3.tsx
@@ -28,7 +28,7 @@ declarations:
         MemberOf:
           - TypeOf:
               symbol:
-                symbol: "React#1"
+                symbol: "React#2"
                 source:
                   hash: "15137159298720990290"
                   path: src/class-component/class-component-3.tsx
@@ -42,13 +42,13 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "15137159298720990290"
       path: src/class-component/class-component-3.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -65,7 +65,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "15137159298720990290"
       path: src/class-component/class-component-3.tsx
@@ -76,7 +76,7 @@ declarations:
       Class:
         TypeOf:
           symbol:
-            symbol: "BaseComponent#1"
+            symbol: "BaseComponent#2"
             source:
               hash: "15137159298720990290"
               path: src/class-component/class-component-3.tsx
@@ -93,64 +93,56 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "BaseComponent#1"
-      - "Sample#1"
-      - "Sample#1"
+      - "BaseComponent#2"
+      - "Sample#2"
+      - "Sample#2"
     references:
-      - "BaseComponent#1"
-      - "Component#0"
-      - "React#1"
-      - "Sample#1"
-      - "div#2"
-      - "render#0"
+      - "BaseComponent#2"
+      - "React#2"
+      - "Sample#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "BaseComponent#1"
+      - "div#1"
+  - owner: "BaseComponent#2"
     parent: "__global#0"
     children: []
     references:
-      - "Component#0"
-      - "React#1"
-      - "div#2"
-      - "render#0"
+      - "React#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "BaseComponent#1"
-      - "div#2"
-      - "render#0"
+      - "BaseComponent#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "Sample#1"
+      - "div#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children: []
     references:
-      - "BaseComponent#1"
-      - "div#2"
-      - "render#0"
+      - "BaseComponent#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -158,50 +150,44 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - body:
       - type: ClassMethod
         span:
           start: 79
           end: 134
-          ctxt: 0
         key:
           type: Identifier
           span:
             start: 79
             end: 85
-            ctxt: 0
           value: render
-          optional: false
         function:
           params: []
           decorators: []
           span:
             start: 79
             end: 134
-            ctxt: 0
+          ctxt: 3
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 88
               end: 134
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 98
                   end: 128
-                  ctxt: 0
                 argument:
                   type: JSXElement
                   span:
                     start: 105
                     end: 127
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -209,13 +195,12 @@ body:
                       span:
                         start: 106
                         end: 109
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                     span:
                       start: 105
                       end: 110
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -224,7 +209,6 @@ body:
                       span:
                         start: 110
                         end: 121
-                        ctxt: 0
                       value: base sample
                       raw: base sample
                   closing:
@@ -232,13 +216,12 @@ body:
                     span:
                       start: 121
                       end: 127
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 123
                         end: 126
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
           generator: false
@@ -251,6 +234,7 @@ body:
         isAbstract: false
         isOptional: false
         isOverride: false
+    ctxt: 0
     declare: false
     decorators: []
     identifier:
@@ -258,7 +242,7 @@ body:
       span:
         start: 35
         end: 48
-        ctxt: 1
+      ctxt: 2
       value: BaseComponent
       optional: false
     implements: []
@@ -266,19 +250,17 @@ body:
     span:
       start: 29
       end: 136
-      ctxt: 0
     superClass:
       type: MemberExpression
       span:
         start: 57
         end: 72
-        ctxt: 0
       object:
         type: Identifier
         span:
           start: 57
           end: 62
-          ctxt: 1
+        ctxt: 2
         value: React
         optional: false
       property:
@@ -286,9 +268,7 @@ body:
         span:
           start: 63
           end: 72
-          ctxt: 0
         value: Component
-        optional: false
     superTypeParams: ~
     type: ClassDeclaration
     typeParams: ~
@@ -296,47 +276,40 @@ body:
     span:
       start: 138
       end: 238
-      ctxt: 0
     declaration:
       body:
         - type: ClassMethod
           span:
             start: 186
             end: 236
-            ctxt: 0
           key:
             type: Identifier
             span:
               start: 186
               end: 192
-              ctxt: 0
             value: render
-            optional: false
           function:
             params: []
             decorators: []
             span:
               start: 186
               end: 236
-              ctxt: 0
+            ctxt: 4
             body:
-              type: BlockStatement
+              type: FunctionBody
               span:
                 start: 195
                 end: 236
-                ctxt: 0
               stmts:
                 - type: ReturnStatement
                   span:
                     start: 205
                     end: 230
-                    ctxt: 0
                   argument:
                     type: JSXElement
                     span:
                       start: 212
                       end: 229
-                      ctxt: 0
                     opening:
                       type: JSXOpeningElement
                       name:
@@ -344,13 +317,12 @@ body:
                         span:
                           start: 213
                           end: 216
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
                       span:
                         start: 212
                         end: 217
-                        ctxt: 0
                       attributes: []
                       selfClosing: false
                       typeArguments: ~
@@ -359,7 +331,6 @@ body:
                         span:
                           start: 217
                           end: 223
-                          ctxt: 0
                         value: sample
                         raw: sample
                     closing:
@@ -367,13 +338,12 @@ body:
                       span:
                         start: 223
                         end: 229
-                        ctxt: 0
                       name:
                         type: Identifier
                         span:
                           start: 225
                           end: 228
-                          ctxt: 2
+                        ctxt: 1
                         value: div
                         optional: false
             generator: false
@@ -386,6 +356,7 @@ body:
           isAbstract: false
           isOptional: false
           isOverride: false
+      ctxt: 0
       declare: false
       decorators: []
       identifier:
@@ -393,7 +364,7 @@ body:
         span:
           start: 151
           end: 157
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       implements: []
@@ -401,15 +372,15 @@ body:
       span:
         start: 145
         end: 238
-        ctxt: 0
       superClass:
         type: Identifier
         span:
           start: 166
           end: 179
-          ctxt: 1
+        ctxt: 2
         value: BaseComponent
         optional: false
       superTypeParams: ~
       type: ClassDeclaration
       typeParams: ~
+

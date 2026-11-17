@@ -16,13 +16,13 @@ exports:
       Internal: "default#0"
     exported_name: default
 declarations:
-  - symbol: "Icon#1"
+  - symbol: "Icon#2"
     source:
       hash: "10264941111487525485"
       path: src/web-component/icon.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 7755890089321815681, path: \"src/web-component/icon.vanilla\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 7755890089321815681, path: \"src/web-component/icon.vanilla\", pkg_name: \"UNKNOWN\", mtype: Local } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,13 +39,13 @@ declarations:
     end:
       line: 3
       column: 12
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "10264941111487525485"
       path: src/web-component/icon.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('<wildcard>' type=dynamic), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"<wildcard>\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -62,7 +62,7 @@ declarations:
     end:
       line: 1
       column: 18
-  - symbol: "ReactIcon#1"
+  - symbol: "ReactIcon#2"
     source:
       hash: "10264941111487525485"
       path: src/web-component/icon.tsx
@@ -73,7 +73,7 @@ declarations:
       ReturnTypeOf:
         - TypeOf:
             symbol:
-              symbol: "createComponent#1"
+              symbol: "createComponent#2"
               source:
                 hash: "10264941111487525485"
                 path: src/web-component/icon.tsx
@@ -84,7 +84,7 @@ declarations:
               elementClass:
                 TypeOf:
                   symbol:
-                    symbol: "Icon#1"
+                    symbol: "Icon#2"
                     source:
                       hash: "10264941111487525485"
                       path: src/web-component/icon.tsx
@@ -94,7 +94,7 @@ declarations:
               react:
                 TypeOf:
                   symbol:
-                    symbol: "React#1"
+                    symbol: "React#2"
                     source:
                       hash: "10264941111487525485"
                       path: src/web-component/icon.tsx
@@ -109,17 +109,17 @@ declarations:
     end:
       line: 5
       column: 16
-  - symbol: "createComponent#1"
+  - symbol: "createComponent#2"
     source:
       hash: "10264941111487525485"
       path: src/web-component/icon.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('createComponent' type=dynamic), context: #1 }, source: ModuleId { hash: 17593148492820589098, path: \"\", pkg_name: \"@lit-labs/react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"createComponent\", context: #2 }, source: ModuleId { hash: 17593148492820589098, path: \"\", pkg_name: \"@lit-labs/react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "createComponent#1"
+          symbol: "createComponent#2"
           source:
             hash: "17593148492820589098"
             path: ""
@@ -142,7 +142,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "ReactIcon#1"
+          symbol: "ReactIcon#2"
           source:
             hash: "10264941111487525485"
             path: src/web-component/icon.tsx
@@ -159,52 +159,44 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "ReactIcon#1"
+      - "ReactIcon#2"
       - "default#0"
     references:
-      - "Icon#1"
-      - "React#1"
-      - "ReactIcon#1"
-      - "createComponent#1"
-      - "elementClass#0"
-      - "react#0"
-      - "tagName#0"
+      - "Icon#2"
+      - "React#2"
+      - "ReactIcon#2"
+      - "createComponent#2"
     jsx_references: []
-  - owner: "ReactIcon#1"
+  - owner: "ReactIcon#2"
     parent: "__global#0"
     children: []
     references:
-      - "Icon#1"
-      - "React#1"
-      - "createComponent#1"
-      - "elementClass#0"
-      - "react#0"
-      - "tagName#0"
+      - "Icon#2"
+      - "React#2"
+      - "createComponent#2"
     jsx_references: []
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "ReactIcon#1"
+      - "ReactIcon#2"
     jsx_references: []
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 32
-      ctxt: 0
     specifiers:
       - type: ImportNamespaceSpecifier
         span:
           start: 8
           end: 18
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 13
             end: 18
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -212,28 +204,26 @@ body:
       span:
         start: 24
         end: 31
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 33
       end: 83
-      ctxt: 0
     specifiers:
       - type: ImportSpecifier
         span:
           start: 42
           end: 57
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 42
             end: 57
-            ctxt: 1
+          ctxt: 2
           value: createComponent
           optional: false
         imported: ~
@@ -243,28 +233,26 @@ body:
       span:
         start: 65
         end: 82
-        ctxt: 0
       value: "@lit-labs/react"
       raw: "\"@lit-labs/react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ImportDeclaration
     span:
       start: 84
       end: 118
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 91
           end: 95
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 91
             end: 95
-            ctxt: 1
+          ctxt: 2
           value: Icon
           optional: false
     source:
@@ -272,16 +260,16 @@ body:
       span:
         start: 101
         end: 117
-        ctxt: 0
       value: "./icon.vanilla"
       raw: "\"./icon.vanilla\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: VariableDeclaration
     span:
       start: 120
       end: 224
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -289,13 +277,12 @@ body:
         span:
           start: 126
           end: 223
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 126
             end: 135
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: ReactIcon
@@ -304,13 +291,13 @@ body:
           span:
             start: 138
             end: 223
-            ctxt: 0
+          ctxt: 0
           callee:
             type: Identifier
             span:
               start: 138
               end: 153
-              ctxt: 1
+            ctxt: 2
             value: createComponent
             optional: false
           arguments:
@@ -320,7 +307,6 @@ body:
                 span:
                   start: 154
                   end: 222
-                  ctxt: 0
                 properties:
                   - type: KeyValueProperty
                     key:
@@ -328,15 +314,12 @@ body:
                       span:
                         start: 160
                         end: 167
-                        ctxt: 0
                       value: tagName
-                      optional: false
                     value:
                       type: StringLiteral
                       span:
                         start: 169
                         end: 178
-                        ctxt: 0
                       value: nb-icon
                       raw: "\"nb-icon\""
                   - type: KeyValueProperty
@@ -345,15 +328,13 @@ body:
                       span:
                         start: 184
                         end: 196
-                        ctxt: 0
                       value: elementClass
-                      optional: false
                     value:
                       type: Identifier
                       span:
                         start: 198
                         end: 202
-                        ctxt: 1
+                      ctxt: 2
                       value: Icon
                       optional: false
                   - type: KeyValueProperty
@@ -362,15 +343,13 @@ body:
                       span:
                         start: 208
                         end: 213
-                        ctxt: 0
                       value: react
-                      optional: false
                     value:
                       type: Identifier
                       span:
                         start: 215
                         end: 220
-                        ctxt: 1
+                      ctxt: 2
                       value: React
                       optional: false
           typeArguments: ~
@@ -379,12 +358,12 @@ body:
     span:
       start: 226
       end: 251
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 241
         end: 250
-        ctxt: 1
+      ctxt: 2
       value: ReactIcon
       optional: false
+

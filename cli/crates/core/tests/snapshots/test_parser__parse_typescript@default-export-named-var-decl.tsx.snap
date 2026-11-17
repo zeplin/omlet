@@ -32,7 +32,7 @@ declarations:
     end:
       line: 3
       column: 2
-  - symbol: "NamedVarDeclComponent#1"
+  - symbol: "NamedVarDeclComponent#2"
     source:
       hash: "6634460355154843873"
       path: src/module-decls/default-export/default-export-named-var-decl.tsx
@@ -58,7 +58,7 @@ declarations:
     inferred_type:
       TypeOf:
         symbol:
-          symbol: "NamedVarDeclComponent#1"
+          symbol: "NamedVarDeclComponent#2"
           source:
             hash: "6634460355154843873"
             path: src/module-decls/default-export/default-export-named-var-decl.tsx
@@ -75,48 +75,48 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "NamedVarDeclComponent#1"
+      - "NamedVarDeclComponent#2"
       - "<anonymous-2>#0"
       - "default#0"
     references:
-      - "NamedVarDeclComponent#1"
-      - "div#2"
+      - "NamedVarDeclComponent#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
-  - owner: "NamedVarDeclComponent#1"
+      - "div#1"
+  - owner: "NamedVarDeclComponent#2"
     parent: "__global#0"
     children:
       - "<anonymous-1>#0"
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "<anonymous-1>#0"
-    parent: "NamedVarDeclComponent#1"
+    parent: "NamedVarDeclComponent#2"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "<anonymous-2>#0"
     parent: "__global#0"
     children: []
     references:
-      - "div#2"
+      - "div#1"
     jsx_references:
-      - "div#2"
+      - "div#1"
   - owner: "default#0"
     parent: "__global#0"
     children: []
     references:
-      - "NamedVarDeclComponent#1"
+      - "NamedVarDeclComponent#2"
     jsx_references: []
 body:
   - type: VariableDeclaration
     span:
       start: 1
       end: 71
-      ctxt: 0
+    ctxt: 0
     kind: const
     declare: false
     declarations:
@@ -124,36 +124,32 @@ body:
         span:
           start: 7
           end: 70
-          ctxt: 0
         id:
+          ctxt: 2
           optional: false
           span:
             start: 7
             end: 28
-            ctxt: 1
           type: Identifier
           typeAnnotation: ~
           value: NamedVarDeclComponent
         init:
           async: false
           body:
-            type: BlockStatement
+            type: FunctionBody
             span:
               start: 43
               end: 70
-              ctxt: 0
             stmts:
               - type: ReturnStatement
                 span:
                   start: 49
                   end: 68
-                  ctxt: 0
                 argument:
                   type: JSXElement
                   span:
                     start: 56
                     end: 67
-                    ctxt: 0
                   opening:
                     type: JSXOpeningElement
                     name:
@@ -161,13 +157,12 @@ body:
                       span:
                         start: 57
                         end: 60
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
                     span:
                       start: 56
                       end: 61
-                      ctxt: 0
                     attributes: []
                     selfClosing: false
                     typeArguments: ~
@@ -177,15 +172,15 @@ body:
                     span:
                       start: 61
                       end: 67
-                      ctxt: 0
                     name:
                       type: Identifier
                       span:
                         start: 63
                         end: 66
-                        ctxt: 2
+                      ctxt: 1
                       value: div
                       optional: false
+          ctxt: 3
           decorators: []
           generator: false
           identifier: ~
@@ -194,7 +189,6 @@ body:
           span:
             start: 31
             end: 70
-            ctxt: 0
           type: FunctionExpression
           typeParameters: ~
         definite: false
@@ -202,12 +196,12 @@ body:
     span:
       start: 73
       end: 110
-      ctxt: 0
     expression:
       type: Identifier
       span:
         start: 88
         end: 109
-        ctxt: 1
+      ctxt: 2
       value: NamedVarDeclComponent
       optional: false
+

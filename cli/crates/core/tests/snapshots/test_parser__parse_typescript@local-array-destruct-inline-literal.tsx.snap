@@ -13,16 +13,16 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Sample#1"
+      Internal: "Sample#2"
     exported_name: default
 declarations:
-  - symbol: "React#1"
+  - symbol: "React#2"
     source:
       hash: "7091236611724423418"
       path: src/functional-component/return-var/local-array-destruct-inline-literal.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -39,7 +39,7 @@ declarations:
     end:
       line: 1
       column: 13
-  - symbol: "Sample#1"
+  - symbol: "Sample#2"
     source:
       hash: "7091236611724423418"
       path: src/functional-component/return-var/local-array-destruct-inline-literal.tsx
@@ -50,7 +50,7 @@ declarations:
       Function:
         - TypeOf:
             symbol:
-              symbol: "component#3"
+              symbol: "component#1"
               source:
                 hash: "7091236611724423418"
                 path: src/functional-component/return-var/local-array-destruct-inline-literal.tsx
@@ -63,7 +63,7 @@ declarations:
     end:
       line: 7
       column: 2
-  - symbol: "num#2"
+  - symbol: "num#3"
     source:
       hash: "7091236611724423418"
       path: src/functional-component/return-var/local-array-destruct-inline-literal.tsx
@@ -84,7 +84,7 @@ declarations:
     end:
       line: 4
       column: 24
-  - symbol: "str#2"
+  - symbol: "str#3"
     source:
       hash: "7091236611724423418"
       path: src/functional-component/return-var/local-array-destruct-inline-literal.tsx
@@ -109,63 +109,63 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Sample#1"
-      - "Sample#1"
-      - "str#2"
-      - "num#2"
+      - "Sample#2"
+      - "Sample#2"
+      - "str#3"
+      - "num#3"
     references:
-      - "React#1"
-      - "Sample#1"
-      - "component#3"
-      - "num#2"
-      - "str#2"
+      - "React#2"
+      - "Sample#2"
+      - "component#1"
+      - "num#3"
+      - "str#3"
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "str#2"
-      - "num#2"
+      - "str#3"
+      - "num#3"
     references:
-      - "component#3"
-      - "num#2"
-      - "str#2"
+      - "component#1"
+      - "num#3"
+      - "str#3"
     jsx_references: []
-  - owner: "str#2"
-    parent: "Sample#1"
+  - owner: "str#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "num#2"
-    parent: "Sample#1"
+  - owner: "num#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "Sample#1"
+  - owner: "Sample#2"
     parent: "__global#0"
     children:
-      - "str#2"
-      - "num#2"
+      - "str#3"
+      - "num#3"
     references:
-      - "component#3"
-      - "num#2"
-      - "str#2"
+      - "component#1"
+      - "num#3"
+      - "str#3"
     jsx_references: []
-  - owner: "str#2"
-    parent: "Sample#1"
+  - owner: "str#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "num#2"
-    parent: "Sample#1"
+  - owner: "num#3"
+    parent: "Sample#2"
     children: []
     references: []
     jsx_references: []
-  - owner: "str#2"
+  - owner: "str#3"
     parent: "__global#0"
     children: []
     references: []
     jsx_references: []
-  - owner: "num#2"
+  - owner: "num#3"
     parent: "__global#0"
     children: []
     references: []
@@ -175,19 +175,17 @@ body:
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: React
           optional: false
     source:
@@ -195,30 +193,28 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - type: ExportDefaultDeclaration
     span:
       start: 29
       end: 142
-      ctxt: 0
     decl:
       async: false
       body:
-        type: BlockStatement
+        type: FunctionBody
         span:
           start: 62
           end: 142
-          ctxt: 0
         stmts:
           - type: VariableDeclaration
             span:
               start: 68
               end: 117
-              ctxt: 0
+            ctxt: 0
             kind: const
             declare: false
             declarations:
@@ -226,29 +222,27 @@ body:
                 span:
                   start: 74
                   end: 116
-                  ctxt: 0
                 id:
                   type: ArrayPattern
                   span:
                     start: 74
                     end: 88
-                    ctxt: 0
                   elements:
                     - ~
-                    - optional: false
+                    - ctxt: 3
+                      optional: false
                       span:
                         start: 77
                         end: 80
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: str
                     - ~
-                    - optional: false
+                    - ctxt: 3
+                      optional: false
                       span:
                         start: 84
                         end: 87
-                        ctxt: 2
                       type: Identifier
                       typeAnnotation: ~
                       value: num
@@ -259,7 +253,6 @@ body:
                   span:
                     start: 91
                     end: 116
-                    ctxt: 0
                   elements:
                     - spread: ~
                       expression:
@@ -267,7 +260,6 @@ body:
                         span:
                           start: 92
                           end: 98
-                          ctxt: 0
                         value: text
                         raw: "\"text\""
                     - spread: ~
@@ -276,7 +268,6 @@ body:
                         span:
                           start: 100
                           end: 108
-                          ctxt: 0
                         value: sample
                         raw: "\"sample\""
                     - spread: ~
@@ -285,7 +276,6 @@ body:
                         span:
                           start: 110
                           end: 111
-                          ctxt: 0
                         value: 3.0
                         raw: "3"
                     - spread: ~
@@ -294,7 +284,6 @@ body:
                         span:
                           start: 113
                           end: 115
-                          ctxt: 0
                         value: 42.0
                         raw: "42"
                 definite: false
@@ -302,15 +291,15 @@ body:
             span:
               start: 123
               end: 140
-              ctxt: 0
             argument:
               type: Identifier
               span:
                 start: 130
                 end: 139
-                ctxt: 3
+              ctxt: 1
               value: component
               optional: false
+      ctxt: 3
       decorators: []
       generator: false
       identifier:
@@ -318,7 +307,7 @@ body:
         span:
           start: 53
           end: 59
-          ctxt: 1
+        ctxt: 2
         value: Sample
         optional: false
       params: []
@@ -326,6 +315,6 @@ body:
       span:
         start: 44
         end: 142
-        ctxt: 0
       type: FunctionExpression
       typeParameters: ~
+

@@ -13,10 +13,10 @@ created_at: ~
 updated_at: ~
 exports:
   - source:
-      Internal: "Button#1"
+      Internal: "Button#2"
     exported_name: default
 declarations:
-  - symbol: "Button#1"
+  - symbol: "Button#2"
     source:
       hash: "11441123865108480054"
       path: src/renamed-import/renamed-string-export.tsx
@@ -32,13 +32,13 @@ declarations:
     end:
       line: 5
       column: 2
-  - symbol: "react#1"
+  - symbol: "react#2"
     source:
       hash: "11441123865108480054"
       path: src/renamed-import/renamed-string-export.tsx
       package_name: UNKNOWN
       mtype: local
-    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: Atom('default' type=static), context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
+    definition: "ExternalSymbol<SymbolWithSource { symbol: Symbol { name: \"default\", context: #0 }, source: ModuleId { hash: 11002248552354871051, path: \"\", pkg_name: \"react\", mtype: Package } }>"
     inferred_type:
       TypeOf:
         symbol:
@@ -59,38 +59,36 @@ scopes:
   - owner: "__global#0"
     parent: ~
     children:
-      - "Button#1"
+      - "Button#2"
     references:
-      - "Button#1"
-      - "button#2"
-      - "react#1"
+      - "Button#2"
+      - "button#1"
+      - "react#2"
     jsx_references:
-      - "button#2"
-  - owner: "Button#1"
+      - "button#1"
+  - owner: "Button#2"
     parent: "__global#0"
     children: []
     references:
-      - "button#2"
+      - "button#1"
     jsx_references:
-      - "button#2"
+      - "button#1"
 body:
   - type: ImportDeclaration
     span:
       start: 1
       end: 27
-      ctxt: 0
     specifiers:
       - type: ImportDefaultSpecifier
         span:
           start: 8
           end: 13
-          ctxt: 0
         local:
           type: Identifier
           span:
             start: 8
             end: 13
-            ctxt: 1
+          ctxt: 2
           value: react
           optional: false
     source:
@@ -98,30 +96,27 @@ body:
       span:
         start: 19
         end: 26
-        ctxt: 0
       value: react
       raw: "\"react\""
     typeOnly: false
-    asserts: ~
+    with: ~
+    phase: evaluation
   - async: false
     body:
-      type: BlockStatement
+      type: FunctionBody
       span:
         start: 47
         end: 86
-        ctxt: 0
       stmts:
         - type: ReturnStatement
           span:
             start: 53
             end: 84
-            ctxt: 0
           argument:
             type: JSXElement
             span:
               start: 60
               end: 83
-              ctxt: 0
             opening:
               type: JSXOpeningElement
               name:
@@ -129,13 +124,12 @@ body:
                 span:
                   start: 61
                   end: 67
-                  ctxt: 2
+                ctxt: 1
                 value: button
                 optional: false
               span:
                 start: 60
                 end: 68
-                ctxt: 0
               attributes: []
               selfClosing: false
               typeArguments: ~
@@ -144,7 +138,6 @@ body:
                 span:
                   start: 68
                   end: 74
-                  ctxt: 0
                 value: Sample
                 raw: Sample
             closing:
@@ -152,15 +145,15 @@ body:
               span:
                 start: 74
                 end: 83
-                ctxt: 0
               name:
                 type: Identifier
                 span:
                   start: 76
                   end: 82
-                  ctxt: 2
+                ctxt: 1
                 value: button
                 optional: false
+    ctxt: 3
     declare: false
     decorators: []
     generator: false
@@ -169,7 +162,7 @@ body:
       span:
         start: 38
         end: 44
-        ctxt: 1
+      ctxt: 2
       value: Button
       optional: false
     params: []
@@ -177,26 +170,23 @@ body:
     span:
       start: 29
       end: 86
-      ctxt: 0
     type: FunctionDeclaration
     typeParameters: ~
   - type: ExportNamedDeclaration
     span:
       start: 88
       end: 119
-      ctxt: 0
     specifiers:
       - type: ExportSpecifier
         span:
           start: 97
           end: 116
-          ctxt: 0
         orig:
           type: Identifier
           span:
             start: 97
             end: 103
-            ctxt: 1
+          ctxt: 2
           value: Button
           optional: false
         exported:
@@ -204,10 +194,10 @@ body:
           span:
             start: 107
             end: 116
-            ctxt: 0
           value: default
           raw: "\"default\""
         isTypeOnly: false
     source: ~
     typeOnly: false
-    asserts: ~
+    with: ~
+
