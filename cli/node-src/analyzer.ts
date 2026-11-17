@@ -1318,7 +1318,10 @@ function rejectIncompleteAnalysis(analysisData: AnalyzeResult, options: AnalyzeC
         "The analysis is incomplete. Run with --dry-run to list the failures under parser_errors."
     );
 
-    throw new ParseErrorsFound(failedModules);
+    const error = new ParseErrorsFound(failedModules);
+    logError(error);
+
+    throw error;
 }
 
 export async function analyze(projectRoot: string, options: AnalyzeCmdOptions) {

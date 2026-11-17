@@ -1,13 +1,13 @@
-import { Broken } from "./Broken";
-import { Broken2 } from "./Broken2";
-import { Ok } from "./Ok";
+import { AsConst } from "./AsConst";
+import { AsConstSatisfies } from "./AsConstSatisfies";
+import { ObjectSatisfies } from "./ObjectSatisfies";
 
 export function App() {
     return (
         <div>
-            <Ok />
-            <Broken />
-            <Broken2 />
+            <AsConst />
+            <AsConstSatisfies />
+            <ObjectSatisfies />
         </div>
     );
 }

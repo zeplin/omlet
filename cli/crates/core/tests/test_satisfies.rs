@@ -76,10 +76,10 @@ fn test_satisfies_operator_does_not_drop_components() {
         BTreeSet::from([
             String::from("Aliased"),
             String::from("App"),
-            String::from("Broken"),
-            String::from("Broken2"),
+            String::from("AsConst"),
+            String::from("AsConstSatisfies"),
             String::from("List"),
-            String::from("Ok"),
+            String::from("ObjectSatisfies"),
             String::from("Page"),
             String::from("Theme"),
         ])
@@ -88,9 +88,9 @@ fn test_satisfies_operator_does_not_drop_components() {
     assert_eq!(
         dependencies_of_app,
         BTreeSet::from([
-            String::from("Broken"),
-            String::from("Broken2"),
-            String::from("Ok"),
+            String::from("AsConst"),
+            String::from("AsConstSatisfies"),
+            String::from("ObjectSatisfies"),
         ]),
         "usages of components declared in a module using satisfies must still be collected"
     );
